@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Farmer Government Schemes</title>
+
+<style>
+.search-box{
+text-align:center;
+margin:20px;
+}
+
+.search-box input{
+width:90%;
+padding:12px;
+font-size:16px;
+border:2px solid #2E7D32;
+border-radius:10px;
+outline:none;
+}
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#f4f4f4;
+}
+
+header{
+background:#2E7D32;
+color:white;
+padding:18px;
+text-align:center;
+font-size:28px;
+font-weight:bold;
+}
+
+.back{
+display:inline-block;
+margin:15px;
+padding:10px 18px;
+background:#2E7D32;
+color:white;
+text-decoration:none;
+border-radius:8px;
+}
+
+.card{
+background:white;
+margin:15px;
+padding:20px;
+border-radius:15px;
+box-shadow:0 4px 10px rgba(0,0,0,.2);
+}
+
+.card h2{
+color:#2E7D32;
+}
+
+.btn{
+display:inline-block;
+margin-top:10px;
+padding:10px 18px;
+background:#2E7D32;
+color:white;
+text-decoration:none;
+border-radius:8px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <div class="search-box">
+<input
+type="text"
+id="searchInput"
+placeholder="🔍 Search Farmer Scheme..."
+onkeyup="searchScheme()">
+  </div>
+🌾 Farmer Government Schemes
+</header>
+
+<a href="Government.html" class="back">← Back</a>
+
+<div class="card">
+<h2>PM-KISAN</h2>
+<p>Income support scheme for farmers.</p>
+<a href="pmkisan.html" class="btn">View Details</a>
+</div>
+<div class="card">
+<h2>🌾 PM Fasal Bima Yojana</h2>
+
+<p>Crop insurance scheme for farmers.</p>
+
+<a href="fasalbima.html" class="btn">
+View Details
+</a>
+
+</div>
+  <div class="card">
+
+<h2>💳 Kisan Credit Card</h2>
+
+<p>Low-interest loans for farmers.</p>
+
+<a href="kcc.html" class="btn">
+View Details
+</a>
+
+  </div>
+  <div class="card">
+
+<h2>🌱 Soil Health Card Scheme</h2>
+
+<p>Free soil testing and fertilizer recommendations.</p>
+
+<a href="soilhealth.html" class="btn">
+View Details
+</a>
+
+  </div>
+  <div class="card">
+
+<h2>💧 PM Krishi Sinchai Yojana</h2>
+
+<p>Water conservation and irrigation support for farmers.</p>
+
+<a href="pmksy.html" class="btn">
+View Details
+</a>
+
+  </div>
+  <div class="card">
+
+<h2>🛒 e-NAM</h2>
+
+<p>Online National Agriculture Market for Farmers.</p>
+
+<a href="enam.html" class="btn">
+View Details
+</a>
+
+  </div>
+  <div class="card">
+
+<h2>🌿 Paramparagat Krishi Vikas Yojana</h2>
+
+<p>Organic farming support for farmers.</p>
+
+<a href="pkvy.html" class="btn">
+View Details
+</a>
+
+  </div>
+  <div class="card">
+
+<h2>🚜 Agriculture Infrastructure Fund</h2>
+
+<p>Financial support for agricultural infrastructure.</p>
+
+<a href="aif.html" class="btn">
+View Details
+</a>
+
+  </div>
+  <div class="card">
+
+<h2>🍎 MIDH Scheme</h2>
+
+<p>Support for fruits, vegetables, flowers and horticulture crops.</p>
+
+<a href="midh.html" class="btn">
+View Details
+</a>
+
+  </div>
+  <div class="card">
+
+<h2>🐄 Rashtriya Gokul Mission</h2>
+
+<p>Support for dairy farmers and indigenous cattle development.</p>
+
+<a href="gokulmission.html" class="btn">
+View Details
+</a>
+
+  </div>
+  <div class="card">
+
+<h2>🐟 PM Matsya Sampada Yojana</h2>
+
+<p>Support for fisheries and aquaculture development.</p>
+
+<a href="pmmsy.html" class="btn">
+View Details
+</a>
+</div>
+  </ poultry and fodder development.</p>
+
+<div class="card">
+
+<h2>🥛 National Livestock Mission</h2>
+
+<p>Support for livestock, poultry and fodder development.</p>
+
+<a href="nlm.html" class="btn">
+View Details
+</a>
+
+</div>
+  <script>
+function searchScheme() {
+
+let input = document.getElementById("searchInput").value.toLowerCase();
+
+let cards = document.getElementsByClassName("card");
+
+for(let i=0;i<cards.length;i++){
+
+let title = cards[i].getElementsByTagName("h2")[0].innerText.toLowerCase();
+
+if(title.indexOf(input)>-1){
+cards[i].style.display="block";
+}
+else{
+cards[i].style.display="none";
+}
+
+}
+
+}
+  </script>
+</body>
+</html>

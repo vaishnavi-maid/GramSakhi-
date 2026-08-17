@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GramSakhi - Pest & Disease Management</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f8f1;
+    color:#333;
+    line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+    background:#558b2f;
+    color:white;
+    text-align:center;
+    padding:28px 15px;
+}
+
+header h1{
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+header p{
+    font-size:16px;
+}
+
+/* BACK */
+
+.back{
+    width:94%;
+    max-width:1100px;
+    margin:18px auto;
+}
+
+.back a{
+    text-decoration:none;
+    color:#558b2f;
+    font-weight:bold;
+}
+
+/* CONTAINER */
+
+.container{
+    width:94%;
+    max-width:1100px;
+    margin:auto;
+}
+
+/* INTRO */
+
+.intro{
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+.intro h2{
+    color:#558b2f;
+    margin-bottom:8px;
+}
+
+/* SELECT */
+
+.search-box{
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+.search-box h2{
+    color:#558b2f;
+    margin-bottom:15px;
+}
+
+select{
+    width:100%;
+    padding:13px;
+    border:2px solid #ddd;
+    border-radius:8px;
+    font-size:15px;
+    background:white;
+}
+
+select:focus{
+    outline:none;
+    border-color:#558b2f;
+}
+
+/* RESULT */
+
+.result{
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+.result h2{
+    color:#558b2f;
+    margin-bottom:18px;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.info-card{
+    background:#f1f8e9;
+    padding:17px;
+    border-radius:10px;
+}
+
+.info-card h3{
+    color:#558b2f;
+    margin-bottom:7px;
+}
+
+/* GENERAL CARDS */
+
+.section{
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+.section h2{
+    color:#558b2f;
+    margin-bottom:15px;
+}
+
+.card-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.card{
+    background:#f1f8e9;
+    padding:17px;
+    border-radius:10px;
+}
+
+.card h3{
+    color:#558b2f;
+    margin-bottom:7px;
+}
+
+.card ul{
+    padding-left:20px;
+}
+
+/* STEPS */
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.step{
+    background:#f9fbe7;
+    padding:18px;
+    border-radius:10px;
+    border-left:5px solid #7cb342;
+}
+
+.step-number{
+    display:inline-block;
+    background:#558b2f;
+    color:white;
+    width:32px;
+    height:32px;
+    text-align:center;
+    line-height:32px;
+    border-radius:50%;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+/* WARNING */
+
+.warning{
+    background:#fff8e1;
+    border-left:5px solid #f9a825;
+    padding:18px;
+    border-radius:8px;
+    margin-bottom:20px;
+}
+
+.danger{
+    background:#ffebee;
+    border-left:5px solid #c62828;
+    padding:18px;
+    border-radius:8px;
+    margin-bottom:20px;
+}
+
+/* OFFICIAL */
+
+.official{
+    background:#e8f5e9;
+    padding:22px;
+    border-radius:15px;
+    margin-bottom:25px;
+}
+
+.official h2{
+    color:#2e7d32;
+    margin-bottom:8px;
+}
+
+.official-btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 18px;
+    background:#2e7d32;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+    background:#33691e;
+    color:white;
+    text-align:center;
+    padding:18px;
+    margin-top:30px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .info-grid,
+    .card-grid,
+    .steps{
+        grid-template-columns:1fr;
+    }
+
+    header h1{
+        font-size:26px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<h1>🐛 Pest & Disease Management</h1>
+
+<p>
+Identify Problems Early and Protect Your Crops
+</p>
+
+</header>
+
+
+<!-- BACK -->
+
+<div class="back">
+
+<a href="farmer-corner.html">
+← Back to Farmer Corner
+</a>
+
+</div>
+
+
+<div class="container">
+
+
+<!-- INTRO -->
+
+<div class="intro">
+
+<h2>🌱 Protect Your Crop</h2>
+
+<p>
+Pests and diseases can reduce crop growth and
+yield. Regular field observation, good farming
+practices and early identification can help
+farmers manage crop problems effectively.
+</p>
+
+</div>
+
+
+<!-- CROP SELECT -->
+
+<div class="search-box">
+
+<h2>🔎 Select Your Crop</h2>
+
+<select id="cropSelect" onchange="showCrop()">
+
+<option value="">
+-- Select Crop --
+</option>
+
+<option value="cabbage">🥬 Cabbage</option>
+
+<option value="cauliflower">🥦 Cauliflower</option>
+
+<option value="greenpeas">🫛 Green Peas</option>
+
+<option value="fenugreek">🌿 Fenugreek</option>
+
+<option value="spinach">🥬 Spinach</option>
+
+<option value="chilli">🌶️ Chilli</option>
+
+<option value="tomato">🍅 Tomato</option>
+
+<option value="onion">🧅 Onion</option>
+
+<option value="potato">🥔 Potato</option>
+
+<option value="brinjal">🍆 Brinjal</option>
+
+<option value="okra">🌱 Okra</option>
+
+<option value="guava">🍈 Guava</option>
+
+<option value="mango">🥭 Mango</option>
+
+<option value="grapes">🍇 Grapes</option>
+
+<option value="pomegranate">🍎 Pomegranate</option>
+
+<option value="banana">🍌 Banana</option>
+
+<option value="wheat">🌾 Wheat</option>
+
+<option value="maize">🌽 Maize</option>
+
+<option value="jowar">🌾 Jowar</option>
+
+<option value="bajra">🌾 Bajra</option>
+
+<option value="gram">🌱 Gram</option>
+
+<option value="tur">🌱 Tur</option>
+
+<option value="moong">🌱 Moong</option>
+
+<option value="soybean">🌱 Soybean</option>
+
+<option value="groundnut">🥜 Groundnut</option>
+
+<option value="cotton">🌿 Cotton</option>
+
+</select>
+
+</div>
+
+
+<!-- RESULT -->
+
+<div class="result" id="cropResult">
+
+<h2>🐛 Pest & Disease Information</h2>
+
+<p>
+Select a crop above to see common pests,
+diseases, symptoms and general management.
+</p>
+
+</div>
+
+
+<!-- EARLY IDENTIFICATION -->
+
+<div class="section">
+
+<h2>🔍 Early Warning Signs</h2>
+
+<div class="card-grid">
+
+
+<div class="card">
+
+<h3>🍃 Leaf Damage</h3>
+
+<p>
+Holes, curling, discoloration, spots or
+unexpected leaf drop may indicate pest,
+disease or nutrient problems.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🌱 Plant Wilting</h3>
+
+<p>
+Sudden or gradual wilting can have several
+causes including diseases, root problems,
+water stress or pests.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🐛 Visible Insects</h3>
+
+<p>
+Check both sides of leaves, stems, flowers
+and fruits for insects or eggs.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🍅 Fruit Damage</h3>
+
+<p>
+Holes, rotting, discoloration or abnormal
+fruit development should be investigated.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- IPM -->
+
+<div class="section">
+
+<h2>🌿 Integrated Pest Management (IPM)</h2>
+
+<p>
+Integrated Pest Management combines different
+safe and practical approaches instead of
+depending only on pesticides.
+</p>
+
+<br>
+
+<div class="steps">
+
+
+<div class="step">
+
+<span class="step-number">1</span>
+
+<h3>👀 Monitor</h3>
+
+<p>
+Regularly inspect plants, leaves, stems,
+flowers and fruits.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<span class="step-number">2</span>
+
+<h3>🌱 Prevent</h3>
+
+<p>
+Use healthy planting material, suitable crop
+rotation and good field sanitation.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<span class="step-number">3</span>
+
+<h3>🧹 Remove</h3>
+
+<p>
+Remove heavily infected plant parts or
+affected plants when appropriate.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<span class="step-number">4</span>
+
+<h3>🐞 Biological Control</h3>
+
+<p>
+Encourage beneficial insects and use approved
+biological control methods where suitable.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<span class="step-number">5</span>
+
+<h3>🪤 Mechanical Control</h3>
+
+<p>
+Use traps, barriers or physical removal of
+pests where practical.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<span class="step-number">6</span>
+
+<h3>🧪 Chemical Control</h3>
+
+<p>
+Use registered pesticides only when necessary
+and according to the product label and
+expert recommendations.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- PREVENTION -->
+
+<div class="section">
+
+<h2>🛡️ Prevention Tips</h2>
+
+<div class="card-grid">
+
+
+<div class="card">
+
+<h3>🌱 Healthy Seeds</h3>
+
+<p>
+Use quality and certified seeds or healthy
+planting material from reliable sources.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🌾 Crop Rotation</h3>
+
+<p>
+Where suitable, rotate crops to reduce
+the buildup of certain pests and diseases.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🧹 Field Hygiene</h3>
+
+<p>
+Remove crop residues and weeds that may
+harbour pests or diseases.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>💧 Proper Irrigation</h3>
+
+<p>
+Avoid unnecessary irrigation and prolonged
+waterlogging.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🌬️ Proper Spacing</h3>
+
+<p>
+Appropriate plant spacing can improve
+air circulation and reduce some disease risks.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🔬 Soil Testing</h3>
+
+<p>
+Use soil-test information to support balanced
+nutrient management and healthy crop growth.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- SAFE PESTICIDE -->
+
+<div class="section">
+
+<h2>🧪 Safe Pesticide Use</h2>
+
+<ul style="padding-left:22px;">
+
+<li>
+Identify the pest or disease before choosing
+a pesticide.
+</li>
+
+<li>
+Use only products registered for the intended
+crop and pest.
+</li>
+
+<li>
+Read and follow the product label carefully.
+</li>
+
+<li>
+Use the recommended dose and application method
+on the label.
+</li>
+
+<li>
+Wear appropriate protective equipment.
+</li>
+
+<li>
+Keep children and animals away during
+application.
+</li>
+
+<li>
+Observe the required waiting period before
+harvesting.
+</li>
+
+<li>
+Do not mix pesticides unless the combination
+is specifically recommended by an authorised
+expert or product label.
+</li>
+
+<li>
+Store pesticides safely in their original,
+labelled containers.
+</li>
+
+</ul>
+
+</div>
+
+
+<!-- NATURAL METHODS -->
+
+<div class="section">
+
+<h2>🌿 Non-Chemical Management</h2>
+
+<div class="card-grid">
+
+
+<div class="card">
+
+<h3>🪤 Traps</h3>
+
+<p>
+Suitable traps can help monitor or reduce
+certain insect populations.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🐞 Beneficial Insects</h3>
+
+<p>
+Protect natural enemies such as ladybird
+beetles and other beneficial organisms.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🌱 Resistant Varieties</h3>
+
+<p>
+Where available, choose varieties with
+appropriate resistance or tolerance.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🧹 Sanitation</h3>
+
+<p>
+Remove and safely manage severely diseased
+plant material where appropriate.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- IMPORTANT -->
+
+<div class="warning">
+
+<b>⚠️ Important:</b>
+
+<br><br>
+
+Not every leaf spot, insect or yellow leaf
+requires pesticide treatment.
+
+Some symptoms can look similar but have
+different causes, including nutrient
+deficiency, water stress, weather damage
+or disease.
+
+Correct identification should be done before
+treatment.
+
+</div>
+
+
+<div class="danger">
+
+<b>🚫 Never use an unlabelled or banned pesticide.</b>
+
+<br><br>
+
+Do not increase the pesticide dose on your own.
+Always follow the current product label and
+local agricultural recommendations.
+
+For serious or uncertain crop problems,
+contact the Agriculture Department, Krishi
+Vigyan Kendra or a qualified agricultural expert.
+
+</div>
+
+
+<!-- OFFICIAL -->
+
+<div class="official">
+
+<h2>🏛️ Official Agriculture Resources</h2>
+
+<p>
+For crop protection advice, farmers should use
+reliable government agricultural resources and
+seek local expert guidance when necessary.
+</p>
+
+<a
+href="https://agriwelfare.gov.in/"
+target="_blank"
+class="official-btn">
+
+🌐 Agriculture Department
+
+</a>
+
+</div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 GramSakhi | Farmer Corner
+
+</footer>
+
+
+<script>
+
+/* =========================================
+   CROP PEST & DISEASE DATA
+========================================= */
+
+const crops = {
+
+cabbage:{
+name:"🥬 Cabbage",
+pests:"Diamondback moth, aphids and cabbage butterfly.",
+diseases:"Downy mildew and black rot.",
+symptoms:"Leaf holes, chewing damage, yellowing, leaf spots or poor head development.",
+prevention:"Use healthy seedlings, field sanitation, regular monitoring and suitable crop rotation.",
+management:"Use integrated pest management and seek local expert advice before using pesticides."
+},
+
+cauliflower:{
+name:"🥦 Cauliflower",
+pests:"Cabbage butterfly, diamondback moth and aphids.",
+diseases:"Downy mildew and black rot.",
+symptoms:"Leaf holes, caterpillars, yellowing and abnormal curd development.",
+prevention:"Use healthy planting material, maintain field hygiene and monitor plants regularly.",
+management:"Use suitable IPM practices and registered products only when necessary."
+},
+
+greenpeas:{
+name:"🫛 Green Peas",
+pests:"Aphids and pod-feeding insects.",
+diseases:"Powdery mildew and other fungal diseases.",
+symptoms:"Leaf curling, insect colonies, white powdery growth and damaged pods.",
+prevention:"Maintain field hygiene and avoid excessive moisture.",
+management:"Monitor crops regularly and obtain expert advice for serious infestations."
+},
+
+fenugreek:{
+name:"🌿 Fenugreek",
+pests:"Aphids and leaf-feeding insects.",
+diseases:"Powdery mildew and leaf diseases.",
+symptoms:"Curling leaves, insects on young growth and powdery patches.",
+prevention:"Use healthy seed, maintain proper spacing and avoid excess irrigation.",
+management:"Use integrated management and approved treatments when required."
+},
+
+spinach:{
+name:"🥬 Spinach",
+pests:"Aphids and leaf-mining insects.",
+diseases:"Leaf spot and downy mildew.",
+symptoms:"Leaf spots, tunnels, curling or discoloration.",
+prevention:"Remove severely affected leaves and maintain good field hygiene.",
+management:"Avoid unnecessary pesticide use and seek correct diagnosis."
+},
+
+chilli:{
+name:"🌶️ Chilli",
+pests:"Thrips, mites, aphids and fruit-feeding insects.",
+diseases:"Leaf curl, wilt and fungal diseases.",
+symptoms:"Leaf curling, distorted growth, flower drop, wilting or fruit damage.",
+prevention:"Use healthy seedlings, monitor regularly and remove badly affected plants when appropriate.",
+management:"Integrated pest management should be preferred. Use registered products only according to label."
+},
+
+tomato:{
+name:"🍅 Tomato",
+pests:"Fruit borer, whitefly, aphids and thrips.",
+diseases:"Early blight, late blight and bacterial wilt.",
+symptoms:"Leaf spots, wilting, fruit holes and yellowing.",
+prevention:"Use healthy seedlings, crop rotation, field sanitation and regular monitoring.",
+management:"Identify the exact problem before selecting a control measure."
+},
+
+onion:{
+name:"🧅 Onion",
+pests:"Thrips and onion maggot-type pests in applicable regions.",
+diseases:"Purple blotch, downy mildew and basal rot.",
+symptoms:"Silvering of leaves, leaf spots, drying leaves and bulb problems.",
+prevention:"Use healthy planting material, proper irrigation and field sanitation.",
+management:"Avoid excess moisture and follow local crop-protection recommendations."
+},
+
+potato:{
+name:"🥔 Potato",
+pests:"Potato tuber moth and other insect pests.",
+diseases:"Late blight, early blight and bacterial diseases.",
+symptoms:"Leaf lesions, rapid foliage damage, wilting or tuber damage.",
+prevention:"Use healthy seed tubers, crop rotation and regular field inspection.",
+management:"Seek timely expert advice, especially when blight symptoms appear."
+},
+
+brinjal:{
+name:"🍆 Brinjal",
+pests:"Shoot and fruit borer, aphids and mites.",
+diseases:"Bacterial wilt and fungal diseases.",
+symptoms:"Wilting, bored shoots, holes in fruits and yellowing.",
+prevention:"Remove affected shoots and fruits, use healthy seedlings and maintain field hygiene.",
+management:"Use IPM and appropriate registered control measures when required."
+},
+
+okra:{
+name:"🌱 Okra",
+pests:"Jassids, aphids and fruit/shoot borers.",
+diseases:"Yellow vein mosaic and other leaf diseases.",
+symptoms:"Yellowing veins, leaf curling, stunted growth and damaged fruits.",
+prevention:"Use healthy seed, monitor sucking pests and remove severely affected plants where appropriate.",
+management:"Control vectors and pests according to local recommendations."
+},
+
+guava:{
+name:"🍈 Guava",
+pests:"Fruit fly, mealybugs and other fruit pests.",
+diseases:"Wilt and fruit diseases.",
+symptoms:"Fruit damage, premature fruit drop, wilting and branch decline.",
+prevention:"Maintain orchard hygiene, remove affected fruits and monitor trees.",
+management:"Use orchard sanitation and expert-guided management."
+},
+
+mango:{
+name:"🥭 Mango",
+pests:"Mango hopper, mealybug and fruit fly.",
+diseases:"Powdery mildew and anthracnose.",
+symptoms:"Flower damage, sticky deposits, fruit damage, black spots and powdery growth.",
+prevention:"Maintain orchard sanitation and monitor flowering and fruiting stages.",
+management:"Follow local horticulture recommendations for pest and disease control."
+},
+
+grapes:{
+name:"🍇 Grapes",
+pests:"Mealybugs, thrips and other vineyard pests.",
+diseases:"Downy mildew and powdery mildew.",
+symptoms:"White powdery growth, leaf spots, damaged bunches and reduced fruit quality.",
+prevention:"Maintain canopy management, sanitation and regular monitoring.",
+management:"Disease management should be timely and based on correct diagnosis."
+},
+
+pomegranate:{
+name:"🍎 Pomegranate",
+pests:"Aphids, thrips and fruit-related pests.",
+diseases:"Bacterial blight and fruit diseases.",
+symptoms:"Leaf/fruit spots, cracking, lesions and fruit damage.",
+prevention:"Remove affected plant material, maintain orchard hygiene and monitor regularly.",
+management:"Seek horticulture expert advice for diagnosis and treatment."
+},
+
+banana:{
+name:"🍌 Banana",
+pests:"Sucking pests and rhizome/corm pests.",
+diseases:"Panama disease, Sigatoka and other diseases.",
+symptoms:"Leaf streaks, yellowing, wilting and poor plant growth.",
+prevention:"Use healthy planting material, maintain field sanitation and good drainage.",
+management:"Remove severely affected plants where recommended and consult experts."
+},
+
+wheat:{
+name:"🌾 Wheat",
+pests:"Aphids and other insect pests.",
+diseases:"Leaf, stem and stripe rusts.",
+symptoms:"Rust-coloured pustules, yellowing and reduced plant vigour.",
+prevention:"Use suitable varieties, monitor fields and follow recommended agronomic practices.",
+management:"Early identification is important. Follow local disease-control recommendations."
+},
+
+maize:{
+name:"🌽 Maize",
+pests:"Fall armyworm, stem borers and other insect pests.",
+diseases:"Leaf blight and other fungal diseases.",
+symptoms:"Leaf feeding damage, whorl injury, holes and leaf lesions.",
+prevention:"Regularly inspect the whorl and use integrated management.",
+management:"Use recommended control measures only after identifying the pest."
+},
+
+jowar:{
+name:"🌾 Jowar",
+pests:"Shoot fly and stem borer.",
+diseases:"Downy mildew and other diseases.",
+symptoms:"Dead hearts, stem damage and abnormal leaf growth.",
+prevention:"Use healthy seed, timely sowing and regular monitoring.",
+management:"Follow local crop-protection recommendations."
+},
+
+bajra:{
+name:"🌾 Bajra",
+pests:"Shoot fly and other insect pests.",
+diseases:"Downy mildew and ergot-type diseases.",
+symptoms:"Abnormal earheads, leaf symptoms and poor grain formation.",
+prevention:"Use suitable varieties and healthy seed and maintain field hygiene.",
+management:"Use integrated management based on local recommendations."
+},
+
+gram:{
+name:"🌱 Gram",
+pests:"Gram pod borer and other pod-feeding pests.",
+diseases:"Wilt and root diseases.",
+symptoms:"Damaged pods, wilting, yellowing and poor plant growth.",
+prevention:"Use healthy seed, crop rotation and regular monitoring.",
+management:"Integrated pest management is preferred."
+},
+
+tur:{
+name:"🌱 Tur / Pigeon Pea",
+pests:"Pod borer and pod fly.",
+diseases:"Wilt and sterility-related diseases.",
+symptoms:"Pod holes, damaged seeds, wilting and poor pod formation.",
+prevention:"Use healthy seed, crop rotation and regular scouting.",
+management:"Use recommended IPM practices and seek expert advice."
+},
+
+moong:{
+    name:"🌱 Moong",
+    pests:"Aphids, whiteflies, thrips and pod-feeding pests.",
+    diseases:"Yellow mosaic disease and powdery mildew.",
+    symptoms:"Yellow mosaic patterns on leaves, leaf curling, stunted growth and damaged pods.",
+    prevention:"Use healthy seed, maintain field hygiene, monitor the crop regularly and control insect vectors early.",
+    management:"Use integrated pest management. For serious infestation or disease, consult the local Agriculture Department or a qualified agricultural expert."
+},
+
+soybean:{
+    name:"🌱 Soybean",
+    pests:"Girdle beetle, defoliating insects and sucking pests.",
+    diseases:"Yellow mosaic and fungal diseases.",
+    symptoms:"Leaf feeding damage, girdling of stems, yellow patches and premature leaf loss.",
+    prevention:"Regular field scouting, healthy seed, proper crop management and good field sanitation.",
+    management:"Identify the pest or disease correctly before treatment and follow local agricultural recommendations."
+},
+
+groundnut:{
+    name:"🥜 Groundnut",
+    pests:"Leaf miner, aphids, thrips and other sucking pests.",
+    diseases:"Tikka/leaf spot and rust.",
+    symptoms:"Brown or dark leaf spots, yellowing, leaf drying and reduced plant growth.",
+    prevention:"Use healthy seed, suitable crop rotation, proper field sanitation and regular monitoring.",
+    management:"Use integrated pest and disease management according to local agricultural recommendations."
+},
+
+cotton:{
+    name:"🌿 Cotton",
+    pests:"Bollworms, aphids, jassids, whiteflies and thrips.",
+    diseases:"Wilt and other fungal or bacterial diseases.",
+    symptoms:"Leaf curling, sucking-pest damage, damaged bolls, yellowing and wilting.",
+    prevention:"Regular crop scouting, field sanitation, balanced crop management and timely identification of pests.",
+    management:"Use Integrated Pest Management (IPM) and only registered products according to their current label and local recommendations."
+}
+
+};
+
+
+/* =========================================
+   SHOW CROP INFORMATION
+========================================= */
+
+function showCrop(){
+
+    const selected =
+    document.getElementById("cropSelect").value;
+
+    const box =
+    document.getElementById("cropResult");
+
+
+    if(selected === ""){
+
+        box.innerHTML = `
+
+        <h2>🐛 Pest & Disease Information</h2>
+
+        <p>
+        Select a crop above to see common pests,
+        diseases, symptoms and general management.
+        </p>
+
+        `;
+
+        return;
+    }
+
+
+    const crop =
+    crops[selected];
+
+
+    box.innerHTML = `
+
+    <h2>${crop.name}</h2>
+
+    <div class="info-grid">
+
+
+        <div class="info-card">
+
+            <h3>🐛 Common Pests</h3>
+
+            <p>
+            ${crop.pests}
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>🦠 Common Diseases</h3>
+
+            <p>
+            ${crop.diseases}
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>🔍 Common Symptoms</h3>
+
+            <p>
+            ${crop.symptoms}
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>🛡️ Prevention</h3>
+
+            <p>
+            ${crop.prevention}
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>🌱 General Management</h3>
+
+            <p>
+            ${crop.management}
+            </p>
+
+        </div>
+
+
+    </div>
+
+    `;
+
+}
+
+</script>
+
+
+</body>
+
+</html>
+  
+  

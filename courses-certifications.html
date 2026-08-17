@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GramSakhi - Courses & Certifications</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4faf8;
+            color: #333;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #00897b;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        /* BACK */
+
+        .top-bar {
+            width: 92%;
+            max-width: 1100px;
+            margin: 20px auto;
+        }
+
+        .back-btn {
+            color: #00897b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* CONTAINER */
+
+        .container {
+            width: 92%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* INTRO & SEARCH */
+
+        .intro,
+        .search-box {
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .intro h2,
+        .search-box h2 {
+            color: #00897b;
+            margin-bottom: 12px;
+        }
+
+        .intro p {
+            line-height: 1.7;
+        }
+
+        /* SEARCH */
+
+        #searchInput {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        #searchInput:focus {
+            border-color: #00897b;
+        }
+
+        /* COURSE LIST */
+
+        .course-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .course-card {
+            background: white;
+            padding: 23px;
+            border-left: 5px solid #00897b;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .course-card h2 {
+            color: #00796b;
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .course-card p {
+            line-height: 1.7;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .course-card ul {
+            margin-left: 22px;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        /* BUTTON */
+
+        .btn {
+            display: inline-block;
+            background: #00897b;
+            color: white;
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 7px;
+            margin: 8px 6px 0 0;
+        }
+
+        .btn:hover {
+            background: #00695c;
+        }
+
+        /* NOTE */
+
+        .note {
+            background: #e0f2f1;
+            padding: 18px;
+            border-radius: 10px;
+            margin-top: 25px;
+            line-height: 1.7;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #00695c;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 40px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 26px;
+            }
+
+            .container,
+            .top-bar {
+                width: 94%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <h1>🎓 Courses & Certifications</h1>
+
+    <p>
+        Learn New Skills • Earn Certificates • Build Your Career
+    </p>
+
+</header>
+
+
+<!-- BACK BUTTON -->
+
+<div class="top-bar">
+
+    <a href="student-corner.html" class="back-btn">
+        ← Back to Student Corner
+    </a>
+
+</div>
+
+
+<div class="container">
+
+
+    <!-- INTRODUCTION -->
+
+    <div class="intro">
+
+        <h2>📚 Courses & Certification Guide</h2>
+
+        <p>
+            Explore important online courses and certification
+            platforms that can help students improve their
+            technical, professional and career-related skills.
+            Always check the official platform for current course
+            availability, fees and certificate conditions.
+        </p>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+        <h2>🔍 Search Courses</h2>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search Python, AI, Web Development, Data Science..."
+            onkeyup="searchCourses()">
+
+    </div>
+
+
+    <!-- COURSE LIST -->
+
+    <div class="course-list">
+
+
+        <!-- 1 -->
+
+        <div class="course-card"
+             data-search="python programming coding beginner software development">
+
+            <h2>🐍 Python Programming</h2>
+
+            <p>
+                Learn Python programming from basic concepts to
+                advanced programming and practical applications.
+            </p>
+
+            <ul>
+                <li>Useful for beginners and engineering students.</li>
+                <li>Helpful for software development, data and AI.</li>
+                <li>Practice programming through projects.</li>
+            </ul>
+
+            <a href="https://www.coursera.org/"
+               target="_blank"
+               class="btn">
+                Coursera
+            </a>
+
+            <a href="https://www.python.org/"
+               target="_blank"
+               class="btn">
+                Python Official
+            </a>
+
+        </div>
+
+
+        <!-- 2 -->
+
+        <div class="course-card"
+             data-search="web development html css javascript website frontend backend">
+
+            <h2>🌐 Web Development</h2>
+
+            <p>
+                Learn how websites are created using HTML, CSS,
+                JavaScript and other web technologies.
+            </p>
+
+            <ul>
+                <li>HTML for webpage structure.</li>
+                <li>CSS for design and layout.</li>
+                <li>JavaScript for interactive websites.</li>
+            </ul>
+
+            <a href="https://developer.mozilla.org/"
+               target="_blank"
+               class="btn">
+                MDN Web Docs
+            </a>
+
+            <a href="https://www.w3schools.com/"
+               target="_blank"
+               class="btn">
+                W3Schools
+            </a>
+
+        </div>
+
+
+        <!-- 3 -->
+
+        <div class="course-card"
+             data-search="data science data analytics statistics python machine learning">
+
+            <h2>📊 Data Science & Data Analytics</h2>
+
+            <p>
+                Learn how data is collected, processed, analysed
+                and used to support decision-making.
+            </p>
+
+            <ul>
+                <li>Python and data analysis.</li>
+                <li>Statistics and visualization.</li>
+                <li>Introduction to machine learning.</li>
+            </ul>
+
+            <a href="https://www.coursera.org/"
+               target="_blank"
+               class="btn">
+                Coursera
+            </a>
+
+        </div>
+
+
+        <!-- 4 -->
+
+        <div class="course-card"
+             data-search="artificial intelligence ai machine learning ml deep learning">
+
+            <h2>🤖 Artificial Intelligence & Machine Learning</h2>
+
+            <p>
+                Learn the basic concepts of artificial intelligence,
+                machine learning and intelligent applications.
+            </p>
+
+            <ul>
+                <li>Machine learning concepts.</li>
+                <li>Data preparation.</li>
+                <li>AI applications.</li>
+            </ul>
+
+            <a href="https://www.nptel.ac.in/"
+               target="_blank"
+               class="btn">
+                NPTEL
+            </a>
+
+            <a href="https://www.coursera.org/"
+               target="_blank"
+               class="btn">
+                Coursera
+            </a>
+
+        </div>
+
+
+        <!-- 5 -->
+
+        <div class="course-card"
+             data-search="cyber security cybersecurity ethical hacking network security">
+
+            <h2>🔐 Cybersecurity</h2>
+
+            <p>
+                Learn the fundamentals of cybersecurity, networks,
+                information security and safe computing practices.
+            </p>
+
+            <ul>
+                <li>Cybersecurity fundamentals.</li>
+                <li>Network and information security.</li>
+                <li>Security awareness.</li>
+            </ul>
+
+            <a href="https://www.nptel.ac.in/"
+               target="_blank"
+               class="btn">
+                NPTEL
+            </a>
+
+        </div>
+
+
+        <!-- 6 -->
+
+        <div class="course-card"
+             data-search="cloud computing aws azure google cloud">
+
+            <h2>☁️ Cloud Computing</h2>
+
+            <p>
+                Learn how computing resources, applications and
+                services are delivered through cloud platforms.
+            </p>
+
+            <ul>
+                <li>Cloud fundamentals.</li>
+                <li>Cloud storage and computing.</li>
+                <li>Introduction to cloud platforms.</li>
+            </ul>
+
+            <a href="https://aws.amazon.com/training/"
+               target="_blank"
+               class="btn">
+                AWS Training
+            </a>
+
+            <a href="https://learn.microsoft.com/training/"
+               target="_blank"
+               class="btn">
+                Microsoft Learn
+            </a>
+
+        </div>
+
+
+        <!-- 7 -->
+
+        <div class="course-card"
+             data-search="digital marketing seo social media marketing">
+
+            <h2>📱 Digital Marketing</h2>
+
+            <p>
+                Learn how businesses use digital platforms to
+                reach customers and promote products or services.
+            </p>
+
+            <ul>
+                <li>Search engine optimization.</li>
+                <li>Social media marketing.</li>
+                <li>Content and digital advertising basics.</li>
+            </ul>
+
+            <a href="https://skillshop.withgoogle.com/"
+               target="_blank"
+               class="btn">
+                Google Skillshop
+            </a>
+
+        </div>
+
+
+        <!-- 8 -->
+
+        <div class="course-card"
+             data-search="communication soft skills english speaking personality development">
+
+            <h2>🗣️ Communication & Soft Skills</h2>
+
+            <p>
+                Improve communication, teamwork, presentation,
+                problem-solving and professional skills.
+            </p>
+
+            <ul>
+                <li>Communication skills.</li>
+                <li>Presentation skills.</li>
+                <li>Teamwork and leadership.</li>
+                <li>Interview preparation.</li>
+            </ul>
+
+            <a href="https://swayam.gov.in/"
+               target="_blank"
+               class="btn">
+                SWAYAM
+            </a>
+
+        </div>
+
+
+        <!-- 9 -->
+
+        <div class="course-card"
+             data-search="entrepreneurship startup business innovation">
+
+            <h2>🚀 Entrepreneurship</h2>
+
+            <p>
+                Learn how business ideas are developed, tested
+                and converted into sustainable ventures.
+            </p>
+
+            <ul>
+                <li>Business idea development.</li>
+                <li>Business model basics.</li>
+                <li>Marketing and finance fundamentals.</li>
+            </ul>
+
+            <a href="https://www.startupindia.gov.in/"
+               target="_blank"
+               class="btn">
+                Startup India
+            </a>
+
+            <a href="https://swayam.gov.in/"
+               target="_blank"
+               class="btn">
+                SWAYAM
+            </a>
+
+        </div>
+
+
+        <!-- 10 -->
+
+        <div class="course-card"
+             data-search="java programming object oriented software development">
+
+            <h2>☕ Java Programming</h2>
+
+            <p>
+                Learn Java programming and object-oriented
+                programming concepts used in software development.
+            </p>
+
+            <ul>
+                <li>Java fundamentals.</li>
+                <li>Object-oriented programming.</li>
+                <li>Applications and development basics.</li>
+            </ul>
+
+            <a href="https://dev.java/"
+               target="_blank"
+               class="btn">
+                Java Official
+            </a>
+
+        </div>
+
+
+        <!-- 11 -->
+
+        <div class="course-card"
+             data-search="c cpp c++ programming data structures algorithms">
+
+            <h2>💻 C / C++ Programming</h2>
+
+            <p>
+                Learn programming fundamentals, problem solving,
+                data structures and algorithms.
+            </p>
+
+            <ul>
+                <li>Programming fundamentals.</li>
+                <li>Object-oriented programming with C++.</li>
+                <li>Data structures and algorithms.</li>
+            </ul>
+
+            <a href="https://www.nptel.ac.in/"
+               target="_blank"
+               class="btn">
+                NPTEL
+            </a>
+
+        </div>
+
+
+        <!-- 12 -->
+
+        <div class="course-card"
+             data-search="english language spoken english grammar communication">
+
+            <h2>🇬🇧 English Language Skills</h2>
+
+            <p>
+                Improve English vocabulary, grammar, reading,
+                writing and communication skills.
+            </p>
+
+            <ul>
+                <li>English communication.</li>
+                <li>Grammar and vocabulary.</li>
+                <li>Professional communication.</li>
+            </ul>
+
+            <a href="https://swayam.gov.in/"
+               target="_blank"
+               class="btn">
+                SWAYAM
+            </a>
+
+        </div>
+
+
+        <!-- 13 -->
+
+        <div class="course-card"
+             data-search="project management management leadership agile">
+
+            <h2>📋 Project Management</h2>
+
+            <p>
+                Learn how projects are planned, organised,
+                monitored and completed effectively.
+            </p>
+
+            <ul>
+                <li>Project planning.</li>
+                <li>Team management.</li>
+                <li>Time and resource management.</li>
+            </ul>
+
+            <a href="https://www.coursera.org/"
+               target="_blank"
+               class="btn">
+                Coursera
+            </a>
+
+        </div>
+
+
+        <!-- 14 -->
+
+        <div class="course-card"
+             data-search="nptel certification engineering technical courses">
+
+            <h2>🎓 NPTEL Certification Courses</h2>
+
+            <p>
+                NPTEL provides online courses in engineering,
+                science, technology, management and other areas.
+                Some courses offer certification examinations.
+            </p>
+
+            <a href="https://nptel.ac.in/"
+               target="_blank"
+               class="btn">
+                NPTEL Official
+            </a>
+
+        </div>
+
+
+        <!-- 15 -->
+
+        <div class="course-card"
+             data-search="swayam online courses certificate government india">
+
+            <h2>🇮🇳 SWAYAM Online Courses</h2>
+
+            <p>
+                SWAYAM is an Indian government-supported platform
+                offering online courses across different subjects.
+            </p>
+
+            <ul>
+                <li>Courses from different academic areas.</li>
+                <li>Learning from recognised institutions.</li>
+                <li>Some courses provide certification options.</li>
+            </ul>
+
+            <a href="https://swayam.gov.in/"
+               target="_blank"
+               class="btn">
+                SWAYAM Official
+            </a>
+
+        </div>
+
+
+        <!-- 16 -->
+
+        <div class="course-card"
+             data-search="government skill development courses pmkvy skill india">
+
+            <h2>🛠️ Skill Development Courses</h2>
+
+            <p>
+                Explore skill-development opportunities in
+                different sectors through government-supported
+                programmes and platforms.
+            </p>
+
+            <a href="https://www.skillindiadigital.gov.in/"
+               target="_blank"
+               class="btn">
+                Skill India Digital
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- NOTE -->
+
+    <div class="note">
+
+        💡 <b>Important:</b>
+        Course availability, fees, eligibility and certification
+        requirements may change. Always check the official
+        website before enrolling or paying any course fee.
+
+    </div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 GramSakhi | Student Corner
+    </p>
+
+</footer>
+
+
+<script>
+
+    function searchCourses() {
+
+        let searchText =
+            document.getElementById("searchInput")
+            .value
+            .toLowerCase()
+            .trim();
+
+        let cards =
+            document.querySelectorAll(".course-card");
+
+
+        cards.forEach(function(card) {
+
+            let text =
+                card.innerText.toLowerCase();
+
+            let keywords =
+                card.getAttribute("data-search")
+                .toLowerCase();
+
+
+            if (
+                text.includes(searchText) ||
+                keywords.includes(searchText)
+            ) {
+
+                card.style.display = "block";
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+    }
+
+</script>
+
+
+</body>
+
+</html>

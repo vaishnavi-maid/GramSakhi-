@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GramSakhi - Internships</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4faf8;
+            color: #333;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #00897b;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        /* BACK */
+
+        .top-bar {
+            width: 92%;
+            max-width: 1100px;
+            margin: 20px auto;
+        }
+
+        .back-btn {
+            color: #00897b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* MAIN */
+
+        .container {
+            width: 92%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section {
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            border-left: 5px solid #00897b;
+        }
+
+        .section h2 {
+            color: #00796b;
+            margin-bottom: 12px;
+        }
+
+        .section p {
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .section ul {
+            margin-left: 22px;
+            line-height: 1.8;
+        }
+
+        /* SEARCH */
+
+        .search-box {
+            background: white;
+            padding: 20px;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .search-box h2 {
+            color: #00897b;
+            margin-bottom: 12px;
+        }
+
+        #searchInput {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        #searchInput:focus {
+            border-color: #00897b;
+        }
+
+        /* BUTTONS */
+
+        .btn {
+            display: inline-block;
+            background: #00897b;
+            color: white;
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 7px;
+            margin: 8px 6px 0 0;
+        }
+
+        .btn:hover {
+            background: #00695c;
+        }
+
+        /* CARDS */
+
+        .info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .info-card {
+            background: white;
+            padding: 22px;
+            border-radius: 12px;
+            border-left: 5px solid #00897b;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .info-card h3 {
+            color: #00796b;
+            margin-bottom: 10px;
+        }
+
+        .info-card p {
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        /* NOTE */
+
+        .note {
+            background: #e0f2f1;
+            padding: 18px;
+            border-radius: 10px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #00695c;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 40px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 26px;
+            }
+
+            .container,
+            .top-bar {
+                width: 94%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <h1>💼 Internships</h1>
+
+    <p>
+        Learn • Gain Experience • Build Your Career
+    </p>
+
+</header>
+
+
+<!-- BACK BUTTON -->
+
+<div class="top-bar">
+
+    <a href="student-corner.html" class="back-btn">
+        ← Back to Student Corner
+    </a>
+
+</div>
+
+
+<div class="container">
+
+
+    <!-- INTRODUCTION -->
+
+    <div class="section">
+
+        <h2>🚀 What is an Internship?</h2>
+
+        <p>
+            An internship is a short-term work or learning
+            experience where students get practical exposure
+            to a company, organisation or professional field.
+        </p>
+
+        <p>
+            Internships help students apply their academic
+            knowledge, develop skills and understand the
+            professional work environment.
+        </p>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+        <h2>🔍 Search Internship Information</h2>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search eligibility, resume, certificate, internship..."
+            onkeyup="searchInternship()">
+
+    </div>
+
+
+    <!-- INFORMATION -->
+
+    <div class="info-list">
+
+
+        <!-- 1 -->
+
+        <div class="info-card"
+             data-search="benefits internship advantages experience skills resume career">
+
+            <h3>⭐ Benefits of an Internship</h3>
+
+            <ul>
+
+                <li>Gain practical work experience.</li>
+
+                <li>Improve technical and soft skills.</li>
+
+                <li>Understand the professional environment.</li>
+
+                <li>Build your resume and portfolio.</li>
+
+                <li>Develop communication and teamwork skills.</li>
+
+                <li>Explore your career interests.</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 2 -->
+
+        <div class="info-card"
+             data-search="types internship online offline paid unpaid government private remote">
+
+            <h3>📌 Types of Internships</h3>
+
+            <ul>
+
+                <li>Online / Remote Internship</li>
+
+                <li>Offline / On-site Internship</li>
+
+                <li>Paid Internship</li>
+
+                <li>Unpaid Internship</li>
+
+                <li>Government Internship</li>
+
+                <li>Private Company Internship</li>
+
+                <li>Research Internship</li>
+
+                <li>Summer Internship</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 3 -->
+
+        <div class="info-card"
+             data-search="eligibility internship students engineering qualification">
+
+            <h3>🎓 Internship Eligibility</h3>
+
+            <p>
+                Eligibility depends on the organisation and
+                internship role. Students may be selected based
+                on their educational background, skills, academic
+                year and other requirements.
+            </p>
+
+            <p>
+                Always check the eligibility criteria mentioned
+                in the official internship advertisement.
+            </p>
+
+        </div>
+
+
+        <!-- 4 -->
+
+        <div class="info-card"
+             data-search="documents internship resume cv id college certificate">
+
+            <h3>📄 Documents Usually Required</h3>
+
+            <ul>
+
+                <li>Updated Resume / CV</li>
+
+                <li>College ID or student information</li>
+
+                <li>Academic details</li>
+
+                <li>Skills or project details</li>
+
+                <li>Portfolio or GitHub profile, if applicable</li>
+
+                <li>Cover letter, if required</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 5 -->
+
+        <div class="info-card"
+             data-search="resume cv internship preparation">
+
+            <h3>📝 Prepare Your Resume</h3>
+
+            <p>
+                Keep your resume clear, short and relevant to
+                the internship. Mention your education, technical
+                skills, projects, achievements and relevant
+                extracurricular activities.
+            </p>
+
+        </div>
+
+
+        <!-- 6 -->
+
+        <div class="info-card"
+             data-search="skills internship technical communication teamwork">
+
+            <h3>💡 Skills That Help</h3>
+
+            <ul>
+
+                <li>Communication skills</li>
+
+                <li>Problem-solving</li>
+
+                <li>Teamwork</li>
+
+                <li>Time management</li>
+
+                <li>Technical skills related to the role</li>
+
+                <li>Basic interview skills</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 7 -->
+
+        <div class="info-card"
+             data-search="find internship websites platforms search internship">
+
+            <h3>🔎 Where to Find Internships</h3>
+
+            <p>
+                Students can search for internships through
+                trusted internship platforms, company career
+                pages and official government portals.
+            </p>
+
+            <a href="https://internshala.com/"
+               target="_blank"
+               class="btn">
+                Internshala
+            </a>
+
+            <a href="https://internship.aicte-india.org/"
+               target="_blank"
+               class="btn">
+                AICTE Internship Portal
+            </a>
+
+            <a href="https://www.linkedin.com/jobs/"
+               target="_blank"
+               class="btn">
+                LinkedIn Jobs
+            </a>
+
+            <a href="https://www.ncs.gov.in/"
+               target="_blank"
+               class="btn">
+                National Career Service
+            </a>
+
+        </div>
+
+
+        <!-- 8 -->
+
+        <div class="info-card"
+             data-search="government internship india students">
+
+            <h3>🏛️ Government Internship Opportunities</h3>
+
+            <p>
+                Government departments and public organisations
+                may offer internship opportunities for eligible
+                students. Check official portals for current
+                openings and eligibility requirements.
+            </p>
+
+            <a href="https://internship.aicte-india.org/"
+               target="_blank"
+               class="btn">
+                AICTE Internship Portal
+            </a>
+
+        </div>
+
+
+        <!-- 9 -->
+
+        <div class="info-card"
+             data-search="application process apply internship steps">
+
+            <h3>📋 How to Apply for an Internship</h3>
+
+            <ul>
+
+                <li>Find a suitable internship.</li>
+
+                <li>Read eligibility and requirements carefully.</li>
+
+                <li>Prepare your resume.</li>
+
+                <li>Complete the application form.</li>
+
+                <li>Submit required documents.</li>
+
+                <li>Attend an interview or test if required.</li>
+
+                <li>Wait for the selection result.</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 10 -->
+
+        <div class="info-card"
+             data-search="interview internship questions preparation">
+
+            <h3>🎤 Internship Interview Preparation</h3>
+
+            <p>
+                Be prepared to explain your education, projects,
+                skills, interests and why you want the internship.
+                Practice basic technical and communication questions.
+            </p>
+
+        </div>
+
+
+        <!-- 11 -->
+
+        <div class="info-card"
+             data-search="internship certificate completion certificate experience">
+
+            <h3>🏆 Internship Certificate</h3>
+
+            <p>
+                After successfully completing an internship,
+                the organisation may provide an internship or
+                completion certificate according to its policy.
+            </p>
+
+            <p>
+                Keep the certificate safely because it may be
+                useful for your resume, portfolio or future
+                applications.
+            </p>
+
+        </div>
+
+
+        <!-- 12 -->
+
+        <div class="info-card"
+             data-search="safety scam fraud internship money registration fee">
+
+            <h3>⚠️ Internship Safety Tips</h3>
+
+            <ul>
+
+                <li>Verify the organisation before applying.</li>
+
+                <li>Use trusted internship platforms.</li>
+
+                <li>Check the official company website.</li>
+
+                <li>Be careful with suspicious offers.</li>
+
+                <li>Do not share sensitive personal information unnecessarily.</li>
+
+                <li>Be cautious if someone demands money for a promised internship.</li>
+
+            </ul>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- IMPORTANT NOTE -->
+
+    <div class="note">
+
+        💡 <b>Important:</b>
+        Internship availability, eligibility, deadlines and
+        selection procedures can change. Always verify the
+        latest information on the official organisation or
+        internship portal before applying.
+
+    </div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 GramSakhi | Student Corner
+    </p>
+
+</footer>
+
+
+<script>
+
+    function searchInternship() {
+
+        let searchText =
+            document.getElementById("searchInput")
+            .value
+            .toLowerCase()
+            .trim();
+
+        let cards =
+            document.querySelectorAll(".info-card");
+
+        let count = 0;
+
+
+        cards.forEach(function(card) {
+
+            let text =
+                card.innerText.toLowerCase();
+
+            let keywords =
+                card.getAttribute("data-search")
+                .toLowerCase();
+
+
+            if (
+                text.includes(searchText) ||
+                keywords.includes(searchText)
+            ) {
+
+                card.style.display = "block";
+
+                count++;
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+    }
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GramSakhi - RBSK</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4faf8;
+            color: #333;
+        }
+
+        /* HEADER */
+        header {
+            background: #00897b;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        /* CONTAINER */
+        .container {
+            width: 92%;
+            max-width: 1000px;
+            margin: 25px auto;
+        }
+
+        /* BACK BUTTON */
+        .back-btn {
+            display: inline-block;
+            color: #00897b;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .back-btn:hover {
+            color: #00695c;
+        }
+
+        /* CARD */
+        .card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 14px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .card h2 {
+            color: #00897b;
+            margin-bottom: 14px;
+        }
+
+        .card p {
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .card ul {
+            margin-left: 22px;
+            line-height: 1.8;
+        }
+
+        /* HIGHLIGHT */
+        .highlight {
+            background: #e0f2f1;
+            border-left: 5px solid #00897b;
+            padding: 18px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .highlight h3 {
+            color: #00695c;
+            margin-bottom: 8px;
+        }
+
+        /* 4 Ds */
+        .four-d-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .d-box {
+            background: #f4faf8;
+            padding: 18px;
+            border-radius: 10px;
+            border-top: 4px solid #00897b;
+        }
+
+        .d-box h3 {
+            color: #00796b;
+            margin-bottom: 8px;
+        }
+
+        .d-box p {
+            margin-bottom: 0;
+        }
+
+        /* INFO GRID */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .info-box {
+            background: #f4faf8;
+            padding: 18px;
+            border-radius: 10px;
+        }
+
+        .info-box h3 {
+            color: #00796b;
+            margin-bottom: 8px;
+        }
+
+        /* NOTE */
+        .note {
+            background: #fff8e1;
+            border-left: 5px solid #f9a825;
+            padding: 15px;
+            border-radius: 8px;
+            line-height: 1.6;
+        }
+
+        /* BUTTON */
+        .official-btn {
+            display: inline-block;
+            background: #00897b;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 7px;
+            margin-top: 12px;
+        }
+
+        .official-btn:hover {
+            background: #00695c;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #00695c;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 40px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 650px) {
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            .container {
+                width: 94%;
+            }
+
+            .four-d-grid,
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+    <h1>👶 Rashtriya Bal Swasthya Karyakram</h1>
+
+    <p>
+        GramSakhi - Child Health Screening Programme
+    </p>
+
+</header>
+
+
+<div class="container">
+
+    <!-- BACK -->
+    <a href="healthscheme.html" class="back-btn">
+        ← Back to Health Care Schemes
+    </a>
+
+
+    <!-- ABOUT -->
+    <div class="card">
+
+        <h2>📋 About RBSK</h2>
+
+        <p>
+            Rashtriya Bal Swasthya Karyakram (RBSK) is a child
+            health screening programme under the National Health
+            Mission. It focuses on early identification and
+            management of health conditions among children.
+        </p>
+
+        <div class="highlight">
+
+            <h3>🎯 Main Purpose</h3>
+
+            <p>
+                To detect health conditions early and provide
+                appropriate support, treatment or referral to
+                improve the health and development of children.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- OBJECTIVE -->
+    <div class="card">
+
+        <h2>🎯 Objectives</h2>
+
+        <ul>
+
+            <li>
+                Early identification of health conditions
+                among children.
+            </li>
+
+            <li>
+                Provide appropriate treatment and follow-up.
+            </li>
+
+            <li>
+                Refer children requiring specialised care.
+            </li>
+
+            <li>
+                Reduce the impact of health problems on
+                children's growth and development.
+            </li>
+
+            <li>
+                Improve access to child healthcare services.
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- 4 Ds -->
+    <div class="card">
+
+        <h2>🔎 The 4 Ds of RBSK</h2>
+
+        <div class="four-d-grid">
+
+            <div class="d-box">
+
+                <h3>1️⃣ Defects at Birth</h3>
+
+                <p>
+                    Identification of congenital conditions
+                    present from birth.
+                </p>
+
+            </div>
+
+
+            <div class="d-box">
+
+                <h3>2️⃣ Diseases</h3>
+
+                <p>
+                    Identification of selected childhood
+                    diseases and health conditions.
+                </p>
+
+            </div>
+
+
+            <div class="d-box">
+
+                <h3>3️⃣ Deficiencies</h3>
+
+                <p>
+                    Identification of nutritional and other
+                    health deficiencies.
+                </p>
+
+            </div>
+
+
+            <div class="d-box">
+
+                <h3>4️⃣ Developmental Delays</h3>
+
+                <p>
+                    Identification of developmental delays
+                    and disabilities requiring support.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SCREENING -->
+    <div class="card">
+
+        <h2>🩺 Health Screening</h2>
+
+        <p>
+            Children are screened for specified health
+            conditions through designated public health
+            mechanisms.
+        </p>
+
+        <ul>
+
+            <li>
+                Physical health screening
+            </li>
+
+            <li>
+                Growth and development assessment
+            </li>
+
+            <li>
+                Screening for selected diseases
+            </li>
+
+            <li>
+                Identification of nutritional deficiencies
+            </li>
+
+            <li>
+                Developmental and disability screening
+            </li>
+
+            <li>
+                Referral for further examination when required
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- BENEFICIARIES -->
+    <div class="card">
+
+        <h2>👶 Who Can Benefit?</h2>
+
+        <div class="info-grid">
+
+            <div class="info-box">
+
+                <h3>🏫 School Children</h3>
+
+                <p>
+                    Children in the programme's designated
+                    school-age groups may receive screening
+                    through public health mechanisms.
+                </p>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <h3>🏠 Children in the Community</h3>
+
+                <p>
+                    Young children may be screened through
+                    community and early childhood care
+                    settings covered by the programme.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- REFERRAL -->
+    <div class="card">
+
+        <h2>🏥 Referral & Treatment</h2>
+
+        <ul>
+
+            <li>
+                Children identified with health conditions
+                may be referred for further evaluation.
+            </li>
+
+            <li>
+                Appropriate treatment may be provided through
+                designated government health facilities.
+            </li>
+
+            <li>
+                Children requiring specialist care may be
+                referred to higher-level facilities.
+            </li>
+
+            <li>
+                Follow-up may be provided according to the
+                identified health condition.
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- HOW TO ACCESS -->
+    <div class="card">
+
+        <h2>📝 How to Access RBSK Services</h2>
+
+        <ul>
+
+            <li>
+                Contact your nearest government health
+                facility.
+            </li>
+
+            <li>
+                Ask the local ASHA/health worker about
+                child screening services.
+            </li>
+
+            <li>
+                Contact the child's school or Anganwadi
+                centre where applicable.
+            </li>
+
+            <li>
+                Follow the referral instructions given by
+                the healthcare team.
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- IMPORTANT -->
+    <div class="card">
+
+        <h2>⚠️ Important Information</h2>
+
+        <div class="note">
+
+            RBSK is a public health screening programme.
+            Screening does not necessarily mean that a child
+            has a particular disease or condition.
+
+            <br><br>
+
+            Availability of specific services and referral
+            facilities may vary by location.
+
+            <br><br>
+
+            For current information, contact the nearest
+            government health facility.
+
+        </div>
+
+    </div>
+
+
+    <!-- OFFICIAL -->
+    <div class="card">
+
+        <h2>🌐 Official Information</h2>
+
+        <p>
+            For official information about RBSK and child
+            health programmes, visit the National Health
+            Mission website.
+        </p>
+
+        <a
+            href="https://nhm.gov.in/"
+            target="_blank"
+            class="official-btn">
+
+            Visit Official NHM Website
+
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <p>
+        © 2026 GramSakhi | Government Schemes & Health Care
+    </p>
+
+</footer>
+
+</body>
+</html>

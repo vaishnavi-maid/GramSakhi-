@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GramSakhi - Agriculture Helpline</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f8f1;
+    color:#333;
+    line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+    background:#2e7d32;
+    color:white;
+    text-align:center;
+    padding:30px 15px;
+}
+
+header h1{
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+header p{
+    font-size:16px;
+}
+
+/* BACK BUTTON */
+
+.back{
+    width:94%;
+    max-width:1100px;
+    margin:18px auto;
+}
+
+.back a{
+    text-decoration:none;
+    color:#2e7d32;
+    font-weight:bold;
+}
+
+/* MAIN */
+
+.container{
+    width:94%;
+    max-width:1100px;
+    margin:auto;
+}
+
+/* INTRO */
+
+.intro{
+    background:white;
+    padding:23px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+.intro h2{
+    color:#2e7d32;
+    margin-bottom:8px;
+}
+
+/* HELPLINE GRID */
+
+.helpline-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+/* CARD */
+
+.card{
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+.card h2{
+    color:#2e7d32;
+    margin-bottom:10px;
+}
+
+.card h3{
+    color:#33691e;
+    margin-bottom:7px;
+}
+
+.card p{
+    margin-bottom:10px;
+}
+
+/* CALL BUTTON */
+
+.call-btn{
+    display:inline-block;
+    background:#2e7d32;
+    color:white;
+    text-decoration:none;
+    padding:11px 18px;
+    border-radius:8px;
+    font-weight:bold;
+    margin-top:8px;
+}
+
+.call-btn:hover{
+    background:#1b5e20;
+}
+
+/* WEBSITE BUTTON */
+
+.web-btn{
+    display:inline-block;
+    background:#558b2f;
+    color:white;
+    text-decoration:none;
+    padding:11px 18px;
+    border-radius:8px;
+    font-weight:bold;
+    margin-top:8px;
+}
+
+/* SECTION */
+
+.section{
+    background:white;
+    padding:23px;
+    border-radius:15px;
+    margin-top:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+.section h2{
+    color:#2e7d32;
+    margin-bottom:15px;
+}
+
+/* TOPIC GRID */
+
+.topic-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.topic{
+    background:#f1f8e9;
+    padding:18px;
+    border-radius:10px;
+    border-left:5px solid #66bb6a;
+}
+
+.topic h3{
+    color:#33691e;
+    margin-bottom:6px;
+}
+
+/* STEPS */
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.step{
+    background:#f9fbe7;
+    padding:18px;
+    border-radius:10px;
+}
+
+.number{
+    display:inline-block;
+    width:32px;
+    height:32px;
+    line-height:32px;
+    text-align:center;
+    border-radius:50%;
+    background:#2e7d32;
+    color:white;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+/* WARNING */
+
+.warning{
+    background:#fff8e1;
+    border-left:5px solid #f9a825;
+    padding:20px;
+    border-radius:8px;
+    margin-top:20px;
+}
+
+/* EMERGENCY */
+
+.emergency{
+    background:#ffebee;
+    border-left:5px solid #c62828;
+    padding:20px;
+    border-radius:8px;
+    margin-top:20px;
+}
+
+.emergency h2{
+    color:#c62828;
+    margin-bottom:8px;
+}
+
+/* OFFICIAL */
+
+.official{
+    background:#e8f5e9;
+    padding:23px;
+    border-radius:15px;
+    margin-top:20px;
+}
+
+.official h2{
+    color:#2e7d32;
+    margin-bottom:10px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#1b5e20;
+    color:white;
+    text-align:center;
+    padding:18px;
+    margin-top:30px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .helpline-grid,
+    .topic-grid,
+    .steps{
+        grid-template-columns:1fr;
+    }
+
+    header h1{
+        font-size:26px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<h1>📞 Agriculture Helpline</h1>
+
+<p>
+Important Agricultural Support & Official Contacts
+</p>
+
+</header>
+
+
+<!-- BACK -->
+
+<div class="back">
+
+<a href="farmer-corner.html">
+← Back to Farmer Corner
+</a>
+
+</div>
+
+
+<div class="container">
+
+
+<!-- INTRO -->
+
+<div class="intro">
+
+<h2>🌾 Need Help With Farming?</h2>
+
+<p>
+Farmers may need assistance with crop problems,
+government schemes, machinery, soil, weather,
+markets and other agricultural services.
+</p>
+
+<br>
+
+<p>
+Use the official contact details and websites
+below for reliable information and support.
+</p>
+
+</div>
+
+
+<!-- MAIN HELPLINES -->
+
+<div class="helpline-grid">
+
+
+<!-- MAHARASHTRA AGRICULTURE -->
+
+<div class="card">
+
+<h2>🌾 Maharashtra Agriculture Department</h2>
+
+<h3>📞 Agriculture Department Contact</h3>
+
+<p>
+For agriculture-related departmental information
+and assistance in Maharashtra.
+</p>
+
+<p>
+<strong>Phone:</strong> 020-26123648
+</p>
+
+<a
+href="tel:02026123648"
+class="call-btn">
+
+📞 Call Agriculture Department
+
+</a>
+
+<br>
+
+<a
+href="https://krishi.maharashtra.gov.in/"
+target="_blank"
+class="web-btn">
+
+🌐 Official Website
+
+</a>
+
+</div>
+
+
+<!-- MAHADBT -->
+
+<div class="card">
+
+<h2>💰 MahaDBT Farmer Portal</h2>
+
+<h3>📞 Farmer Portal Helpline</h3>
+
+<p>
+For farmer portal login, application,
+profile and scheme-related portal support.
+</p>
+
+<p>
+<strong>Helpline:</strong> 022-61316429
+</p>
+
+<p>
+<strong>Working Hours:</strong>
+9:00 AM – 7:00 PM, Monday to Friday
+</p>
+
+<a
+href="tel:02261316429"
+class="call-btn">
+
+📞 Call MahaDBT Helpline
+
+</a>
+
+<br>
+
+<a
+href="https://mahadbt.maharashtra.gov.in/Farmer/RegistrationLogin/RegistrationLogin"
+target="_blank"
+class="web-btn">
+
+💻 Open MahaDBT Farmer Portal
+
+</a>
+
+</div>
+
+
+<!-- AGRICULTURE WEBSITE -->
+
+<div class="card">
+
+<h2>🌱 Agriculture Information</h2>
+
+<h3>📚 Official Information</h3>
+
+<p>
+Farmers can find agriculture schemes, farmer
+services, departmental information and
+agriculture-related updates.
+</p>
+
+<a
+href="https://krishi.maharashtra.gov.in/"
+target="_blank"
+class="web-btn">
+
+🌐 Maharashtra Agriculture Website
+
+</a>
+
+</div>
+
+
+<!-- FARMER CORNER -->
+
+<div class="card">
+
+<h2>👨‍🌾 Farmer Information</h2>
+
+<h3>🌾 Farmer Corner</h3>
+
+<p>
+The Maharashtra Agriculture Department provides
+farmer-oriented information and useful agricultural
+resources.
+</p>
+
+<a
+href="https://krishi.maharashtra.gov.in/1008/%E0%A4%B6%E0%A5%87%E0%A4%A4%E0%A4%95%E0%A4%B0%E0%A5%80-%E0%A4%95%E0%A5%89%E0%A4%B0%E0%A5%8D%E0%A4%A8%E0%A4%B0-%28%E0%A4%95%E0%A4%9F%E0%A5%8D%E0%A4%9F%E0%A4%BE%29"
+target="_blank"
+class="web-btn">
+
+🌾 Open Farmer Corner
+
+</a>
+
+</div>
+
+
+</div>
+
+
+<!-- HELP TOPICS -->
+
+<div class="section">
+
+<h2>🔎 What Kind of Help Do You Need?</h2>
+
+<div class="topic-grid">
+
+
+<div class="topic">
+
+<h3>🌱 Crop Problem</h3>
+
+<p>
+For pest, disease, crop growth or other
+crop-related problems, contact the Agriculture
+Department or a qualified agricultural expert.
+</p>
+
+</div>
+
+
+<div class="topic">
+
+<h3>🧪 Soil Testing</h3>
+
+<p>
+For soil testing and soil health information,
+contact the appropriate local agriculture or
+soil testing service.
+</p>
+
+</div>
+
+
+<div class="topic">
+
+<h3>💧 Irrigation</h3>
+
+<p>
+For irrigation-related guidance, consult the
+Agriculture Department or relevant irrigation
+service.
+</p>
+
+</div>
+
+
+<div class="topic">
+
+<h3>🚜 Farm Machinery</h3>
+
+<p>
+For machinery assistance and current subsidy
+information, check the MahaDBT Farmer Portal
+and Agriculture Department.
+</p>
+
+</div>
+
+
+<div class="topic">
+
+<h3>💰 Government Schemes</h3>
+
+<p>
+Check the official MahaDBT Farmer Portal for
+eligible schemes, applications and status.
+</p>
+
+</div>
+
+
+<div class="topic">
+
+<h3>🌾 Agriculture Information</h3>
+
+<p>
+For official agricultural information, visit
+the Maharashtra Agriculture Department website.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- HOW TO CONTACT -->
+
+<div class="section">
+
+<h2>📞 How to Get Proper Help</h2>
+
+<div class="steps">
+
+
+<div class="step">
+
+<span class="number">1</span>
+
+<h3>📝 Identify Your Problem</h3>
+
+<p>
+Clearly identify whether your issue is related
+to crop, scheme, machinery, soil, irrigation
+or another agricultural service.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<span class="number">2</span>
+
+<h3>📷 Keep Information Ready</h3>
+
+<p>
+For crop problems, keep details such as crop
+name, variety, symptoms and photographs if
+available.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<span class="number">3</span>
+
+<h3>📞 Contact Official Support</h3>
+
+<p>
+Use the official contact number or website
+provided on this page.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<span class="number">4</span>
+
+<h3>📄 Keep Documents Ready</h3>
+
+<p>
+For scheme-related questions, keep your
+application details and relevant documents
+available.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- MAHADBT HELP -->
+
+<div class="section">
+
+<h2>💰 MahaDBT Farmer Portal Help</h2>
+
+<p>
+The current MahaDBT Farmer Portal provides support
+for issues related to login, application submission,
+profile updates and other farmer-portal queries.
+</p>
+
+<br>
+
+<p>
+<strong>Helpline:</strong> 022-61316429
+</p>
+
+<p>
+<strong>Working Hours:</strong>
+9:00 AM to 7:00 PM, Monday to Friday
+</p>
+
+<br>
+
+<a
+href="tel:02261316429"
+class="call-btn">
+
+📞 Call Now
+
+</a>
+
+</div>
+
+
+<!-- DOCUMENTS -->
+
+<div class="section">
+
+<h2>📄 Before Calling About a Scheme</h2>
+
+<ul style="padding-left:22px;">
+
+<li>
+Keep your Farmer ID available if you have one.
+</li>
+
+<li>
+Keep your application number available.
+</li>
+
+<li>
+Keep your registered mobile number available.
+</li>
+
+<li>
+Keep relevant land or scheme documents available
+when required.
+</li>
+
+<li>
+Take a screenshot of any portal error message.
+</li>
+
+<li>
+Never share your OTP or password with anyone.
+</li>
+
+</ul>
+
+</div>
+
+
+<!-- EMERGENCY -->
+
+<div class="emergency">
+
+<h2>🚨 Important Safety Information</h2>
+
+<p>
+Agriculture helplines are for agricultural
+information and support. For immediate threats
+to life, fire, serious accidents or other
+emergencies, use the appropriate emergency
+service rather than waiting for an agriculture
+department response.
+</p>
+
+</div>
+
+
+<!-- FRAUD WARNING -->
+
+<div class="warning">
+
+<h3>⚠️ Beware of Fraud</h3>
+
+<br>
+
+<ul style="padding-left:22px;">
+
+<li>
+Do not share your OTP with anyone.
+</li>
+
+<li>
+Do not share your ATM PIN, UPI PIN or password.
+</li>
+
+<li>
+Do not pay money to unknown persons promising
+a government subsidy.
+</li>
+
+<li>
+Verify schemes and application information only
+through official government portals.
+</li>
+
+<li>
+Keep your application receipt and documents safe.
+</li>
+
+</ul>
+
+</div>
+
+
+<!-- OFFICIAL RESOURCES -->
+
+<div class="official">
+
+<h2>🏛️ Official Agricultural Resources</h2>
+
+<p>
+For the latest information, always prefer official
+government websites.
+</p>
+
+<br>
+
+<a
+href="https://krishi.maharashtra.gov.in/"
+target="_blank"
+class="web-btn">
+
+🌾 Maharashtra Agriculture Department
+
+</a>
+
+<br><br>
+
+<a
+href="https://mahadbt.maharashtra.gov.in/Farmer/RegistrationLogin/RegistrationLogin"
+target="_blank"
+class="web-btn">
+
+💻 MahaDBT Farmer Portal
+
+</a>
+
+</div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 GramSakhi | Farmer Corner
+
+</footer>
+
+
+</body>
+
+</html>

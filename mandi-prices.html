@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GramSakhi - Mandi Prices</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f8f1;
+    color: #333;
+}
+
+/* HEADER */
+
+header {
+    background: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 28px 15px;
+}
+
+header h1 {
+    font-size: 30px;
+    margin-bottom: 7px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+/* BACK */
+
+.back {
+    width: 94%;
+    max-width: 1000px;
+    margin: 18px auto;
+}
+
+.back a {
+    text-decoration: none;
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+/* MAIN */
+
+.container {
+    width: 94%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* INTRO */
+
+.intro {
+    background: white;
+    padding: 22px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.intro h2 {
+    color: #2e7d32;
+    margin-bottom: 8px;
+}
+
+/* SEARCH */
+
+.search-box {
+    background: white;
+    padding: 23px;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.search-box h2 {
+    color: #2e7d32;
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 14px;
+    margin-bottom: 6px;
+}
+
+select,
+input {
+    width: 100%;
+    padding: 13px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    background: white;
+}
+
+select:focus,
+input:focus {
+    outline: none;
+    border-color: #2e7d32;
+}
+
+/* SEARCH BUTTON */
+
+.search-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #2e7d32;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background: #1b5e20;
+}
+
+/* RESULT */
+
+.result {
+    background: white;
+    margin-top: 22px;
+    padding: 23px;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.result h2 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+.selected-info {
+    background: #e8f5e9;
+    padding: 15px;
+    border-radius: 10px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+/* PRICE CARDS */
+
+.price-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.price-card {
+    padding: 18px;
+    border-radius: 12px;
+    text-align: center;
+    background: #f1f8e9;
+}
+
+.price-card h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.price-card p {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+/* STATUS */
+
+#status {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* OFFICIAL */
+
+.official {
+    background: #e8f5e9;
+    padding: 22px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.official h2 {
+    color: #2e7d32;
+    margin-bottom: 8px;
+}
+
+.official-btn {
+    display: inline-block;
+    margin-top: 14px;
+    background: #2e7d32;
+    color: white;
+    text-decoration: none;
+    padding: 12px 17px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* NOTE */
+
+.note {
+    background: #fff8e1;
+    border-left: 5px solid #f9a825;
+    padding: 17px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 35px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px) {
+
+    .price-container {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <h1>🌾 Mandi Prices</h1>
+
+    <p>
+        Find Agricultural Market Prices Easily
+    </p>
+
+</header>
+
+
+<div class="back">
+
+    <a href="farmer-corner.html">
+        ← Back to Farmer Corner
+    </a>
+
+</div>
+
+
+<div class="container">
+
+
+<!-- INTRO -->
+
+<div class="intro">
+
+    <h2>💰 Check Mandi Price</h2>
+
+    <p>
+        Select your district, market and crop to check
+        the latest available agricultural market price.
+    </p>
+
+</div>
+
+
+<!-- SEARCH -->
+
+<div class="search-box">
+
+    <h2>🔎 Find Your Crop Price</h2>
+
+
+    <!-- DISTRICT -->
+
+    <label for="district">
+        📍 Select District
+    </label>
+
+    <select id="district"
+            onchange="loadMarkets()">
+
+        <option value="">
+            -- Select District --
+        </option>
+
+        <option value="ahilyanagar">
+            Ahilyanagar
+        </option>
+
+        <option value="pune">
+            Pune
+        </option>
+
+        <option value="nashik">
+            Nashik
+        </option>
+
+        <option value="sangli">
+            Sangli
+        </option>
+
+        <option value="satara">
+            Satara
+        </option>
+
+        <option value="solapur">
+            Solapur
+        </option>
+
+        <option value="kolhapur">
+            Kolhapur
+        </option>
+
+        <option value="jalgaon">
+            Jalgaon
+        </option>
+
+        <option value="dhule">
+            Dhule
+        </option>
+
+        <option value="nanded">
+            Nanded
+        </option>
+
+        <option value="nagpur">
+            Nagpur
+        </option>
+
+        <option value="beed">
+            Beed
+        </option>
+
+        <option value="latur">
+            Latur
+        </option>
+
+        <option value="dharashiv">
+            Dharashiv
+        </option>
+
+        <option value="parbhani">
+            Parbhani
+        </option>
+
+        <option value="chhatrapati-sambhajinagar">
+            Chhatrapati Sambhajinagar
+        </option>
+
+        <option value="nashik">
+            Nashik
+        </option>
+
+        <option value="raigad">
+            Raigad
+        </option>
+
+        <option value="thane">
+            Thane
+        </option>
+
+    </select>
+
+
+    <!-- MARKET -->
+
+    <label for="market">
+        🏪 Select Market / APMC
+    </label>
+
+    <select id="market">
+
+        <option value="">
+            -- First Select District --
+        </option>
+
+    </select>
+
+
+    <!-- CROP -->
+
+    <label for="crop">
+        🌾 Select Crop
+    </label>
+
+    <select id="crop">
+
+        <option value="">
+            -- Select Crop --
+        </option>
+
+        <option value="cabbage">
+            Cabbage
+        </option>
+
+        <option value="cauliflower">
+            Cauliflower
+        </option>
+
+        <option value="green-peas">
+            Green Peas
+        </option>
+
+        <option value="fenugreek">
+            Fenugreek (Methi)
+        </option>
+
+        <option value="spinach">
+            Spinach (Palak)
+        </option>
+
+        <option value="green-chilli">
+            Green Chilli
+        </option>
+
+        <option value="guava">
+            Guava
+        </option>
+
+        <option value="onion">
+            Onion
+        </option>
+
+        <option value="tomato">
+            Tomato
+        </option>
+
+        <option value="potato">
+            Potato
+        </option>
+
+        <option value="brinjal">
+            Brinjal
+        </option>
+
+        <option value="okra">
+            Okra (Bhendi)
+        </option>
+
+        <option value="carrot">
+            Carrot
+        </option>
+
+        <option value="radish">
+            Radish
+        </option>
+
+        <option value="coriander">
+            Coriander
+        </option>
+
+        <option value="grapes">
+            Grapes
+        </option>
+
+        <option value="pomegranate">
+            Pomegranate
+        </option>
+
+        <option value="banana">
+            Banana
+        </option>
+
+        <option value="mango">
+            Mango
+        </option>
+
+        <option value="wheat">
+            Wheat
+        </option>
+
+        <option value="maize">
+            Maize
+        </option>
+
+        <option value="jowar">
+            Jowar
+        </option>
+
+        <option value="bajra">
+            Bajra
+        </option>
+
+        <option value="gram">
+            Gram
+        </option>
+
+        <option value="tur">
+            Tur
+        </option>
+
+        <option value="moong">
+            Moong
+        </option>
+
+        <option value="urad">
+            Urad
+        </option>
+
+        <option value="soybean">
+            Soybean
+        </option>
+
+        <option value="groundnut">
+            Groundnut
+        </option>
+
+        <option value="cotton">
+            Cotton
+        </option>
+
+        <option value="sugarcane">
+            Sugarcane
+        </option>
+
+    </select>
+
+
+    <!-- DATE -->
+
+    <label for="date">
+        📅 Date
+    </label>
+
+    <input
+        type="date"
+        id="date">
+
+
+    <!-- SEARCH -->
+
+    <button
+        class="search-btn"
+        onclick="findPrice()">
+
+        🔍 Find Mandi Price
+
+    </button>
+
+
+    <div id="status"></div>
+
+</div>
+
+
+<!-- RESULT -->
+
+<div class="result">
+
+    <h2>📊 Mandi Price</h2>
+
+
+    <div
+        class="selected-info"
+        id="selectedInfo">
+
+        Select district, market and crop
+        to see the price.
+
+    </div>
+
+
+    <div class="price-container">
+
+
+        <div class="price-card">
+
+            <h3>Minimum Price</h3>
+
+            <p id="minPrice">
+                --
+            </p>
+
+        </div>
+
+
+        <div class="price-card">
+
+            <h3>Maximum Price</h3>
+
+            <p id="maxPrice">
+                --
+            </p>
+
+        </div>
+
+
+        <div class="price-card">
+
+            <h3>General / Modal Price</h3>
+
+            <p id="modalPrice">
+                --
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <p style="margin-top:15px;text-align:center;">
+
+        💰 Prices are displayed according to the
+        official market data unit.
+
+    </p>
+
+</div>
+
+
+<!-- OFFICIAL -->
+
+<div class="official">
+
+    <h2>🌐 Official Mandi Price</h2>
+
+    <p>
+        Verify the latest market price directly
+        from Maharashtra State Agricultural
+        Marketing Board.
+    </p>
+
+    <a
+       href="https://www.msamb.com/ApmcDetail/APMCPriceInformation"
+       target="_blank"
+       class="official-btn">
+
+       📊 Open Official MSAMB Price
+
+    </a>
+
+</div>
+
+
+<!-- NOTE -->
+
+<div class="note">
+
+    <b>⚠️ Important:</b>
+
+    Market prices change according to date,
+    market, quality, arrivals and demand.
+
+    Do not make a selling decision only from
+    one price. Always verify the latest official
+    market information.
+
+</div>
+
+
+</div>
+
+
+<footer>
+
+    © 2026 GramSakhi | Farmer Corner
+
+</footer>
+
+
+<script>
+
+
+/* ==========================================
+   MARKET DATA
+========================================== */
+
+const markets = {
+
+    ahilyanagar: [
+        "Ahilyanagar",
+        "Sangamner",
+        "Akole",
+        "Rahuri",
+        "Shrirampur",
+        "Kopargaon",
+        "Nevasa",
+        "Pathardi",
+        "Shevgaon",
+        "Karjat",
+        "Jamkhed",
+        "Parner",
+        "Shirdi"
+    ],
+
+    pune: [
+        "Pune",
+        "Junnar",
+        "Narayangaon",
+        "Manchar",
+        "Khed",
+        "Shirur",
+        "Daund",
+        "Baramati",
+        "Indapur",
+        "Moshi",
+        "Pimpri"
+    ],
+
+    nashik: [
+        "Nashik",
+        "Sinnar",
+        "Niphad",
+        "Dindori",
+        "Yeola",
+        "Malegaon",
+        "Lasalgaon",
+        "Kalwan",
+        "Chandwad",
+        "Deola",
+        "Igatpuri",
+        "Manmad"
+    ],
+
+    sangli: [
+        "Sangli",
+        "Miraj",
+        "Tasgaon",
+        "Islampur",
+        "Jat",
+        "Kavathe Mahankal",
+        "Atpadi",
+        "Palus"
+    ],
+
+    satara: [
+        "Satara",
+        "Karad",
+        "Phaltan",
+        "Wai",
+        "Koregaon",
+        "Patan",
+        "Man",
+        "Khatav"
+    ],
+
+    solapur: [
+        "Solapur",
+        "Akluj",
+        "Barshi",
+        "Karmala",
+        "Mangalwedha",
+        "Pandharpur",
+        "Sangola",
+        "Akkalkot",
+        "Mohol"
+    ],
+
+    kolhapur: [
+        "Kolhapur",
+        "Ichalkaranji",
+        "Gadhinglaj",
+        "Kagal",
+        "Panhala",
+        "Shahuwadi",
+        "Radhanagari"
+    ],
+
+    jalgaon: [
+        "Jalgaon",
+        "Bhusawal",
+        "Chalisgaon",
+        "Pachora",
+        "Amalner",
+        "Yawal",
+        "Raver",
+        "Bodwad"
+    ],
+
+    dhule: [
+        "Dhule",
+        "Shirpur",
+        "Sakri",
+        "Shindkheda"
+    ],
+
+    nanded: [
+        "Nanded",
+        "Deglur",
+        "Kinwat",
+        "Hadgaon",
+        "Loha",
+        "Mukhed"
+    ],
+
+    nagpur: [
+        "Nagpur",
+        "Kamptee",
+        "Katol",
+        "Umred",
+        "Hingna",
+        "Saoner"
+    ],
+
+    beed: [
+        "Beed",
+        "Georai",
+        "Majalgaon",
+        "Ambajogai",
+        "Kaij",
+        "Parli"
+    ],
+
+    latur: [
+        "Latur",
+        "Udgir",
+        "Nilanga",
+        "Ausa",
+        "Ahmedpur"
+    ],
+
+    dharashiv: [
+        "Dharashiv",
+        "Tuljapur",
+        "Umarga",
+        "Kalamb",
+        "Bhoom"
+    ],
+
+    parbhani: [
+        "Parbhani",
+        "Manwath",
+        "Jintur",
+        "Gangakhed",
+        "Sonpeth"
+    ],
+
+    "chhatrapati-sambhajinagar": [
+        "Chhatrapati Sambhajinagar",
+        "Kannad",
+        "Sillod",
+        "Paithan",
+        "Gangapur",
+        "Vaijapur",
+        "Khadgaon"
+    ],
+
+    raigad: [
+        "Alibag",
+        "Panvel",
+        "Pen",
+        "Karjat",
+        "Khalapur",
+        "Mangaon"
+    ],
+
+    thane: [
+        "Thane",
+        "Kalyan",
+        "Bhiwandi",
+        "Murbad",
+        "Shahapur"
+    ]
+
+};
+
+
+/* ==========================================
+   LOAD MARKETS
+========================================== */
+
+function loadMarkets() {
+
+    const district =
+        document.getElementById("district").value;
+
+    const market =
+        document.getElementById("market");
+
+
+    market.innerHTML =
+        '<option value="">-- Select Market --</option>';
+
+
+    if (!district) {
+        return;
+    }
+
+
+    markets[district].forEach(function(place) {
+
+        const option =
+            document.createElement("option");
+
+        option.value =
+            place.toLowerCase();
+
+        option.textContent =
+            place;
+
+        market.appendChild(option);
+
+    });
+
+}
+
+
+/* ==========================================
+   DEFAULT DATE
+========================================== */
+
+document.getElementById("date").value =
+    new Date().toISOString().split("T")[0];
+
+
+/* ==========================================
+   FIND PRICE
+========================================== */
+
+function findPrice() {
+
+    const district =
+        document.getElementById("district");
+
+    const market =
+        document.getElementById("market");
+
+    const crop =
+        document.getElementById("crop");
+
+    const date =
+        document.getElementById("date");
+
+
+    const status =
+        document.getElementById("status");
+
+
+    if (
+        district.value === "" ||
+        market.value === "" ||
+        crop.value === ""
+    ) {
+
+        status.innerHTML =
+            "❌ Please select District, Market and Crop.";
+
+        status.style.color =
+            "#d32f2f";
+
+        return;
+
+    }
+
+
+    const districtName =
+        district.options[
+            district.selectedIndex
+        ].text;
+
+
+    const marketName =
+        market.options[
+            market.selectedIndex
+        ].text;
+
+
+    const cropName =
+        crop.options[
+            crop.selectedIndex
+        ].text;
+
+
+    document.getElementById(
+        "selectedInfo"
+    ).innerHTML =
+
+        "<b>📍 District:</b> " +
+        districtName +
+
+        "<br>" +
+
+        "<b>🏪 Market:</b> " +
+        marketName +
+
+        "<br>" +
+
+        "<b>🌾 Crop:</b> " +
+        cropName +
+
+        "<br>" +
+
+        "<b>📅 Date:</b> " +
+        date.value;
+
+
+    /*
+       IMPORTANT:
+
+       We do NOT create fake prices.
+
+       This is where an official API/data
+       connection must provide the actual
+       minimum, maximum and modal price.
+    */
+
+
+    document.getElementById(
+        "minPrice"
+    ).innerHTML =
+        "Official data";
+
+
+    document.getElementById(
+        "maxPrice"
+    ).innerHTML =
+        "Official data";
+
+
+    document.getElementById(
+        "modalPrice"
+    ).innerHTML =
+        "Official data";
+
+
+    status.innerHTML =
+        "⚠️ Live official price API is not connected yet. Use the official MSAMB button below to verify the exact price.";
+
+    status.style.color =
+        "#d97706";
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GramSakhi - Ayushman Arogya Mandir</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4faf8;
+            color: #333;
+        }
+
+        header {
+            background: #00897b;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1000px;
+            margin: 25px auto;
+        }
+
+        .back-btn {
+            display: inline-block;
+            color: #00897b;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .back-btn:hover {
+            color: #00695c;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 14px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .card h2 {
+            color: #00897b;
+            margin-bottom: 14px;
+        }
+
+        .card p {
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .card ul {
+            margin-left: 22px;
+            line-height: 1.8;
+        }
+
+        .highlight {
+            background: #e0f2f1;
+            border-left: 5px solid #00897b;
+            padding: 18px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .highlight h3 {
+            color: #00695c;
+            margin-bottom: 8px;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .service-box {
+            background: #f4faf8;
+            padding: 18px;
+            border-radius: 10px;
+        }
+
+        .service-box h3 {
+            color: #00796b;
+            margin-bottom: 8px;
+        }
+
+        .service-box p {
+            margin-bottom: 0;
+        }
+
+        .note {
+            background: #fff8e1;
+            border-left: 5px solid #f9a825;
+            padding: 15px;
+            border-radius: 8px;
+            line-height: 1.6;
+        }
+
+        .official-btn {
+            display: inline-block;
+            background: #00897b;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 7px;
+            margin-top: 12px;
+        }
+
+        .official-btn:hover {
+            background: #00695c;
+        }
+
+        footer {
+            background: #00695c;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 650px) {
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            .container {
+                width: 94%;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+    <h1>🏥 Ayushman Arogya Mandir</h1>
+
+    <p>
+        GramSakhi - Comprehensive Primary Healthcare
+    </p>
+
+</header>
+
+
+<div class="container">
+
+    <!-- BACK -->
+    <a href="healthscheme.html" class="back-btn">
+        ← Back to Health Care Schemes
+    </a>
+
+
+    <!-- ABOUT -->
+    <div class="card">
+
+        <h2>📋 About Ayushman Arogya Mandir</h2>
+
+        <p>
+            Ayushman Arogya Mandirs are government primary
+            healthcare facilities designed to provide
+            comprehensive primary healthcare services closer
+            to communities.
+        </p>
+
+        <div class="highlight">
+
+            <h3>🎯 Main Purpose</h3>
+
+            <p>
+                To make essential primary healthcare,
+                prevention, health promotion and basic treatment
+                services more accessible to people in their
+                communities.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- OBJECTIVES -->
+    <div class="card">
+
+        <h2>🎯 Objectives</h2>
+
+        <ul>
+
+            <li>
+                Provide accessible primary healthcare services.
+            </li>
+
+            <li>
+                Promote prevention and early detection of diseases.
+            </li>
+
+            <li>
+                Provide health promotion and wellness services.
+            </li>
+
+            <li>
+                Improve access to essential medicines and
+                diagnostic services.
+            </li>
+
+            <li>
+                Connect patients with higher-level healthcare
+                facilities when referral is required.
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- SERVICES -->
+    <div class="card">
+
+        <h2>🩺 Services Available</h2>
+
+        <div class="service-grid">
+
+            <div class="service-box">
+
+                <h3>🩺 General Healthcare</h3>
+
+                <p>
+                    Basic consultation, treatment and management
+                    of common health conditions.
+                </p>
+
+            </div>
+
+
+            <div class="service-box">
+
+                <h3>🤰 Maternal Healthcare</h3>
+
+                <p>
+                    Primary healthcare and support related to
+                    pregnancy and maternal health.
+                </p>
+
+            </div>
+
+
+            <div class="service-box">
+
+                <h3>👶 Child Healthcare</h3>
+
+                <p>
+                    Basic child health services, monitoring and
+                    referral where required.
+                </p>
+
+            </div>
+
+
+            <div class="service-box">
+
+                <h3>💉 Immunization</h3>
+
+                <p>
+                    Vaccination and immunization services as
+                    provided through the public health system.
+                </p>
+
+            </div>
+
+
+            <div class="service-box">
+
+                <h3>🩸 Disease Screening</h3>
+
+                <p>
+                    Screening and early detection of selected
+                    diseases and health conditions.
+                </p>
+
+            </div>
+
+
+            <div class="service-box">
+
+                <h3>💊 Medicines</h3>
+
+                <p>
+                    Access to essential medicines according to
+                    services and availability at the facility.
+                </p>
+
+            </div>
+
+
+            <div class="service-box">
+
+                <h3>🧪 Diagnostics</h3>
+
+                <p>
+                    Selected diagnostic services according to
+                    facility capabilities.
+                </p>
+
+            </div>
+
+
+            <div class="service-box">
+
+                <h3>🧘 Wellness</h3>
+
+                <p>
+                    Health promotion, wellness and preventive
+                    healthcare activities.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- WHO CAN USE -->
+    <div class="card">
+
+        <h2>👨‍👩‍👧 Who Can Use These Services?</h2>
+
+        <p>
+            Ayushman Arogya Mandirs are intended to provide
+            primary healthcare services to people in the
+            communities they serve.
+        </p>
+
+        <ul>
+
+            <li>Women</li>
+
+            <li>Children</li>
+
+            <li>Adults</li>
+
+            <li>Senior citizens</li>
+
+            <li>Adolescents</li>
+
+            <li>People requiring primary healthcare</li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- HOW TO ACCESS -->
+    <div class="card">
+
+        <h2>📝 How to Access</h2>
+
+        <ul>
+
+            <li>
+                Find the nearest Ayushman Arogya Mandir or
+                government primary healthcare facility.
+            </li>
+
+            <li>
+                Visit the facility during its working hours.
+            </li>
+
+            <li>
+                Carry an identity document if required.
+            </li>
+
+            <li>
+                Consult the healthcare worker or medical staff.
+            </li>
+
+            <li>
+                Follow referral advice if specialist or
+                higher-level treatment is required.
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- IMPORTANT -->
+    <div class="card">
+
+        <h2>⚠️ Important Information</h2>
+
+        <div class="note">
+
+            Services can vary depending on the facility,
+            location, staffing and availability.
+
+            <br><br>
+
+            For the latest information about a particular
+            facility, contact the nearest government health
+            centre or check the official health department
+            resources.
+
+        </div>
+
+    </div>
+
+
+    <!-- OFFICIAL -->
+    <div class="card">
+
+        <h2>🌐 Official Information</h2>
+
+        <p>
+            For official information about Ayushman Arogya
+            Mandirs and primary healthcare services, visit
+            the Government of India's health programme
+            resources.
+        </p>
+
+        <a
+            href="https://aam.mohfw.gov.in/"
+            target="_blank"
+            class="official-btn">
+
+            Visit Official Website
+
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <p>
+        © 2026 GramSakhi | Government Schemes & Health Care
+    </p>
+
+</footer>
+
+</body>
+</html>

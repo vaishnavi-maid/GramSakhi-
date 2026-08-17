@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GramSakhi - Fertilizer Guide</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f8f1;
+    color:#333;
+    line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+    background:#2e7d32;
+    color:white;
+    text-align:center;
+    padding:28px 15px;
+}
+
+header h1{
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+header p{
+    font-size:16px;
+}
+
+/* BACK BUTTON */
+
+.back{
+    width:94%;
+    max-width:1100px;
+    margin:18px auto;
+}
+
+.back a{
+    text-decoration:none;
+    color:#2e7d32;
+    font-weight:bold;
+}
+
+/* CONTAINER */
+
+.container{
+    width:94%;
+    max-width:1100px;
+    margin:auto;
+}
+
+/* INTRO */
+
+.intro{
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+.intro h2{
+    color:#2e7d32;
+    margin-bottom:8px;
+}
+
+/* SEARCH */
+
+.search-box{
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+.search-box h2{
+    color:#2e7d32;
+    margin-bottom:15px;
+}
+
+select{
+    width:100%;
+    padding:13px;
+    border:2px solid #ddd;
+    border-radius:8px;
+    font-size:15px;
+    background:white;
+}
+
+select:focus{
+    outline:none;
+    border-color:#2e7d32;
+}
+
+/* FERTILIZER INFORMATION */
+
+.fertilizer-info{
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+.fertilizer-info h2{
+    color:#2e7d32;
+    margin-bottom:18px;
+}
+
+/* CARDS */
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.info-card{
+    background:#f1f8e9;
+    padding:17px;
+    border-radius:10px;
+}
+
+.info-card h3{
+    color:#2e7d32;
+    margin-bottom:7px;
+}
+
+/* NPK */
+
+.npk-section{
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+.npk-section h2{
+    color:#2e7d32;
+    margin-bottom:15px;
+}
+
+.npk-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.npk-card{
+    padding:18px;
+    text-align:center;
+    border-radius:12px;
+    background:#f1f8e9;
+}
+
+.npk-card h3{
+    color:#2e7d32;
+    margin-bottom:6px;
+}
+
+.npk-card p{
+    font-size:14px;
+}
+
+/* APPLICATION */
+
+.application{
+    background:#e8f5e9;
+    padding:22px;
+    border-radius:15px;
+    margin-bottom:20px;
+}
+
+.application h2{
+    color:#2e7d32;
+    margin-bottom:12px;
+}
+
+.application ul{
+    padding-left:22px;
+}
+
+/* SOIL */
+
+.soil{
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+.soil h2{
+    color:#2e7d32;
+    margin-bottom:10px;
+}
+
+.soil-btn{
+    display:inline-block;
+    margin-top:14px;
+    background:#2e7d32;
+    color:white;
+    padding:12px 18px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* WARNING */
+
+.warning{
+    background:#fff8e1;
+    border-left:5px solid #f9a825;
+    padding:18px;
+    border-radius:8px;
+    margin-bottom:20px;
+}
+
+/* OFFICIAL */
+
+.official{
+    background:#e3f2fd;
+    padding:22px;
+    border-radius:15px;
+    margin-bottom:25px;
+}
+
+.official h2{
+    color:#1565c0;
+    margin-bottom:8px;
+}
+
+.official-btn{
+    display:inline-block;
+    margin-top:14px;
+    padding:12px 18px;
+    background:#1565c0;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+    background:#1b5e20;
+    color:white;
+    text-align:center;
+    padding:18px;
+    margin-top:30px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .npk-grid{
+        grid-template-columns:1fr;
+    }
+
+    header h1{
+        font-size:26px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<h1>🧪 Fertilizer Guide</h1>
+
+<p>
+Choose the Right Fertilizer for Better Crop Growth
+</p>
+
+</header>
+
+
+<!-- BACK -->
+
+<div class="back">
+
+<a href="farmer-corner.html">
+← Back to Farmer Corner
+</a>
+
+</div>
+
+
+<div class="container">
+
+
+<!-- INTRO -->
+
+<div class="intro">
+
+<h2>🌱 Fertilizer Information for Farmers</h2>
+
+<p>
+Learn about different fertilizers, nutrients,
+organic manure, application methods and important
+precautions for safe fertilizer use.
+</p>
+
+</div>
+
+
+<!-- FERTILIZER SELECT -->
+
+<div class="search-box">
+
+<h2>🔎 Select Fertilizer</h2>
+
+<select id="fertilizerSelect"
+        onchange="showFertilizer()">
+
+<option value="">
+-- Select Fertilizer --
+</option>
+
+<option value="urea">
+Urea
+</option>
+
+<option value="dap">
+DAP
+</option>
+
+<option value="mop">
+MOP
+</option>
+
+<option value="ssp">
+SSP
+</option>
+
+<option value="npk">
+NPK Fertilizer
+</option>
+
+<option value="ammonium">
+Ammonium Sulphate
+</option>
+
+<option value="organic">
+Organic Manure
+</option>
+
+<option value="vermicompost">
+Vermicompost
+</option>
+
+<option value="compost">
+Compost
+</option>
+
+<option value="farmyard">
+Farmyard Manure (FYM)
+</option>
+
+</select>
+
+</div>
+
+
+<!-- FERTILIZER RESULT -->
+
+<div class="fertilizer-info"
+     id="fertilizerInfo">
+
+<h2>🧪 Fertilizer Information</h2>
+
+<p>
+Select a fertilizer above to see its general
+purpose and nutrient information.
+</p>
+
+</div>
+
+
+<!-- NPK -->
+
+<div class="npk-section">
+
+<h2>🌱 Understanding NPK</h2>
+
+<div class="npk-grid">
+
+<div class="npk-card">
+
+<h3>🟢 Nitrogen (N)</h3>
+
+<p>
+Helps in leaf growth, plant development
+and green colour.
+</p>
+
+</div>
+
+
+<div class="npk-card">
+
+<h3>🟡 Phosphorus (P)</h3>
+
+<p>
+Supports root development, flowering,
+energy transfer and seed formation.
+</p>
+
+</div>
+
+
+<div class="npk-card">
+
+<h3>🔵 Potassium (K)</h3>
+
+<p>
+Supports overall plant strength,
+water regulation and crop quality.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- APPLICATION -->
+
+<div class="application">
+
+<h2>🚜 How to Apply Fertilizer</h2>
+
+<ul>
+
+<li>
+Test your soil before applying fertilizers.
+</li>
+
+<li>
+Use the fertilizer according to soil-test
+and crop recommendations.
+</li>
+
+<li>
+Apply fertilizer at the recommended crop stage.
+</li>
+
+<li>
+Keep fertilizer away from direct contact
+with seeds unless the method specifically
+allows it.
+</li>
+
+<li>
+Irrigate appropriately after fertilizer
+application when recommended.
+</li>
+
+<li>
+Avoid excessive fertilizer application.
+</li>
+
+<li>
+Use protective equipment while handling
+fertilizers.
+</li>
+
+<li>
+Store fertilizer in a dry and safe place.
+</li>
+
+</ul>
+
+</div>
+
+
+<!-- CROP GUIDANCE -->
+
+<div class="fertilizer-info">
+
+<h2>🌾 General Crop-wise Nutrient Guidance</h2>
+
+<div class="info-grid">
+
+
+<div class="info-card">
+
+<h3>🥬 Vegetables</h3>
+
+<p>
+Vegetables require balanced nutrients.
+Nitrogen supports vegetative growth, while
+phosphorus and potassium support roots,
+flowering and quality.
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>🌾 Cereals</h3>
+
+<p>
+Crops such as wheat, maize, jowar and bajra
+require balanced nutrition. Nitrogen is
+especially important for healthy vegetative
+growth.
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>🌱 Pulses</h3>
+
+<p>
+Gram, tur, moong and urad have different
+nutrient requirements. Avoid unnecessary
+excess nitrogen and follow soil-test
+recommendations.
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>🍇 Fruit Crops</h3>
+
+<p>
+Fruit crops require balanced and stage-wise
+nutrition. Nutrient needs vary with crop,
+variety, plant age and production stage.
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>🌿 Oilseeds</h3>
+
+<p>
+Soybean and groundnut require balanced
+nutrition along with appropriate secondary
+and micronutrients when soil tests indicate
+a deficiency.
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>🌱 Cotton</h3>
+
+<p>
+Cotton requires balanced nutrition throughout
+its growth. Fertilizer application should
+follow soil-test and local recommendations.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- SOIL TEST -->
+
+<div class="soil">
+
+<h2>🔬 Soil Testing</h2>
+
+<p>
+Soil testing helps identify nutrient levels
+and soil properties. It can help farmers
+choose appropriate fertilizers instead of
+applying fertilizer unnecessarily.
+</p>
+
+<a
+href="https://soilhealth.dac.gov.in/"
+target="_blank"
+class="soil-btn">
+
+🔬 Soil Health Card / Soil Testing
+
+</a>
+
+</div>
+
+
+<!-- ORGANIC -->
+
+<div class="fertilizer-info">
+
+<h2>🌿 Organic Fertilizers</h2>
+
+<div class="info-grid">
+
+
+<div class="info-card">
+
+<h3>🌱 Farmyard Manure (FYM)</h3>
+
+<p>
+Well-decomposed farmyard manure can improve
+soil organic matter and soil structure.
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>🪱 Vermicompost</h3>
+
+<p>
+Vermicompost is prepared using earthworms
+and decomposed organic material. It can
+improve soil organic matter.
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>🍂 Compost</h3>
+
+<p>
+Compost is decomposed organic material that
+can be used as a source of organic matter
+and nutrients.
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>🌿 Green Manure</h3>
+
+<p>
+Green manure crops can be incorporated into
+soil to add organic matter and improve
+soil health.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- WARNING -->
+
+<div class="warning">
+
+<b>⚠️ Important Safety Information</b>
+
+<br><br>
+
+Do not decide fertilizer quantity only from
+general information on this page.
+
+The correct dose depends on the crop, variety,
+soil condition, previous crop, irrigation,
+growth stage and soil-test results.
+
+For exact fertilizer recommendations,
+consult the Agriculture Department,
+Krishi Vigyan Kendra or a qualified
+agriculture expert.
+
+</div>
+
+
+<!-- OFFICIAL -->
+
+<div class="official">
+
+<h2>🏛️ Official Agriculture Information</h2>
+
+<p>
+For reliable agricultural information,
+farmers can refer to official Government
+agriculture resources.
+</p>
+
+<a
+href="https://agriwelfare.gov.in/"
+target="_blank"
+class="official-btn">
+
+🌐 Agriculture Department
+
+</a>
+
+</div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 GramSakhi | Farmer Corner
+
+</footer>
+
+
+<script>
+
+/* =========================================
+   FERTILIZER DATA
+========================================= */
+
+const fertilizers = {
+
+urea:{
+name:"🌱 Urea",
+nutrient:"High nitrogen fertilizer",
+purpose:"Mainly supplies nitrogen to support vegetative growth.",
+use:"Use only according to soil-test and crop recommendations.",
+note:"Excess nitrogen can cause excessive vegetative growth and other crop problems."
+},
+
+dap:{
+name:"🌾 DAP",
+nutrient:"Nitrogen + Phosphorus",
+purpose:"Supplies nitrogen and phosphorus.",
+use:"Useful where phosphorus is required according to soil-test recommendations.",
+note:"Avoid unnecessary application when soil already has sufficient phosphorus."
+},
+
+mop:{
+name:"🌱 MOP",
+nutrient:"Potassium",
+purpose:"Supplies potassium to crops.",
+use:"Use where potassium is required according to soil-test recommendations.",
+note:"Crop sensitivity to chloride should be considered."
+},
+
+ssp:{
+name:"🌱 SSP",
+nutrient:"Phosphorus + Sulphur + Calcium",
+purpose:"Provides phosphorus along with sulphur and calcium.",
+use:"Can be useful where these nutrients are required.",
+note:"Use based on soil-test and crop requirements."
+},
+
+npk:{
+name:"🌱 NPK Fertilizer",
+nutrient:"Nitrogen + Phosphorus + Potassium",
+purpose:"Provides a combination of major plant nutrients.",
+use:"Different NPK grades are available for different nutrient requirements.",
+note:"Choose the grade according to crop and soil requirements."
+},
+
+ammonium:{
+name:"🧪 Ammonium Sulphate",
+nutrient:"Nitrogen + Sulphur",
+purpose:"Provides nitrogen and sulphur.",
+use:"May be useful where nitrogen and sulphur are required.",
+note:"Use according to soil-test recommendations."
+},
+
+organic:{
+name:"🌿 Organic Manure",
+nutrient:"Organic matter + plant nutrients",
+purpose:"Improves soil organic matter and contributes nutrients.",
+use:"Use well-decomposed organic material.",
+note:"Nutrient content varies according to source and decomposition."
+},
+
+vermicompost:{
+name:"🪱 Vermicompost",
+nutrient:"Organic matter + plant nutrients",
+purpose:"Improves soil organic matter and soil structure.",
+use:"Use mature, well-prepared vermicompost.",
+note:"Nutrient content varies with the material used to prepare it."
+},
+
+compost:{
+name:"🍂 Compost",
+nutrient:"Organic matter + nutrients",
+purpose:"Improves soil organic matter and soil structure.",
+use:"Apply properly decomposed compost.",
+note:"Do not use incompletely decomposed organic waste."
+},
+
+farmyard:{
+name:"🐄 Farmyard Manure (FYM)",
+nutrient:"Organic matter + plant nutrients",
+purpose:"Improves soil structure and organic matter.",
+use:"Use well-decomposed FYM.",
+note:"Nutrient content varies according to source and storage."
+}
+
+};
+
+
+/* =========================================
+   SHOW FERTILIZER
+========================================= */
+
+function showFertilizer(){
+
+const selected =
+document.getElementById("fertilizerSelect").value;
+
+const box =
+document.getElementById("fertilizerInfo");
+
+
+if(selected === ""){
+
+box.innerHTML = `
+<h2>🧪 Fertilizer Information</h2>
+
+<p>
+Select a fertilizer above to see its general
+purpose and nutrient information.
+</p>
+`;
+
+return;
+
+}
+
+
+const fertilizer =
+fertilizers[selected];
+
+
+box.innerHTML = `
+
+<h2>${fertilizer.name}</h2>
+
+<div class="info-grid">
+
+<div class="info-card">
+
+<h3>🧪 Nutrients</h3>
+
+<p>
+${fertilizer.nutrient}
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>🌱 Main Purpose</h3>
+
+<p>
+${fertilizer.purpose}
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>🚜 General Use</h3>
+
+<p>
+${fertilizer.use}
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>⚠️ Important Note</h3>
+
+<p>
+${fertilizer.note}
+</p>
+
+</div>
+
+</div>
+
+`;
+
+}
+
+</script>
+
+
+</body>
+
+</html>

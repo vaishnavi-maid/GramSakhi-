@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GramSakhi - Seed Information</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f8f1;
+    color:#333;
+    line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+    background:#2e7d32;
+    color:white;
+    text-align:center;
+    padding:28px 15px;
+}
+
+header h1{
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+header p{
+    font-size:16px;
+}
+
+/* BACK BUTTON */
+
+.back{
+    width:94%;
+    max-width:1100px;
+    margin:18px auto;
+}
+
+.back a{
+    text-decoration:none;
+    color:#2e7d32;
+    font-weight:bold;
+}
+
+/* MAIN CONTAINER */
+
+.container{
+    width:94%;
+    max-width:1100px;
+    margin:auto;
+}
+
+/* INTRO */
+
+.intro{
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+.intro h2{
+    color:#2e7d32;
+    margin-bottom:8px;
+}
+
+/* SECTION */
+
+.section{
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+.section h2{
+    color:#2e7d32;
+    margin-bottom:15px;
+}
+
+/* GRID */
+
+.card-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.card{
+    background:#f1f8e9;
+    padding:17px;
+    border-radius:10px;
+}
+
+.card h3{
+    color:#2e7d32;
+    margin-bottom:7px;
+}
+
+.card ul{
+    padding-left:20px;
+}
+
+/* CROP SELECT */
+
+.crop-box{
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+.crop-box h2{
+    color:#2e7d32;
+    margin-bottom:15px;
+}
+
+select{
+    width:100%;
+    padding:13px;
+    border:2px solid #ddd;
+    border-radius:8px;
+    font-size:15px;
+    background:white;
+}
+
+select:focus{
+    outline:none;
+    border-color:#2e7d32;
+}
+
+/* CROP RESULT */
+
+.result{
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+.result h2{
+    color:#2e7d32;
+    margin-bottom:18px;
+}
+
+/* TABLE */
+
+.seed-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+}
+
+.seed-table th,
+.seed-table td{
+    border:1px solid #ddd;
+    padding:11px;
+    text-align:left;
+}
+
+.seed-table th{
+    background:#2e7d32;
+    color:white;
+}
+
+/* STEPS */
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.step{
+    background:#f9fbe7;
+    padding:18px;
+    border-radius:10px;
+    border-left:5px solid #66bb6a;
+}
+
+.step-number{
+    display:inline-block;
+    background:#2e7d32;
+    color:white;
+    width:32px;
+    height:32px;
+    text-align:center;
+    line-height:32px;
+    border-radius:50%;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+/* WARNING */
+
+.warning{
+    background:#fff8e1;
+    border-left:5px solid #f9a825;
+    padding:18px;
+    border-radius:8px;
+    margin-bottom:20px;
+}
+
+.danger{
+    background:#ffebee;
+    border-left:5px solid #c62828;
+    padding:18px;
+    border-radius:8px;
+    margin-bottom:20px;
+}
+
+/* OFFICIAL */
+
+.official{
+    background:#e8f5e9;
+    padding:22px;
+    border-radius:15px;
+    margin-bottom:25px;
+}
+
+.official h2{
+    color:#2e7d32;
+    margin-bottom:8px;
+}
+
+.official-btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 18px;
+    background:#2e7d32;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.official-btn:hover{
+    background:#1b5e20;
+}
+
+/* FOOTER */
+
+footer{
+    background:#1b5e20;
+    color:white;
+    text-align:center;
+    padding:18px;
+    margin-top:30px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .card-grid,
+    .steps{
+        grid-template-columns:1fr;
+    }
+
+    .seed-table{
+        font-size:13px;
+    }
+
+    .seed-table th,
+    .seed-table td{
+        padding:8px;
+    }
+
+    header h1{
+        font-size:26px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<h1>🌱 Seed Information</h1>
+
+<p>
+Choose Quality Seeds for a Healthy Crop
+</p>
+
+</header>
+
+
+<!-- BACK -->
+
+<div class="back">
+
+<a href="farmer-corner.html">
+← Back to Farmer Corner
+</a>
+
+</div>
+
+
+<div class="container">
+
+
+<!-- INTRO -->
+
+<div class="intro">
+
+<h2>🌱 Why Good Seeds Matter</h2>
+
+<p>
+Good-quality seed is an important starting point
+for a healthy crop. Seed quality can affect
+germination, plant establishment, crop uniformity
+and ultimately crop performance.
+</p>
+
+<br>
+
+<p>
+Farmers should select seed according to the crop,
+local growing conditions, recommended variety and
+the purpose for which the crop is being grown.
+</p>
+
+</div>
+
+
+<!-- WHAT IS QUALITY SEED -->
+
+<div class="section">
+
+<h2>🔍 What is Quality Seed?</h2>
+
+<div class="card-grid">
+
+
+<div class="card">
+
+<h3>🌱 Good Germination</h3>
+
+<p>
+Quality seed should have good germination
+according to the applicable seed standard
+and product information.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🧬 Varietal Purity</h3>
+
+<p>
+The seed should correspond to the variety
+mentioned on its official label.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🦠 Seed Health</h3>
+
+<p>
+Seed should be free from serious pest,
+disease and contamination problems as far
+as applicable to the crop and seed class.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>💧 Appropriate Moisture</h3>
+
+<p>
+Seed should be stored under conditions that
+help maintain its quality and viability.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- TYPES -->
+
+<div class="section">
+
+<h2>🌾 Common Types of Seed</h2>
+
+<div class="card-grid">
+
+
+<div class="card">
+
+<h3>🏷️ Certified Seed</h3>
+
+<p>
+Seed produced and processed under applicable
+certification standards and carrying the
+required certification information.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🌱 Hybrid Seed</h3>
+
+<p>
+Hybrid seed is produced by crossing selected
+parent lines to obtain desired characteristics.
+Hybrid seed generally needs to be purchased
+again for each crop cycle.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🌾 Open-Pollinated Varieties</h3>
+
+<p>
+These varieties can produce seed that may be
+saved under appropriate conditions, but farmers
+should follow crop-specific recommendations.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🌿 Improved Varieties</h3>
+
+<p>
+Improved varieties are developed or selected
+for desirable characteristics such as yield,
+quality, maturity or adaptation.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- CROP SELECT -->
+
+<div class="crop-box">
+
+<h2>🔎 Select Your Crop</h2>
+
+<select id="cropSelect" onchange="showCrop()">
+
+<option value="">
+-- Select Crop --
+</option>
+
+<option value="cabbage">🥬 Cabbage</option>
+<option value="cauliflower">🥦 Cauliflower</option>
+<option value="greenpeas">🫛 Green Peas</option>
+<option value="fenugreek">🌿 Fenugreek</option>
+<option value="spinach">🥬 Spinach</option>
+<option value="chilli">🌶️ Chilli</option>
+<option value="tomato">🍅 Tomato</option>
+<option value="onion">🧅 Onion</option>
+<option value="potato">🥔 Potato</option>
+<option value="brinjal">🍆 Brinjal</option>
+<option value="okra">🌱 Okra</option>
+<option value="guava">🍈 Guava</option>
+<option value="mango">🥭 Mango</option>
+<option value="grapes">🍇 Grapes</option>
+<option value="pomegranate">🍎 Pomegranate</option>
+<option value="banana">🍌 Banana</option>
+<option value="wheat">🌾 Wheat</option>
+<option value="maize">🌽 Maize</option>
+<option value="jowar">🌾 Jowar</option>
+<option value="bajra">🌾 Bajra</option>
+<option value="gram">🌱 Gram</option>
+<option value="tur">🌱 Tur</option>
+<option value="moong">🌱 Moong</option>
+<option value="soybean">🌱 Soybean</option>
+<option value="groundnut">🥜 Groundnut</option>
+<option value="cotton">🌿 Cotton</option>
+
+</select>
+
+</div>
+
+
+<!-- CROP RESULT -->
+
+<div class="result" id="cropResult">
+
+<h2>🌱 Crop Seed Information</h2>
+
+<p>
+Select a crop above to see general information
+about seed selection, sowing and spacing.
+</p>
+
+</div>
+
+
+<!-- BUYING SEEDS -->
+
+<div class="section">
+
+<h2>🛒 How to Select Seeds Before Buying</h2>
+
+<div class="steps">
+
+
+<div class="step">
+
+<span class="step-number">1</span>
+
+<h3>🏷️ Check the Label</h3>
+
+<p>
+Check crop name, variety, lot or batch details,
+germination information, validity and other
+required information on the seed package.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<span class="step-number">2</span>
+
+<h3>📅 Check the Date</h3>
+
+<p>
+Check the relevant packing, testing and
+validity information provided on the package.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<span class="step-number">3</span>
+
+<h3>🏪 Buy From a Reliable Source</h3>
+
+<p>
+Purchase seed from authorised or reliable
+agricultural input dealers and keep the bill.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<span class="step-number">4</span>
+
+<h3>🌱 Check Seed Quality</h3>
+
+<p>
+Avoid packages that appear damaged, wet,
+open or improperly stored.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<span class="step-number">5</span>
+
+<h3>📋 Choose the Right Variety</h3>
+
+<p>
+Select a variety suitable for your crop,
+season, soil, climate and local conditions.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<span class="step-number">6</span>
+
+<h3>🧾 Keep the Bill</h3>
+
+<p>
+Keep the purchase bill, package label and
+other documents safely for future reference.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- SEED TREATMENT -->
+
+<div class="section">
+
+<h2>🧪 Seed Treatment</h2>
+
+<p>
+Seed treatment can help protect seeds and
+young seedlings from certain seed-borne or
+soil-borne problems when an appropriate
+treatment is recommended for the crop.
+</p>
+
+<br>
+
+<div class="card-grid">
+
+
+<div class="card">
+
+<h3>🌱 Biological Treatment</h3>
+
+<p>
+Certain beneficial microorganisms can be used
+for seed treatment where recommended for the
+specific crop.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🧪 Chemical Treatment</h3>
+
+<p>
+Use only a registered product specifically
+recommended for the crop and purpose.
+Follow the product label exactly.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🦠 Disease Protection</h3>
+
+<p>
+Appropriate seed treatment may help reduce
+certain seed-borne disease risks.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>⚠️ Expert Advice</h3>
+
+<p>
+Treatment requirements differ by crop and
+seed. Follow agricultural expert or official
+recommendations.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- STORAGE -->
+
+<div class="section">
+
+<h2>📦 Proper Seed Storage</h2>
+
+<div class="card-grid">
+
+
+<div class="card">
+
+<h3>🌬️ Keep Dry</h3>
+
+<p>
+Store seed in a dry environment and protect
+it from moisture.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🌡️ Avoid Excess Heat</h3>
+
+<p>
+Protect seed from excessive heat and direct
+sunlight.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🐀 Protect From Pests</h3>
+
+<p>
+Keep stored seed protected from rodents,
+insects and other pests.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>🏷️ Keep Labels</h3>
+
+<p>
+Store seed in its original labelled package
+where possible and keep the purchase details.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- SOWING -->
+
+<div class="section">
+
+<h2>🌱 Important Points Before Sowing</h2>
+
+<ul style="padding-left:22px;">
+
+<li>
+Select the appropriate crop and variety for
+the local season and conditions.
+</li>
+
+<li>
+Prepare the field according to the crop's
+requirements.
+</li>
+
+<li>
+Use the recommended seed rate for the specific
+crop and variety.
+</li>
+
+<li>
+Follow recommended sowing depth and spacing.
+</li>
+
+<li>
+Ensure adequate soil moisture at sowing.
+</li>
+
+<li>
+Avoid sowing damaged or poor-quality seed.
+</li>
+
+<li>
+Follow local Agriculture Department or
+agricultural university recommendations for
+specific crops.
+</li>
+
+</ul>
+
+</div>
+
+
+<!-- SEED TABLE -->
+
+<div class="section">
+
+<h2>📊 General Crop Seed Guide</h2>
+
+<p>
+The information below is only general guidance.
+Actual seed rate, spacing and sowing time can
+vary by variety, region, season and farming
+method.
+</p>
+
+<br>
+
+<table class="seed-table">
+
+<tr>
+
+<th>Crop</th>
+
+<th>General Sowing Period</th>
+
+<th>Important Point</th>
+
+</tr>
+
+
+<tr>
+
+<td>🥬 Cabbage</td>
+
+<td>Season-dependent</td>
+
+<td>
+Use healthy seedlings of a suitable variety.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>🥦 Cauliflower</td>
+
+<td>Season-dependent</td>
+
+<td>
+Choose variety according to the required
+maturity season.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>🫛 Green Peas</td>
+
+<td>Cool season</td>
+
+<td>
+Use suitable varieties and healthy seed.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>🌶️ Chilli</td>
+
+<td>Season-dependent</td>
+
+<td>
+Healthy nursery seedlings are important.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>🍅 Tomato</td>
+
+<td>Season-dependent</td>
+
+<td>
+Use healthy seedlings and suitable varieties.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>🧅 Onion</td>
+
+<td>Season-dependent</td>
+
+<td>
+Select variety according to season and region.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>🌾 Wheat</td>
+
+<td>Rabi season</td>
+
+<td>
+Timely sowing is important for good crop
+establishment.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>🌽 Maize</td>
+
+<td>Season-dependent</td>
+
+<td>
+Select hybrids or varieties suitable for the
+local season.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>🌱 Gram</td>
+
+<td>Rabi season</td>
+
+<td>
+Use healthy seed and suitable varieties.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>🌱 Tur</td>
+
+<td>Kharif season</td>
+
+<td>
+Choose a suitable maturity group for the area.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>🌱 Moong</td>
+
+<td>Season-dependent</td>
+
+<td>
+Use healthy seed and suitable varieties.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>🌱 Soybean</td>
+
+<td>Kharif season</td>
+
+<td>
+Use suitable varieties and quality seed.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>🥜 Groundnut</td>
+
+<td>Season-dependent</td>
+
+<td>
+Use healthy, good-quality seed suitable for
+the region.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>🌿 Cotton</td>
+
+<td>Kharif season</td>
+
+<td>
+Use approved seed and follow recommended
+sowing practices.
+</td>
+
+</tr>
+
+
+</table>
+
+</div>
+
+
+<!-- COMMON MISTAKES -->
+
+<div class="warning">
+
+<h3>⚠️ Common Mistakes to Avoid</h3>
+
+<br>
+
+<ul style="padding-left:22px;">
+
+<li>
+Buying seed only because it is cheap.
+</li>
+
+<li>
+Buying packages with damaged or unclear labels.
+</li>
+
+<li>
+Ignoring the recommended variety for the local
+season.
+</li>
+
+<li>
+Using an incorrect seed rate.
+</li>
+
+<li>
+Storing seed in a damp place.
+</li>
+
+<li>
+Using old or improperly stored seed.
+</li>
+
+<li>
+Using seed treatment chemicals without checking
+the label or recommendation.
+</li>
+
+</ul>
+
+</div>
+
+
+<!-- IMPORTANT -->
+
+<div class="danger">
+
+<b>🚫 Important:</b>
+
+<br><br>
+
+Do not use an unlabelled or illegally marketed
+seed packet.
+
+Do not assume that the same seed rate,
+spacing or treatment is suitable for every
+variety.
+
+Always check the current information on the
+seed package and follow recommendations from
+the Agriculture Department, agricultural
+university or qualified agricultural expert.
+
+</div>
+
+
+<!-- OFFICIAL -->
+
+<div class="official">
+
+<h2>🏛️ Official Agriculture Resources</h2>
+
+<p>
+For reliable information about seeds, varieties,
+agricultural practices and government programmes,
+farmers should use official agricultural resources.
+</p>
+
+<a
+href="https://agriwelfare.gov.in/"
+target="_blank"
+class="official-btn">
+
+🌐 Visit Agriculture Department
+
+</a>
+
+</div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 GramSakhi | Farmer Corner
+
+</footer>
+
+
+<script>
+
+/* =========================================
+   CROP SEED INFORMATION
+========================================= */
+
+const crops = {
+
+cabbage:{
+name:"🥬 Cabbage",
+season:"Season-dependent",
+seed:"Use quality seed or healthy seedlings of a variety suitable for the local season.",
+sowing:"Cabbage is generally established through nursery-raised seedlings.",
+spacing:"Follow the spacing recommended for the selected variety.",
+tip:"Choose varieties according to local climate and expected maturity."
+},
+
+cauliflower:{
+name:"🥦 Cauliflower",
+season:"Season-dependent",
+seed:"Choose a suitable variety according to the local season.",
+sowing:"Usually established using healthy nursery seedlings.",
+spacing:"Spacing varies according to variety and growing season.",
+tip:"Selecting the correct maturity group is important."
+},
+
+greenpeas:{
+name:"🫛 Green Peas",
+season:"Cool season",
+seed:"Use healthy, good-quality seed of a suitable variety.",
+sowing:"Sow according to the locally recommended planting window.",
+spacing:"Follow the recommended spacing for the variety.",
+tip:"Avoid poorly stored or damaged seed."
+},
+
+fenugreek:{
+name:"🌿 Fenugreek",
+season:"Generally cool season",
+seed:"Use clean, healthy seed with good germination.",
+sowing:"Direct sowing is commonly practiced.",
+spacing:"Follow local recommendations for the variety.",
+tip:"Avoid excessive moisture during establishment."
+},
+
+spinach:{
+name:"🥬 Spinach",
+season:"Season-dependent",
+seed:"Use fresh, good-quality seed.",
+sowing:"Usually direct-sown in prepared soil.",
+spacing:"Follow crop-specific local recommendations.",
+tip:"Good soil preparation helps uniform establishment."
+},
+
+chilli:{
+name:"🌶️ Chilli",
+season:"Season-dependent",
+seed:"Use quality seed of a suitable variety or hybrid.",
+sowing:"Usually raised in a nursery before transplanting.",
+spacing:"Depends on variety and cultivation system.",
+tip:"Healthy nursery seedlings are important for a good crop."
+},
+
+tomato:{
+name:"🍅 Tomato",
+season:"Season-dependent",
+seed:"Use quality seed from a reliable source.",
+sowing:"Usually raised in a nursery and transplanted.",
+spacing:"Varies according to variety and training system.",
+tip:"Select varieties according to season and local conditions."
+},
+
+onion:{
+name:"🧅 Onion",
+season:"Season-dependent",
+seed:"Use quality seed suitable for the required season.",
+sowing:"May be raised in nursery beds and transplanted depending on production system.",
+spacing:"Follow variety-specific recommendations.",
+tip:"Choose varieties suitable for local climate and storage requirements."
+},
+
+potato:{
+name:"🥔 Potato",
+season:"Season-dependent",
+seed:"Use healthy, disease-free quality seed tubers.",
+sowing:"Plant healthy seed tubers at the recommended time.",
+spacing:"Depends on variety and tuber size.",
+tip:"Avoid planting diseased or damaged tubers."
+},
+
+brinjal:{
+name:"🍆 Brinjal",
+season:"Season-dependent",
+seed:"Use quality seed of a suitable variety or hybrid.",
+sowing:"Generally raised in a nursery and transplanted.",
+spacing:"Depends on variety and production system.",
+tip:"Healthy seedlings support better crop establishment."
+},
+
+okra:{
+name:"🌱 Okra",
+season:"Season-dependent",
+seed:"Use quality seed with good germination.",
+sowing:"Usually direct-sown.",
+spacing:"Follow the recommended spacing for the selected variety.",
+tip:"Use varieties suitable for the local growing season."
+},
+
+guava:{
+name:"🍈 Guava",
+season:"Planting season varies by region",
+seed:"Commercial orchards generally use recommended healthy planting material rather than ordinary seed.",
+sowing:"Use healthy nursery plants or recommended planting material.",
+spacing:"Depends on variety and orchard system.",
+tip:"Select planting material from a reliable nursery."
+},
+
+mango:{
+name:"🥭 Mango",
+season:"Planting season varies by region",
+seed:"Commercial mango production generally uses grafted planting material of recommended varieties.",
+sowing:"Plant healthy grafted plants from a reliable nursery.",
+spacing:"Depends on variety and orchard system.",
+tip:"Use true-to-type, healthy grafted plants."
+},
+
+grapes:{
+name:"🍇 Grapes",
+season:"Planting and pruning schedules vary by region.",
+seed:"Commercial vineyards are normally established using suitable planting material rather than seed.",
+sowing:"Use healthy, recommended nursery planting material.",
+spacing:"Depends on variety and vineyard training system.",
+tip:"Choose varieties suited to the local climate and market."
+},
+
+pomegranate:{
+name:"🍎 Pomegranate",
+season:"Planting season varies by region",
+seed:"Use healthy, true-to-type planting material from a reliable nursery.",
+sowing:"Establish orchards using recommended planting material.",
+spacing:"Depends on variety and orchard system.",
+tip:"Avoid planting material showing disease symptoms."
+},
+  banana:{
+    name:"🍌 Banana",
+    season:"Planting season varies by region",
+    seed:"Use healthy, disease-free suckers or recommended tissue-culture plants.",
+    sowing:"Plant healthy planting material at the locally recommended time.",
+    spacing:"Depends on variety and planting system.",
+    tip:"Use disease-free planting material."
+},
+
+wheat:{
+    name:"🌾 Wheat",
+    season:"Rabi season",
+    seed:"Use certified or quality seed of a recommended variety.",
+    sowing:"Timely sowing is important and varies by region.",
+    spacing:"Follow the recommended seed rate and row spacing.",
+    tip:"Choose varieties suited to the local agro-climatic conditions."
+},
+
+maize:{
+    name:"🌽 Maize",
+    season:"Season-dependent",
+    seed:"Use quality seed of a suitable hybrid or variety.",
+    sowing:"Sow according to the recommended local planting window.",
+    spacing:"Depends on hybrid, variety and production system.",
+    tip:"Use the recommended plant population."
+},
+
+jowar:{
+    name:"🌾 Jowar",
+    season:"Season-dependent",
+    seed:"Use quality seed of a locally recommended variety or hybrid.",
+    sowing:"Follow the locally recommended sowing period.",
+    spacing:"Follow recommended row and plant spacing.",
+    tip:"Use healthy seed and maintain suitable plant population."
+},
+
+bajra:{
+    name:"🌾 Bajra",
+    season:"Kharif and season-dependent",
+    seed:"Use quality seed of a suitable hybrid or variety.",
+    sowing:"Sow according to local rainfall and seasonal recommendations.",
+    spacing:"Follow recommended spacing for the variety.",
+    tip:"Timely sowing supports good establishment."
+},
+
+gram:{
+    name:"🌱 Gram",
+    season:"Rabi season",
+    seed:"Use healthy, quality seed of a recommended variety.",
+    sowing:"Sow during the recommended rabi planting period.",
+    spacing:"Follow local seed-rate and row-spacing recommendations.",
+    tip:"Avoid using damaged or diseased seed."
+},
+
+tur:{
+    name:"🌱 Tur / Pigeon Pea",
+    season:"Kharif season",
+    seed:"Use quality seed of a suitable maturity group.",
+    sowing:"Sow according to local kharif recommendations.",
+    spacing:"Depends on variety and cropping system.",
+    tip:"Select maturity duration according to the local growing season."
+},
+
+moong:{
+    name:"🌱 Moong",
+    season:"Season-dependent",
+    seed:"Use quality seed with good germination.",
+    sowing:"Follow the locally recommended sowing window.",
+    spacing:"Follow recommended spacing for the variety.",
+    tip:"Use healthy seed and avoid prolonged storage in humid conditions."
+},
+
+soybean:{
+    name:"🌱 Soybean",
+    season:"Kharif season",
+    seed:"Use certified or quality seed of a recommended variety.",
+    sowing:"Sow with suitable soil moisture and according to local recommendations.",
+    spacing:"Follow the recommended seed rate and row spacing.",
+    tip:"Use appropriate seed treatment when officially recommended."
+},
+
+groundnut:{
+    name:"🥜 Groundnut",
+    season:"Season-dependent",
+    seed:"Use healthy, mature and good-quality seed suitable for the region.",
+    sowing:"Follow the locally recommended sowing period.",
+    spacing:"Depends on variety and production system.",
+    tip:"Avoid damaged, shrivelled or diseased kernels."
+},
+
+cotton:{
+    name:"🌿 Cotton",
+    season:"Kharif season",
+    seed:"Use approved quality seed of a recommended variety or hybrid.",
+    sowing:"Follow the locally recommended kharif sowing period.",
+    spacing:"Depends on variety, hybrid and cultivation system.",
+    tip:"Follow official recommendations regarding seed and crop management."
+}
+
+};
+
+
+/* =========================================
+   SHOW CROP INFORMATION
+========================================= */
+
+function showCrop(){
+
+    const selected =
+    document.getElementById("cropSelect").value;
+
+    const box =
+    document.getElementById("cropResult");
+
+
+    if(selected === ""){
+
+        box.innerHTML = `
+
+        <h2>🌱 Crop Seed Information</h2>
+
+        <p>
+        Select a crop above to see general information
+        about seed selection, sowing and spacing.
+        </p>
+
+        `;
+
+        return;
+    }
+
+
+    const crop =
+    crops[selected];
+
+
+    box.innerHTML = `
+
+    <h2>${crop.name}</h2>
+
+    <div class="card-grid">
+
+
+        <div class="card">
+
+            <h3>📅 General Season</h3>
+
+            <p>
+            ${crop.season}
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>🌱 Seed Selection</h3>
+
+            <p>
+            ${crop.seed}
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>🌾 Sowing Information</h3>
+
+            <p>
+            ${crop.sowing}
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>📏 Spacing</h3>
+
+            <p>
+            ${crop.spacing}
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>💡 Farmer Tip</h3>
+
+            <p>
+            ${crop.tip}
+            </p>
+
+        </div>
+
+
+    </div>
+
+    `;
+
+}
+
+</script>
+
+
+</body>
+
+</html>

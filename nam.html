@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GramSakhi - National AYUSH Mission</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4faf8;
+            color: #333;
+        }
+
+        /* HEADER */
+        header {
+            background: #00897b;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        /* CONTAINER */
+        .container {
+            width: 92%;
+            max-width: 1000px;
+            margin: 25px auto;
+        }
+
+        /* BACK BUTTON */
+        .back-btn {
+            display: inline-block;
+            color: #00897b;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .back-btn:hover {
+            color: #00695c;
+        }
+
+        /* CARD */
+        .card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 14px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .card h2 {
+            color: #00897b;
+            margin-bottom: 14px;
+        }
+
+        .card p {
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .card ul {
+            margin-left: 22px;
+            line-height: 1.8;
+        }
+
+        /* HIGHLIGHT */
+        .highlight {
+            background: #e0f2f1;
+            border-left: 5px solid #00897b;
+            padding: 18px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .highlight h3 {
+            color: #00695c;
+            margin-bottom: 8px;
+        }
+
+        /* AYUSH GRID */
+        .ayush-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .ayush-box {
+            background: #f4faf8;
+            padding: 18px;
+            border-radius: 10px;
+            border-top: 4px solid #00897b;
+        }
+
+        .ayush-box h3 {
+            color: #00796b;
+            margin-bottom: 8px;
+        }
+
+        .ayush-box p {
+            margin-bottom: 0;
+        }
+
+        /* BENEFITS */
+        .benefit {
+            background: #e8f5e9;
+            border-left: 5px solid #43a047;
+            padding: 18px;
+            border-radius: 8px;
+            line-height: 1.7;
+        }
+
+        /* NOTE */
+        .note {
+            background: #fff8e1;
+            border-left: 5px solid #f9a825;
+            padding: 15px;
+            border-radius: 8px;
+            line-height: 1.6;
+        }
+
+        /* BUTTON */
+        .official-btn {
+            display: inline-block;
+            background: #00897b;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 7px;
+            margin-top: 12px;
+        }
+
+        .official-btn:hover {
+            background: #00695c;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #00695c;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 40px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 650px) {
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            .container {
+                width: 94%;
+            }
+
+            .ayush-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+    <h1>🌿 National AYUSH Mission</h1>
+
+    <p>
+        GramSakhi - AYUSH Healthcare Services
+    </p>
+
+</header>
+
+
+<div class="container">
+
+    <!-- BACK -->
+    <a href="healthscheme.html" class="back-btn">
+        ← Back to Health Care Schemes
+    </a>
+
+
+    <!-- ABOUT -->
+    <div class="card">
+
+        <h2>📋 About National AYUSH Mission</h2>
+
+        <p>
+            The National AYUSH Mission (NAM) is a Government of
+            India initiative that supports the development and
+            strengthening of AYUSH healthcare systems and
+            services.
+        </p>
+
+        <div class="highlight">
+
+            <h3>🎯 Main Purpose</h3>
+
+            <p>
+                To improve access to quality AYUSH healthcare
+                services and strengthen AYUSH facilities,
+                institutions and related systems.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- AYUSH SYSTEMS -->
+    <div class="card">
+
+        <h2>🌿 AYUSH Systems</h2>
+
+        <div class="ayush-grid">
+
+            <div class="ayush-box">
+
+                <h3>🌿 Ayurveda</h3>
+
+                <p>
+                    A traditional Indian system of medicine
+                    focusing on health promotion and holistic
+                    approaches to wellbeing.
+                </p>
+
+            </div>
+
+
+            <div class="ayush-box">
+
+                <h3>🧘 Yoga</h3>
+
+                <p>
+                    Practices involving physical postures,
+                    breathing and related techniques that
+                    support wellbeing.
+                </p>
+
+            </div>
+
+
+            <div class="ayush-box">
+
+                <h3>🌱 Unani</h3>
+
+                <p>
+                    A recognised system of traditional medicine
+                    practised through qualified healthcare
+                    professionals.
+                </p>
+
+            </div>
+
+
+            <div class="ayush-box">
+
+                <h3>🌿 Siddha</h3>
+
+                <p>
+                    A traditional system of medicine with roots
+                    in South India.
+                </p>
+
+            </div>
+
+
+            <div class="ayush-box">
+
+                <h3>🌸 Homoeopathy</h3>
+
+                <p>
+                    A recognised system of medicine included
+                    within the AYUSH framework.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- OBJECTIVES -->
+    <div class="card">
+
+        <h2>🎯 Objectives</h2>
+
+        <ul>
+
+            <li>
+                Improve access to AYUSH healthcare services.
+            </li>
+
+            <li>
+                Strengthen AYUSH health facilities.
+            </li>
+
+            <li>
+                Support availability of qualified AYUSH
+                healthcare services.
+            </li>
+
+            <li>
+                Improve infrastructure and related facilities.
+            </li>
+
+            <li>
+                Promote awareness about AYUSH systems.
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- KEY AREAS -->
+    <div class="card">
+
+        <h2>🏥 Key Areas of Support</h2>
+
+        <div class="benefit">
+
+            <ul>
+
+                <li>
+                    Strengthening AYUSH healthcare facilities.
+                </li>
+
+                <li>
+                    Supporting AYUSH services through public
+                    healthcare systems.
+                </li>
+
+                <li>
+                    Development of AYUSH infrastructure.
+                </li>
+
+                <li>
+                    Support for availability of medicines and
+                    related resources as per programme
+                    guidelines.
+                </li>
+
+                <li>
+                    Promotion of preventive and promotive
+                    healthcare practices.
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <!-- WHO CAN ACCESS -->
+    <div class="card">
+
+        <h2>👨‍👩‍👧 Who Can Access AYUSH Services?</h2>
+
+        <p>
+            AYUSH healthcare services may be available to
+            members of the public through government and
+            other authorised AYUSH facilities, depending on
+            local availability.
+        </p>
+
+        <ul>
+
+            <li>
+                Children
+            </li>
+
+            <li>
+                Adults
+            </li>
+
+            <li>
+                Women
+            </li>
+
+            <li>
+                Senior citizens
+            </li>
+
+            <li>
+                Other eligible members of the community
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- HOW TO ACCESS -->
+    <div class="card">
+
+        <h2>📝 How to Access AYUSH Services</h2>
+
+        <ul>
+
+            <li>
+                Visit a government AYUSH healthcare facility.
+            </li>
+
+            <li>
+                Contact your nearest government health centre
+                and ask about available AYUSH services.
+            </li>
+
+            <li>
+                Consult a qualified AYUSH healthcare
+                professional.
+            </li>
+
+            <li>
+                Follow the treatment and health advice
+                provided by the qualified practitioner.
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- IMPORTANT -->
+    <div class="card">
+
+        <h2>⚠️ Important Information</h2>
+
+        <div class="note">
+
+            AYUSH systems should be accessed through qualified
+            and authorised practitioners.
+
+            <br><br>
+
+            Availability of specific AYUSH services and
+            facilities can vary by location.
+
+            <br><br>
+
+            Do not stop or replace prescribed medical
+            treatment without consulting an appropriate
+            qualified healthcare professional.
+
+        </div>
+
+    </div>
+
+
+    <!-- OFFICIAL -->
+    <div class="card">
+
+        <h2>🌐 Official Information</h2>
+
+        <p>
+            For official information about the National AYUSH
+            Mission and AYUSH healthcare programmes, visit
+            the Ministry of Ayush.
+        </p>
+
+        <a
+            href="https://ayush.gov.in/"
+            target="_blank"
+            class="official-btn">
+
+            Visit Official Ministry of Ayush
+
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <p>
+        © 2026 GramSakhi | Government Schemes & Health Care
+    </p>
+
+</footer>
+
+</body>
+</html>

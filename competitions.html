@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GramSakhi - Competitions & Hackathons</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4faf8;
+            color: #333;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #00897b;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        /* BACK */
+
+        .top-bar {
+            width: 92%;
+            max-width: 1100px;
+            margin: 20px auto;
+        }
+
+        .back-btn {
+            color: #00897b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* CONTAINER */
+
+        .container {
+            width: 92%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* INTRO + SEARCH */
+
+        .intro,
+        .search-box {
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .intro h2,
+        .search-box h2 {
+            color: #00897b;
+            margin-bottom: 12px;
+        }
+
+        .intro p {
+            line-height: 1.7;
+        }
+
+        /* SEARCH */
+
+        #searchInput {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        #searchInput:focus {
+            border-color: #00897b;
+        }
+
+        /* INFORMATION */
+
+        .info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .info-card {
+            background: white;
+            padding: 23px;
+            border-left: 5px solid #00897b;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .info-card h2 {
+            color: #00796b;
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .info-card p {
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .info-card ul {
+            margin-left: 22px;
+            line-height: 1.8;
+        }
+
+        /* BUTTON */
+
+        .btn {
+            display: inline-block;
+            background: #00897b;
+            color: white;
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 7px;
+            margin: 8px 6px 0 0;
+        }
+
+        .btn:hover {
+            background: #00695c;
+        }
+
+        /* NOTE */
+
+        .note {
+            background: #e0f2f1;
+            padding: 18px;
+            border-radius: 10px;
+            margin-top: 25px;
+            line-height: 1.7;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #00695c;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 40px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 26px;
+            }
+
+            .container,
+            .top-bar {
+                width: 94%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <h1>🏆 Competitions & Hackathons</h1>
+
+    <p>
+        Compete • Innovate • Build • Learn • Win
+    </p>
+
+</header>
+
+
+<!-- BACK BUTTON -->
+
+<div class="top-bar">
+
+    <a href="student-corner.html" class="back-btn">
+        ← Back to Student Corner
+    </a>
+
+</div>
+
+
+<div class="container">
+
+
+    <!-- INTRODUCTION -->
+
+    <div class="intro">
+
+        <h2>🚀 Competitions & Hackathons</h2>
+
+        <p>
+            Competitions and hackathons give students an opportunity
+            to apply their knowledge, solve real-world problems,
+            develop projects, work in teams and demonstrate their
+            skills.
+        </p>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+        <h2>🔍 Search Competitions</h2>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search hackathon, coding, innovation, quiz..."
+            onkeyup="searchCompetitions()">
+
+    </div>
+
+
+    <!-- INFORMATION -->
+
+    <div class="info-list">
+
+
+        <!-- 1 -->
+
+        <div class="info-card"
+             data-search="hackathon what is hackathon coding innovation project team">
+
+            <h2>💻 What is a Hackathon?</h2>
+
+            <p>
+                A hackathon is an event where individuals or teams
+                work within a limited period to create a solution,
+                prototype or project for a given problem.
+            </p>
+
+            <ul>
+
+                <li>Usually team-based.</li>
+
+                <li>Focuses on problem solving and innovation.</li>
+
+                <li>May involve coding, design, business or research.</li>
+
+                <li>Projects are usually presented to judges.</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 2 -->
+
+        <div class="info-card"
+             data-search="benefits competitions hackathon career resume skills networking">
+
+            <h2>⭐ Benefits of Participating</h2>
+
+            <ul>
+
+                <li>Improve technical and problem-solving skills.</li>
+
+                <li>Build real-world projects.</li>
+
+                <li>Improve teamwork and communication.</li>
+
+                <li>Strengthen your resume and portfolio.</li>
+
+                <li>Meet other students and professionals.</li>
+
+                <li>Get opportunities to win prizes and recognition.</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 3 -->
+
+        <div class="info-card"
+             data-search="coding competition programming competitive coding">
+
+            <h2>💻 Coding Competitions</h2>
+
+            <p>
+                Coding competitions help students improve
+                programming, algorithms, data structures and
+                problem-solving skills.
+            </p>
+
+            <a href="https://www.codechef.com/"
+               target="_blank"
+               class="btn">
+                CodeChef
+            </a>
+
+            <a href="https://leetcode.com/"
+               target="_blank"
+               class="btn">
+                LeetCode
+            </a>
+
+        </div>
+
+
+        <!-- 4 -->
+
+        <div class="info-card"
+             data-search="smart india hackathon sih innovation government india">
+
+            <h2>🇮🇳 Smart India Hackathon</h2>
+
+            <p>
+                Smart India Hackathon provides students with an
+                opportunity to work on problem statements and
+                develop innovative solutions.
+            </p>
+
+            <a href="https://www.sih.gov.in/"
+               target="_blank"
+               class="btn">
+                Official Website
+            </a>
+
+        </div>
+
+
+        <!-- 5 -->
+
+        <div class="info-card"
+             data-search="hackathon platforms devfolio unstop hackathon">
+
+            <h2>🌐 Find Hackathons Online</h2>
+
+            <p>
+                Students can use recognised platforms to discover
+                hackathons, competitions, challenges and student
+                opportunities.
+            </p>
+
+            <a href="https://devfolio.co/"
+               target="_blank"
+               class="btn">
+                Devfolio
+            </a>
+
+            <a href="https://unstop.com/"
+               target="_blank"
+               class="btn">
+                Unstop
+            </a>
+
+            <a href="https://devpost.com/"
+               target="_blank"
+               class="btn">
+                Devpost
+            </a>
+
+        </div>
+
+
+        <!-- 6 -->
+
+        <div class="info-card"
+             data-search="innovation startup business competition entrepreneurship">
+
+            <h2>🚀 Innovation & Startup Competitions</h2>
+
+            <p>
+                Students can participate in innovation and
+                entrepreneurship competitions to present business
+                ideas, prototypes and solutions to real-world
+                problems.
+            </p>
+
+            <a href="https://www.startupindia.gov.in/"
+               target="_blank"
+               class="btn">
+                Startup India
+            </a>
+
+        </div>
+
+
+        <!-- 7 -->
+
+        <div class="info-card"
+             data-search="quiz competition students general knowledge online quiz">
+
+            <h2>🧠 Quiz Competitions</h2>
+
+            <p>
+                Quiz competitions can help students improve
+                general knowledge, subject knowledge, current
+                affairs and quick thinking.
+            </p>
+
+            <a href="https://www.mygov.in/"
+               target="_blank"
+               class="btn">
+                MyGov
+            </a>
+
+        </div>
+
+
+        <!-- 8 -->
+
+        <div class="info-card"
+             data-search="project competition engineering science student project">
+
+            <h2>🔬 Project Competitions</h2>
+
+            <p>
+                Students can present academic or innovative
+                projects and demonstrate their technical knowledge,
+                creativity and problem-solving ability.
+            </p>
+
+            <ul>
+
+                <li>College-level project competitions.</li>
+
+                <li>Department-level competitions.</li>
+
+                <li>Inter-college competitions.</li>
+
+                <li>National-level project events.</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 9 -->
+
+        <div class="info-card"
+             data-search="design competition ui ux poster graphic design">
+
+            <h2>🎨 Design Competitions</h2>
+
+            <p>
+                Students interested in creativity and design can
+                participate in UI/UX, graphic design, poster,
+                presentation and other design challenges.
+            </p>
+
+        </div>
+
+
+        <!-- 10 -->
+
+        <div class="info-card"
+             data-search="team formation hackathon team roles">
+
+            <h2>👥 How to Build a Hackathon Team</h2>
+
+            <ul>
+
+                <li>Choose members with different skills.</li>
+
+                <li>Include technical and non-technical skills.</li>
+
+                <li>Clearly divide responsibilities.</li>
+
+                <li>Communicate regularly.</li>
+
+                <li>Practice presenting the project together.</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 11 -->
+
+        <div class="info-card"
+             data-search="hackathon preparation project idea prototype presentation pitch">
+
+            <h2>🛠️ How to Prepare for a Hackathon</h2>
+
+            <ul>
+
+                <li>Understand the problem statement carefully.</li>
+
+                <li>Research the existing solutions.</li>
+
+                <li>Identify your target users.</li>
+
+                <li>Build a practical solution or prototype.</li>
+
+                <li>Test the project before submission.</li>
+
+                <li>Prepare a clear presentation.</li>
+
+                <li>Practice your pitch.</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 12 -->
+
+        <div class="info-card"
+             data-search="judging criteria hackathon innovation feasibility impact presentation">
+
+            <h2>🏅 Common Judging Criteria</h2>
+
+            <p>
+                The judging criteria vary by competition. Common
+                factors may include:
+            </p>
+
+            <ul>
+
+                <li>Innovation</li>
+
+                <li>Problem understanding</li>
+
+                <li>Technical implementation</li>
+
+                <li>Practical feasibility</li>
+
+                <li>Social or business impact</li>
+
+                <li>User experience</li>
+
+                <li>Presentation quality</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 13 -->
+
+        <div class="info-card"
+             data-search="competition certificate participation certificate achievement resume">
+
+            <h2>📜 Certificates & Achievements</h2>
+
+            <p>
+                Depending on the organiser, participants may
+                receive participation certificates, winning
+                certificates, prizes or other recognition.
+            </p>
+
+            <p>
+                Keep genuine certificates and achievement records
+                safely for your portfolio and resume.
+            </p>
+
+        </div>
+
+
+        <!-- 14 -->
+
+        <div class="info-card"
+             data-search="competition safety scam registration fee fake hackathon">
+
+            <h2>⚠️ Safety Tips</h2>
+
+            <ul>
+
+                <li>Check the organiser before registering.</li>
+
+                <li>Read the official rules carefully.</li>
+
+                <li>Check registration deadlines.</li>
+
+                <li>Be careful with suspicious links and offers.</li>
+
+                <li>Do not share sensitive information unnecessarily.</li>
+
+                <li>Verify prize and certificate claims from official sources.</li>
+
+            </ul>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- IMPORTANT NOTE -->
+
+    <div class="note">
+
+        💡 <b>Important:</b>
+        Competition dates, rules, eligibility, registration fees,
+        prizes and problem statements can change. Always check
+        the organiser's official website before registering.
+
+    </div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 GramSakhi | Student Corner
+    </p>
+
+</footer>
+
+
+<script>
+
+    function searchCompetitions() {
+
+        let searchText =
+            document.getElementById("searchInput")
+            .value
+            .toLowerCase()
+            .trim();
+
+        let cards =
+            document.querySelectorAll(".info-card");
+
+
+        cards.forEach(function(card) {
+
+            let text =
+                card.innerText.toLowerCase();
+
+            let keywords =
+                card.getAttribute("data-search")
+                .toLowerCase();
+
+
+            if (
+                text.includes(searchText) ||
+                keywords.includes(searchText)
+            ) {
+
+                card.style.display = "block";
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+    }
+
+</script>
+
+
+</body>
+
+</html>

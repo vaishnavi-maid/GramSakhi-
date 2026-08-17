@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GramSakhi - NCD Prevention & Control Programme</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4faf8;
+            color: #333;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #00897b;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        /* CONTAINER */
+
+        .container {
+            width: 92%;
+            max-width: 1000px;
+            margin: 25px auto;
+        }
+
+        /* BACK BUTTON */
+
+        .back-btn {
+            display: inline-block;
+            color: #00897b;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .back-btn:hover {
+            color: #00695c;
+        }
+
+        /* CARD */
+
+        .card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 14px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .card h2 {
+            color: #00897b;
+            margin-bottom: 14px;
+        }
+
+        .card p {
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .card ul {
+            margin-left: 22px;
+            line-height: 1.8;
+        }
+
+        /* HIGHLIGHT */
+
+        .highlight {
+            background: #e0f2f1;
+            border-left: 5px solid #00897b;
+            padding: 18px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .highlight h3 {
+            color: #00695c;
+            margin-bottom: 8px;
+        }
+
+        /* DISEASE GRID */
+
+        .disease-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .disease-box {
+            background: #f4faf8;
+            padding: 18px;
+            border-radius: 10px;
+            border-top: 4px solid #00897b;
+        }
+
+        .disease-box h3 {
+            color: #00796b;
+            margin-bottom: 8px;
+        }
+
+        .disease-box p {
+            margin-bottom: 0;
+        }
+
+        /* SERVICE GRID */
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .service-box {
+            background: #e8f5e9;
+            padding: 18px;
+            border-radius: 10px;
+        }
+
+        .service-box h3 {
+            color: #00796b;
+            margin-bottom: 8px;
+        }
+
+        .service-box p {
+            margin-bottom: 0;
+        }
+
+        /* NOTE */
+
+        .note {
+            background: #fff8e1;
+            border-left: 5px solid #f9a825;
+            padding: 15px;
+            border-radius: 8px;
+            line-height: 1.6;
+        }
+
+        /* BUTTON */
+
+        .official-btn {
+            display: inline-block;
+            background: #00897b;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 7px;
+            margin-top: 12px;
+        }
+
+        .official-btn:hover {
+            background: #00695c;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #00695c;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 40px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 650px) {
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            .container {
+                width: 94%;
+            }
+
+            .disease-grid,
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <h1>🩺 NCD Prevention & Control Programme</h1>
+
+    <p>
+        GramSakhi - Non-Communicable Disease Prevention
+    </p>
+
+</header>
+
+
+<div class="container">
+
+
+    <!-- BACK -->
+
+    <a href="healthscheme.html" class="back-btn">
+
+        ← Back to Health Care Schemes
+
+    </a>
+
+
+    <!-- ABOUT -->
+
+    <div class="card">
+
+        <h2>📋 About the Programme</h2>
+
+        <p>
+            The Government of India implements programmes
+            for prevention and control of non-communicable
+            diseases (NCDs) through the public healthcare
+            system.
+        </p>
+
+        <div class="highlight">
+
+            <h3>🎯 Main Purpose</h3>
+
+            <p>
+                To promote prevention, early detection,
+                screening, treatment and management of
+                important non-communicable diseases.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- WHAT ARE NCDs -->
+
+    <div class="card">
+
+        <h2>🩺 What Are Non-Communicable Diseases?</h2>
+
+        <p>
+            Non-communicable diseases are health conditions
+            that are generally not transmitted directly from
+            one person to another and often require long-term
+            prevention and management.
+        </p>
+
+    </div>
+
+
+    <!-- DISEASES -->
+
+    <div class="card">
+
+        <h2>🔎 Important NCDs</h2>
+
+        <div class="disease-grid">
+
+
+            <div class="disease-box">
+
+                <h3>❤️ Hypertension</h3>
+
+                <p>
+                    High blood pressure can increase the risk
+                    of heart disease, stroke and other health
+                    complications.
+                </p>
+
+            </div>
+
+
+            <div class="disease-box">
+
+                <h3>🩸 Diabetes</h3>
+
+                <p>
+                    Diabetes affects blood glucose levels and
+                    may require regular monitoring and
+                    long-term management.
+                </p>
+
+            </div>
+
+
+            <div class="disease-box">
+
+                <h3>🎗️ Common Cancers</h3>
+
+                <p>
+                    Public health programmes support awareness
+                    and screening for selected common cancers.
+                </p>
+
+            </div>
+
+
+            <div class="disease-box">
+
+                <h3>❤️ Cardiovascular Diseases</h3>
+
+                <p>
+                    Prevention and management of cardiovascular
+                    risk factors are important parts of NCD
+                    control.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- OBJECTIVES -->
+
+    <div class="card">
+
+        <h2>🎯 Objectives</h2>
+
+        <ul>
+
+            <li>
+                Promote healthy lifestyles and disease
+                prevention.
+            </li>
+
+            <li>
+                Encourage early identification of NCDs.
+            </li>
+
+            <li>
+                Provide screening through appropriate
+                healthcare facilities.
+            </li>
+
+            <li>
+                Support diagnosis and treatment through the
+                public healthcare system.
+            </li>
+
+            <li>
+                Encourage regular follow-up and disease
+                management.
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- SERVICES -->
+
+    <div class="card">
+
+        <h2>🏥 Major Services</h2>
+
+        <div class="service-grid">
+
+
+            <div class="service-box">
+
+                <h3>🔍 Screening</h3>
+
+                <p>
+                    Screening services can help identify
+                    selected NCDs and risk factors at
+                    healthcare facilities.
+                </p>
+
+            </div>
+
+
+            <div class="service-box">
+
+                <h3>🩺 Diagnosis</h3>
+
+                <p>
+                    People with suspected conditions can be
+                    referred for further assessment and
+                    diagnosis.
+                </p>
+
+            </div>
+
+
+            <div class="service-box">
+
+                <h3>💊 Treatment</h3>
+
+                <p>
+                    Appropriate treatment and medicines may
+                    be provided through designated government
+                    health facilities.
+                </p>
+
+            </div>
+
+
+            <div class="service-box">
+
+                <h3>📅 Follow-up</h3>
+
+                <p>
+                    Long-term follow-up and management may be
+                    provided according to the patient's
+                    condition and healthcare plan.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- PREVENTION -->
+
+    <div class="card">
+
+        <h2>🌱 NCD Prevention Tips</h2>
+
+        <ul>
+
+            <li>
+                Eat a balanced and nutritious diet.
+            </li>
+
+            <li>
+                Stay physically active.
+            </li>
+
+            <li>
+                Avoid tobacco use.
+            </li>
+
+            <li>
+                Avoid harmful use of alcohol.
+            </li>
+
+            <li>
+                Maintain a healthy body weight.
+            </li>
+
+            <li>
+                Get recommended health screenings.
+            </li>
+
+            <li>
+                Follow medical advice for diagnosed
+                conditions.
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- HOW TO ACCESS -->
+
+    <div class="card">
+
+        <h2>📝 How to Access NCD Services</h2>
+
+        <ul>
+
+            <li>
+                Visit your nearest government health centre.
+            </li>
+
+            <li>
+                Ask about NCD screening services.
+            </li>
+
+            <li>
+                Get your blood pressure and blood glucose
+                checked when recommended.
+            </li>
+
+            <li>
+                Follow the referral process if further
+                examination is required.
+            </li>
+
+            <li>
+                Continue regular follow-up for diagnosed
+                conditions.
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- IMPORTANT -->
+
+    <div class="card">
+
+        <h2>⚠️ Important Information</h2>
+
+        <div class="note">
+
+            Screening is intended for early identification
+            and does not by itself confirm a diagnosis.
+
+            <br><br>
+
+            If you have symptoms or concerns about your
+            health, consult a qualified healthcare professional.
+
+            <br><br>
+
+            Availability of specific services may vary
+            between healthcare facilities.
+
+        </div>
+
+    </div>
+
+
+    <!-- OFFICIAL -->
+
+    <div class="card">
+
+        <h2>🌐 Official Information</h2>
+
+        <p>
+            For official information about national
+            non-communicable disease programmes, visit the
+            Ministry of Health & Family Welfare.
+        </p>
+
+        <a
+            href="https://mohfw.gov.in/"
+            target="_blank"
+            class="official-btn">
+
+            Visit Official Website
+
+        </a>
+
+    </div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 GramSakhi | Government Schemes & Health Care
+    </p>
+
+</footer>
+
+
+</body>
+</html>

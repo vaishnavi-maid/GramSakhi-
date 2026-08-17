@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GramSakhi - Farm Machinery</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f8f1;
+    color:#333;
+    line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+    background:#558b2f;
+    color:white;
+    text-align:center;
+    padding:28px 15px;
+}
+
+header h1{
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+header p{
+    font-size:16px;
+}
+
+/* BACK */
+
+.back{
+    width:94%;
+    max-width:1100px;
+    margin:18px auto;
+}
+
+.back a{
+    color:#558b2f;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* CONTAINER */
+
+.container{
+    width:94%;
+    max-width:1100px;
+    margin:auto;
+}
+
+/* INTRO */
+
+.intro{
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+.intro h2{
+    color:#558b2f;
+    margin-bottom:8px;
+}
+
+/* SECTION */
+
+.section{
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+.section h2{
+    color:#558b2f;
+    margin-bottom:15px;
+}
+
+/* MACHINE GRID */
+
+.machine-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+}
+
+.machine{
+    background:#f1f8e9;
+    padding:18px;
+    border-radius:12px;
+    border-left:5px solid #7cb342;
+}
+
+.machine h3{
+    color:#558b2f;
+    margin-bottom:8px;
+}
+
+.machine ul{
+    padding-left:20px;
+}
+
+/* SEARCH */
+
+.search-box{
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+.search-box h2{
+    color:#558b2f;
+    margin-bottom:12px;
+}
+
+select{
+    width:100%;
+    padding:13px;
+    border:2px solid #ddd;
+    border-radius:8px;
+    font-size:15px;
+    background:white;
+}
+
+select:focus{
+    outline:none;
+    border-color:#558b2f;
+}
+
+/* RESULT */
+
+.result{
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+.result h2{
+    color:#558b2f;
+    margin-bottom:18px;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.info-card{
+    background:#f1f8e9;
+    padding:17px;
+    border-radius:10px;
+}
+
+.info-card h3{
+    color:#558b2f;
+    margin-bottom:7px;
+}
+
+/* SCHEMES */
+
+.scheme{
+    background:#f1f8e9;
+    padding:18px;
+    border-radius:12px;
+    margin-bottom:15px;
+}
+
+.scheme h3{
+    color:#33691e;
+    margin-bottom:7px;
+}
+
+.scheme-btn{
+    display:inline-block;
+    margin-top:10px;
+    padding:10px 15px;
+    background:#558b2f;
+    color:white;
+    text-decoration:none;
+    border-radius:7px;
+    font-weight:bold;
+}
+
+/* STEPS */
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.step{
+    background:#f9fbe7;
+    padding:18px;
+    border-radius:10px;
+    border-left:5px solid #8bc34a;
+}
+
+.number{
+    display:inline-block;
+    background:#558b2f;
+    color:white;
+    width:32px;
+    height:32px;
+    line-height:32px;
+    text-align:center;
+    border-radius:50%;
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+/* WARNING */
+
+.warning{
+    background:#fff8e1;
+    border-left:5px solid #f9a825;
+    padding:18px;
+    border-radius:8px;
+    margin-bottom:20px;
+}
+
+/* OFFICIAL */
+
+.official{
+    background:#e8f5e9;
+    padding:22px;
+    border-radius:15px;
+    margin-bottom:25px;
+}
+
+.official h2{
+    color:#2e7d32;
+    margin-bottom:8px;
+}
+
+.official-btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 18px;
+    background:#2e7d32;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+    background:#33691e;
+    color:white;
+    text-align:center;
+    padding:18px;
+    margin-top:30px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .machine-grid,
+    .info-grid,
+    .steps{
+        grid-template-columns:1fr;
+    }
+
+    header h1{
+        font-size:26px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<h1>🚜 Farm Machinery</h1>
+
+<p>
+Modern Agricultural Machines, Uses & Government Assistance
+</p>
+
+</header>
+
+
+<!-- BACK -->
+
+<div class="back">
+
+<a href="farmer-corner.html">
+← Back to Farmer Corner
+</a>
+
+</div>
+
+
+<div class="container">
+
+
+<!-- INTRO -->
+
+<div class="intro">
+
+<h2>🚜 Why Farm Machinery is Important</h2>
+
+<p>
+Farm machinery helps farmers perform agricultural
+operations more efficiently. It can reduce manual
+labour, save time and improve the timeliness of
+farm operations.
+</p>
+
+<br>
+
+<p>
+Farmers should select machinery according to their
+farm size, crop, soil condition, available power,
+budget and actual requirement.
+</p>
+
+</div>
+
+
+<!-- MACHINE SELECTOR -->
+
+<div class="search-box">
+
+<h2>🔎 Select a Farm Machine</h2>
+
+<select id="machineSelect" onchange="showMachine()">
+
+<option value="">
+-- Select Machine --
+</option>
+
+<option value="tractor">🚜 Tractor</option>
+
+<option value="rotavator">🌱 Rotavator</option>
+
+<option value="cultivator">🌾 Cultivator</option>
+
+<option value="seeddrill">🌱 Seed Drill</option>
+
+<option value="planter">🌽 Planter</option>
+
+<option value="sprayer">💧 Sprayer</option>
+
+<option value="thresher">🌾 Thresher</option>
+
+<option value="sheller">🌽 Maize Sheller</option>
+
+<option value="chaffcutter">🌿 Chaff Cutter</option>
+
+<option value="reaper">🌾 Reaper</option>
+
+<option value="harvester">🚜 Combine Harvester</option>
+
+<option value="pump">💧 Agricultural Pump</option>
+
+<option value="weeders">🌱 Weeder</option>
+
+<option value="plough">🌾 Plough</option>
+
+</select>
+
+</div>
+
+
+<!-- MACHINE RESULT -->
+
+<div class="result" id="machineResult">
+
+<h2>🚜 Machine Information</h2>
+
+<p>
+Select a machine above to see its uses,
+benefits and important information.
+</p>
+
+</div>
+
+
+<!-- MACHINES -->
+
+<div class="section">
+
+<h2>🚜 Common Farm Machinery</h2>
+
+<div class="machine-grid">
+
+
+<div class="machine">
+
+<h3>🚜 Tractor</h3>
+
+<p>
+Used for ploughing, tilling, sowing,
+transportation and operating different
+farm implements.
+</p>
+
+</div>
+
+
+<div class="machine">
+
+<h3>🌱 Rotavator</h3>
+
+<p>
+Used for preparing and pulverising soil
+before sowing.
+</p>
+
+</div>
+
+
+<div class="machine">
+
+<h3>🌾 Cultivator</h3>
+
+<p>
+Used for primary or secondary tillage
+depending on the implement and soil.
+</p>
+
+</div>
+
+
+<div class="machine">
+
+<h3>🌱 Seed Drill</h3>
+
+<p>
+Places seed in rows at controlled depth
+and spacing.
+</p>
+
+</div>
+
+
+<div class="machine">
+
+<h3>💧 Sprayer</h3>
+
+<p>
+Used to apply approved agricultural
+sprays uniformly to crops.
+</p>
+
+</div>
+
+
+<div class="machine">
+
+<h3>🌾 Thresher</h3>
+
+<p>
+Separates grains from harvested crop
+material.
+</p>
+
+</div>
+
+
+<div class="machine">
+
+<h3>🌿 Chaff Cutter</h3>
+
+<p>
+Cuts fodder into smaller pieces for
+livestock feeding.
+</p>
+
+</div>
+
+
+<div class="machine">
+
+<h3>🌾 Reaper</h3>
+
+<p>
+Helps in harvesting crops such as
+cereals and other suitable crops.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- GOVERNMENT SCHEMES -->
+
+<div class="section">
+
+<h2>💰 Government Machinery Assistance & Schemes</h2>
+
+<p>
+Government programmes may provide assistance for
+agricultural machinery and equipment to eligible
+farmers or farmer groups. Availability, eligibility,
+subsidy percentage, approved machinery and limits
+can change according to the current guidelines.
+</p>
+
+<br>
+
+
+<div class="scheme">
+
+<h3>🏛️ Sub-Mission on Agricultural Mechanization (SMAM)</h3>
+
+<p>
+The Sub-Mission on Agricultural Mechanization aims
+to promote access to agricultural machinery and
+mechanization, including support through applicable
+government programmes.
+</p>
+
+<a
+href="https://agrimachinery.nic.in/"
+target="_blank"
+class="scheme-btn">
+
+🌐 Official Portal
+
+</a>
+
+</div>
+
+
+<div class="scheme">
+
+<h3>🌾 Maharashtra Agriculture Department</h3>
+
+<p>
+Farmers in Maharashtra can check current
+agricultural schemes, machinery assistance,
+eligibility and application information through
+the state Agriculture Department.
+</p>
+
+<a
+href="https://krishi.maharashtra.gov.in/"
+target="_blank"
+class="scheme-btn">
+
+🌐 Maharashtra Agriculture
+
+</a>
+
+</div>
+
+
+<div class="scheme">
+
+<h3>💻 MahaDBT Farmer Portal</h3>
+
+<p>
+Eligible Maharashtra farmers can use the MahaDBT
+Farmer portal to check available agriculture
+schemes and application-related information.
+</p>
+
+<a
+href="https://mahadbt.maharashtra.gov.in/"
+target="_blank"
+class="scheme-btn">
+
+🌐 MahaDBT Portal
+
+</a>
+
+</div>
+
+
+<div class="scheme">
+
+<h3>🤝 Custom Hiring Centres</h3>
+
+<p>
+Custom Hiring Centres can help farmers access
+farm machinery on a hiring basis instead of
+purchasing every machine individually.
+Availability depends on the local programme
+and service provider.
+</p>
+
+</div>
+
+
+</div>
+
+
+<!-- HOW TO APPLY -->
+
+<div class="section">
+
+<h2>📝 How to Check Machinery Assistance</h2>
+
+<div class="steps">
+
+
+<div class="step">
+
+<span class="number">1</span>
+
+<h3>🌐 Visit Official Portal</h3>
+
+<p>
+Check the current machinery-related scheme on
+the official government portal.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<span class="number">2</span>
+
+<h3>📋 Check Eligibility</h3>
+
+<p>
+Read the current eligibility requirements
+before submitting an application.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<span class="number">3</span>
+
+<h3>📄 Prepare Documents</h3>
+
+<p>
+Keep the required identity, bank, land and
+other documents ready as specified by the
+current scheme.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<span class="number">4</span>
+
+<h3>💻 Submit Application</h3>
+
+<p>
+Submit the application through the official
+portal when the scheme/application window
+is available.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<span class="number">5</span>
+
+<h3>🔍 Check Status</h3>
+
+<p>
+Use the official portal to check application
+status and further instructions.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<span class="number">6</span>
+
+<h3>🚜 Purchase as Required</h3>
+
+<p>
+Follow the scheme's current rules regarding
+approved machinery, vendors and purchase
+procedure.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- DOCUMENTS -->
+
+<div class="section">
+
+<h2>📄 Common Documents</h2>
+
+<p>
+The exact documents depend on the scheme. Commonly
+requested documents may include:
+</p>
+
+<br>
+
+<ul style="padding-left:22px;">
+
+<li>🪪 Aadhaar or other accepted identity document</li>
+
+<li>🏦 Bank account details</li>
+
+<li>🌾 Land or farmer-related records where applicable</li>
+
+<li>📱 Registered mobile number</li>
+
+<li>📄 Caste/category certificate where applicable</li>
+
+<li>📋 Other documents specified by the current scheme</li>
+
+</ul>
+
+</div>
+
+
+<!-- MACHINE SELECTION -->
+
+<div class="section">
+
+<h2>💡 How to Choose the Right Machine</h2>
+
+<div class="machine-grid">
+
+
+<div class="machine">
+
+<h3>📏 Consider Farm Size</h3>
+
+<p>
+Choose machine capacity according to the size
+of your farm and expected workload.
+</p>
+
+</div>
+
+
+<div class="machine">
+
+<h3>🌾 Consider Your Crop</h3>
+
+<p>
+Different crops require different implements
+and harvesting equipment.
+</p>
+
+</div>
+
+
+<div class="machine">
+
+<h3>💰 Consider Cost</h3>
+
+<p>
+Compare purchase, fuel, maintenance and
+operating costs before buying.
+</p>
+
+</div>
+
+
+<div class="machine">
+
+<h3>🔧 Maintenance</h3>
+
+<p>
+Check availability of spare parts, servicing
+and repair facilities.
+</p>
+
+</div>
+
+
+<div class="machine">
+
+<h3>⚡ Power Requirement</h3>
+
+<p>
+Ensure that the tractor or power source is
+compatible with the implement.
+</p>
+
+</div>
+
+
+<div class="machine">
+
+<h3>🤝 Hiring Option</h3>
+
+<p>
+For occasional use, compare machine hiring
+or Custom Hiring Centre options with purchase.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- SAFETY -->
+
+<div class="section">
+
+<h2>⚠️ Farm Machinery Safety</h2>
+
+<ul style="padding-left:22px;">
+
+<li>
+Read the machine's operating instructions before use.
+</li>
+
+<li>
+Keep children away from operating machinery.
+</li>
+
+<li>
+Wear appropriate protective equipment.
+</li>
+
+<li>
+Switch off the machine before cleaning or
+performing maintenance.
+</li>
+
+<li>
+Do not remove safety guards while machinery
+is operating.
+</li>
+
+<li>
+Use tractors and implements only within their
+recommended operating limits.
+</li>
+
+<li>
+Ensure operators are properly trained.
+</li>
+
+<li>
+Do not carry passengers in unsafe positions
+on tractors or agricultural machinery.
+</li>
+
+</ul>
+
+</div>
+
+
+<!-- WARNING -->
+
+<div class="warning">
+
+<b>⚠️ Important:</b>
+
+<br><br>
+
+Machinery subsidy percentages, maximum assistance,
+eligible farmers, approved machines, vendors and
+application dates can change.
+
+Always verify the latest information on the
+official government portal before purchasing
+machinery or applying for assistance.
+
+</div>
+
+
+<!-- OFFICIAL -->
+
+<div class="official">
+
+<h2>🏛️ Official Resources</h2>
+
+<p>
+Use official government portals for the latest
+information about agricultural machinery schemes
+and applications.
+</p>
+
+
+<a
+href="https://agrimachinery.nic.in/"
+target="_blank"
+class="official-btn">
+
+🚜 Agricultural Mechanization Portal
+
+</a>
+
+
+<a
+href="https://krishi.maharashtra.gov.in/"
+target="_blank"
+class="official-btn">
+
+🌾 Maharashtra Agriculture Department
+
+</a>
+
+
+<a
+href="https://mahadbt.maharashtra.gov.in/"
+target="_blank"
+class="official-btn">
+
+💻 MahaDBT Farmer Portal
+
+</a>
+
+</div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 GramSakhi | Farmer Corner
+
+</footer>
+
+
+<script>
+
+/* =========================================
+   FARM MACHINERY DATA
+========================================= */
+
+const machines = {
+
+tractor:{
+name:"🚜 Tractor",
+use:"Used for ploughing, tillage, sowing, transportation and operating compatible farm implements.",
+benefit:"Can perform multiple agricultural operations and reduce manual labour.",
+suitable:"Useful for farms requiring regular mechanised field operations.",
+care:"Regular servicing, tyre checks, engine maintenance and safe operation are important."
+},
+
+rotavator:{
+name:"🌱 Rotavator",
+use:"Used for soil preparation, mixing crop residues and creating a suitable seedbed.",
+benefit:"Can complete soil preparation efficiently when used under suitable soil conditions.",
+suitable:"Useful for seedbed preparation in many field crops.",
+care:"Avoid operating in unsuitable soil moisture conditions and follow the implement manufacturer's instructions."
+},
+
+cultivator:{
+name:"🌾 Cultivator",
+use:"Used for tillage, loosening soil and controlling weeds between crop rows where appropriate.",
+benefit:"Can reduce time and labour required for certain field operations.",
+suitable:"Useful for farms using tractor-based tillage.",
+care:"Use correct depth and compatible tractor power."
+},
+
+seeddrill:{
+name:"🌱 Seed Drill",
+use:"Places seeds in rows at controlled depth and spacing.",
+benefit:"Can improve uniformity of sowing and reduce manual seed placement.",
+suitable:"Useful for crops that are suitable for row sowing.",
+care:"Check seed metering, calibration and seed tubes before operation."
+},
+
+planter:{
+name:"🌽 Planter",
+use:"Used for precise planting of selected crops such as maize and other suitable crops.",
+benefit:"Can provide more uniform plant spacing and planting depth.",
+suitable:"Useful where precision planting is required.",
+care:"Calibrate according to seed size and crop requirements."
+},
+
+sprayer:{
+name:"💧 Sprayer",
+use:"Used to apply approved crop-protection or other agricultural spray products.",
+benefit:"Can provide more uniform application when correctly calibrated.",
+suitable:"Suitable for farms requiring crop spraying operations.",
+care:"Use appropriate protective equipment and follow product label directions."
+},
+
+thresher:{
+name:"🌾 Thresher",
+use:"Separates grain from harvested crop material.",
+benefit:"Can reduce manual threshing time and labour.",
+suitable:"Used for suitable cereal and pulse crops depending on machine design.",
+care:"Use safety guards and never put hands near moving parts."
+},
+
+sheller:{
+name:"🌽 Maize Sheller",
+use:"Separates maize kernels from cobs.",
+benefit:"Can speed up maize shelling and reduce manual labour.",
+suitable:"Useful after maize harvesting when grain needs to be separated from cobs.",
+care:"Follow manufacturer instructions and keep hands away from moving mechanisms."
+},
+
+chaffcutter:{
+name:"🌿 Chaff Cutter",
+use:"Cuts green or dry fodder into smaller pieces for livestock feeding.",
+benefit:"Can make fodder handling easier and improve feeding convenience.",
+suitable:"Useful for dairy and livestock farmers.",
+care:"Use guards and never put hands near the cutting mechanism."
+},
+
+reaper:{
+name:"🌾 Reaper",
+use:"Cuts and lays suitable standing crops during harvesting.",
+benefit:"Can reduce harvesting time and labour requirements.",
+suitable:"Useful for suitable cereal and other crops depending on machine type.",
+care:"Operate only according to the machine's recommended conditions."
+},
+
+harvester:{
+name:"🚜 Combine Harvester",
+use:"Performs harvesting and, depending on the machine, threshing and cleaning operations.",
+benefit:"Can significantly reduce harvesting time and labour.",
+suitable:"Useful for larger areas and crops compatible with the machine.",
+care:"Requires trained operation and proper adjustment for the crop."
+},
+
+pump:{
+name:"💧 Agricultural Pump",
+use:"Used to move irrigation water from an appropriate water source to the field.",
+benefit:"Supports irrigation where a suitable water source and infrastructure are available.",
+suitable:"Useful for farms requiring pumping for irrigation.",
+care:"Ensure safe electrical/fuel connections and maintain the pump regularly."
+},
+
+weeders:{
+name:"🌱 Weeder",
+use:"Used to remove weeds between crop rows or in suitable field conditions.",
+benefit:"Can reduce manual weeding effort.",
+suitable:"Useful where crop spacing permits mechanical weeding.",
+care:"Use correct depth to avoid damaging crop roots."
+},
+
+plough:{
+name:"🌾 Plough",
+use:"Used for primary soil tillage and turning or loosening soil depending on plough type.",
+benefit:"Helps prepare land for subsequent operations.",
+suitable:"Useful for appropriate soil and cropping conditions.",
+care:"Use suitable tractor power and recommended working depth."
+}
+
+};
+
+
+/* =========================================
+   SHOW MACHINE
+========================================= */
+
+function showMachine(){
+
+const selected =
+document.getElementById("machineSelect").value;
+
+const box =
+document.getElementById("machineResult");
+
+
+if(selected === ""){
+
+box.innerHTML = `
+
+<h2>🚜 Machine Information</h2>
+
+<p>
+Select a machine above to see its uses,
+benefits and important information.
+</p>
+
+`;
+
+return;
+
+}
+
+
+const machine =
+machines[selected];
+
+
+box.innerHTML = `
+
+<h2>${machine.name}</h2>
+
+<div class="info-grid">
+
+
+<div class="info-card">
+
+<h3>⚙️ Main Use</h3>
+
+<p>
+${machine.use}
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>✅ Benefits</h3>
+
+<p>
+${machine.benefit}
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>🌾 Suitable For</h3>
+
+<p>
+${machine.suitable}
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>🔧 Important Care</h3>
+
+<p>
+${machine.care}
+</p>
+
+</div>
+
+
+</div>
+
+`;
+
+}
+
+</script>
+
+
+</body>
+
+</html>

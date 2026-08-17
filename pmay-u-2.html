@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GramSakhi - PMAY-U 2.0</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4faf8;
+            color: #333;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #00897b;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        /* CONTAINER */
+
+        .container {
+            width: 92%;
+            max-width: 1000px;
+            margin: 25px auto;
+        }
+
+        /* BACK BUTTON */
+
+        .back-btn {
+            display: inline-block;
+            color: #00897b;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .back-btn:hover {
+            color: #00695c;
+        }
+
+        /* CARD */
+
+        .card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 14px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .card h2 {
+            color: #00897b;
+            margin-bottom: 14px;
+        }
+
+        .card p {
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .card ul {
+            margin-left: 22px;
+            line-height: 1.8;
+        }
+
+        /* HIGHLIGHT */
+
+        .highlight {
+            background: #e0f2f1;
+            border-left: 5px solid #00897b;
+            padding: 18px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .highlight h3 {
+            color: #00695c;
+            margin-bottom: 8px;
+        }
+
+        /* VERTICAL GRID */
+
+        .vertical-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .vertical-box {
+            background: #f4faf8;
+            padding: 18px;
+            border-radius: 10px;
+            border-top: 4px solid #00897b;
+        }
+
+        .vertical-box h3 {
+            color: #00796b;
+            margin-bottom: 8px;
+        }
+
+        .vertical-box p {
+            margin-bottom: 0;
+        }
+
+        /* BENEFIT */
+
+        .benefit {
+            background: #e8f5e9;
+            border-left: 5px solid #43a047;
+            padding: 18px;
+            border-radius: 8px;
+            line-height: 1.7;
+        }
+
+        /* NOTE */
+
+        .note {
+            background: #fff8e1;
+            border-left: 5px solid #f9a825;
+            padding: 15px;
+            border-radius: 8px;
+            line-height: 1.6;
+        }
+
+        /* BUTTON */
+
+        .official-btn {
+            display: inline-block;
+            background: #00897b;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 7px;
+            margin-top: 12px;
+        }
+
+        .official-btn:hover {
+            background: #00695c;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #00695c;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 40px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 650px) {
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            .container {
+                width: 94%;
+            }
+
+            .vertical-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <h1>🏙️ Pradhan Mantri Awas Yojana - Urban 2.0</h1>
+
+    <p>
+        GramSakhi - Urban Housing Scheme
+    </p>
+
+</header>
+
+
+<div class="container">
+
+
+    <!-- BACK -->
+
+    <a href="housingschemes.html" class="back-btn">
+        ← Back to Housing Schemes
+    </a>
+
+
+    <!-- ABOUT -->
+
+    <div class="card">
+
+        <h2>📋 About PMAY-U 2.0</h2>
+
+        <p>
+            Pradhan Mantri Awas Yojana - Urban 2.0 is a
+            Government of India housing programme designed
+            to provide housing assistance to eligible
+            urban families.
+        </p>
+
+        <p>
+            The scheme supports eligible beneficiaries
+            through different housing assistance options
+            according to their requirements and applicable
+            government guidelines.
+        </p>
+
+        <div class="highlight">
+
+            <h3>🎯 Main Objective</h3>
+
+            <p>
+                To support eligible urban families in
+                constructing, purchasing or obtaining
+                affordable housing.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ELIGIBILITY -->
+
+    <div class="card">
+
+        <h2>👨‍👩‍👧 Eligibility</h2>
+
+        <ul>
+
+            <li>
+                Eligible urban families belonging to
+                Economically Weaker Section (EWS),
+                Low Income Group (LIG) or Middle Income
+                Group (MIG), as applicable.
+            </li>
+
+            <li>
+                Beneficiaries must satisfy the conditions
+                applicable to the selected PMAY-U 2.0
+                vertical.
+            </li>
+
+            <li>
+                The applicant and family must meet the
+                applicable ownership and other scheme
+                conditions.
+            </li>
+
+        </ul>
+
+        <div class="note">
+
+            <b>Important:</b>
+            Eligibility differs according to the PMAY-U 2.0
+            component. Always verify the latest criteria
+            before applying.
+
+        </div>
+
+    </div>
+
+
+    <!-- FOUR VERTICALS -->
+
+    <div class="card">
+
+        <h2>🏠 Four Main Components</h2>
+
+        <div class="vertical-grid">
+
+
+            <div class="vertical-box">
+
+                <h3>🏗️ 1. BLC</h3>
+
+                <p>
+                    Beneficiary Led Construction supports
+                    eligible beneficiaries in constructing
+                    houses on their own available land.
+                </p>
+
+            </div>
+
+
+            <div class="vertical-box">
+
+                <h3>🏢 2. AHP</h3>
+
+                <p>
+                    Affordable Housing in Partnership supports
+                    affordable housing projects for eligible
+                    beneficiaries.
+                </p>
+
+            </div>
+
+
+            <div class="vertical-box">
+
+                <h3>🏘️ 3. ARH</h3>
+
+                <p>
+                    Affordable Rental Housing supports
+                    affordable rental housing for eligible
+                    urban groups.
+                </p>
+
+            </div>
+
+
+            <div class="vertical-box">
+
+                <h3>💰 4. ISS</h3>
+
+                <p>
+                    Interest Subsidy Scheme provides interest
+                    subsidy support on eligible home loans,
+                    subject to applicable conditions.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- BENEFITS -->
+
+    <div class="card">
+
+        <h2>💰 Key Benefits</h2>
+
+        <div class="benefit">
+
+            <ul>
+
+                <li>
+                    Housing assistance for eligible urban
+                    families.
+                </li>
+
+                <li>
+                    Support for construction or purchase of
+                    eligible houses.
+                </li>
+
+                <li>
+                    Affordable rental housing support through
+                    the applicable ARH component.
+                </li>
+
+                <li>
+                    Interest subsidy support through the
+                    applicable ISS component.
+                </li>
+
+                <li>
+                    Government assistance is subject to the
+                    applicable component, eligibility and
+                    scheme guidelines.
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <!-- DOCUMENTS -->
+
+    <div class="card">
+
+        <h2>📄 Common Documents / Information</h2>
+
+        <ul>
+
+            <li>
+                Aadhaar or other approved identification,
+                as applicable.
+            </li>
+
+            <li>
+                Bank account details where required.
+            </li>
+
+            <li>
+                Income-related documents, where applicable.
+            </li>
+
+            <li>
+                Address and family details.
+            </li>
+
+            <li>
+                Property or land documents where required
+                for the selected component.
+            </li>
+
+            <li>
+                Any additional documents required by the
+                concerned authority or lender.
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- HOW TO APPLY -->
+
+    <div class="card">
+
+        <h2>📝 How to Apply</h2>
+
+        <ul>
+
+            <li>
+                Identify the PMAY-U 2.0 component applicable
+                to your situation.
+            </li>
+
+            <li>
+                Check eligibility and required documents.
+            </li>
+
+            <li>
+                Apply through the prescribed PMAY-U 2.0
+                process or concerned urban local body.
+            </li>
+
+            <li>
+                Submit the required information and
+                documents.
+            </li>
+
+            <li>
+                Track the application according to the
+                available government process.
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- IMPORTANT -->
+
+    <div class="card">
+
+        <h2>⚠️ Important Information</h2>
+
+        <div class="note">
+
+            PMAY-U 2.0 benefits, eligibility, assistance
+            amounts and conditions depend on the applicable
+            component and current government guidelines.
+
+            <br><br>
+
+            Applicants should verify the latest information
+            through the official PMAY-U 2.0 portal or their
+            concerned Urban Local Body.
+
+        </div>
+
+    </div>
+
+
+    <!-- OFFICIAL -->
+
+    <div class="card">
+
+        <h2>🌐 Official Information</h2>
+
+        <p>
+            For current information about PMAY-U 2.0,
+            eligibility, application procedures and
+            scheme components, visit the official PMAY
+            Urban portal.
+        </p>
+
+        <a
+            href="https://pmay-urban.gov.in/"
+            target="_blank"
+            class="official-btn">
+
+            Visit Official PMAY-U Website
+
+        </a>
+
+    </div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 GramSakhi | Government Schemes & Housing
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>

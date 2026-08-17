@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Crop Advisory</title>
+
+<style>
+
+body{
+font-family:Arial,sans-serif;
+margin:0;
+background:#F1F8E9;
+}
+
+header{
+background:#2E7D32;
+color:white;
+padding:20px;
+text-align:center;
+font-size:28px;
+font-weight:bold;
+}
+
+.card{
+background:white;
+margin:20px;
+padding:20px;
+border-radius:15px;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+select{
+width:100%;
+padding:12px;
+font-size:18px;
+border-radius:8px;
+margin-top:10px;
+}
+
+#result{
+margin-top:20px;
+font-size:18px;
+line-height:1.8;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+🌱 Crop Advisory
+</header>
+
+<div class="card">
+
+<h2>Select Your Crop</h2>
+
+<select onchange="showAdvice(this.value)">
+
+<option value="">Choose Crop</option>
+
+<option value="Wheat">Wheat</option>
+
+<option value="Rice">Rice</option>
+
+<option value="Cotton">Cotton</option>
+
+<option value="Sugarcane">Sugarcane</option>
+
+<option value="Soybean">Soybean</option>
+
+<option value="Onion">Onion</option>
+
+<option value="Tomato">Tomato</option>
+
+</select>
+
+<div id="result"></div>
+
+</div>
+
+<script>
+
+function showAdvice(crop){
+
+let text="";
+
+if(crop=="Wheat"){
+text="<h3>🌾 Wheat</h3>Best Season: Rabi<br>💧 Irrigation: Moderate<br>🌱 Fertilizer: NPK + Organic Manure";
+}
+
+else if(crop=="Rice"){
+text="<h3>🌾 Rice</h3>Best Season: Kharif<br>💧 Irrigation: High<br>🌱 Fertilizer: Nitrogen-rich fertilizer";
+}
+
+else if(crop=="Cotton"){
+text="<h3>🌾 Cotton</h3>Best Season: Kharif<br>☀ Plenty of sunlight<br>🌱 Use balanced fertilizer";
+}
+
+else if(crop=="Sugarcane"){
+text="<h3>🌾 Sugarcane</h3>Needs regular irrigation and fertile soil.";
+}
+
+else if(crop=="Soybean"){
+text="<h3>🌾 Soybean</h3>Best Season: Kharif<br>🌱 Use phosphorus fertilizer.";
+}
+
+else if(crop=="Onion"){
+text="<h3>🧅 Onion</h3>Requires well-drained soil and regular watering.";
+}
+
+else if(crop=="Tomato"){
+text="<h3>🍅 Tomato</h3>Needs sunlight, drip irrigation and disease monitoring.";
+}
+
+document.getElementById("result").innerHTML=text;
+
+}
+
+</script>
+
+</body>
+
+</html>

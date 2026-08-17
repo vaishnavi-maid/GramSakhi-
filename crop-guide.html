@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GramSakhi - Crop Guide</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f8f1;
+    color:#333;
+    line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+    background:#2e7d32;
+    color:white;
+    text-align:center;
+    padding:28px 15px;
+}
+
+header h1{
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+header p{
+    font-size:16px;
+}
+
+/* BACK */
+
+.back{
+    width:94%;
+    max-width:1100px;
+    margin:18px auto;
+}
+
+.back a{
+    color:#2e7d32;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* MAIN */
+
+.container{
+    width:94%;
+    max-width:1100px;
+    margin:auto;
+}
+
+/* INTRO */
+
+.intro{
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+.intro h2{
+    color:#2e7d32;
+    margin-bottom:8px;
+}
+
+/* SEARCH */
+
+.search-box{
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+.search-box h2{
+    color:#2e7d32;
+    margin-bottom:15px;
+}
+
+select{
+    width:100%;
+    padding:13px;
+    border:2px solid #ddd;
+    border-radius:8px;
+    font-size:15px;
+}
+
+select:focus{
+    outline:none;
+    border-color:#2e7d32;
+}
+
+/* CROP INFORMATION */
+
+.crop-info{
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+.crop-info h2{
+    color:#2e7d32;
+    margin-bottom:18px;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.info-card{
+    background:#f1f8e9;
+    padding:16px;
+    border-radius:10px;
+}
+
+.info-card h3{
+    color:#2e7d32;
+    margin-bottom:6px;
+}
+
+/* TIPS */
+
+.tips{
+    background:#e8f5e9;
+    padding:22px;
+    border-radius:15px;
+    margin-bottom:20px;
+}
+
+.tips h2{
+    color:#2e7d32;
+    margin-bottom:10px;
+}
+
+.tips ul{
+    padding-left:22px;
+}
+
+/* WARNING */
+
+.warning{
+    background:#fff8e1;
+    border-left:5px solid #f9a825;
+    padding:18px;
+    border-radius:8px;
+    margin-bottom:20px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#1b5e20;
+    color:white;
+    text-align:center;
+    padding:18px;
+    margin-top:30px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+    header h1{
+        font-size:26px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<h1>🌾 Crop Guide</h1>
+
+<p>
+Complete Crop Information for Farmers
+</p>
+
+</header>
+
+
+<!-- BACK -->
+
+<div class="back">
+
+<a href="farmer-corner.html">
+← Back to Farmer Corner
+</a>
+
+</div>
+
+
+<div class="container">
+
+
+<!-- INTRO -->
+
+<div class="intro">
+
+<h2>🌱 Know Your Crop</h2>
+
+<p>
+Select your crop below to get useful information
+about cultivation, soil, sowing, irrigation,
+fertilizer, pests, harvesting and yield.
+</p>
+
+</div>
+
+
+<!-- CROP SELECT -->
+
+<div class="search-box">
+
+<h2>🔎 Select Your Crop</h2>
+
+<select id="cropSelect"
+        onchange="showCrop()">
+
+<option value="">
+-- Select Crop --
+</option>
+
+<option value="cabbage">
+Cabbage
+</option>
+
+<option value="cauliflower">
+Cauliflower
+</option>
+
+<option value="greenpeas">
+Green Peas
+</option>
+
+<option value="fenugreek">
+Fenugreek (Methi)
+</option>
+
+<option value="spinach">
+Spinach (Palak)
+</option>
+
+<option value="chilli">
+Green Chilli
+</option>
+
+<option value="guava">
+Guava
+</option>
+
+<option value="onion">
+Onion
+</option>
+
+<option value="tomato">
+Tomato
+</option>
+
+<option value="potato">
+Potato
+</option>
+
+<option value="brinjal">
+Brinjal
+</option>
+
+<option value="okra">
+Okra (Bhendi)
+</option>
+
+<option value="carrot">
+Carrot
+</option>
+
+<option value="radish">
+Radish
+</option>
+
+<option value="coriander">
+Coriander
+</option>
+
+<option value="grapes">
+Grapes
+</option>
+
+<option value="pomegranate">
+Pomegranate
+</option>
+
+<option value="banana">
+Banana
+</option>
+
+<option value="mango">
+Mango
+</option>
+
+<option value="wheat">
+Wheat
+</option>
+
+<option value="jowar">
+Jowar
+</option>
+
+<option value="maize">
+Maize
+</option>
+
+<option value="bajra">
+Bajra
+</option>
+
+<option value="gram">
+Gram
+</option>
+
+<option value="tur">
+Tur
+</option>
+
+<option value="moong">
+Moong
+</option>
+
+<option value="urad">
+Urad
+</option>
+
+<option value="soybean">
+Soybean
+</option>
+
+<option value="groundnut">
+Groundnut
+</option>
+
+<option value="cotton">
+Cotton
+</option>
+
+</select>
+
+</div>
+
+
+<!-- CROP INFORMATION -->
+
+<div class="crop-info"
+     id="cropInfo">
+
+<h2>🌱 Crop Information</h2>
+
+<p>
+Please select a crop to see its cultivation guide.
+</p>
+
+</div>
+
+
+<!-- GENERAL TIPS -->
+
+<div class="tips">
+
+<h2>💡 General Farming Tips</h2>
+
+<ul>
+
+<li>
+Test your soil before selecting fertilizer.
+</li>
+
+<li>
+Use good-quality and certified seeds.
+</li>
+
+<li>
+Follow recommended spacing while planting.
+</li>
+
+<li>
+Avoid unnecessary irrigation.
+</li>
+
+<li>
+Regularly check crops for pests and diseases.
+</li>
+
+<li>
+Use fertilizers according to soil-test
+recommendations.
+</li>
+
+<li>
+Harvest crops at the proper maturity stage.
+</li>
+
+<li>
+Store harvested produce in a clean and dry place.
+</li>
+
+</ul>
+
+</div>
+
+
+<!-- WARNING -->
+
+<div class="warning">
+
+<b>⚠️ Important:</b>
+
+Crop requirements vary according to soil,
+weather, variety and local conditions.
+
+For fertilizer and pesticide recommendations,
+farmers should follow the advice of the
+Agriculture Department or a qualified
+agriculture expert.
+
+</div>
+
+
+</div>
+
+
+<footer>
+
+© 2026 GramSakhi | Farmer Corner
+
+</footer>
+
+
+<script>
+
+/* =========================================
+   CROP DATA
+========================================= */
+
+const crops = {
+
+cabbage:{
+name:"🥬 Cabbage",
+season:"Rabi / Cool season",
+soil:"Well-drained fertile loamy soil",
+sowing:"September – November",
+seed:"About 400–500 g/ha for transplanted crop",
+irrigation:"Regular irrigation; avoid waterlogging",
+fertilizer:"Use soil-test based fertilizer",
+pests:"Diamondback moth, aphids",
+disease:"Downy mildew, black rot",
+harvest:"Harvest when heads become firm",
+yield:"Depends on variety and management"
+},
+
+cauliflower:{
+name:"🥦 Cauliflower",
+season:"Rabi / Cool season",
+soil:"Fertile, well-drained loamy soil",
+sowing:"Variety dependent; commonly August–November",
+seed:"Depends on variety and nursery method",
+irrigation:"Regular irrigation with good drainage",
+fertilizer:"Soil-test based nutrient management",
+pests:"Cabbage butterfly, aphids",
+disease:"Downy mildew, black rot",
+harvest:"Harvest when curds are compact and white",
+yield:"Depends on variety and management"
+},
+
+greenpeas:{
+name:"🫛 Green Peas",
+season:"Cool season",
+soil:"Well-drained loamy soil",
+sowing:"October – November",
+seed:"Use recommended seed rate for variety",
+irrigation:"Light and regular irrigation",
+fertilizer:"Use soil-test recommendations",
+pests:"Aphids, pod borer",
+disease:"Powdery mildew",
+harvest:"Harvest tender green pods",
+yield:"Depends on variety and crop management"
+},
+
+fenugreek:{
+name:"🌿 Fenugreek (Methi)",
+season:"Cool season",
+soil:"Well-drained loamy soil",
+sowing:"October – December",
+seed:"Use good-quality seed",
+irrigation:"Light irrigation at suitable intervals",
+fertilizer:"Use soil-test based recommendation",
+pests:"Aphids",
+disease:"Powdery mildew",
+harvest:"Leaves can be harvested when sufficiently developed",
+yield:"Depends on purpose and management"
+},
+
+spinach:{
+name:"🥬 Spinach (Palak)",
+season:"Cool to mild season",
+soil:"Fertile, well-drained soil",
+sowing:"Can be grown in suitable seasons",
+seed:"Use recommended seed rate",
+irrigation:"Frequent light irrigation",
+fertilizer:"Use organic matter and soil-test based nutrients",
+pests:"Leaf miners, aphids",
+disease:"Leaf spot",
+harvest:"Harvest tender leaves regularly",
+yield:"Depends on repeated harvesting"
+},
+
+chilli:{
+name:"🌶️ Green Chilli",
+season:"Kharif / Rabi depending on region",
+soil:"Well-drained fertile soil",
+sowing:"Season varies by region",
+seed:"Variety dependent",
+irrigation:"Regular irrigation without waterlogging",
+fertilizer:"Soil-test based fertilizer",
+pests:"Thrips, mites, aphids",
+disease:"Leaf curl, wilt",
+harvest:"Harvest green fruits when they reach marketable size",
+yield:"Variety and management dependent"
+},
+
+guava:{
+name:"🍈 Guava",
+season:"Perennial fruit crop",
+soil:"Well-drained loamy soil",
+sowing:"Planting season depends on region",
+seed:"Usually propagated through planting material",
+irrigation:"Regular irrigation for young plants",
+fertilizer:"Apply according to plant age and soil test",
+pests:"Fruit fly, bark eating caterpillar",
+disease:"Wilt, fruit diseases",
+harvest:"Harvest fruits at mature green to yellowish stage",
+yield:"Depends on tree age and variety"
+},
+
+onion:{
+name:"🧅 Onion",
+season:"Kharif / Rabi",
+soil:"Well-drained sandy loam to loam",
+sowing:"Season depends on crop type",
+seed:"Use certified seed",
+irrigation:"Light irrigation at regular intervals",
+fertilizer:"Soil-test based nutrient management",
+pests:"Thrips",
+disease:"Purple blotch, basal rot",
+harvest:"Harvest after bulb maturity and neck falling",
+yield:"Depends on variety and management"
+},
+
+tomato:{
+name:"🍅 Tomato",
+season:"Suitable season varies by region",
+soil:"Well-drained fertile loamy soil",
+sowing:"Season varies according to region",
+seed:"Use certified hybrid/variety seed",
+irrigation:"Regular irrigation",
+fertilizer:"Use soil-test recommendations",
+pests:"Fruit borer, whitefly",
+disease:"Early blight, bacterial wilt",
+harvest:"Harvest according to market requirement",
+yield:"Variety and management dependent"
+},
+
+potato:{
+name:"🥔 Potato",
+season:"Cool season",
+soil:"Loose, well-drained sandy loam",
+sowing:"Generally October – November in suitable regions",
+seed:"Use certified seed tubers",
+irrigation:"Regular but avoid waterlogging",
+fertilizer:"Soil-test based fertilizer",
+pests:"Potato tuber moth",
+disease:"Late blight",
+harvest:"Harvest after foliage matures",
+yield:"Depends on variety and management"
+},
+
+brinjal:{
+name:"🍆 Brinjal",
+season:"Can be grown in suitable seasons",
+soil:"Fertile well-drained soil",
+sowing:"Season varies by region",
+seed:"Use quality seed",
+irrigation:"Regular irrigation",
+fertilizer:"Soil-test based",
+pests:"Shoot and fruit borer",
+disease:"Wilt",
+harvest:"Harvest tender fruits at marketable size",
+yield:"Depends on variety and management"
+},
+
+okra:{
+name:"🌱 Okra (Bhendi)",
+season:"Kharif / Summer",
+soil:"Well-drained fertile soil",
+sowing:"Season depends on region",
+seed:"Use recommended seed",
+irrigation:"Regular irrigation",
+fertilizer:"Soil-test based",
+pests:"Jassids, fruit borer",
+disease:"Yellow vein mosaic",
+harvest:"Harvest tender pods regularly",
+yield:"Depends on variety and management"
+},
+
+carrot:{
+name:"🥕 Carrot",
+season:"Cool season",
+soil:"Deep loose sandy loam",
+sowing:"Generally cool season",
+seed:"Use quality seed",
+irrigation:"Regular light irrigation",
+fertilizer:"Avoid excessive nitrogen",
+pests:"Aphids",
+disease:"Leaf blight",
+harvest:"Harvest when roots reach marketable size",
+yield:"Depends on variety and soil"
+},
+
+radish:{
+name:"🌱 Radish",
+season:"Cool season",
+soil:"Loose sandy loam",
+sowing:"Cool season",
+seed:"Use quality seed",
+irrigation:"Regular light irrigation",
+fertilizer:"Soil-test based",
+pests:"Aphids",
+disease:"Downy mildew",
+harvest:"Harvest roots while tender",
+yield:"Depends on variety"
+},
+
+coriander:{
+name:"🌿 Coriander",
+season:"Cool season",
+soil:"Well-drained loamy soil",
+sowing:"October – November",
+seed:"Use good-quality seed",
+irrigation:"Light irrigation",
+fertilizer:"Soil-test based",
+pests:"Aphids",
+disease:"Powdery mildew",
+harvest:"Harvest leaves or mature seeds according to purpose",
+yield:"Depends on crop purpose"
+},
+
+grapes:{
+name:"🍇 Grapes",
+season:"Perennial fruit crop",
+soil:"Well-drained soil",
+sowing:"Planting depends on local conditions",
+seed:"Usually propagated through cuttings",
+irrigation:"Carefully managed irrigation",
+fertilizer:"Based on soil and plant analysis",
+pests:"Mealybugs, thrips",
+disease:"Downy mildew, powdery mildew",
+harvest:"Harvest at required maturity and quality",
+yield:"Depends on variety and vineyard management"
+},
+
+pomegranate:{
+name:"🍎 Pomegranate",
+season:"Perennial fruit crop",
+soil:"Well-drained soil",
+sowing:"Planting depends on local conditions",
+seed:"Usually propagated using planting material",
+irrigation:"Controlled irrigation",
+fertilizer:"Soil and plant-test based",
+pests:"Aphids, fruit diseases",
+disease:"Bacterial blight",
+harvest:"Harvest mature fruits according to variety",
+yield:"Depends on tree age and management"
+},
+
+banana:{
+name:"🍌 Banana",
+season:"Year-round planting possible in suitable conditions",
+soil:"Deep fertile well-drained soil",
+sowing:"Depends on region and irrigation",
+seed:"Use healthy planting material",
+irrigation:"Regular irrigation",
+fertilizer:"Crop and soil-test based",
+pests:"Rhizome/corm pests and sucking pests",
+disease:"Panama disease, Sigatoka",
+harvest:"Harvest bunches at suitable maturity",
+yield:"Depends on variety and management"
+},
+
+mango:{
+name:"🥭 Mango",
+season:"Perennial fruit crop",
+soil:"Well-drained deep soil",
+sowing:"Planting generally during suitable monsoon conditions",
+seed:"Use grafted quality planting material",
+irrigation:"Important during establishment and fruit development",
+fertilizer:"Based on tree age and soil test",
+pests:"Mango hopper, mealybug",
+disease:"Powdery mildew, anthracnose",
+harvest:"Harvest at mature stage",
+yield:"Depends on variety and tree age"
+},
+
+wheat:{
+name:"🌾 Wheat",
+season:"Rabi",
+soil:"Well-drained fertile loam",
+sowing:"Generally November in suitable regions",
+seed:"Use certified seed",
+irrigation:"Critical irrigations at crop stages",
+fertilizer:"Soil-test based",
+pests:"Aphids",
+disease:"Rusts",
+harvest:"Harvest when crop becomes mature and grains harden",
+yield:"Depends on variety and management"
+},
+
+jowar:{
+name:"🌾 Jowar",
+season:"Kharif / Rabi",
+soil:"Well-drained medium soil",
+sowing:"Depends on crop season",
+seed:"Use certified seed",
+irrigation:"Depends on rainfall and crop season",
+fertilizer:"Soil-test based",
+pests:"Shoot fly, stem borer",
+disease:"Downy mildew",
+harvest:"Harvest at physiological maturity",
+yield:"Depends on variety and rainfall"
+},
+
+maize:{
+name:"🌽 Maize",
+season:"Kharif / Rabi / Summer",
+soil:"Well-drained fertile soil",
+sowing:"Season varies by region",
+seed:"Use certified hybrid/variety",
+irrigation:"Adequate irrigation during critical stages",
+fertilizer:"Soil-test based",
+pests:"Fall armyworm, stem borer",
+disease:"Leaf blight",
+harvest:"Harvest when grains mature",
+yield:"Depends on hybrid and management"
+},
+
+bajra:{
+name:"🌾 Bajra",
+season:"Kharif",
+soil:"Light to medium well-drained soil",
+sowing:"Monsoon season",
+seed:"Use certified seed",
+irrigation:"Mostly rainfall dependent; irrigation if required",
+fertilizer:"Soil-test based",
+pests:"Shoot fly, downy mildew",
+disease:"Downy mildew",
+harvest:"Harvest mature earheads",
+yield:"Depends on variety and rainfall"
+},
+
+gram:{
+name:"🌱 Gram / Chickpea",
+season:"Rabi",
+soil:"Well-drained loamy soil",
+sowing:"October – November",
+seed:"Use certified seed",
+irrigation:"Limited irrigation depending on rainfall",
+fertilizer:"Soil-test based",
+pests:"Pod borer",
+disease:"Wilt",
+harvest:"Harvest when pods and plants become mature",
+yield:"Depends on variety and management"
+},
+
+tur:{
+name:"🌱 Tur / Pigeon Pea",
+season:"Kharif",
+soil:"Well-drained medium to deep soil",
+sowing:"Monsoon season",
+seed:"Use certified seed",
+irrigation:"Generally rainfall dependent",
+fertilizer:"Soil-test based",
+pests:"Pod borer",
+disease:"Wilt",
+harvest:"Harvest when pods mature and dry",
+yield:"Depends on variety and rainfall"
+},
+
+moong:{
+name:"🌱 Moong / Green Gram",
+season:"Kharif / Summer",
+soil:"Well-drained light to medium soil",
+sowing:"Season varies by region",
+seed:"Use certified seed",
+irrigation:"Light irrigation when required",
+fertilizer:"Soil-test based",
+pests:"Pod borer, aphids",
+disease:"Yellow mosaic",
+harvest:"Harvest mature pods in stages",
+yield:"Depends on variety"
+},
+
+urad:{
+name:"🌱 Urad / Black Gram",
+season:"Kharif / Summer",
+soil:"Well-drained soil",
+sowing:"Season varies by region",
+seed:"Use certified seed",
+irrigation:"Light irrigation when required",
+fertilizer:"Soil-test based",
+pests:"Pod borer",
+disease:"Yellow mosaic",
+harvest:"Harvest mature pods",
+yield:"Depends on variety and management"
+},
+
+soybean:{
+name:"🌱 Soybean",
+season:"Kharif",
+soil:"Well-drained fertile soil",
+sowing:"With onset of monsoon",
+seed:"Use certified seed and suitable inoculation",
+irrigation:"Mostly rainfall dependent",
+fertilizer:"Soil-test based",
+pests:"Girdle beetle, defoliators",
+disease:"Yellow mosaic and fungal diseases",
+harvest:"Harvest when pods mature and leaves fall",
+yield:"Depends on variety and rainfall"
+},
+
+groundnut:{
+name:"🥜 Groundnut",
+season:"Kharif / Summer",
+soil:"Loose well-drained sandy loam",
+sowing:"Season varies by region",
+seed:"Use quality seed",
+irrigation:"Important at critical stages",
+fertilizer:"Soil-test based",
+pests:"Leaf miner, sucking pests",
+disease:"Tikka/leaf spot",
+harvest:"Harvest when pods mature",
+yield:"Depends on variety and management"
+},
+
+cotton:{
+name:"🌿 Cotton",
+season:"Kharif",
+soil:"Deep well-drained black soil is suitable",
+sowing:"Monsoon season",
+seed:"Use approved quality seed",
+irrigation:"Depends on rainfall and irrigation availability",
+fertilizer:"Soil-test based",
+pests:"Bollworm, sucking pests",
+disease:"Wilt and leaf diseases",
+harvest:"Pick fully opened mature bolls",
+yield:"Depends on variety and management"
+}
+
+};
+
+
+/* =========================================
+   SHOW CROP
+========================================= */
+
+function showCrop(){
+
+const selected =
+document.getElementById("cropSelect").value;
+
+const box =
+document.getElementById("cropInfo");
+
+
+if(selected === ""){
+
+box.innerHTML = `
+<h2>🌱 Crop Information</h2>
+<p>
+Please select a crop to see its cultivation guide.
+</p>
+`;
+
+return;
+
+}
+
+
+const crop =
+crops[selected];
+
+
+box.innerHTML = `
+
+<h2>${crop.name}</h2>
+
+<div class="info-grid">
+
+<div class="info-card">
+<h3>🌦️ Season</h3>
+<p>${crop.season}</p>
+</div>
+
+<div class="info-card">
+<h3>🌱 Suitable Soil</h3>
+<p>${crop.soil}</p>
+</div>
+
+<div class="info-card">
+<h3>📅 Sowing Time</h3>
+<p>${crop.sowing}</p>
+</div>
+
+<div class="info-card">
+<h3>🌾 Seed</h3>
+<p>${crop.seed}</p>
+</div>
+
+<div class="info-card">
+<h3>💧 Irrigation</h3>
+<p>${crop.irrigation}</p>
+</div>
+
+<div class="info-card">
+<h3>🧪 Fertilizer</h3>
+<p>${crop.fertilizer}</p>
+</div>
+
+<div class="info-card">
+<h3>🐛 Common Pests</h3>
+<p>${crop.pests}</p>
+</div>
+
+<div class="info-card">
+<h3>🦠 Common Diseases</h3>
+<p>${crop.disease}</p>
+</div>
+
+<div class="info-card">
+<h3>🌾 Harvesting</h3>
+<p>${crop.harvest}</p>
+</div>
+
+<div class="info-card">
+<h3>📊 Expected Yield</h3>
+<p>${crop.yield}</p>
+</div>
+
+</div>
+
+`;
+
+}
+
+</script>
+
+
+</body>
+
+</html>

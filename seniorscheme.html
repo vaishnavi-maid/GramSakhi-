@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Senior Citizen Government Schemes</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f5f5f5;
+}
+
+header{
+background:#2E7D32;
+color:white;
+text-align:center;
+padding:30px 15px;
+}
+
+header h1{
+font-size:42px;
+}
+
+.search-box{
+padding:20px;
+text-align:center;
+}
+
+.search-box input{
+width:90%;
+padding:15px;
+font-size:18px;
+border:3px solid #2E7D32;
+border-radius:15px;
+outline:none;
+}
+
+.card{
+background:white;
+width:90%;
+margin:20px auto;
+padding:22px;
+border-radius:18px;
+box-shadow:0 4px 12px rgba(0,0,0,0.15);
+}
+
+.card h2{
+color:#2E7D32;
+font-size:34px;
+margin-bottom:20px;
+}
+
+.btn{
+display:inline-block;
+background:#2E7D32;
+color:white;
+text-decoration:none;
+padding:14px 22px;
+border-radius:10px;
+font-size:22px;
+}
+
+footer{
+background:#2E7D32;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:30px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>👴 Senior Citizen Government Schemes</h1>
+</header>
+
+<div class="search-box">
+<input type="text" id="searchInput"
+placeholder="🔍 Search Scheme..."
+onkeyup="searchScheme()">
+</div>
+<!-- Scheme 1 -->
+<div class="card scheme">
+    <h2>Indira Gandhi National Old Age Pension Scheme</h2>
+    <a href="ignoaps.html" class="btn">View Details</a>
+</div>
+
+<!-- Scheme 2 -->
+<div class="card scheme">
+    <h2>Pradhan Mantri Vaya Vandana Yojana</h2>
+    <a href="pmvvy.html" class="btn">View Details</a>
+</div>
+
+<!-- Scheme 3 -->
+<div class="card scheme">
+    <h2>Ayushman Bharat Health Scheme</h2>
+    <a href="abha.html" class="btn">View Details</a>
+</div>
+
+<!-- Scheme 4 -->
+<div class="card scheme">
+    <h2>Rashtriya Vayoshri Yojana</h2>
+    <a href="rvy.html" class="btn">View Details</a>
+</div>
+
+<!-- Scheme 5 -->
+<div class="card scheme">
+    <h2>Annapurna Scheme</h2>
+    <a href="annapurna.html" class="btn">View Details</a>
+</div>
+<script>
+function searchScheme() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let cards = document.getElementsByClassName("scheme");
+
+    for (let i = 0; i < cards.length; i++) {
+        let title = cards[i].getElementsByTagName("h2")[0].innerText.toLowerCase();
+
+        if (title.indexOf(input) > -1) {
+            cards[i].style.display = "block";
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
+}
+</script>
+<footer>
+    <p>© 2026 GramSakhi | Senior Citizen Government Schemes</p>
+</footer>
+
+</body>
+</html>

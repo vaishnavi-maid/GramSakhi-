@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GramSakhi - Competitive Exams</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4faf8;
+            color: #333;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #00897b;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        /* BACK */
+
+        .top-bar {
+            width: 92%;
+            max-width: 1100px;
+            margin: 20px auto;
+        }
+
+        .back-btn {
+            color: #00897b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* CONTAINER */
+
+        .container {
+            width: 92%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* INTRO */
+
+        .intro,
+        .search-box {
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .intro h2,
+        .search-box h2 {
+            color: #00897b;
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            line-height: 1.7;
+        }
+
+        /* SEARCH */
+
+        #searchInput {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        #searchInput:focus {
+            border-color: #00897b;
+        }
+
+        /* EXAM LIST */
+
+        .exam-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .exam-card {
+            background: white;
+            padding: 22px;
+            border-left: 5px solid #00897b;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .exam-card h3 {
+            color: #00796b;
+            font-size: 21px;
+            margin-bottom: 8px;
+        }
+
+        .exam-card p {
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 12px;
+        }
+
+        /* BUTTON */
+
+        .exam-card a {
+            display: inline-block;
+            background: #00897b;
+            color: white;
+            text-decoration: none;
+            padding: 9px 15px;
+            border-radius: 6px;
+            margin-right: 7px;
+            margin-top: 5px;
+        }
+
+        .exam-card a:hover {
+            background: #00695c;
+        }
+
+        /* NO RESULT */
+
+        #noResult {
+            display: none;
+            background: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
+        /* NOTE */
+
+        .note {
+            background: #e0f2f1;
+            padding: 18px;
+            border-radius: 10px;
+            margin-top: 25px;
+            line-height: 1.6;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #00695c;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 40px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 26px;
+            }
+
+            .container,
+            .top-bar {
+                width: 94%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <h1>🎯 Competitive Exams</h1>
+
+    <p>
+        Explore Competitive Examination Opportunities
+    </p>
+
+</header>
+
+
+<!-- BACK BUTTON -->
+
+<div class="top-bar">
+
+    <a href="student-corner.html" class="back-btn">
+        ← Back to Student Corner
+    </a>
+
+</div>
+
+
+<div class="container">
+
+
+    <!-- INTRODUCTION -->
+
+    <div class="intro">
+
+        <h2>📚 Competitive Exam Resources</h2>
+
+        <p>
+            Find information and useful official links for
+            government, banking, engineering, defence and other
+            competitive examinations. Use the search bar to
+            quickly find an examination.
+        </p>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+        <h2>🔍 Search Competitive Exams</h2>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search UPSC, MPSC, Banking, SSC, GATE..."
+            onkeyup="searchExams()">
+
+    </div>
+
+
+    <!-- EXAM LIST -->
+
+    <div class="exam-list">
+
+
+        <!-- UPSC -->
+
+        <div class="exam-card"
+             data-search="upsc civil services ias ips indian administrative service">
+
+            <h3>🇮🇳 UPSC Civil Services Examination</h3>
+
+            <p>
+                A national-level examination conducted by the
+                Union Public Service Commission for services such
+                as IAS, IPS and other central services.
+            </p>
+
+            <a href="https://upsc.gov.in/"
+               target="_blank">
+                Official Website
+            </a>
+
+        </div>
+
+
+        <!-- MPSC -->
+
+        <div class="exam-card"
+             data-search="mpsc maharashtra public service commission rajyaseva">
+
+            <h3>🏛️ MPSC</h3>
+
+            <p>
+                Maharashtra Public Service Commission conducts
+                examinations for various government posts in
+                Maharashtra.
+            </p>
+
+            <a href="https://mpsc.gov.in/"
+               target="_blank">
+                Official Website
+            </a>
+
+        </div>
+
+
+        <!-- SSC -->
+
+        <div class="exam-card"
+             data-search="ssc staff selection commission cgl chsl mts">
+
+            <h3>📋 SSC Examinations</h3>
+
+            <p>
+                Staff Selection Commission conducts examinations
+                for various posts in central government departments.
+            </p>
+
+            <a href="https://ssc.gov.in/"
+               target="_blank">
+                Official Website
+            </a>
+
+        </div>
+
+
+        <!-- BANKING -->
+
+        <div class="exam-card"
+             data-search="banking ibps sbi po clerk bank exams">
+
+            <h3>🏦 Banking Examinations</h3>
+
+            <p>
+                Opportunities in banking through examinations
+                conducted by organisations such as IBPS and SBI.
+            </p>
+
+            <a href="https://www.ibps.in/"
+               target="_blank">
+                IBPS
+            </a>
+
+            <a href="https://sbi.co.in/"
+               target="_blank">
+                SBI
+            </a>
+
+        </div>
+
+
+        <!-- RAILWAY -->
+
+        <div class="exam-card"
+             data-search="railway rrb ntpc group d railway recruitment">
+
+            <h3>🚆 Railway Recruitment Exams</h3>
+
+            <p>
+                Railway recruitment examinations provide
+                opportunities for various posts in Indian Railways.
+            </p>
+
+            <a href="https://www.rrbapply.gov.in/"
+               target="_blank">
+                RRB
+            </a>
+
+        </div>
+
+
+        <!-- GATE -->
+
+        <div class="exam-card"
+             data-search="gate graduate aptitude test engineering computer technology">
+
+            <h3>💻 GATE</h3>
+
+            <p>
+                Graduate Aptitude Test in Engineering is useful
+                for higher studies and certain recruitment
+                opportunities in technical fields.
+            </p>
+
+            <a href="https://gate2026.iitg.ac.in/"
+               target="_blank">
+                GATE Website
+            </a>
+
+        </div>
+
+
+        <!-- DEFENCE -->
+
+        <div class="exam-card"
+             data-search="defence nda cds army navy air force">
+
+            <h3>🪖 Defence Examinations</h3>
+
+            <p>
+                Competitive examinations such as NDA and CDS
+                provide opportunities for eligible candidates
+                to pursue careers in the defence services.
+            </p>
+
+            <a href="https://upsc.gov.in/"
+               target="_blank">
+                UPSC
+            </a>
+
+        </div>
+
+
+        <!-- CTET -->
+
+        <div class="exam-card"
+             data-search="ctet teacher central teacher eligibility test teaching">
+
+            <h3>👩‍🏫 CTET</h3>
+
+            <p>
+                Central Teacher Eligibility Test is conducted
+                for candidates interested in teaching opportunities
+                under applicable eligibility requirements.
+            </p>
+
+            <a href="https://ctet.nic.in/"
+               target="_blank">
+                Official Website
+            </a>
+
+        </div>
+
+
+        <!-- UGC NET -->
+
+        <div class="exam-card"
+             data-search="ugc net assistant professor research fellowship">
+
+            <h3>🎓 UGC NET</h3>
+
+            <p>
+                National Eligibility Test for determining
+                eligibility for Assistant Professor and
+                Junior Research Fellowship in eligible subjects.
+            </p>
+
+            <a href="https://ugcnet.nta.ac.in/"
+               target="_blank">
+                Official Website
+            </a>
+
+        </div>
+
+
+        <!-- MAHARASHTRA POLICE -->
+
+        <div class="exam-card"
+             data-search="maharashtra police police bharti recruitment">
+
+            <h3>👮 Maharashtra Police Recruitment</h3>
+
+            <p>
+                Recruitment opportunities for eligible candidates
+                interested in careers in the Maharashtra Police.
+            </p>
+
+            <a href="https://policerecruitment2025.mahait.org/"
+               target="_blank">
+                Recruitment Portal
+            </a>
+
+        </div>
+
+
+        <!-- MPSC TECHNICAL -->
+
+        <div class="exam-card"
+             data-search="technical engineering government mpsc technical recruitment">
+
+            <h3>⚙️ Technical Government Examinations</h3>
+
+            <p>
+                Explore technical and engineering-related
+                government recruitment opportunities through
+                relevant official recruitment authorities.
+            </p>
+
+            <a href="https://mpsc.gov.in/"
+               target="_blank">
+                MPSC
+            </a>
+
+        </div>
+
+
+        <!-- SCHOLARSHIP EXAMS -->
+
+        <div class="exam-card"
+             data-search="entrance exams scholarship education entrance competitive">
+
+            <h3>📖 Entrance & Other Examinations</h3>
+
+            <p>
+                Explore entrance examinations and other
+                examinations related to higher education and
+                professional courses.
+            </p>
+
+            <a href="https://www.nta.ac.in/"
+               target="_blank">
+                NTA
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- NO RESULT -->
+
+    <div id="noResult">
+
+        <h3>😔 No examination found</h3>
+
+        <p>
+            Try another examination name or keyword.
+        </p>
+
+    </div>
+
+
+    <!-- NOTE -->
+
+    <div class="note">
+
+        💡 <b>Important:</b>
+        Examination dates, eligibility, syllabus and application
+        procedures can change. Always verify the latest information
+        on the official examination website before applying.
+
+    </div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 GramSakhi | Student Corner
+    </p>
+
+</footer>
+
+
+<script>
+
+    function searchExams() {
+
+        let searchText =
+            document.getElementById("searchInput")
+            .value
+            .toLowerCase()
+            .trim();
+
+        let exams =
+            document.querySelectorAll(".exam-card");
+
+        let count = 0;
+
+
+        exams.forEach(function(exam) {
+
+            let text =
+                exam.innerText.toLowerCase();
+
+            let keywords =
+                exam.getAttribute("data-search")
+                .toLowerCase();
+
+
+            if (
+                text.includes(searchText) ||
+                keywords.includes(searchText)
+            ) {
+
+                exam.style.display = "block";
+
+                count++;
+
+            } else {
+
+                exam.style.display = "none";
+
+            }
+
+        });
+
+
+        if (count === 0) {
+
+            document.getElementById("noResult")
+                .style.display = "block";
+
+        } else {
+
+            document.getElementById("noResult")
+                .style.display = "none";
+
+        }
+
+    }
+
+</script>
+
+
+</body>
+
+</html>

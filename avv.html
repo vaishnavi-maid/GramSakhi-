@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GramSakhi - Ayushman Vay Vandana Card</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4faf8;
+            color: #333;
+        }
+
+        /* HEADER */
+        header {
+            background: #00897b;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        /* CONTAINER */
+        .container {
+            width: 92%;
+            max-width: 1000px;
+            margin: 25px auto;
+        }
+
+        /* BACK BUTTON */
+        .back-btn {
+            display: inline-block;
+            color: #00897b;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .back-btn:hover {
+            color: #00695c;
+        }
+
+        /* CARD */
+        .card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 14px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .card h2 {
+            color: #00897b;
+            margin-bottom: 14px;
+        }
+
+        .card p {
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .card ul {
+            margin-left: 22px;
+            line-height: 1.8;
+        }
+
+        /* HIGHLIGHT */
+        .highlight {
+            background: #e0f2f1;
+            border-left: 5px solid #00897b;
+            padding: 18px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .highlight h3 {
+            color: #00695c;
+            margin-bottom: 8px;
+        }
+
+        /* BENEFIT GRID */
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .benefit-box {
+            background: #f4faf8;
+            padding: 18px;
+            border-radius: 10px;
+        }
+
+        .benefit-box h3 {
+            color: #00796b;
+            margin-bottom: 8px;
+        }
+
+        .benefit-box p {
+            margin-bottom: 0;
+        }
+
+        /* NOTE */
+        .note {
+            background: #fff8e1;
+            border-left: 5px solid #f9a825;
+            padding: 15px;
+            border-radius: 8px;
+            line-height: 1.6;
+        }
+
+        /* BUTTON */
+        .official-btn {
+            display: inline-block;
+            background: #00897b;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 7px;
+            margin-top: 12px;
+        }
+
+        .official-btn:hover {
+            background: #00695c;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #00695c;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 40px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 650px) {
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            .container {
+                width: 94%;
+            }
+
+            .benefit-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+    <h1>👵 Ayushman Vay Vandana Card</h1>
+
+    <p>
+        GramSakhi - Health Coverage for Senior Citizens
+    </p>
+
+</header>
+
+
+<div class="container">
+
+    <!-- BACK -->
+    <a href="healthscheme.html" class="back-btn">
+        ← Back to Health Care Schemes
+    </a>
+
+
+    <!-- ABOUT -->
+    <div class="card">
+
+        <h2>📋 About the Scheme</h2>
+
+        <p>
+            The Ayushman Vay Vandana Card provides health
+            coverage under the Ayushman Bharat - Pradhan Mantri
+            Jan Arogya Yojana (AB PM-JAY) for eligible senior
+            citizens aged 70 years and above.
+        </p>
+
+        <div class="highlight">
+
+            <h3>🎯 Main Benefit</h3>
+
+            <p>
+                Eligible senior citizens aged 70 years and above
+                can receive health coverage of up to ₹5 lakh per
+                year, subject to the applicable PM-JAY rules.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ELIGIBILITY -->
+    <div class="card">
+
+        <h2>👵 Eligibility</h2>
+
+        <ul>
+
+            <li>
+                Senior citizens aged 70 years and above are
+                covered under the expanded AB PM-JAY provision.
+            </li>
+
+            <li>
+                Eligibility is not based on family income for
+                the 70+ senior-citizen expansion.
+            </li>
+
+            <li>
+                Aadhaar-based e-KYC is required for enrolment.
+            </li>
+
+        </ul>
+
+        <div class="note">
+
+            <b>Important:</b>
+            The exact process and applicable conditions should
+            be verified through the official PM-JAY system.
+
+        </div>
+
+    </div>
+
+
+    <!-- BENEFITS -->
+    <div class="card">
+
+        <h2>💰 Key Benefits</h2>
+
+        <div class="benefit-grid">
+
+            <div class="benefit-box">
+
+                <h3>🏥 Health Cover</h3>
+
+                <p>
+                    Up to ₹5 lakh health cover per year for
+                    eligible senior citizens, according to
+                    applicable PM-JAY rules.
+                </p>
+
+            </div>
+
+
+            <div class="benefit-box">
+
+                <h3>🏨 Hospitalisation</h3>
+
+                <p>
+                    Provides coverage for eligible secondary
+                    and tertiary hospitalisation services at
+                    empanelled hospitals.
+                </p>
+
+            </div>
+
+
+            <div class="benefit-box">
+
+                <h3>💳 Cashless Treatment</h3>
+
+                <p>
+                    Eligible beneficiaries can access covered
+                    treatment through the PM-JAY cashless
+                    system at empanelled hospitals.
+                </p>
+
+            </div>
+
+
+            <div class="benefit-box">
+
+                <h3>👴 Senior Citizen Support</h3>
+
+                <p>
+                    Provides additional health protection for
+                    senior citizens aged 70 years and above.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- DOCUMENTS -->
+    <div class="card">
+
+        <h2>📄 Documents / Information</h2>
+
+        <ul>
+
+            <li>
+                Aadhaar card
+            </li>
+
+            <li>
+                Aadhaar-linked mobile number where applicable
+            </li>
+
+            <li>
+                Basic beneficiary information
+            </li>
+
+            <li>
+                Any additional information requested during
+                enrolment or verification
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- HOW TO GET CARD -->
+    <div class="card">
+
+        <h2>📝 How to Get the Card</h2>
+
+        <ul>
+
+            <li>
+                Check eligibility through the official
+                PM-JAY system.
+            </li>
+
+            <li>
+                Complete the required Aadhaar-based e-KYC.
+            </li>
+
+            <li>
+                Follow the enrolment process provided by
+                the authorised PM-JAY system or centre.
+            </li>
+
+            <li>
+                Download or obtain the Ayushman card after
+                successful verification, as applicable.
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- HOSPITAL -->
+    <div class="card">
+
+        <h2>🏥 Where Can Treatment Be Taken?</h2>
+
+        <p>
+            Covered treatment can be taken at hospitals
+            empanelled under the applicable PM-JAY network.
+        </p>
+
+        <ul>
+
+            <li>
+                Government hospitals participating in PM-JAY
+            </li>
+
+            <li>
+                Empanelled private hospitals
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- IMPORTANT -->
+    <div class="card">
+
+        <h2>⚠️ Important Information</h2>
+
+        <div class="note">
+
+            The Ayushman Vay Vandana Card is linked to the
+            AB PM-JAY expansion for senior citizens aged
+            70 years and above.
+
+            <br><br>
+
+            Coverage, package availability and hospital
+            empanelment are subject to the applicable
+            government rules.
+
+            <br><br>
+
+            Always verify the latest information through
+            the official PM-JAY portal.
+
+        </div>
+
+    </div>
+
+
+    <!-- OFFICIAL -->
+    <div class="card">
+
+        <h2>🌐 Official Information</h2>
+
+        <p>
+            Visit the official Ayushman Bharat PM-JAY portal
+            for eligibility, enrolment, hospitals and other
+            current information.
+        </p>
+
+        <a
+            href="https://pmjay.gov.in/"
+            target="_blank"
+            class="official-btn">
+
+            Visit Official PM-JAY Website
+
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <p>
+        © 2026 GramSakhi | Government Schemes & Health Care
+    </p>
+
+</footer>
+
+</body>
+</html>

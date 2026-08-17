@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GramSakhi - General Health Schemes</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4faf8;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background: #00897b;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            width: 90%;
+            max-width: 1100px;
+            margin: 20px auto 10px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .breadcrumb span {
+            color: #00897b;
+            font-weight: bold;
+        }
+
+        /* Main Container */
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 20px auto;
+        }
+
+        .intro {
+            background: white;
+            padding: 22px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .intro h2 {
+            color: #00897b;
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            line-height: 1.6;
+        }
+
+        /* Search */
+        .search-box {
+            margin-bottom: 25px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .search-box input:focus {
+            border-color: #00897b;
+        }
+
+        /* Scheme Card */
+        .scheme-card {
+            background: white;
+            padding: 22px;
+            margin-bottom: 20px;
+            border-radius: 14px;
+            border-left: 5px solid #00897b;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .scheme-card h2 {
+            color: #00796b;
+            margin-bottom: 12px;
+        }
+
+        .scheme-card p {
+            line-height: 1.6;
+            margin: 7px 0;
+        }
+
+        .scheme-card ul {
+            margin: 10px 0 15px 20px;
+            line-height: 1.7;
+        }
+
+        /* Button */
+        .btn {
+            display: inline-block;
+            background: #00897b;
+            color: white;
+            padding: 10px 18px;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-top: 8px;
+        }
+
+        .btn:hover {
+            background: #00695c;
+        }
+
+        /* Footer */
+        footer {
+            background: #00695c;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 35px;
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            .container,
+            .breadcrumb {
+                width: 94%;
+            }
+
+            .scheme-card {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>🏥 General Health Schemes</h1>
+        <p>GramSakhi - Government Health Services at One Place</p>
+    </header>
+
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        Government Schemes → <span>Health Care</span> → General Health Schemes
+    </div>
+
+
+    <div class="container">
+
+        <!-- Introduction -->
+        <div class="intro">
+            <h2>About General Health Schemes</h2>
+
+            <p>
+                Government health schemes provide healthcare support,
+                medical services and financial assistance to eligible
+                citizens. GramSakhi brings important health scheme
+                information together in one easy-to-use platform.
+            </p>
+        </div>
+
+
+        <!-- Search -->
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="🔍 Search health scheme..."
+                onkeyup="searchSchemes()">
+        </div>
+
+
+        <!-- Scheme 1 -->
+        <div class="scheme-card">
+
+            <h2>🏥 Ayushman Bharat - PM Jan Arogya Yojana</h2>
+
+            <p>
+                <b>Purpose:</b>
+                Provides healthcare coverage to eligible families
+                for specified hospital treatments.
+            </p>
+
+            <p><b>Key Features:</b></p>
+
+            <ul>
+                <li>Cashless treatment at empanelled hospitals</li>
+                <li>Coverage for eligible families</li>
+                <li>Hospitalization-related healthcare support</li>
+            </ul>
+
+            <p>
+                <b>Eligibility:</b>
+                Based on the applicable government eligibility criteria.
+            </p>
+
+            <a href="#" class="btn">Know More</a>
+
+        </div>
+
+
+        <!-- Scheme 2 -->
+        <div class="scheme-card">
+
+            <h2>🏥 National Health Mission (NHM)</h2>
+
+            <p>
+                <b>Purpose:</b>
+                Strengthens public healthcare services and improves
+                access to essential health services.
+            </p>
+
+            <p><b>Key Areas:</b></p>
+
+            <ul>
+                <li>Maternal and child healthcare</li>
+                <li>Primary healthcare services</li>
+                <li>Disease prevention and control</li>
+                <li>Community health services</li>
+            </ul>
+
+            <p>
+                <b>Beneficiaries:</b>
+                Citizens accessing eligible government health services.
+            </p>
+
+            <a href="#" class="btn">Know More</a>
+
+        </div>
+
+
+        <!-- Scheme 3 -->
+        <div class="scheme-card">
+
+            <h2>🏥 Mahatma Jyotirao Phule Jan Arogya Yojana</h2>
+
+            <p>
+                <b>Purpose:</b>
+                A Maharashtra government health protection scheme
+                providing healthcare assistance to eligible beneficiaries.
+            </p>
+
+            <p><b>Key Features:</b></p>
+
+            <ul>
+                <li>Cashless treatment at participating hospitals</li>
+                <li>Support for specified medical procedures</li>
+                <li>Healthcare assistance for eligible beneficiaries</li>
+            </ul>
+
+            <p>
+                <b>State:</b> Maharashtra
+            </p>
+
+            <a href="#" class="btn">Know More</a>
+
+        </div>
+
+
+        <!-- Scheme 4 -->
+        <div class="scheme-card">
+
+            <h2>🩺 National Programme for Prevention and Control of
+                Non-Communicable Diseases</h2>
+
+            <p>
+                <b>Purpose:</b>
+                Supports prevention, screening and management of
+                important non-communicable diseases.
+            </p>
+
+            <p><b>Focus Areas:</b></p>
+
+            <ul>
+                <li>Health screening</li>
+                <li>Disease awareness</li>
+                <li>Early detection</li>
+                <li>Access to appropriate healthcare services</li>
+            </ul>
+
+            <a href="#" class="btn">Know More</a>
+
+        </div>
+
+
+        <!-- Scheme 5 -->
+        <div class="scheme-card">
+
+            <h2>🏥 Government Primary Health Centre Services</h2>
+
+            <p>
+                <b>Purpose:</b>
+                Provides basic healthcare services through
+                government health facilities.
+            </p>
+
+            <p><b>Services may include:</b></p>
+
+            <ul>
+                <li>Basic medical consultation</li>
+                <li>Preventive healthcare</li>
+                <li>Health awareness</li>
+                <li>Referral services</li>
+            </ul>
+
+            <a href="#" class="btn">Find Health Centre</a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 GramSakhi | Government Schemes & Health Care</p>
+    </footer>
+
+
+    <!-- Search Function -->
+    <script>
+
+        function searchSchemes() {
+
+            let input =
+                document.getElementById("searchInput")
+                .value
+                .toLowerCase();
+
+            let cards =
+                document.getElementsByClassName("scheme-card");
+
+            for (let i = 0; i < cards.length; i++) {
+
+                let text =
+                    cards[i].innerText.toLowerCase();
+
+                if (text.includes(input)) {
+                    cards[i].style.display = "block";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+
+    </script>
+
+</body>
+</html>

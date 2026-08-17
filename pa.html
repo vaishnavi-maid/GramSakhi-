@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GramSakhi - POSHAN Abhiyaan</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4faf8;
+            color: #333;
+        }
+
+        /* HEADER */
+        header {
+            background: #00897b;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        /* CONTAINER */
+        .container {
+            width: 92%;
+            max-width: 1000px;
+            margin: 25px auto;
+        }
+
+        /* BACK BUTTON */
+        .back-btn {
+            display: inline-block;
+            color: #00897b;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .back-btn:hover {
+            color: #00695c;
+        }
+
+        /* CARD */
+        .card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 14px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .card h2 {
+            color: #00897b;
+            margin-bottom: 14px;
+        }
+
+        .card p {
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .card ul {
+            margin-left: 22px;
+            line-height: 1.8;
+        }
+
+        /* HIGHLIGHT */
+        .highlight {
+            background: #e0f2f1;
+            border-left: 5px solid #00897b;
+            padding: 18px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .highlight h3 {
+            color: #00695c;
+            margin-bottom: 8px;
+        }
+
+        /* FOCUS GRID */
+        .focus-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .focus-box {
+            background: #f4faf8;
+            padding: 18px;
+            border-radius: 10px;
+        }
+
+        .focus-box h3 {
+            color: #00796b;
+            margin-bottom: 8px;
+        }
+
+        .focus-box p {
+            margin-bottom: 0;
+        }
+
+        /* BENEFIT */
+        .benefit {
+            background: #e8f5e9;
+            border-left: 5px solid #43a047;
+            padding: 18px;
+            border-radius: 8px;
+            line-height: 1.7;
+        }
+
+        /* NOTE */
+        .note {
+            background: #fff8e1;
+            border-left: 5px solid #f9a825;
+            padding: 15px;
+            border-radius: 8px;
+            line-height: 1.6;
+        }
+
+        /* BUTTON */
+        .official-btn {
+            display: inline-block;
+            background: #00897b;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 7px;
+            margin-top: 12px;
+        }
+
+        .official-btn:hover {
+            background: #00695c;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #00695c;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 40px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 650px) {
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            .container {
+                width: 94%;
+            }
+
+            .focus-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+    <h1>🥗 POSHAN Abhiyaan</h1>
+
+    <p>
+        GramSakhi - Nutrition & Health Programme
+    </p>
+
+</header>
+
+
+<div class="container">
+
+    <!-- BACK -->
+    <a href="healthscheme.html" class="back-btn">
+        ← Back to Health Care Schemes
+    </a>
+
+
+    <!-- ABOUT -->
+    <div class="card">
+
+        <h2>📋 About POSHAN Abhiyaan</h2>
+
+        <p>
+            POSHAN Abhiyaan is a Government of India initiative
+            focused on improving nutrition outcomes and
+            addressing malnutrition among children, pregnant
+            women and lactating mothers.
+        </p>
+
+        <div class="highlight">
+
+            <h3>🎯 Main Purpose</h3>
+
+            <p>
+                To improve nutritional outcomes through
+                convergence, awareness, community participation
+                and better implementation of nutrition-related
+                services.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- OBJECTIVES -->
+    <div class="card">
+
+        <h2>🎯 Objectives</h2>
+
+        <ul>
+
+            <li>
+                Improve nutrition outcomes among children.
+            </li>
+
+            <li>
+                Improve maternal nutrition and health.
+            </li>
+
+            <li>
+                Create awareness about healthy nutrition
+                practices.
+            </li>
+
+            <li>
+                Encourage community participation in
+                preventing malnutrition.
+            </li>
+
+            <li>
+                Support convergence of nutrition-related
+                government services.
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- TARGET GROUPS -->
+    <div class="card">
+
+        <h2>👨‍👩‍👧 Target Beneficiaries</h2>
+
+        <div class="focus-grid">
+
+            <div class="focus-box">
+
+                <h3>👶 Children</h3>
+
+                <p>
+                    Focus on improving nutrition and healthy
+                    growth among children.
+                </p>
+
+            </div>
+
+
+            <div class="focus-box">
+
+                <h3>🤰 Pregnant Women</h3>
+
+                <p>
+                    Promotes awareness and support for better
+                    maternal nutrition during pregnancy.
+                </p>
+
+            </div>
+
+
+            <div class="focus-box">
+
+                <h3>🤱 Lactating Mothers</h3>
+
+                <p>
+                    Encourages appropriate nutrition and
+                    health practices during the breastfeeding
+                    period.
+                </p>
+
+            </div>
+
+
+            <div class="focus-box">
+
+                <h3>👩 Women & Families</h3>
+
+                <p>
+                    Promotes awareness about balanced diets,
+                    hygiene and healthy nutrition practices.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- KEY AREAS -->
+    <div class="card">
+
+        <h2>🥗 Key Areas</h2>
+
+        <div class="benefit">
+
+            <ul>
+
+                <li>
+                    Maternal nutrition
+                </li>
+
+                <li>
+                    Child nutrition
+                </li>
+
+                <li>
+                    Prevention of malnutrition
+                </li>
+
+                <li>
+                    Nutrition awareness
+                </li>
+
+                <li>
+                    Healthy dietary practices
+                </li>
+
+                <li>
+                    Community participation
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <!-- SERVICES -->
+    <div class="card">
+
+        <h2>🏥 Nutrition-Related Support</h2>
+
+        <p>
+            Nutrition services are delivered through various
+            government programmes and community-level
+            mechanisms.
+        </p>
+
+        <ul>
+
+            <li>
+                Nutrition education and awareness
+            </li>
+
+            <li>
+                Growth monitoring of children
+            </li>
+
+            <li>
+                Promotion of appropriate infant and young
+                child feeding practices
+            </li>
+
+            <li>
+                Counselling for pregnant and lactating women
+            </li>
+
+            <li>
+                Identification and referral of children
+                requiring additional care
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- HOW TO ACCESS -->
+    <div class="card">
+
+        <h2>📝 How to Access Nutrition Services</h2>
+
+        <ul>
+
+            <li>
+                Visit your nearest Anganwadi Centre.
+            </li>
+
+            <li>
+                Contact an Anganwadi Worker or ASHA worker.
+            </li>
+
+            <li>
+                Contact your nearest government health
+                facility.
+            </li>
+
+            <li>
+                Ask about available nutrition services,
+                counselling and growth monitoring.
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- IMPORTANT -->
+    <div class="card">
+
+        <h2>⚠️ Important Information</h2>
+
+        <div class="note">
+
+            Nutrition services and eligibility for specific
+            benefits may depend on the applicable government
+            programme and local implementation.
+
+            <br><br>
+
+            For current information about available services,
+            contact your nearest Anganwadi Centre or government
+            health facility.
+
+        </div>
+
+    </div>
+
+
+    <!-- OFFICIAL -->
+    <div class="card">
+
+        <h2>🌐 Official Information</h2>
+
+        <p>
+            For official information about nutrition programmes
+            and POSHAN-related initiatives, visit the Ministry
+            of Women and Child Development.
+        </p>
+
+        <a
+            href="https://wcd.gov.in/"
+            target="_blank"
+            class="official-btn">
+
+            Visit Official Website
+
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <p>
+        © 2026 GramSakhi | Government Schemes & Health Care
+    </p>
+
+</footer>
+
+</body>
+</html>

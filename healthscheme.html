@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GramSakhi - Health Care Schemes</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4faf8;
+            color: #333;
+        }
+
+        /* HEADER */
+        header {
+            background: #00897b;
+            color: white;
+            text-align: center;
+            padding: 28px 15px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        /* BREADCRUMB */
+        .breadcrumb {
+            width: 92%;
+            max-width: 1200px;
+            margin: 20px auto 10px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .breadcrumb span {
+            color: #00897b;
+            font-weight: bold;
+        }
+
+        /* MAIN */
+        .container {
+            width: 92%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .intro {
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            margin: 20px 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .intro h2 {
+            color: #00897b;
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            line-height: 1.6;
+        }
+
+        /* SEARCH */
+        .search-area {
+            background: white;
+            padding: 20px;
+            border-radius: 14px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .search-area h2 {
+            color: #00796b;
+            margin-bottom: 12px;
+        }
+
+        #searchInput {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        #searchInput:focus {
+            border-color: #00897b;
+        }
+
+        /* CATEGORY BUTTONS */
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .category-btn {
+            padding: 9px 15px;
+            border: none;
+            border-radius: 20px;
+            background: #e0f2f1;
+            color: #00695c;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .category-btn:hover,
+        .category-btn.active {
+            background: #00897b;
+            color: white;
+        }
+
+        /* SCHEME COUNT */
+        #schemeCount {
+            margin: 20px 0;
+            font-weight: bold;
+            color: #00796b;
+        }
+
+        /* SCHEME GRID */
+        .scheme-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        /* CARD */
+        .scheme-card {
+            background: white;
+            padding: 22px;
+            border-radius: 14px;
+            border-left: 5px solid #00897b;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: 0.2s;
+        }
+
+        .scheme-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .scheme-card h2 {
+            color: #00796b;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .scheme-card p {
+            line-height: 1.6;
+            margin: 7px 0;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #e0f2f1;
+            color: #00695c;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #00897b;
+            color: white;
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background: #00695c;
+        }
+
+        /* NO RESULT */
+        #noResult {
+            display: none;
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 20px;
+            color: #777;
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: 40px;
+            background: #00695c;
+            color: white;
+            text-align: center;
+            padding: 18px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 700px) {
+
+            header h1 {
+                font-size: 25px;
+            }
+
+            .scheme-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container,
+            .breadcrumb {
+                width: 94%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <h1>🏥 Health Care Schemes</h1>
+    <p>GramSakhi - All Government Health Schemes at One Place</p>
+</header>
+
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+    Government Schemes → <span>Health Care</span> → All Schemes
+</div>
+
+
+<div class="container">
+
+    <!-- INTRODUCTION -->
+    <div class="intro">
+        <h2>Government Health Schemes</h2>
+
+        <p>
+            Find government health schemes and programmes related to
+            healthcare, insurance, women and child health, senior citizens,
+            vaccination, nutrition and financial assistance.
+        </p>
+    </div>
+
+
+    <!-- SEARCH AREA -->
+    <div class="search-area">
+
+        <h2>🔍 Find a Health Scheme</h2>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search by scheme name, category or benefit..."
+            onkeyup="searchSchemes()">
+
+        <div class="categories">
+
+            <button class="category-btn active"
+                    onclick="filterCategory('all', this)">
+                All
+            </button>
+
+            <button class="category-btn"
+                    onclick="filterCategory('insurance', this)">
+                💳 Insurance
+            </button>
+
+            <button class="category-btn"
+                    onclick="filterCategory('women', this)">
+                👩 Women
+            </button>
+
+            <button class="category-btn"
+                    onclick="filterCategory('children', this)">
+                👶 Children
+            </button>
+
+            <button class="category-btn"
+                    onclick="filterCategory('senior', this)">
+                👵 Senior Citizens
+            </button>
+
+            <button class="category-btn"
+                    onclick="filterCategory('vaccination', this)">
+                💉 Vaccination
+            </button>
+
+            <button class="category-btn"
+                    onclick="filterCategory('nutrition', this)">
+                🥗 Nutrition
+            </button>
+
+            <button class="category-btn"
+                    onclick="filterCategory('maharashtra', this)">
+                🌿 Maharashtra
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- COUNT -->
+    <div id="schemeCount">
+        Showing 12 health schemes
+    </div>
+
+
+    <!-- SCHEME LIST -->
+    <div class="scheme-grid" id="schemeList">
+
+        <!-- 1 -->
+        <div class="scheme-card"
+             data-category="insurance"
+             data-search="ayushman bharat pm jay health insurance hospital treatment">
+
+            <span class="tag">Health Insurance</span>
+
+            <h2>🏥 Ayushman Bharat - PM-JAY</h2>
+
+            <p>
+                Health assurance support for eligible beneficiaries
+                for specified secondary and tertiary hospitalization.
+            </p>
+
+            <p>
+                <b>Benefit:</b> Health cover up to ₹5 lakh per family
+                per year for eligible beneficiaries.
+            </p>
+
+            <a href="pmjay.html" class="btn">Know More</a>
+
+        </div>
+
+
+        <!-- 2 -->
+        <div class="scheme-card"
+             data-category="maharashtra insurance"
+             data-search="mahatma jyotirao phule jan arogya yojana mjpjay maharashtra health">
+
+            <span class="tag">Maharashtra</span>
+
+            <h2>🏥 Mahatma Jyotirao Phule Jan Arogya Yojana</h2>
+
+            <p>
+                Maharashtra's public health protection programme
+                for eligible beneficiaries.
+            </p>
+
+            <p>
+                <b>Benefit:</b> Healthcare support through participating
+                hospitals for covered procedures.
+            </p>
+
+            <a href="mjpjay.html" class="btn">Know More</a>
+
+        </div>
+
+
+        <!-- 3 -->
+        <div class="scheme-card"
+             data-category="general"
+             data-search="national health mission nhm healthcare public health">
+
+            <span class="tag">General Health</span>
+
+            <h2>🏥 National Health Mission</h2>
+
+            <p>
+                Supports States and Union Territories in strengthening
+                public healthcare systems and services.
+            </p>
+
+            <p>
+                <b>Focus:</b> Accessible, affordable and quality
+                healthcare services.
+            </p>
+
+            <a href="nhm.html" class="btn">Know More</a>
+
+        </div>
+
+
+        <!-- 4 -->
+        <div class="scheme-card"
+             data-category="general"
+             data-search="ayushman arogya mandir primary healthcare">
+
+            <span class="tag">Primary Healthcare</span>
+
+            <h2>🏥 Ayushman Arogya Mandir</h2>
+
+            <p>
+                Provides comprehensive primary healthcare services
+                closer to communities.
+            </p>
+
+            <p>
+                <b>Services:</b> Preventive, promotive and basic
+                healthcare services.
+            </p>
+
+            <a href="aam.html" class="btn">Know More</a>
+
+        </div>
+
+
+        <!-- 5 -->
+        <div class="scheme-card"
+             data-category="women"
+             data-search="pradhan mantri matru vandana yojana pmmvy pregnancy maternity women">
+
+            <span class="tag">Women & Maternal Health</span>
+
+            <h2>🤰 Pradhan Mantri Matru Vandana Yojana</h2>
+
+            <p>
+                Provides maternity-related financial assistance to
+                eligible women according to scheme guidelines.
+            </p>
+
+            <p>
+                <b>Focus:</b> Pregnancy, maternity and nutrition support.
+            </p>
+
+            <a href="pmmvy.html" class="btn">Know More</a>
+
+        </div>
+
+
+        <!-- 6 -->
+        <div class="scheme-card"
+             data-category="children"
+             data-search="rashtriya bal swasthya karyakram rbsk child health screening">
+
+            <span class="tag">Child Health</span>
+
+            <h2>👶 Rashtriya Bal Swasthya Karyakram</h2>
+
+            <p>
+                Focuses on early identification and management of
+                health conditions among children.
+            </p>
+
+            <p>
+                <b>Focus:</b> Child screening, early detection and referral.
+            </p>
+
+            <a href="rbsk.html" class="btn">Know More</a>
+
+        </div>
+
+
+        <!-- 7 -->
+        <div class="scheme-card"
+             data-category="vaccination children"
+             data-search="universal immunization programme uip vaccination child">
+
+            <span class="tag">Vaccination</span>
+
+            <h2>💉 Universal Immunization Programme</h2>
+
+            <p>
+                Provides routine immunization services through
+                government health facilities.
+            </p>
+
+            <p>
+                <b>Beneficiaries:</b> Eligible children and pregnant women
+                according to programme guidelines.
+            </p>
+
+            <a href="upi.html" class="btn">Know More</a>
+
+        </div>
+
+
+        <!-- 8 -->
+        <div class="scheme-card"
+             data-category="vaccination children"
+             data-search="mission indradhanush immunization vaccination children pregnant women">
+
+            <span class="tag">Vaccination</span>
+
+            <h2>💉 Mission Indradhanush</h2>
+
+            <p>
+                Special immunization drives aimed at improving
+                vaccination coverage.
+            </p>
+
+            <p>
+                <b>Focus:</b> Children and pregnant women who may have
+                missed routine vaccination.
+            </p>
+
+            <a href="mi.html" class="btn">Know More</a>
+
+        </div>
+
+
+        <!-- 9 -->
+        <div class="scheme-card"
+             data-category="nutrition children women"
+             data-search="poshan abhiyan nutrition child women malnutrition">
+
+            <span class="tag">Nutrition</span>
+
+            <h2>🥗 POSHAN Abhiyaan</h2>
+
+            <p>
+                Aims to improve nutrition outcomes among children,
+                pregnant women and lactating mothers.
+            </p>
+
+            <p>
+                <b>Focus:</b> Nutrition awareness and reduction of
+                malnutrition.
+            </p>
+
+            <a href="pa.html" class="btn">Know More</a>
+
+        </div>
+
+
+        <!-- 10 -->
+        <div class="scheme-card"
+             data-category="senior insurance"
+             data-search="ayushman vay vandana card senior citizen 70 health insurance">
+
+            <span class="tag">Senior Citizens</span>
+
+            <h2>👵 Ayushman Vay Vandana Card</h2>
+
+            <p>
+                AB PM-JAY health coverage was expanded to all senior
+                citizens aged 70 years and above, irrespective of income.
+            </p>
+
+            <p>
+                <b>Benefit:</b> Up to ₹5 lakh annual health cover
+                according to applicable rules.
+            </p>
+
+            <a href="avv.html" class="btn">Know More</a>
+
+        </div>
+
+
+        <!-- 11 -->
+        <div class="scheme-card"
+             data-category="general"
+             data-search="ayush national ayush mission ayurveda yoga healthcare">
+
+            <span class="tag">AYUSH</span>
+
+            <h2>🌿 National AYUSH Mission</h2>
+
+            <p>
+                Supports development and access to AYUSH healthcare
+                systems and services.
+            </p>
+
+            <p>
+                <b>Focus:</b> Ayurveda, Yoga, Unani, Siddha and Homoeopathy
+                related healthcare services.
+            </p>
+
+            <a href="nam.html" class="btn">Know More</a>
+
+        </div>
+
+
+        <!-- 12 -->
+        <div class="scheme-card"
+             data-category="general"
+             data-search="national programme non communicable diseases diabetes cancer hypertension screening">
+
+            <span class="tag">Disease Prevention</span>
+
+            <h2>🩺 NCD Prevention & Control Programme</h2>
+
+            <p>
+                Supports prevention, screening and management of
+                important non-communicable diseases.
+            </p>
+
+            <p>
+                <b>Focus:</b> Screening and awareness for conditions
+                such as diabetes, hypertension and common cancers.
+            </p>
+
+            <a href="dp.html" class="btn">Know More</a>
+
+        </div>
+
+    </div>
+
+
+    <!-- NO RESULT -->
+    <div id="noResult">
+        <h3>😔 No scheme found</h3>
+        <p>Try another scheme name or category.</p>
+    </div>
+
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 GramSakhi | Government Schemes & Health Care</p>
+</footer>
+
+
+<script>
+
+    let currentCategory = "all";
+
+
+    function searchSchemes() {
+
+        let searchText =
+            document.getElementById("searchInput")
+            .value
+            .toLowerCase()
+            .trim();
+
+        let cards =
+            document.querySelectorAll(".scheme-card");
+
+        let visibleCount = 0;
+
+
+        cards.forEach(function(card) {
+
+            let schemeText =
+                card.innerText.toLowerCase();
+
+            let searchData =
+                card.getAttribute("data-search").toLowerCase();
+
+            let category =
+                card.getAttribute("data-category").toLowerCase();
+
+
+            let matchesSearch =
+                schemeText.includes(searchText) ||
+                searchData.includes(searchText);
+
+
+            let matchesCategory =
+                currentCategory === "all" ||
+                category.includes(currentCategory);
+
+
+            if (matchesSearch && matchesCategory) {
+
+                card.style.display = "block";
+                visibleCount++;
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+
+        updateCount(visibleCount);
+
+    }
+
+
+    function filterCategory(category, button) {
+
+        currentCategory = category;
+
+
+        let buttons =
+            document.querySelectorAll(".category-btn");
+
+        buttons.forEach(function(btn) {
+            btn.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+
+        searchSchemes();
+
+    }
+
+
+    function updateCount(count) {
+
+        document.getElementById("schemeCount").innerText =
+            "Showing " + count + " health scheme" +
+            (count !== 1 ? "s" : "");
+
+        if (count === 0) {
+
+            document.getElementById("noResult").style.display =
+                "block";
+
+        } else {
+
+            document.getElementById("noResult").style.display =
+                "none";
+
+        }
+
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GramSakhi - College & Admission</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4faf8;
+            color: #333;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #00897b;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        /* BACK BUTTON */
+
+        .top-bar {
+            width: 92%;
+            max-width: 1100px;
+            margin: 20px auto;
+        }
+
+        .back-btn {
+            color: #00897b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* MAIN CONTAINER */
+
+        .container {
+            width: 92%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* INTRO & SEARCH */
+
+        .intro,
+        .search-box {
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .intro h2,
+        .search-box h2 {
+            color: #00897b;
+            margin-bottom: 12px;
+        }
+
+        .intro p {
+            line-height: 1.7;
+        }
+
+        /* SEARCH */
+
+        #searchInput {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        #searchInput:focus {
+            border-color: #00897b;
+        }
+
+        /* INFORMATION LIST */
+
+        .info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .info-card {
+            background: white;
+            padding: 23px;
+            border-left: 5px solid #00897b;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .info-card h2 {
+            color: #00796b;
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .info-card p {
+            line-height: 1.7;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .info-card ul {
+            margin-left: 22px;
+            line-height: 1.8;
+        }
+
+        /* BUTTON */
+
+        .btn {
+            display: inline-block;
+            background: #00897b;
+            color: white;
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 7px;
+            margin: 8px 6px 0 0;
+        }
+
+        .btn:hover {
+            background: #00695c;
+        }
+
+        /* IMPORTANT NOTE */
+
+        .note {
+            background: #e0f2f1;
+            padding: 18px;
+            border-radius: 10px;
+            margin-top: 25px;
+            line-height: 1.7;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #00695c;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 40px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 26px;
+            }
+
+            .container,
+            .top-bar {
+                width: 94%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <h1>🎓 College & Admission</h1>
+
+    <p>
+        Choose the Right College and Plan Your Admission
+    </p>
+
+</header>
+
+
+<!-- BACK BUTTON -->
+
+<div class="top-bar">
+
+    <a href="student-corner.html" class="back-btn">
+        ← Back to Student Corner
+    </a>
+
+</div>
+
+
+<div class="container">
+
+
+    <!-- INTRODUCTION -->
+
+    <div class="intro">
+
+        <h2>🏫 College & Admission Guide</h2>
+
+        <p>
+            Choosing the right college is an important decision
+            for your education and career. This guide provides
+            useful information about choosing a college,
+            admission procedures, entrance examinations,
+            documents, fees, scholarships and other important
+            points students should consider.
+        </p>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+        <h2>🔍 Search Admission Information</h2>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search admission, documents, fees, college, entrance exam..."
+            onkeyup="searchInformation()">
+
+    </div>
+
+
+    <!-- INFORMATION -->
+
+    <div class="info-list">
+
+
+        <!-- 1 -->
+
+        <div class="info-card"
+             data-search="choose college how to choose college location course reputation placement fees">
+
+            <h2>🏫 How to Choose the Right College?</h2>
+
+            <p>
+                Consider the following points before selecting
+                a college:
+            </p>
+
+            <ul>
+
+                <li>Check whether the desired course is available.</li>
+
+                <li>Check college recognition and affiliation.</li>
+
+                <li>Compare tuition and other fees.</li>
+
+                <li>Check placement opportunities.</li>
+
+                <li>Check faculty and teaching facilities.</li>
+
+                <li>Look at laboratories, library and infrastructure.</li>
+
+                <li>Consider college location and transportation.</li>
+
+                <li>Check hostel and other student facilities.</li>
+
+                <li>Read student reviews carefully.</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 2 -->
+
+        <div class="info-card"
+             data-search="course selection branch career interest engineering degree course">
+
+            <h2>📚 Choose the Right Course</h2>
+
+            <p>
+                Select a course according to your interests,
+                academic strengths and career goals.
+            </p>
+
+            <ul>
+
+                <li>Understand the subjects in the course.</li>
+
+                <li>Check future career opportunities.</li>
+
+                <li>Consider your interests and strengths.</li>
+
+                <li>Check eligibility requirements.</li>
+
+                <li>Compare similar courses before deciding.</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 3 -->
+
+        <div class="info-card"
+             data-search="admission process application registration merit entrance exam counselling">
+
+            <h2>📝 General Admission Process</h2>
+
+            <p>
+                The admission process may differ depending on
+                the course, college, university and state.
+            </p>
+
+            <ul>
+
+                <li>Check eligibility criteria.</li>
+
+                <li>Appear for the required entrance examination, if applicable.</li>
+
+                <li>Register on the official admission portal.</li>
+
+                <li>Fill in the application form carefully.</li>
+
+                <li>Upload required documents.</li>
+
+                <li>Pay the application fee, if applicable.</li>
+
+                <li>Check merit list or entrance examination result.</li>
+
+                <li>Participate in counselling, if applicable.</li>
+
+                <li>Confirm your seat and complete admission formalities.</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 4 -->
+
+        <div class="info-card"
+             data-search="documents admission marksheet certificate aadhaar domicile caste transfer migration">
+
+            <h2>📄 Documents Usually Required</h2>
+
+            <p>
+                Depending on the course and admission authority,
+                students may be asked for documents such as:
+            </p>
+
+            <ul>
+
+                <li>Previous examination marksheet</li>
+
+                <li>School/College Leaving Certificate</li>
+
+                <li>Transfer Certificate, if applicable</li>
+
+                <li>Migration Certificate, if applicable</li>
+
+                <li>Identity proof</li>
+
+                <li>Passport-size photographs</li>
+
+                <li>Domicile certificate, if applicable</li>
+
+                <li>Caste certificate, if applicable</li>
+
+                <li>Income certificate, if applicable</li>
+
+                <li>Other documents specified by the admission authority</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 5 -->
+
+        <div class="info-card"
+             data-search="entrance exam admission cet jee neet mht cet">
+
+            <h2>🎯 Entrance Examinations</h2>
+
+            <p>
+                Some courses require students to qualify through
+                entrance examinations. Always check the official
+                admission authority for the current examination
+                and admission rules.
+            </p>
+
+            <a href="https://www.nta.ac.in/"
+               target="_blank"
+               class="btn">
+                NTA
+            </a>
+
+            <a href="https://cetcell.mahacet.org/"
+               target="_blank"
+               class="btn">
+                Maharashtra CET Cell
+            </a>
+
+        </div>
+
+
+        <!-- 6 -->
+
+        <div class="info-card"
+             data-search="fees tuition hostel admission college expenses">
+
+            <h2>💰 Check College Fees</h2>
+
+            <p>
+                Do not compare colleges only by tuition fees.
+                Consider the complete cost of education.
+            </p>
+
+            <ul>
+
+                <li>Tuition fees</li>
+
+                <li>Examination fees</li>
+
+                <li>Hostel fees</li>
+
+                <li>Transportation expenses</li>
+
+                <li>Books and study materials</li>
+
+                <li>Other college charges</li>
+
+            </ul>
+
+        </div>
+
+
+        
+
+
+        <!-- 8 -->
+
+        <div class="info-card"
+             data-search="college placement internship companies package career placement record">
+
+            <h2>💼 Check Placement Information</h2>
+
+            <p>
+                If career placement is important to you, check
+                the college's placement information before taking
+                admission.
+            </p>
+
+            <ul>
+
+                <li>Placement percentage</li>
+
+                <li>Recruiting companies</li>
+
+                <li>Internship opportunities</li>
+
+                <li>Average and highest packages</li>
+
+                <li>Career support and training</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 9 -->
+
+        <div class="info-card"
+             data-search="college infrastructure laboratory library hostel campus facilities">
+
+            <h2>🏢 Check College Facilities</h2>
+
+            <p>
+                Good infrastructure can improve the overall
+                learning experience.
+            </p>
+
+            <ul>
+
+                <li>Laboratories</li>
+
+                <li>Library</li>
+
+                <li>Computer facilities</li>
+
+                <li>Classrooms</li>
+
+                <li>Hostel</li>
+
+                <li>Sports facilities</li>
+
+                <li>Internet and digital learning facilities</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 10 -->
+
+        <div class="info-card"
+             data-search="college location transportation hostel safety distance">
+
+            <h2>📍 Location & Transportation</h2>
+
+            <p>
+                Consider the distance from home, transportation
+                availability, travel time and accommodation options.
+            </p>
+
+            <ul>
+
+                <li>Distance from home</li>
+
+                <li>Public transport availability</li>
+
+                <li>Bus or railway connectivity</li>
+
+                <li>Hostel availability</li>
+
+                <li>Safety and campus environment</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 11 -->
+
+        <div class="info-card"
+             data-search="counselling admission rounds seat allotment choice filling">
+
+            <h2>🔄 Counselling & Seat Allotment</h2>
+
+            <p>
+                In many admission processes, eligible students
+                participate in counselling and submit their
+                preferred choices of colleges and courses.
+            </p>
+
+            <p>
+                Seat allotment depends on the applicable admission
+                rules, merit, preferences and seat availability.
+            </p>
+
+        </div>
+
+
+        <!-- 12 -->
+
+        <div class="info-card"
+             data-search="admission verification documents original certificates reporting">
+
+            <h2>✅ Document Verification & Admission Confirmation</h2>
+
+            <p>
+                After receiving a seat, carefully follow the
+                instructions for document verification and
+                admission confirmation.
+            </p>
+
+            <ul>
+
+                <li>Keep original documents ready.</li>
+
+                <li>Carry required photocopies.</li>
+
+                <li>Check the reporting deadline.</li>
+
+                <li>Pay required fees within the given time.</li>
+
+                <li>Save your admission receipt.</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 13 -->
+
+        <div class="info-card"
+             data-search="avoid mistakes admission fraud fake college fake website">
+
+            <h2>⚠️ Common Admission Mistakes to Avoid</h2>
+
+            <ul>
+
+                <li>Do not rely only on social media information.</li>
+
+                <li>Do not ignore eligibility requirements.</li>
+
+                <li>Do not miss application deadlines.</li>
+
+                <li>Do not submit incorrect information.</li>
+
+                <li>Do not pay fees to unverified persons.</li>
+
+                <li>Verify college and admission information through official sources.</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 14 -->
+
+        <div class="info-card"
+             data-search="official admission websites university ugc aicte college verification">
+
+            <h2>🌐 Useful Official Resources</h2>
+
+            <p>
+                Use official websites to verify college,
+                course and admission-related information.
+            </p>
+
+            <a href="https://www.ugc.gov.in/"
+               target="_blank"
+               class="btn">
+                UGC
+            </a>
+
+            <a href="https://www.aicte-india.org/"
+               target="_blank"
+               class="btn">
+                AICTE
+            </a>
+
+            <a href="https://www.nta.ac.in/"
+               target="_blank"
+               class="btn">
+                NTA
+            </a>
+
+            <a href="https://cetcell.mahacet.org/"
+               target="_blank"
+               class="btn">
+                Maharashtra CET Cell
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- NOTE -->
+
+    <div class="note">
+
+        💡 <b>Important:</b>
+        Admission rules, eligibility, fees, entrance examinations,
+        counselling dates and required documents can change every
+        year. Always verify the latest information from the official
+        admission authority or college website before applying.
+
+    </div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 GramSakhi | Student Corner
+    </p>
+
+</footer>
+
+
+<script>
+
+    function searchInformation() {
+
+        let searchText =
+            document.getElementById("searchInput")
+            .value
+            .toLowerCase()
+            .trim();
+
+        let cards =
+            document.querySelectorAll(".info-card");
+
+
+        cards.forEach(function(card) {
+
+            let text =
+                card.innerText.toLowerCase();
+
+            let keywords =
+                card.getAttribute("data-search")
+                .toLowerCase();
+
+
+            if (
+                text.includes(searchText) ||
+                keywords.includes(searchText)
+            ) {
+
+                card.style.display = "block";
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+    }
+
+</script>
+
+
+</body>
+
+</html>

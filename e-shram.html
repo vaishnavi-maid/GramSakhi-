@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>GramSakhi - e-Shram</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4faf8;
+            color: #333;
+        }
+
+        header {
+            background: #00897b;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1000px;
+            margin: 25px auto;
+        }
+
+        .back-btn {
+            display: inline-block;
+            color: #00897b;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .back-btn:hover {
+            color: #00695c;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 14px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .card h2 {
+            color: #00897b;
+            margin-bottom: 14px;
+        }
+
+        .card p {
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .card ul {
+            margin-left: 22px;
+            line-height: 1.8;
+        }
+
+        .highlight {
+            background: #e0f2f1;
+            border-left: 5px solid #00897b;
+            padding: 18px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .highlight h3 {
+            color: #00695c;
+            margin-bottom: 8px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .info-box {
+            background: #f4faf8;
+            padding: 18px;
+            border-radius: 10px;
+            border-top: 4px solid #00897b;
+        }
+
+        .info-box h3 {
+            color: #00796b;
+            margin-bottom: 8px;
+        }
+
+        .info-box p {
+            margin-bottom: 0;
+        }
+
+        .benefit {
+            background: #e8f5e9;
+            border-left: 5px solid #43a047;
+            padding: 18px;
+            border-radius: 8px;
+            line-height: 1.7;
+        }
+
+        .note {
+            background: #fff8e1;
+            border-left: 5px solid #f9a825;
+            padding: 15px;
+            border-radius: 8px;
+            line-height: 1.6;
+        }
+
+        .official-btn {
+            display: inline-block;
+            background: #00897b;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 7px;
+            margin-top: 12px;
+        }
+
+        .official-btn:hover {
+            background: #00695c;
+        }
+
+        footer {
+            background: #00695c;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 650px) {
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            .container {
+                width: 94%;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <h1>🧾 e-Shram</h1>
+
+    <p>
+        GramSakhi - National Database for Unorganised Workers
+    </p>
+
+</header>
+
+
+<div class="container">
+
+
+    <!-- BACK BUTTON -->
+
+    <a href="labour-workers.html"
+       class="back-btn">
+
+        ← Back to Labour & Workers
+
+    </a>
+
+
+    <!-- ABOUT -->
+
+    <div class="card">
+
+        <h2>📋 About e-Shram</h2>
+
+        <p>
+            e-Shram is a national database of unorganised
+            workers created by the Government of India.
+        </p>
+
+        <p>
+            Eligible unorganised workers can register on the
+            e-Shram portal and receive a Universal Account
+            Number (UAN).
+        </p>
+
+        <div class="highlight">
+
+            <h3>🎯 Main Objective</h3>
+
+            <p>
+                To create a comprehensive database of
+                unorganised workers and help them access
+                social-security and welfare benefits for
+                which they are eligible.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- WHO CAN REGISTER -->
+
+    <div class="card">
+
+        <h2>👷 Who Can Register?</h2>
+
+        <p>
+            e-Shram is intended for eligible workers in the
+            unorganised sector.
+        </p>
+
+        <div class="info-grid">
+
+
+            <div class="info-box">
+
+                <h3>👨‍🌾 Agricultural Workers</h3>
+
+                <p>
+                    Eligible agricultural workers and
+                    labourers.
+                </p>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <h3>🧱 Construction Workers</h3>
+
+                <p>
+                    Workers involved in construction and
+                    related activities.
+                </p>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <h3>🧹 Domestic Workers</h3>
+
+                <p>
+                    Eligible domestic workers employed in
+                    households.
+                </p>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <h3>🛺 Street Vendors</h3>
+
+                <p>
+                    Eligible street vendors and other
+                    self-employed workers.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- ELIGIBILITY -->
+
+    <div class="card">
+
+        <h2>✅ Basic Eligibility</h2>
+
+        <ul>
+
+            <li>
+                Worker should be engaged in the
+                unorganised sector.
+            </li>
+
+            <li>
+                Generally, the worker should be between
+                16 and 59 years of age for e-Shram
+                registration.
+            </li>
+
+            <li>
+                Worker should not be a member of
+                EPFO or ESIC, subject to applicable
+                rules.
+            </li>
+
+            <li>
+                Worker should provide the required
+                identification and personal details.
+            </li>
+
+        </ul>
+
+        <div class="note">
+
+            <b>Important:</b>
+            Registration on e-Shram does not automatically
+            mean that a worker is eligible for every
+            government welfare scheme. Each scheme has
+            its own eligibility conditions.
+
+        </div>
+
+    </div>
+
+
+    <!-- BENEFITS -->
+
+    <div class="card">
+
+        <h2>🎁 Benefits of e-Shram Registration</h2>
+
+        <div class="benefit">
+
+            <ul>
+
+                <li>
+                    Provides the worker with a permanent
+                    Universal Account Number (UAN).
+                </li>
+
+                <li>
+                    Helps create a national record of
+                    unorganised workers.
+                </li>
+
+                <li>
+                    Can help facilitate access to eligible
+                    social-security and welfare schemes.
+                </li>
+
+                <li>
+                    Helps the government identify and
+                    support unorganised workers during
+                    welfare interventions.
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <!-- DOCUMENTS -->
+
+    <div class="card">
+
+        <h2>📄 Documents / Details Required</h2>
+
+        <ul>
+
+            <li>
+                Aadhaar number.
+            </li>
+
+            <li>
+                Aadhaar-linked mobile number, where
+                applicable.
+            </li>
+
+            <li>
+                Bank account details.
+            </li>
+
+            <li>
+                Personal and occupation-related details.
+            </li>
+
+            <li>
+                Other information requested during
+                registration.
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- HOW TO REGISTER -->
+
+    <div class="card">
+
+        <h2>📝 How to Register</h2>
+
+        <ul>
+
+            <li>
+                Visit the official e-Shram portal.
+            </li>
+
+            <li>
+                Select the registration option.
+            </li>
+
+            <li>
+                Enter the required mobile and Aadhaar
+                details.
+            </li>
+
+            <li>
+                Complete Aadhaar authentication.
+            </li>
+
+            <li>
+                Enter personal, occupation and bank
+                account information.
+            </li>
+
+            <li>
+                Submit the registration details.
+            </li>
+
+            <li>
+                Download or save the e-Shram card/UAN
+                details after successful registration.
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- UAN -->
+
+    <div class="card">
+
+        <h2>🔢 What is UAN?</h2>
+
+        <p>
+            UAN means <b>Universal Account Number</b>.
+        </p>
+
+        <p>
+            It is a unique number associated with an
+            eligible worker's e-Shram registration.
+        </p>
+
+        <div class="highlight">
+
+            <h3>💡 Remember</h3>
+
+            <p>
+                Keep your e-Shram/UAN details safe because
+                they may be required when accessing
+                services connected with the registration.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- IMPORTANT -->
+
+    <div class="card">
+
+        <h2>⚠️ Important Information</h2>
+
+        <div class="note">
+
+            e-Shram is primarily a registration and database
+            platform. The availability of any particular
+            benefit depends on the eligibility requirements
+            of the concerned government scheme.
+
+            <br><br>
+
+            Always check the latest information on the
+            official e-Shram portal before applying for
+            any benefit.
+
+        </div>
+
+    </div>
+
+
+    <!-- OFFICIAL WEBSITE -->
+
+    <div class="card">
+
+        <h2>🌐 Official Website</h2>
+
+        <p>
+            Workers can register and obtain official
+            information through the Government of India's
+            e-Shram portal.
+        </p>
+
+        <a
+            href="https://eshram.gov.in/"
+            target="_blank"
+            class="official-btn">
+
+            Visit Official e-Shram Website
+
+        </a>
+
+    </div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 GramSakhi | Government Schemes & Labour Welfare
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>GramSakhi - Persons with Disabilities</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4faf8;
+            color: #333;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #00897b;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+
+        /* BREADCRUMB */
+
+        .breadcrumb {
+            width: 92%;
+            max-width: 1200px;
+            margin: 20px auto 10px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .breadcrumb span {
+            color: #00897b;
+            font-weight: bold;
+        }
+
+
+        /* CONTAINER */
+
+        .container {
+            width: 92%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+
+        /* INTRO */
+
+        .intro {
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            margin: 20px 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .intro h2 {
+            color: #00897b;
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            line-height: 1.7;
+        }
+
+
+        /* SEARCH */
+
+        .search-area {
+            background: white;
+            padding: 20px;
+            border-radius: 14px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .search-area h2 {
+            color: #00796b;
+            margin-bottom: 12px;
+        }
+
+        #searchInput {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        #searchInput:focus {
+            border-color: #00897b;
+        }
+
+
+        /* CATEGORIES */
+
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .category-btn {
+            padding: 9px 15px;
+            border: none;
+            border-radius: 20px;
+            background: #e0f2f1;
+            color: #00695c;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .category-btn:hover,
+        .category-btn.active {
+            background: #00897b;
+            color: white;
+        }
+
+
+        /* COUNT */
+
+        #schemeCount {
+            margin: 20px 0;
+            font-weight: bold;
+            color: #00796b;
+        }
+
+
+        /* GRID */
+
+        .scheme-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+
+        /* CARD */
+
+        .scheme-card {
+            background: white;
+            padding: 22px;
+            border-radius: 14px;
+            border-left: 5px solid #00897b;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: 0.2s;
+        }
+
+        .scheme-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .scheme-card h2 {
+            color: #00796b;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .scheme-card p {
+            line-height: 1.6;
+            margin: 7px 0;
+        }
+
+
+        /* TAG */
+
+        .tag {
+            display: inline-block;
+            background: #e0f2f1;
+            color: #00695c;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+
+        /* BUTTON */
+
+        .btn {
+            display: inline-block;
+            background: #00897b;
+            color: white;
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background: #00695c;
+        }
+
+
+        /* NO RESULT */
+
+        #noResult {
+            display: none;
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 20px;
+            color: #777;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            margin-top: 40px;
+            background: #00695c;
+            color: white;
+            text-align: center;
+            padding: 18px;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            header h1 {
+                font-size: 25px;
+            }
+
+            .scheme-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container,
+            .breadcrumb {
+                width: 94%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <h1>♿ Persons with Disabilities</h1>
+
+    <p>
+        GramSakhi - Government Schemes & Support for Persons with Disabilities
+    </p>
+
+</header>
+
+
+<!-- BREADCRUMB -->
+
+<div class="breadcrumb">
+
+    Government Schemes →
+    <span>Persons with Disabilities</span> →
+    All Schemes
+
+</div>
+
+
+<div class="container">
+
+
+    <!-- INTRODUCTION -->
+
+    <div class="intro">
+
+        <h2>♿ Support for Persons with Disabilities</h2>
+
+        <p>
+            Explore government schemes and services designed
+            to support persons with disabilities in areas such
+            as assistive devices, identity cards, education,
+            employment, accessibility, rehabilitation and
+            social security.
+        </p>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-area">
+
+        <h2>🔍 Find a Scheme or Service</h2>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search by scheme name, category or benefit..."
+            onkeyup="searchSchemes()">
+
+
+        <!-- CATEGORY BUTTONS -->
+
+        <div class="categories">
+
+            <button class="category-btn active"
+                    onclick="filterCategory('all', this)">
+                All
+            </button>
+
+            <button class="category-btn"
+                    onclick="filterCategory('assistive', this)">
+                🦽 Assistive Devices
+            </button>
+
+            <button class="category-btn"
+                    onclick="filterCategory('identity', this)">
+                🪪 Identity
+            </button>
+
+            <button class="category-btn"
+                    onclick="filterCategory('education', this)">
+                🎓 Education
+            </button>
+
+            <button class="category-btn"
+                    onclick="filterCategory('employment', this)">
+                💼 Employment
+            </button>
+
+            <button class="category-btn"
+                    onclick="filterCategory('accessibility', this)">
+                ♿ Accessibility
+            </button>
+
+            <button class="category-btn"
+                    onclick="filterCategory('rehabilitation', this)">
+                🤝 Rehabilitation
+            </button>
+
+            <button class="category-btn"
+                    onclick="filterCategory('pension', this)">
+                💰 Social Security
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- COUNT -->
+
+    <div id="schemeCount">
+        Showing 8 schemes & services
+    </div>
+
+
+    <!-- SCHEME LIST -->
+
+    <div class="scheme-grid"
+         id="schemeList">
+
+
+        <!-- 1 ADIP -->
+
+        <div class="scheme-card"
+             data-category="assistive"
+             data-search="adip assistance persons disabilities aids appliances wheelchair hearing device prosthetic">
+
+            <span class="tag">
+                Assistive Devices
+            </span>
+
+            <h2>
+                🦽 ADIP Scheme
+            </h2>
+
+            <p>
+                Provides assistance to eligible persons with
+                disabilities for obtaining suitable aids and
+                assistive appliances.
+            </p>
+
+            <a href="adip-scheme.html"
+               class="btn">
+                Know More
+            </a>
+
+        </div>
+
+
+        <!-- 2 UDID -->
+
+        <div class="scheme-card"
+             data-category="identity"
+             data-search="udid unique disability id disability certificate identity card">
+
+            <span class="tag">
+                Identity
+            </span>
+
+            <h2>
+                🪪 UDID - Unique Disability ID
+            </h2>
+
+            <p>
+                A national initiative providing a Unique
+                Disability Identity Card and digital
+                disability certificate services.
+            </p>
+
+            <a href="udid.html"
+               class="btn">
+                Know More
+            </a>
+
+        </div>
+
+
+        <!-- 3 SCHOLARSHIP -->
+
+        <div class="scheme-card"
+             data-category="education"
+             data-search="scholarship students disabilities education scholarship persons with disabilities">
+
+            <span class="tag">
+                Education
+            </span>
+
+            <h2>
+                🎓 Scholarships for Students with Disabilities
+            </h2>
+
+            <p>
+                Various government scholarship programmes
+                provide educational assistance to eligible
+                students with disabilities.
+            </p>
+
+            <a href="pwd-scholarship.html"
+               class="btn">
+                Know More
+            </a>
+
+        </div>
+
+
+        <!-- 4 DDRS -->
+
+        <div class="scheme-card"
+             data-category="rehabilitation"
+             data-search="deendayal disabled rehabilitation scheme ddrs rehabilitation disability">
+
+            <span class="tag">
+                Rehabilitation
+            </span>
+
+            <h2>
+                🤝 Deendayal Disabled Rehabilitation Scheme
+            </h2>
+
+            <p>
+                Supports organisations working towards
+                rehabilitation and empowerment of persons
+                with disabilities.
+            </p>
+
+            <a href="ddrs.html"
+               class="btn">
+                Know More
+            </a>
+
+        </div>
+
+
+        <!-- 5 ACCESSIBLE INDIA -->
+
+        <div class="scheme-card"
+             data-category="accessibility"
+             data-search="accessible india campaign sugamya bharat accessibility disability">
+
+            <span class="tag">
+                Accessibility
+            </span>
+
+            <h2>
+                ♿ Accessible India Campaign
+            </h2>
+
+            <p>
+                Promotes accessibility in the built
+                environment, transportation and information
+                and communication systems.
+            </p>
+
+            <a href="accessible-india.html"
+               class="btn">
+                Know More
+            </a>
+
+        </div>
+
+
+        <!-- 6 SKILL DEVELOPMENT -->
+
+        <div class="scheme-card"
+             data-category="employment"
+             data-search="skill development persons disabilities employment training job pwd">
+
+            <span class="tag">
+                Employment
+            </span>
+
+            <h2>
+                💼 Skill Development for PwDs
+            </h2>
+
+            <p>
+                Government-supported skill development
+                initiatives help eligible persons with
+                disabilities develop employment-oriented
+                skills.
+            </p>
+
+            <a href="pwdscholarship.html"
+               class="btn">
+                Know More
+            </a>
+
+        </div>
+
+
+        
+
+    </div>
+
+
+    <!-- NO RESULT -->
+
+    <div id="noResult">
+
+        <h3>😔 No scheme found</h3>
+
+        <p>
+            Try another scheme name, category or benefit.
+        </p>
+
+    </div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 GramSakhi | Government Schemes
+    </p>
+
+</footer>
+
+
+<script>
+
+    let currentCategory = "all";
+
+
+    function searchSchemes() {
+
+        let searchText =
+            document.getElementById("searchInput")
+            .value
+            .toLowerCase()
+            .trim();
+
+        let cards =
+            document.querySelectorAll(".scheme-card");
+
+        let visibleCount = 0;
+
+
+        cards.forEach(function(card) {
+
+            let schemeText =
+                card.innerText.toLowerCase();
+
+            let searchData =
+                card.getAttribute("data-search")
+                .toLowerCase();
+
+            let category =
+                card.getAttribute("data-category")
+                .toLowerCase();
+
+
+            let matchesSearch =
+                schemeText.includes(searchText) ||
+                searchData.includes(searchText);
+
+
+            let matchesCategory =
+                currentCategory === "all" ||
+                category.includes(currentCategory);
+
+
+            if (matchesSearch && matchesCategory) {
+
+                card.style.display = "block";
+
+                visibleCount++;
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+
+        updateCount(visibleCount);
+
+    }
+
+
+    function filterCategory(category, button) {
+
+        currentCategory = category;
+
+
+        let buttons =
+            document.querySelectorAll(".category-btn");
+
+
+        buttons.forEach(function(btn) {
+
+            btn.classList.remove("active");
+
+        });
+
+
+        button.classList.add("active");
+
+
+        searchSchemes();
+
+    }
+
+
+    function updateCount(count) {
+
+        document.getElementById("schemeCount").innerText =
+            "Showing " + count +
+            " scheme" +
+            (count !== 1 ? "s" : "") +
+            " & services";
+
+
+        if (count === 0) {
+
+            document.getElementById("noResult")
+            .style.display = "block";
+
+        } else {
+
+            document.getElementById("noResult")
+            .style.display = "none";
+
+        }
+
+    }
+
+</script>
+
+
+</body>
+
+</html>

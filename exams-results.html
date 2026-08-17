@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GramSakhi - Exams & Results</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4faf8;
+            color: #333;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #00897b;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        /* BACK BUTTON */
+
+        .top-bar {
+            width: 92%;
+            max-width: 1100px;
+            margin: 20px auto;
+        }
+
+        .back-btn {
+            color: #00897b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* CONTAINER */
+
+        .container {
+            width: 92%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* INTRO + SEARCH */
+
+        .intro,
+        .search-box {
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .intro h2,
+        .search-box h2 {
+            color: #00897b;
+            margin-bottom: 12px;
+        }
+
+        .intro p {
+            line-height: 1.7;
+        }
+
+        /* SEARCH */
+
+        #searchInput {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        #searchInput:focus {
+            border-color: #00897b;
+        }
+
+        /* INFORMATION */
+
+        .info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .info-card {
+            background: white;
+            padding: 23px;
+            border-left: 5px solid #00897b;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .info-card h2 {
+            color: #00796b;
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .info-card p {
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .info-card ul {
+            margin-left: 22px;
+            line-height: 1.8;
+        }
+
+        /* BUTTON */
+
+        .btn {
+            display: inline-block;
+            background: #00897b;
+            color: white;
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 7px;
+            margin: 8px 6px 0 0;
+        }
+
+        .btn:hover {
+            background: #00695c;
+        }
+
+        /* NOTE */
+
+        .note {
+            background: #e0f2f1;
+            padding: 18px;
+            border-radius: 10px;
+            margin-top: 25px;
+            line-height: 1.7;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #00695c;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 40px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 26px;
+            }
+
+            .container,
+            .top-bar {
+                width: 94%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <h1>📝 Exams & Results</h1>
+
+    <p>
+        Exam Information • Admit Cards • Results • Important Links
+    </p>
+
+</header>
+
+
+<!-- BACK BUTTON -->
+
+<div class="top-bar">
+
+    <a href="student-corner.html" class="back-btn">
+        ← Back to Student Corner
+    </a>
+
+</div>
+
+
+<div class="container">
+
+
+    <!-- INTRODUCTION -->
+
+    <div class="intro">
+
+        <h2>📚 Exams & Results Guide</h2>
+
+        <p>
+            Find useful information about examinations,
+            application forms, admit cards, entrance exams,
+            examination preparation, answer keys, results and
+            official education portals.
+        </p>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+        <h2>🔍 Search Exam Information</h2>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search exam, admit card, result, entrance exam..."
+            onkeyup="searchExams()">
+
+    </div>
+
+
+    <!-- INFORMATION -->
+
+    <div class="info-list">
+
+
+        <!-- 1 -->
+
+        <div class="info-card"
+             data-search="exam application form registration exam form apply">
+
+            <h2>📝 Exam Application Form</h2>
+
+            <p>
+                Before applying for an examination, carefully
+                read the official notification and check eligibility,
+                important dates, required documents and application
+                instructions.
+            </p>
+
+            <ul>
+
+                <li>Check eligibility.</li>
+
+                <li>Register on the official portal.</li>
+
+                <li>Fill in correct information.</li>
+
+                <li>Upload required documents.</li>
+
+                <li>Pay the applicable fee.</li>
+
+                <li>Save the application confirmation.</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 2 -->
+
+        <div class="info-card"
+             data-search="admit card hall ticket exam download">
+
+            <h2>🎫 Admit Card / Hall Ticket</h2>
+
+            <p>
+                An admit card contains important examination
+                details such as the candidate's information,
+                exam date, time and examination centre.
+            </p>
+
+            <ul>
+
+                <li>Download it from the official website.</li>
+
+                <li>Check your name and examination details.</li>
+
+                <li>Check the examination centre.</li>
+
+                <li>Follow the instructions printed on it.</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 3 -->
+
+        <div class="info-card"
+             data-search="entrance exams jee neet cet cuet admission">
+
+            <h2>🎯 Entrance Examinations</h2>
+
+            <p>
+                Entrance examinations are used for admission to
+                various courses and institutions. Requirements
+                differ according to the examination.
+            </p>
+
+            <a href="https://www.nta.ac.in/"
+               target="_blank"
+               class="btn">
+                NTA Official
+            </a>
+
+            <a href="https://cetcell.mahacet.org/"
+               target="_blank"
+               class="btn">
+                Maharashtra CET Cell
+            </a>
+
+        </div>
+
+
+        <!-- 4 -->
+
+        <div class="info-card"
+             data-search="university semester exam college examination">
+
+            <h2>🎓 University & College Exams</h2>
+
+            <p>
+                University and college examinations may include
+                semester examinations, internal assessments,
+                practical examinations and other academic tests.
+            </p>
+
+            <ul>
+
+                <li>Check your college/university timetable.</li>
+
+                <li>Complete internal requirements.</li>
+
+                <li>Keep your admit card ready.</li>
+
+                <li>Follow examination rules.</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 5 -->
+
+        <div class="info-card"
+             data-search="exam timetable date schedule time table">
+
+            <h2>📅 Exam Timetable</h2>
+
+            <p>
+                Always check the official timetable before an
+                examination and note the date, time and subject.
+            </p>
+
+            <ul>
+
+                <li>Download the latest timetable.</li>
+
+                <li>Check for revised schedules.</li>
+
+                <li>Save a copy on your phone.</li>
+
+                <li>Reach the examination centre on time.</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 6 -->
+
+        <div class="info-card"
+             data-search="exam preparation study tips revision syllabus">
+
+            <h2>📖 Exam Preparation Tips</h2>
+
+            <ul>
+
+                <li>Understand the syllabus.</li>
+
+                <li>Prepare a realistic study timetable.</li>
+
+                <li>Revise important concepts regularly.</li>
+
+                <li>Solve previous question papers.</li>
+
+                <li>Practice mock tests.</li>
+
+                <li>Take proper breaks and sleep.</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 7 -->
+
+        <div class="info-card"
+             data-search="answer key exam response sheet result">
+
+            <h2>🔑 Answer Key</h2>
+
+            <p>
+                Some examinations publish provisional and final
+                answer keys after the examination.
+            </p>
+
+            <ul>
+
+                <li>Download the official answer key.</li>
+
+                <li>Compare your answers carefully.</li>
+
+                <li>Check the objection window if provided.</li>
+
+                <li>Follow the official instructions.</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 8 -->
+
+        <div class="info-card"
+             data-search="exam result scorecard marks result check">
+
+            <h2>🏆 Exam Results</h2>
+
+            <p>
+                Results are generally published on the official
+                examination or university website.
+            </p>
+
+            <ul>
+
+                <li>Visit the official result portal.</li>
+
+                <li>Enter the required details.</li>
+
+                <li>Download your scorecard/result.</li>
+
+                <li>Keep a copy for future use.</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 9 -->
+
+        <div class="info-card"
+             data-search="nta result jee neet cuet official result">
+
+            <h2>🇮🇳 NTA Examination & Result Portal</h2>
+
+            <p>
+                The National Testing Agency conducts or manages
+                several national-level examinations and publishes
+                examination-related information through official
+                portals.
+            </p>
+
+            <a href="https://www.nta.ac.in/"
+               target="_blank"
+               class="btn">
+                NTA Official Website
+            </a>
+
+        </div>
+
+
+        <!-- 10 -->
+
+        <div class="info-card"
+             data-search="maharashtra cet result mht cet admission exam">
+
+            <h2>🌿 Maharashtra CET Cell</h2>
+
+            <p>
+                Students applying through Maharashtra's common
+                entrance examinations can check examination,
+                admission and result-related information through
+                the official CET Cell portal.
+            </p>
+
+            <a href="https://cetcell.mahacet.org/"
+               target="_blank"
+               class="btn">
+                CET Cell Official Website
+            </a>
+
+        </div>
+
+
+        <!-- 11 -->
+
+        <div class="info-card"
+             data-search="sppu university result exam timetable pune university">
+
+            <h2>🎓 SPPU Examination & Results</h2>
+
+            <p>
+                Students of Savitribai Phule Pune University can
+                use the official university resources for
+                examination and result-related information.
+            </p>
+
+            <a href="https://www.unipune.ac.in/"
+               target="_blank"
+               class="btn">
+                SPPU Official Website
+            </a>
+
+        </div>
+
+
+        <!-- 12 -->
+
+        <div class="info-card"
+             data-search="revaluation photocopy answer sheet result university">
+
+            <h2>🔄 Revaluation / Result Related Requests</h2>
+
+            <p>
+                Some universities and examination authorities
+                provide options such as photocopy of answer sheets,
+                revaluation or result-related applications.
+            </p>
+
+            <p>
+                Check the official examination authority for
+                eligibility, deadlines and applicable fees.
+            </p>
+
+        </div>
+
+
+        <!-- 13 -->
+
+        <div class="info-card"
+             data-search="competitive exams upsc mpsc ssc banking government exams">
+
+            <h2>🏛️ Competitive & Government Exams</h2>
+
+            <p>
+                Students and graduates can explore competitive
+                examinations for higher education, government
+                services and other career opportunities.
+            </p>
+
+            <a href="https://upsc.gov.in/"
+               target="_blank"
+               class="btn">
+                UPSC
+            </a>
+
+            <a href="https://www.mpsc.gov.in/"
+               target="_blank"
+               class="btn">
+                MPSC
+            </a>
+
+            <a href="https://ssc.gov.in/"
+               target="_blank"
+               class="btn">
+                SSC
+            </a>
+
+        </div>
+
+
+        <!-- 14 -->
+
+        <div class="info-card"
+             data-search="result safety fake website scam official result">
+
+            <h2>⚠️ Result & Exam Safety Tips</h2>
+
+            <ul>
+
+                <li>Use official examination websites.</li>
+
+                <li>Do not trust unofficial result links.</li>
+
+                <li>Never share passwords or OTPs unnecessarily.</li>
+
+                <li>Check the website address carefully.</li>
+
+                <li>Save downloaded admit cards and results.</li>
+
+            </ul>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- IMPORTANT NOTE -->
+
+    <div class="note">
+
+        💡 <b>Important:</b>
+        Exam dates, application deadlines, admit cards, results
+        and examination rules can change. Always verify the latest
+        information from the official examination authority.
+
+    </div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 GramSakhi | Student Corner
+    </p>
+
+</footer>
+
+
+<script>
+
+    function searchExams() {
+
+        let searchText =
+            document.getElementById("searchInput")
+            .value
+            .toLowerCase()
+            .trim();
+
+        let cards =
+            document.querySelectorAll(".info-card");
+
+
+        cards.forEach(function(card) {
+
+            let text =
+                card.innerText.toLowerCase();
+
+            let keywords =
+                card.getAttribute("data-search")
+                .toLowerCase();
+
+
+            if (
+                text.includes(searchText) ||
+                keywords.includes(searchText)
+            ) {
+
+                card.style.display = "block";
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+    }
+
+</script>
+
+
+</body>
+
+</html>

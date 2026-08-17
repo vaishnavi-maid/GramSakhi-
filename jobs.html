@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Job Seekers</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f5f5f5;
+}
+
+header{
+background:#2E7D32;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+header h1{
+font-size:40px;
+}
+
+.search-box{
+padding:20px;
+text-align:center;
+}
+
+.search-box input{
+width:90%;
+padding:15px;
+font-size:18px;
+border:3px solid #2E7D32;
+border-radius:12px;
+outline:none;
+}
+
+.card{
+background:white;
+width:90%;
+margin:20px auto;
+padding:20px;
+border-radius:15px;
+box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+.card h2{
+color:#2E7D32;
+margin-bottom:15px;
+}
+
+.btn{
+display:inline-block;
+background:#2E7D32;
+color:white;
+text-decoration:none;
+padding:12px 20px;
+border-radius:8px;
+}
+
+footer{
+background:#2E7D32;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:30px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h1>💼 Job Seekers</h1>
+</header>
+
+<div class="search-box">
+<input type="text"
+id="searchInput"
+placeholder="🔍 Search Job Category..."
+onkeyup="searchJob()">
+</div>
+<!-- Government Jobs -->
+<div class="card job">
+    <h2>🏛 Government Jobs</h2>
+    <a href="govjobs.html" class="btn">View Details</a>
+</div>
+
+<!-- Private Jobs -->
+<div class="card job">
+    <h2>🏢 Private Jobs</h2>
+    <a href="privatejobs.html" class="btn">View Details</a>
+</div>
+
+<!-- Apprenticeship -->
+<div class="card job">
+    <h2>🎓 Apprenticeships</h2>
+    <a href="apprenticeship.html" class="btn">View Details</a>
+</div>
+
+<!-- Skill Development -->
+<div class="card job">
+    <h2>🛠 Skill Development</h2>
+    <a href="skilldevelopment.html" class="btn">View Details</a>
+</div>
+
+<!-- Resume Builder -->
+<div class="card job">
+    <h2>📄 Resume Builder</h2>
+    <a href="resumebuilder.html" class="btn">View Details</a>
+</div>
+
+<!-- Interview Preparation -->
+<div class="card job">
+    <h2>🎤 Interview Preparation</h2>
+    <a href="interview.html" class="btn">View Details</a>
+</div>
+
+<!-- Career Guidance -->
+<div class="card job">
+    <h2>🧭 Career Guidance</h2>
+    <a href="careerguidance.html" class="btn">View Details</a>
+</div>
+
+<!-- Employment News -->
+<div class="card job">
+    <h2>📰 Employment News</h2>
+    <a href="employmentnews.html" class="btn">View Details</a>
+</div>
+<script>
+
+function searchJob(){
+
+let input=document.getElementById("searchInput").value.toLowerCase();
+
+let cards=document.getElementsByClassName("job");
+
+for(let i=0;i<cards.length;i++){
+
+let title=cards[i].getElementsByTagName("h2")[0].innerText.toLowerCase();
+
+if(title.includes(input)){
+
+cards[i].style.display="block";
+
+}
+
+else{
+
+cards[i].style.display="none";
+
+}
+
+}
+
+}
+
+</script>
+
+<footer>
+
+<p>© 2026 GramSakhi | Job Seekers Section</p>
+
+</footer>
+
+</body>
+
+</html>

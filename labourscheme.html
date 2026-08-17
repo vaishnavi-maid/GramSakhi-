@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GramSakhi - Labour & Workers Schemes</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4faf8;
+            color: #333;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #00897b;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        /* BREADCRUMB */
+
+        .breadcrumb {
+            width: 92%;
+            max-width: 1200px;
+            margin: 20px auto 10px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .breadcrumb span {
+            color: #00897b;
+            font-weight: bold;
+        }
+
+        /* MAIN */
+
+        .container {
+            width: 92%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* INTRO */
+
+        .intro {
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            margin: 20px 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .intro h2 {
+            color: #00897b;
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            line-height: 1.6;
+        }
+
+        /* SEARCH */
+
+        .search-area {
+            background: white;
+            padding: 20px;
+            border-radius: 14px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .search-area h2 {
+            color: #00796b;
+            margin-bottom: 12px;
+        }
+
+        #searchInput {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        #searchInput:focus {
+            border-color: #00897b;
+        }
+
+        /* CATEGORY BUTTONS */
+
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .category-btn {
+            padding: 9px 15px;
+            border: none;
+            border-radius: 20px;
+            background: #e0f2f1;
+            color: #00695c;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .category-btn:hover,
+        .category-btn.active {
+            background: #00897b;
+            color: white;
+        }
+
+        /* COUNT */
+
+        #schemeCount {
+            margin: 20px 0;
+            font-weight: bold;
+            color: #00796b;
+        }
+
+        /* SCHEME GRID */
+
+        .scheme-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        /* CARD */
+
+        .scheme-card {
+            background: white;
+            padding: 22px;
+            border-radius: 14px;
+            border-left: 5px solid #00897b;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: 0.2s;
+        }
+
+        .scheme-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .scheme-card h2 {
+            color: #00796b;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .scheme-card p {
+            line-height: 1.6;
+            margin: 7px 0;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #e0f2f1;
+            color: #00695c;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        /* BUTTON */
+
+        .btn {
+            display: inline-block;
+            background: #00897b;
+            color: white;
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background: #00695c;
+        }
+
+        /* NO RESULT */
+
+        #noResult {
+            display: none;
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 20px;
+            color: #777;
+        }
+
+        /* FOOTER */
+
+        footer {
+            margin-top: 40px;
+            background: #00695c;
+            color: white;
+            text-align: center;
+            padding: 18px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            header h1 {
+                font-size: 25px;
+            }
+
+            .scheme-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container,
+            .breadcrumb {
+                width: 94%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <h1>👷 Labour & Workers Schemes</h1>
+
+    <p>
+        GramSakhi - Government Schemes for Workers
+    </p>
+
+</header>
+
+
+<!-- BREADCRUMB -->
+
+<div class="breadcrumb">
+
+    Government Schemes → <span>Labour & Workers</span> → All Schemes
+
+</div>
+
+
+<div class="container">
+
+
+    <!-- INTRODUCTION -->
+
+    <div class="intro">
+
+        <h2>👷 Labour & Workers Government Schemes</h2>
+
+        <p>
+            Find government schemes and welfare programmes
+            for unorganised workers, construction workers,
+            street vendors, rural workers, job seekers and
+            other eligible workers.
+        </p>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-area">
+
+        <h2>🔍 Find a Labour Scheme</h2>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search by scheme name, worker type or benefit..."
+            onkeyup="searchSchemes()">
+
+
+        <!-- CATEGORIES -->
+
+        <div class="categories">
+
+            <button
+                class="category-btn active"
+                onclick="filterCategory('all', this)">
+                All
+            </button>
+
+            <button
+                class="category-btn"
+                onclick="filterCategory('pension', this)">
+                👴 Pension
+            </button>
+
+            <button
+                class="category-btn"
+                onclick="filterCategory('insurance', this)">
+                🛡️ Insurance
+            </button>
+
+            <button
+                class="category-btn"
+                onclick="filterCategory('worker', this)">
+                👷 Workers
+            </button>
+
+            <button
+                class="category-btn"
+                onclick="filterCategory('construction', this)">
+                🧱 Construction
+            </button>
+
+            <button
+                class="category-btn"
+                onclick="filterCategory('street', this)">
+                🛺 Street Vendors
+            </button>
+
+            <button
+                class="category-btn"
+                onclick="filterCategory('employment', this)">
+                💼 Employment
+            </button>
+
+            <button
+                class="category-btn"
+                onclick="filterCategory('skill', this)">
+                🎓 Skill Development
+            </button>
+
+            <button
+                class="category-btn"
+                onclick="filterCategory('maharashtra', this)">
+                🌿 Maharashtra
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- COUNT -->
+
+    <div id="schemeCount">
+        Showing 12 labour and worker schemes
+    </div>
+
+
+    <!-- SCHEME LIST -->
+
+    < class="scheme-grid" id="schemeList">
+
+
+        <!-- 1 PM-SYM -->
+
+        <div class="scheme-card"
+             data-category="pension worker"
+             data-search="pm shram yogi maandhan pm sym pension unorganised workers">
+
+            <span class="tag">Pension</span>
+
+            <h2>👷 Pradhan Mantri Shram Yogi Maandhan</h2>
+
+            <p>
+                A contributory pension scheme for eligible
+                unorganised workers.
+            </p>
+
+            <p>
+                <b>Benefit:</b> Assured pension support subject
+                to scheme conditions.
+            </p>
+
+            <a href="pm-shram-yogi-maandhan.html"
+               class="btn">
+                Know More
+            </a>
+
+        </div>
+
+
+        <!-- 2 e-Shram -->
+
+        <div class="scheme-card"
+             data-category="worker"
+             data-search="e shram unorganised worker registration social security">
+
+            <span class="tag">Workers</span>
+
+            <h2>🧾 e-Shram</h2>
+
+            <p>
+                National database and registration platform
+                for eligible unorganised workers.
+            </p>
+
+            <p>
+                <b>Purpose:</b> Facilitate access to social
+                security and welfare benefits.
+            </p>
+
+            <a href="e-shram.html"
+               class="btn">
+                Know More
+            </a>
+
+        </div>
+
+
+        <!-- 3 PM SVANidhi -->
+
+        <div class="scheme-card"
+             data-category="street worker"
+             data-search="pm svanidhi street vendor loan business">
+
+            <span class="tag">Street Vendors</span>
+
+            <h2>🛺 PM SVANidhi</h2>
+
+            <p>
+                Provides working-capital support to eligible
+                street vendors.
+            </p>
+
+            <p>
+                <b>Purpose:</b> Support street vendors in
+                restarting or expanding their businesses.
+            </p>
+
+            <a href="pm-svanidhi.html"
+               class="btn">
+                Know More
+            </a>
+
+        </div>
+
+
+        <!-- 4 PMSBY -->
+
+        <div class="scheme-card"
+             data-category="insurance worker"
+             data-search="pmsby pradhan mantri suraksha bima yojana accident insurance">
+
+            <span class="tag">Insurance</span>
+
+            <h2>🛡️ Pradhan Mantri Suraksha Bima Yojana</h2>
+
+            <p>
+                Government-backed accident insurance scheme
+                for eligible subscribers.
+            </p>
+
+            <p>
+                <b>Benefit:</b> Financial protection against
+                specified accidental events.
+            </p>
+
+            <a href="pmsby.html"
+               class="btn">
+                Know More
+            </a>
+
+        </div>
+
+
+        <!-- 5 PMJJBY -->
+
+        <div class="scheme-card"
+             data-category="insurance worker"
+             data-search="pmjjby pradhan mantri jeevan jyoti bima yojana life insurance">
+
+            <span class="tag">Life Insurance</span>
+
+            <h2>❤️ Pradhan Mantri Jeevan Jyoti Bima Yojana</h2>
+
+            <p>
+                Affordable life insurance cover for eligible
+                subscribers.
+            </p>
+
+            <p>
+                <b>Benefit:</b> Life insurance protection
+                according to scheme rules.
+            </p>
+
+            <a href="pmjjby.html"
+               class="btn">
+                Know More
+            </a>
+
+        </div>
+
+
+        <!-- 6 APY -->
+
+        <div class="scheme-card"
+             data-category="pension worker"
+             data-search="atal pension yojana apy pension workers">
+
+            <span class="tag">Pension</span>
+
+            <h2>👴 Atal Pension Yojana</h2>
+
+            <p>
+                Government-supported pension scheme for
+                eligible subscribers.
+            </p>
+
+            <p>
+                <b>Focus:</b> Long-term retirement security.
+            </p>
+
+            <a href="atal-pension-yojana.html"
+               class="btn">
+                Know More
+            </a>
+
+        </div>
+
+
+        <!-- 7 BOCW -->
+
+        <div class="scheme-card"
+             data-category="construction worker"
+             data-search="bocw building construction workers welfare board construction worker">
+
+            <span class="tag">Construction Workers</span>
+
+            <h2>🧱 BOCW Welfare Schemes</h2>
+
+            <p>
+                Welfare programmes for eligible building and
+                other construction workers.
+            </p>
+
+            <p>
+                <b>Focus:</b> Social security and welfare
+                assistance.
+            </p>
+
+            <a href="bocw-welfare.html"
+               class="btn">
+                Know More
+            </a>
+
+        </div>
+
+
+        <!-- 8 Maharashtra Construction -->
+
+        <div class="scheme-card"
+             data-category="construction maharashtra"
+             data-search="maharashtra construction workers welfare scheme kamgar">
+
+            <span class="tag">Maharashtra</span>
+
+            <h2>🏗️ Maharashtra Construction Workers Welfare</h2>
+
+            <p>
+                Welfare benefits for eligible registered
+                construction workers in Maharashtra.
+            </p>
+
+            <p>
+                <b>Focus:</b> Education, social security,
+                financial and welfare assistance.
+            </p>
+
+            <a href="maharashtra-construction-workers.html"
+               class="btn">
+                Know More
+            </a>
+
+        </div>
+
+
+    <!-- NO RESULT -->
+
+    <div id="noResult">
+
+        <h3>😔 No scheme found</h3>
+
+        <p>
+            Try another scheme name, worker type or category.
+        </p>
+
+    </div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 GramSakhi | Government Schemes & Labour Welfare
+    </p>
+
+</footer>
+
+
+<script>
+
+    let currentCategory = "all";
+
+
+    function searchSchemes() {
+
+        let searchText =
+            document.getElementById("searchInput")
+            .value
+            .toLowerCase()
+            .trim();
+
+        let cards =
+            document.querySelectorAll(".scheme-card");
+
+        let visibleCount = 0;
+
+
+        cards.forEach(function(card) {
+
+            let schemeText =
+                card.innerText.toLowerCase();
+
+            let searchData =
+                card.getAttribute("data-search")
+                .toLowerCase();
+
+            let category =
+                card.getAttribute("data-category")
+                .toLowerCase();
+
+
+            let matchesSearch =
+                schemeText.includes(searchText) ||
+                searchData.includes(searchText);
+
+
+            let matchesCategory =
+                currentCategory === "all" ||
+                category.includes(currentCategory);
+
+
+            if (matchesSearch && matchesCategory) {
+
+                card.style.display = "block";
+
+                visibleCount++;
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+
+        updateCount(visibleCount);
+
+    }
+
+
+    function filterCategory(category, button) {
+
+        currentCategory = category;
+
+
+        let buttons =
+            document.querySelectorAll(".category-btn");
+
+
+        buttons.forEach(function(btn) {
+
+            btn.classList.remove("active");
+
+        });
+
+
+        button.classList.add("active");
+
+
+        searchSchemes();
+
+    }
+
+
+    function updateCount(count) {
+
+        document.getElementById("schemeCount").innerText =
+            "Showing " +
+            count +
+            " labour and worker scheme" +
+            (count !== 1 ? "s" : "");
+
+
+        if (count === 0) {
+
+            document.getElementById("noResult")
+            .style.display = "block";
+
+        } else {
+
+            document.getElementById("noResult")
+            .style.display = "none";
+
+        }
+
+    }
+
+</script>
+
+
+</body>
+
+</html>

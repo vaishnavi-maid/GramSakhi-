@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GramSakhi - Housing Schemes</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4faf8;
+            color: #333;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #00897b;
+            color: white;
+            text-align: center;
+            padding: 28px 15px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        /* BREADCRUMB */
+
+        .breadcrumb {
+            width: 92%;
+            max-width: 1200px;
+            margin: 20px auto 10px;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .breadcrumb span {
+            color: #00897b;
+            font-weight: bold;
+        }
+
+        /* MAIN */
+
+        .container {
+            width: 92%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* INTRO */
+
+        .intro {
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            margin: 20px 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .intro h2 {
+            color: #00897b;
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            line-height: 1.6;
+        }
+
+        /* SEARCH */
+
+        .search-area {
+            background: white;
+            padding: 20px;
+            border-radius: 14px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .search-area h2 {
+            color: #00796b;
+            margin-bottom: 12px;
+        }
+
+        #searchInput {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        #searchInput:focus {
+            border-color: #00897b;
+        }
+
+        /* CATEGORIES */
+
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .category-btn {
+            padding: 9px 15px;
+            border: none;
+            border-radius: 20px;
+            background: #e0f2f1;
+            color: #00695c;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .category-btn:hover,
+        .category-btn.active {
+            background: #00897b;
+            color: white;
+        }
+
+        /* COUNT */
+
+        #schemeCount {
+            margin: 20px 0;
+            font-weight: bold;
+            color: #00796b;
+        }
+
+        /* GRID */
+
+        .scheme-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        /* CARD */
+
+        .scheme-card {
+            background: white;
+            padding: 22px;
+            border-radius: 14px;
+            border-left: 5px solid #00897b;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: 0.2s;
+        }
+
+        .scheme-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .scheme-card h2 {
+            color: #00796b;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .scheme-card p {
+            line-height: 1.6;
+            margin: 7px 0;
+        }
+
+        /* TAG */
+
+        .tag {
+            display: inline-block;
+            background: #e0f2f1;
+            color: #00695c;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        /* BUTTON */
+
+        .btn {
+            display: inline-block;
+            background: #00897b;
+            color: white;
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+
+        .btn:hover {
+            background: #00695c;
+        }
+
+        /* NO RESULT */
+
+        #noResult {
+            display: none;
+            text-align: center;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 20px;
+            color: #777;
+        }
+
+        /* FOOTER */
+
+        footer {
+            margin-top: 40px;
+            background: #00695c;
+            color: white;
+            text-align: center;
+            padding: 18px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            header h1 {
+                font-size: 25px;
+            }
+
+            .scheme-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container,
+            .breadcrumb {
+                width: 94%;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <h1>🏠 Housing Schemes</h1>
+
+    <p>
+        GramSakhi - Government Housing Schemes at One Place
+    </p>
+
+</header>
+
+
+<!-- BREADCRUMB -->
+
+<div class="breadcrumb">
+
+    Government Schemes → <span>Housing</span> → All Schemes
+
+</div>
+
+
+<div class="container">
+
+
+    <!-- INTRODUCTION -->
+
+    <div class="intro">
+
+        <h2>🏠 Government Housing Schemes</h2>
+
+        <p>
+            Find government housing schemes and programmes
+            that provide support for construction, purchase,
+            rental and improvement of houses for eligible
+            families.
+        </p>
+
+    </div>
+
+
+    <!-- SEARCH AREA -->
+
+    <div class="search-area">
+
+        <h2>🔍 Find a Housing Scheme</h2>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search by scheme name, category or benefit..."
+            onkeyup="searchSchemes()">
+
+
+        <div class="categories">
+
+            <button
+                class="category-btn active"
+                onclick="filterCategory('all', this)">
+
+                All
+
+            </button>
+
+
+            <button
+                class="category-btn"
+                onclick="filterCategory('rural', this)">
+
+                🌾 Rural
+
+            </button>
+
+
+            <button
+                class="category-btn"
+                onclick="filterCategory('urban', this)">
+
+                🏙️ Urban
+
+            </button>
+
+
+            <button
+                class="category-btn"
+                onclick="filterCategory('maharashtra', this)">
+
+                🌿 Maharashtra
+
+            </button>
+
+
+            <button
+                class="category-btn"
+                onclick="filterCategory('women', this)">
+
+                👩 Women
+
+            </button>
+
+
+            <button
+                class="category-btn"
+                onclick="filterCategory('worker', this)">
+
+                👷 Workers
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- COUNT -->
+
+    <div id="schemeCount">
+        Showing 8 housing schemes
+    </div>
+
+
+    <!-- SCHEME LIST -->
+
+    <div class="scheme-grid" id="schemeList">
+
+
+        <!-- 1 -->
+
+        <div
+            class="scheme-card"
+            data-category="rural"
+            data-search="pradhan mantri awas yojana gramin pmay g rural housing house">
+
+            <span class="tag">
+                Rural Housing
+            </span>
+
+            <h2>
+                🏠 Pradhan Mantri Awas Yojana - Gramin
+            </h2>
+
+            <p>
+                A rural housing programme aimed at providing
+                pucca houses with basic amenities to eligible
+                rural households.
+            </p>
+
+            <p>
+                <b>Focus:</b>
+                Housing support for eligible rural families.
+            </p>
+
+            <a href="pmay-g.html" class="btn">
+                Know More
+            </a>
+
+        </div>
+
+
+        <!-- 2 -->
+
+        <div
+            class="scheme-card"
+            data-category="urban"
+            data-search="pradhan mantri awas yojana urban pmay u 2.0 urban housing">
+
+            <span class="tag">
+                Urban Housing
+            </span>
+
+            <h2>
+                🏙️ Pradhan Mantri Awas Yojana - Urban 2.0
+            </h2>
+
+            <p>
+                Provides central assistance to eligible urban
+                families to construct, purchase or rent
+                affordable houses.
+            </p>
+
+            <p>
+                <b>Benefit:</b>
+                Government assistance can be up to ₹2.50 lakh
+                per unit under the scheme, subject to applicable
+                rules.
+            </p>
+
+            <a href="pmay-u-2.html" class="btn">
+                Know More
+            </a>
+
+        </div>
+
+
+        <!-- 3 -->
+
+        <div
+            class="scheme-card"
+            data-category="maharashtra"
+            data-search="ramai awas yojana maharashtra housing house">
+
+            <span class="tag">
+                Maharashtra
+            </span>
+
+            <h2>
+                🏠 Ramai Awas Yojana
+            </h2>
+
+            <p>
+                A Maharashtra housing initiative for eligible
+                beneficiaries under the state's housing
+                support programmes.
+            </p>
+
+            <p>
+                <b>Focus:</b>
+                Assistance towards housing for eligible
+                beneficiaries.
+            </p>
+
+            <a href="ramai-awas-yojana.html" class="btn">
+                Know More
+            </a>
+
+        </div>
+
+
+        <!-- 4 -->
+
+        <div
+            class="scheme-card"
+            data-category="maharashtra rural"
+            data-search="shabari awas yojana maharashtra tribal housing house">
+
+            <span class="tag">
+                Maharashtra
+            </span>
+
+            <h2>
+                🏡 Shabari Awas Yojana
+            </h2>
+
+            <p>
+                A Maharashtra housing programme intended to
+                support eligible tribal households.
+            </p>
+
+            <p>
+                <b>Focus:</b>
+                Housing assistance for eligible beneficiaries.
+            </p>
+
+            <a href="shabari-awas-yojana.html" class="btn">
+                Know More
+            </a>
+
+        </div>
+
+
+        <!-- 5 -->
+
+        <div
+            class="scheme-card"
+            data-category="maharashtra rural"
+            data-search="pandit deendayal upadhyay gharkul yojana maharashtra rural housing">
+
+            <span class="tag">
+                Maharashtra
+            </span>
+
+            <h2>
+                🏡 Pandit Deendayal Upadhyay Gharkul Yojana
+            </h2>
+
+            <p>
+                A Maharashtra housing initiative providing
+                support to eligible families for construction
+                of houses.
+            </p>
+
+            <p>
+                <b>Focus:</b>
+                Rural and economically weaker households,
+                according to applicable guidelines.
+            </p>
+
+            <a href="deendayal-gharkul.html" class="btn">
+                Know More
+            </a>
+
+        </div>
+
+
+        <!-- 6 -->
+
+        <div
+            class="scheme-card"
+            data-category="worker"
+            data-search="atal bandkam kamgar awas yojana construction worker housing maharashtra">
+
+            <span class="tag">
+                Workers
+            </span>
+
+            <h2>
+                👷 Atal Bandhkam Kamgar Awas Yojana
+            </h2>
+
+            <p>
+                Housing support associated with eligible
+                construction workers under applicable
+                Maharashtra welfare provisions.
+            </p>
+
+            <p>
+                <b>Focus:</b>
+                Housing assistance for eligible registered
+                construction workers.
+            </p>
+
+            <a href="atal-bandhkam-kamgar.html" class="btn">
+                Know More
+            </a>
+
+        </div>
+
+
+        <!-- 7 -->
+
+        <div
+            class="scheme-card"
+            data-category="urban women"
+            data-search="affordable rental housing urban migrant working women construction workers housing">
+
+            <span class="tag">
+                Urban Rental Housing
+            </span>
+
+            <h2>
+                🏢 Affordable Rental Housing
+            </h2>
+
+            <p>
+                The Affordable Rental Housing vertical under
+                PMAY-U 2.0 supports affordable rental housing
+                for eligible urban groups.
+            </p>
+
+            <p>
+                <b>Focus:</b>
+                Urban migrants, working women, construction
+                workers and other eligible groups.
+            </p>
+
+            <a href="affordable-rental-housing.html" class="btn">
+                Know More
+            </a>
+
+        </div>
+
+
+        <!-- 8 -->
+
+        <div
+            class="scheme-card"
+            data-category="urban"
+            data-search="interest subsidy scheme iss home loan housing ews lig mig">
+
+            <span class="tag">
+                Home Loan Support
+            </span>
+
+            <h2>
+                💰 Interest Subsidy Scheme
+            </h2>
+
+            <p>
+                The Interest Subsidy Scheme is a vertical
+                under PMAY-U 2.0 for eligible beneficiaries
+                taking qualifying home loans.
+            </p>
+
+            <p>
+                <b>Focus:</b>
+                Interest subsidy for eligible EWS, LIG and
+                MIG beneficiaries according to scheme rules.
+            </p>
+
+            <a href="interest-subsidy-scheme.html" class="btn">
+                Know More
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- NO RESULT -->
+
+    <div id="noResult">
+
+        <h3>😔 No housing scheme found</h3>
+
+        <p>
+            Try another scheme name or category.
+        </p>
+
+    </div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 GramSakhi | Government Schemes & Housing
+    </p>
+
+</footer>
+
+
+<script>
+
+    let currentCategory = "all";
+
+
+    function searchSchemes() {
+
+        let searchText =
+            document.getElementById("searchInput")
+            .value
+            .toLowerCase()
+            .trim();
+
+
+        let cards =
+            document.querySelectorAll(".scheme-card");
+
+
+        let visibleCount = 0;
+
+
+        cards.forEach(function(card) {
+
+            let schemeText =
+                card.innerText.toLowerCase();
+
+
+            let searchData =
+                card.getAttribute("data-search")
+                .toLowerCase();
+
+
+            let category =
+                card.getAttribute("data-category")
+                .toLowerCase();
+
+
+            let matchesSearch =
+                schemeText.includes(searchText) ||
+                searchData.includes(searchText);
+
+
+            let matchesCategory =
+                currentCategory === "all" ||
+                category.includes(currentCategory);
+
+
+            if (matchesSearch && matchesCategory) {
+
+                card.style.display = "block";
+
+                visibleCount++;
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+
+        updateCount(visibleCount);
+
+    }
+
+
+    function filterCategory(category, button) {
+
+        currentCategory = category;
+
+
+        let buttons =
+            document.querySelectorAll(".category-btn");
+
+
+        buttons.forEach(function(btn) {
+
+            btn.classList.remove("active");
+
+        });
+
+
+        button.classList.add("active");
+
+
+        searchSchemes();
+
+    }
+
+
+    function updateCount(count) {
+
+        document.getElementById("schemeCount").innerText =
+            "Showing " +
+            count +
+            " housing scheme" +
+            (count !== 1 ? "s" : "");
+
+
+        if (count === 0) {
+
+            document.getElementById("noResult").style.display =
+                "block";
+
+        } else {
+
+            document.getElementById("noResult").style.display =
+                "none";
+
+        }
+
+    }
+
+</script>
+
+
+</body>
+</html>

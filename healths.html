@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GramSakhi - Health Care</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f1fbf6;
+            color: #333;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, #087f4e, #18b86a);
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 15px;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 15px;
+            background: white;
+            color: #087f4e;
+            text-decoration: none;
+            padding: 9px 18px;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        /* SEARCH */
+        .search-area {
+            text-align: center;
+            padding: 20px 15px 10px;
+        }
+
+        #search {
+            width: 95%;
+            max-width: 600px;
+            padding: 13px 18px;
+            border: 2px solid #18a861;
+            border-radius: 30px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        /* INTRO */
+        .intro {
+            width: 92%;
+            max-width: 1000px;
+            margin: 20px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .intro h2 {
+            color: #087f4e;
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            line-height: 1.6;
+        }
+
+        /* TITLE */
+        .title {
+            text-align: center;
+            color: #087f4e;
+            margin: 25px 0 18px;
+            font-size: 25px;
+        }
+
+        /* CARDS */
+        .container {
+            width: 92%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+
+        .card {
+            background: white;
+            padding: 22px 16px;
+            border-radius: 17px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-top: 5px solid #18a861;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            color: #087f4e;
+            margin-bottom: 9px;
+        }
+
+        .card p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #555;
+            min-height: 65px;
+        }
+
+        .card a,
+        .card button {
+            display: inline-block;
+            margin-top: 14px;
+            padding: 9px 17px;
+            border: none;
+            border-radius: 25px;
+            background: #0a9155;
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .card a:hover,
+        .card button:hover {
+            background: #066d40;
+        }
+
+        /* EMERGENCY */
+        .emergency {
+            width: 92%;
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 25px;
+            text-align: center;
+            background: #fff0f0;
+            border: 2px solid #e53935;
+            border-radius: 18px;
+        }
+
+        .emergency h2 {
+            color: #d32f2f;
+            margin-bottom: 10px;
+        }
+
+        .emergency p {
+            margin-bottom: 15px;
+        }
+
+        .emergency a {
+            display: inline-block;
+            background: #d32f2f;
+            color: white;
+            text-decoration: none;
+            padding: 11px 20px;
+            margin: 5px;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        /* TIPS */
+        .tips {
+            width: 92%;
+            max-width: 1000px;
+            margin: 30px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .tips h2 {
+            color: #087f4e;
+            margin-bottom: 12px;
+        }
+
+        .tips li {
+            margin: 9px 0;
+            line-height: 1.5;
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: 35px;
+            background: #075b38;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+        /* MOBILE */
+        @media(max-width: 600px) {
+
+            header h1 {
+                font-size: 25px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card p {
+                min-height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <h1>🏥 GramSakhi Health Care</h1>
+
+    <p>Healthy Village • Healthy Family • Healthy Future</p>
+
+    <a href="index.html" class="back">← Back to Home</a>
+
+</header>
+
+
+<!-- SEARCH -->
+
+<div class="search-area">
+
+    <input
+        type="text"
+        id="search"
+        placeholder="🔍 Search health information..."
+        onkeyup="searchCards()"
+    >
+
+</div>
+
+
+<!-- INTRO -->
+
+<div class="intro">
+
+    <h2>Welcome to Health Care</h2>
+
+    <p>
+        GramSakhi provides simple and useful health information
+        for rural citizens. Explore health awareness, nutrition,
+        first aid, women's health, child health, vaccination,
+        emergency assistance and government health services.
+    </p>
+
+</div>
+
+
+<!-- HEALTH SERVICES -->
+
+<div class="container">
+
+    <h2 class="title">🌿 Health Services</h2>
+
+    <div class="grid" id="healthCards">
+<div class="grid" id="healthCards">
+<!-- GOVERNMENT HEALTH SCHEMES -->
+
+<div class="card">
+
+    <div class="icon">🏛️</div>
+
+    <h3>Government Health Schemes</h3>
+
+    <p>
+        Explore government health schemes,
+        benefits and support available to citizens.
+    </p>
+
+    <a href="healthscheme.html">
+        View Government Schemes
+    </a>
+
+</div>
+  
+<!-- PERSONS WITH DISABILITIES -->
+
+<div class="card">
+
+    <div class="icon">♿</div>
+
+    <h3>Persons with Disabilities</h3>
+
+    <p>
+        Explore government schemes and support
+        available for persons with disabilities.
+    </p>
+
+    <a href="disabledscheme.html">
+        View Schemes
+    </a>
+
+</div>
+
+  
+
+
+    <!-- YOUR OTHER HEALTH CARDS START HERE -->
+
+    <div class="card">
+
+        <div class="icon">🚑</div>
+
+        <h3>Emergency Help</h3>
+
+        <p>
+            Important emergency contacts and
+            immediate assistance information.
+        </p>
+
+        <a href="#emergency">View</a>
+
+    </div>
+
+    <!-- Continue your other cards below -->
+
+</div>
+
+        <!-- EMERGENCY -->
+
+        <div class="card">
+
+            <div class="icon">🚑</div>
+
+            <h3>Emergency Help</h3>
+
+            <p>
+                Important emergency contacts and immediate
+                assistance information.
+            </p>
+
+            <a href="#emergency">View</a>
+
+        </div>
+
+
+        <!-- COMMON HEALTH -->
+
+        <div class="card">
+
+            <div class="icon">🩺</div>
+
+            <h3>Common Health Problems</h3>
+
+            <p>
+                Basic awareness about common health problems
+                and when to seek medical help.
+            </p>
+
+            <button onclick="commonProblems()">Learn More</button>
+
+        </div>
+
+
+        <!-- FIRST AID -->
+
+        <div class="card">
+
+            <div class="icon">🩹</div>
+
+            <h3>First Aid</h3>
+
+            <p>
+                Basic first-aid guidance for minor injuries
+                and common situations.
+            </p>
+
+            <button onclick="firstAid()">Learn More</button>
+
+        </div>
+
+
+        <!-- WOMEN -->
+
+        <div class="card">
+
+            <div class="icon">👩</div>
+
+            <h3>Women's Health</h3>
+
+            <p>
+                Menstrual hygiene, pregnancy care,
+                nutrition and women's wellness.
+            </p>
+
+            <button onclick="womenHealth()">Explore</button>
+
+        </div>
+
+
+        <!-- CHILD -->
+
+        <div class="card">
+
+            <div class="icon">👶</div>
+
+            <h3>Child Health</h3>
+
+            <p>
+                Child nutrition, hygiene, vaccination
+                and healthy growth.
+            </p>
+
+            <button onclick="childHealth()">Explore</button>
+
+        </div>
+
+
+        <!-- SENIOR CITIZEN -->
+
+        <div class="card">
+
+            <div class="icon">👴</div>
+
+            <h3>Senior Citizen Health</h3>
+
+            <p>
+                Health, nutrition, physical activity
+                and preventive care for seniors.
+            </p>
+
+            <button onclick="seniorHealth()">Explore</button>
+
+        </div>
+
+
+        <!-- NUTRITION -->
+
+        <div class="card">
+
+            <div class="icon">🥗</div>
+
+            <h3>Nutrition & Diet</h3>
+
+            <p>
+                Learn about balanced diets, nutritious foods,
+                vitamins and healthy eating.
+            </p>
+
+            <button onclick="nutrition()">Learn More</button>
+
+        </div>
+
+
+        <!-- VACCINATION -->
+
+        <div class="card">
+
+            <div class="icon">💉</div>
+
+            <h3>Vaccination</h3>
+
+            <p>
+                Learn why vaccination is important
+                for children and adults.
+            </p>
+
+            <button onclick="vaccination()">View</button>
+
+        </div>
+
+
+        <!-- MENTAL WELL-BEING -->
+
+        <div class="card">
+
+            <div class="icon">🧠</div>
+
+            <h3>Mental Well-being</h3>
+
+            <p>
+                Simple information about stress,
+                emotional well-being and healthy habits.
+            </p>
+
+            <button onclick="mentalHealth()">Learn More</button>
+
+        </div>
+
+
+      
+
+
+        <!-- HEALTH FACILITIES -->
+
+        <div class="card">
+
+            <div class="icon">🏥</div>
+
+            <h3>Find Health Facilities</h3>
+
+            <p>
+                Find hospitals, clinics and health facilities
+                near your location.
+            </p>
+
+            <button onclick="findHospital()">Find Nearby</button>
+
+        </div>
+
+
+        <!-- HYGIENE -->
+
+        <div class="card">
+
+            <div class="icon">🧼</div>
+
+            <h3>Health & Hygiene</h3>
+
+            <p>
+                Learn about clean water, sanitation,
+                handwashing and disease prevention.
+            </p>
+
+            <button onclick="hygiene()">Learn More</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- EMERGENCY -->
+
+<div class="emergency" id="emergency">
+
+    <h2>🚨 Emergency Assistance</h2>
+
+    <p>
+        For a serious medical emergency, seek professional
+        medical assistance immediately.
+    </p>
+
+    <a href="tel:112">📞 Call 112</a>
+
+    <a href="tel:108">🚑 Call 108</a>
+
+</div>
+
+
+<!-- DAILY HEALTH TIPS -->
+
+<div class="tips">
+
+    <h2>🌱 Daily Health Tips</h2>
+
+    <ul>
+
+        <li>Drink safe and clean water.</li>
+
+        <li>Eat a balanced and nutritious diet.</li>
+
+        <li>Wash your hands regularly with soap and water.</li>
+
+        <li>Keep your home and surroundings clean.</li>
+
+        <li>Stay physically active.</li>
+
+        <li>Get adequate sleep.</li>
+
+        <li>Take medicines only as advised by a qualified
+            healthcare professional.</li>
+
+        <li>Seek medical advice when symptoms are serious,
+            persistent or worsening.</li>
+
+    </ul>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>🌱 <strong>GramSakhi</strong></p>
+
+    <p>One Platform for Every Rural Citizen</p>
+
+    <p>© 2026 GramSakhi</p>
+
+</footer>
+
+
+<script>
+
+    /* SEARCH */
+
+    function searchCards() {
+
+        let search =
+            document.getElementById("search")
+            .value
+            .toLowerCase();
+
+        let cards =
+            document.querySelectorAll(".card");
+
+        cards.forEach(function(card) {
+
+            let text =
+                card.innerText.toLowerCase();
+
+            if (text.includes(search)) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+
+        });
+
+    }
+
+
+    /* COMMON HEALTH PROBLEMS */
+
+    function commonProblems() {
+
+        alert(
+            "🩺 Common Health Problems\n\n" +
+            "• Fever\n" +
+            "• Cold and cough\n" +
+            "• Headache\n" +
+            "• Stomach problems\n" +
+            "• Skin problems\n\n" +
+            "For serious or persistent symptoms, consult a qualified healthcare professional."
+        );
+
+    }
+
+
+    /* FIRST AID */
+
+    function firstAid() {
+
+        alert(
+            "🩹 Basic First Aid\n\n" +
+            "For minor injuries:\n" +
+            "• Clean minor cuts with clean running water.\n" +
+            "• Cover the wound with a clean dressing.\n" +
+            "• For minor burns, cool the area with clean running water.\n" +
+            "• For serious injuries, seek medical help immediately."
+        );
+
+    }
+
+
+    /* WOMEN HEALTH */
+
+    function womenHealth() {
+
+        alert(
+            "👩 Women's Health\n\n" +
+            "Important areas include:\n" +
+            "• Menstrual hygiene\n" +
+            "• Pregnancy care\n" +
+            "• Nutrition\n" +
+            "• Anaemia awareness\n" +
+            "• Regular health check-ups"
+        );
+
+    }
+
+
+    /* CHILD HEALTH */
+
+    function childHealth() {
+
+        alert(
+            "👶 Child Health\n\n" +
+            "• Proper nutrition\n" +
+            "• Vaccination\n" +
+            "• Personal hygiene\n" +
+            "• Growth monitoring\n" +
+            "• Regular health check-ups"
+        );
+
+    }
+
+
+    /* SENIOR HEALTH */
+
+    function seniorHealth() {
+
+        alert(
+            "👴 Senior Citizen Health\n\n" +
+            "• Regular health check-ups\n" +
+            "• Balanced nutrition\n" +
+            "• Safe physical activity\n" +
+            "• Adequate sleep\n" +
+            "• Follow prescribed medicines correctly"
+        );
+
+    }
+
+
+    /* NUTRITION */
+
+    function nutrition() {
+
+        alert(
+            "🥗 Nutrition & Diet\n\n" +
+            "Include a variety of:\n" +
+            "• Vegetables\n" +
+            "• Fruits\n" +
+            "• Pulses and beans\n" +
+            "• Whole grains\n" +
+            "• Milk or suitable alternatives\n" +
+            "• Nuts and seeds"
+        );
+
+    }
+
+
+    /* VACCINATION */
+
+    function vaccination() {
+
+        alert(
+            "💉 Vaccination\n\n" +
+            "Vaccination helps protect against several infectious diseases.\n\n" +
+            "Follow the vaccination schedule recommended by qualified healthcare professionals and public health authorities."
+        );
+
+    }
+
+
+    /* MENTAL HEALTH */
+
+    function mentalHealth() {
+
+        alert(
+            "🧠 Mental Well-being\n\n" +
+            "• Maintain a regular sleep routine.\n" +
+            "• Stay connected with trusted people.\n" +
+            "• Take breaks and relax.\n" +
+            "• Talk to someone you trust when you are struggling.\n" +
+            "• Seek professional help when needed."
+        );
+
+    }
+
+
+    /* FIND HOSPITAL */
+
+    function findHospital() {
+
+        window.open(
+            "https://www.google.com/maps/search/hospitals+near+me",
+            "_blank"
+        );
+
+    }
+
+
+    /* HYGIENE */
+
+    function hygiene() {
+
+        alert(
+            "🧼 Health & Hygiene\n\n" +
+            "• Wash hands regularly with soap.\n" +
+            "• Drink safe water.\n" +
+            "• Keep food clean and covered.\n" +
+            "• Use clean toilets.\n" +
+            "• Keep your surroundings clean."
+        );
+
+    }
+
+</script>
+
+</body>
+</html>

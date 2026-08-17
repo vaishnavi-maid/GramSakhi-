@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>GramSakhi - Weather & Forecast</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f9fc;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #0277bd;
+            color: white;
+            text-align: center;
+            padding: 28px 15px;
+        }
+
+        header h1 {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        /* BACK BUTTON */
+
+        .top-bar {
+            width: 92%;
+            max-width: 1000px;
+            margin: 18px auto;
+        }
+
+        .back-btn {
+            color: #0277bd;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* MAIN */
+
+        .container {
+            width: 92%;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .box {
+            background: white;
+            padding: 22px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .box h2 {
+            color: #0277bd;
+            margin-bottom: 12px;
+        }
+
+        /* SEARCH */
+
+        .search-area {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        #cityInput {
+            flex: 1;
+            padding: 13px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        #cityInput:focus {
+            border-color: #0277bd;
+        }
+
+        button {
+            border: none;
+            background: #0277bd;
+            color: white;
+            padding: 13px 17px;
+            border-radius: 8px;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #01579b;
+        }
+
+        .location-btn {
+            margin-top: 12px;
+            background: #388e3c;
+        }
+
+        .location-btn:hover {
+            background: #1b5e20;
+        }
+
+        /* STATUS */
+
+        #status {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        /* CURRENT WEATHER */
+
+        .current {
+            text-align: center;
+        }
+
+        .location-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .weather-icon {
+            font-size: 55px;
+            margin: 8px;
+        }
+
+        .temperature {
+            font-size: 48px;
+            font-weight: bold;
+            color: #0277bd;
+        }
+
+        .description {
+            font-size: 19px;
+            margin-bottom: 20px;
+        }
+
+        /* DETAILS */
+
+        .details {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .detail {
+            background: #e3f2fd;
+            padding: 17px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .detail h3 {
+            font-size: 15px;
+            margin-bottom: 6px;
+        }
+
+        .detail p {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* FORECAST */
+
+        .forecast-container {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 8px;
+        }
+
+        .forecast {
+            background: #f1f8e9;
+            padding: 12px 5px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .forecast .day {
+            font-weight: bold;
+            font-size: 13px;
+        }
+
+        .forecast .icon {
+            font-size: 25px;
+            margin: 6px 0;
+        }
+
+        .forecast .temp {
+            font-weight: bold;
+            color: #0277bd;
+        }
+
+        .forecast .rain {
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        /* FARMING INFORMATION */
+
+        ul {
+            margin-left: 22px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        /* OFFICIAL LINKS */
+
+        .official {
+            background: #e8f5e9;
+        }
+
+        .official a {
+            display: inline-block;
+            background: #388e3c;
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 7px;
+            margin: 8px 5px 0 0;
+        }
+
+        /* NOTE */
+
+        .note {
+            background: #fff8e1;
+            border-left: 5px solid #f9a825;
+            padding: 17px;
+            border-radius: 8px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #01579b;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 35px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            .search-area {
+                flex-direction: column;
+            }
+
+            .details {
+                grid-template-columns: 1fr;
+            }
+
+            .forecast-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+            header h1 {
+                font-size: 26px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <h1>🌦️ Weather & Forecast</h1>
+
+    <p>
+        Live Weather Information for Farmers
+    </p>
+
+</header>
+
+
+<!-- BACK -->
+
+<div class="top-bar">
+
+    <a href="farmer-corner.html" class="back-btn">
+        ← Back to Farmer Corner
+    </a>
+
+</div>
+
+
+<div class="container">
+
+
+    <!-- LOCATION SEARCH -->
+
+    <div class="box">
+
+        <h2>📍 Find Your Weather</h2>
+
+        <p>
+            Enter your village, town or city to check the
+            latest available weather information.
+        </p>
+
+        <div class="search-area">
+
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Enter village or city name">
+
+            <button onclick="searchCity()">
+                🔍 Search
+            </button>
+
+        </div>
+
+
+        <button
+            class="location-btn"
+            onclick="useMyLocation()">
+
+            📍 Use My Location
+
+        </button>
+
+
+        <div id="status"></div>
+
+    </div>
+
+
+    <!-- CURRENT WEATHER -->
+
+    <div class="box current">
+
+        <div class="location-name" id="locationName">
+            Search for a location
+        </div>
+
+        <div class="weather-icon" id="weatherIcon">
+            🌤️
+        </div>
+
+        <div class="temperature" id="temperature">
+            --°C
+        </div>
+
+        <div class="description" id="description">
+            Weather information will appear here
+        </div>
+
+
+        <div class="details">
+
+            <div class="detail">
+
+                <h3>💧 Humidity</h3>
+
+                <p id="humidity">
+                    --%
+                </p>
+
+            </div>
+
+
+            <div class="detail">
+
+                <h3>🌧️ Rain</h3>
+
+                <p id="rain">
+                    -- mm
+                </p>
+
+            </div>
+
+
+            <div class="detail">
+
+                <h3>💨 Wind</h3>
+
+                <p id="wind">
+                    -- km/h
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FORECAST -->
+
+    <div class="box">
+
+        <h2>📅 7-Day Forecast</h2>
+
+        <div
+            class="forecast-container"
+            id="forecast">
+
+            <p>
+                Search for a location to see the forecast.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- FARMING INFORMATION -->
+
+    <div class="box">
+
+        <h2>🌾 Weather-Based Farming Tips</h2>
+
+        <ul>
+
+            <li>
+                Check rainfall forecasts before irrigation.
+            </li>
+
+            <li>
+                Avoid unnecessary irrigation when rain is expected.
+            </li>
+
+            <li>
+                Check wind conditions before spraying pesticides.
+            </li>
+
+            <li>
+                Protect harvested crops during expected rainfall.
+            </li>
+
+            <li>
+                Take precautions during extreme heat or heavy rain.
+            </li>
+
+            <li>
+                Plan sowing and harvesting according to suitable
+                weather conditions.
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- OFFICIAL -->
+
+    <div class="box official">
+
+        <h2>🌐 Official Weather Information</h2>
+
+        <p>
+            For official weather warnings and additional
+            information, farmers can check the India
+            Meteorological Department.
+        </p>
+
+
+        <a
+            href="https://mausam.imd.gov.in/"
+            target="_blank">
+
+            🌦️ IMD Mausam
+
+        </a>
+
+
+        <a
+            href="https://www.imd.gov.in/"
+            target="_blank">
+
+            🌐 IMD Official Website
+
+        </a>
+
+    </div>
+
+
+    <!-- NOTE -->
+
+    <div class="note">
+
+        💡 <b>Important:</b>
+        Weather forecasts can change. Always check the latest
+        information and official warnings before making
+        important farming decisions.
+
+    </div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 GramSakhi | Farmer Corner
+    </p>
+
+</footer>
+
+
+
+<script>
+
+/* =========================================
+   SEARCH CITY
+========================================= */
+
+async function searchCity() {
+
+    const city =
+        document.getElementById("cityInput")
+        .value
+        .trim();
+
+    if (city.length < 2) {
+
+        showStatus(
+            "Please enter a village, town or city name.",
+            true
+        );
+
+        return;
+    }
+
+    showStatus("🔍 Finding location...");
+
+
+    try {
+
+        const url =
+            "https://geocoding-api.open-meteo.com/v1/search" +
+            "?name=" +
+            encodeURIComponent(city) +
+            "&count=1" +
+            "&language=en" +
+            "&format=json" +
+            "&countryCode=IN";
+
+
+        const response =
+            await fetch(url);
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "Location search failed."
+            );
+
+        }
+
+
+        const data =
+            await response.json();
+
+
+        if (!data.results ||
+            data.results.length === 0) {
+
+            showStatus(
+                "❌ Location not found. Try another village or city.",
+                true
+            );
+
+            return;
+        }
+
+
+        const place =
+            data.results[0];
+
+
+        showStatus(
+            "✅ Location found. Loading weather..."
+        );
+
+
+        getWeather(
+            place.latitude,
+            place.longitude,
+            place.name,
+            place.admin1 || "India"
+        );
+
+
+    } catch (error) {
+
+        showStatus(
+            "❌ Unable to connect to weather service. Please check your internet connection.",
+            true
+        );
+
+        console.error(error);
+
+    }
+
+}
+
+
+
+/* =========================================
+   USE MY LOCATION
+========================================= */
+
+function useMyLocation() {
+
+    if (!navigator.geolocation) {
+
+        showStatus(
+            "❌ Your browser does not support location.",
+            true
+        );
+
+        return;
+    }
+
+
+    showStatus(
+        "📍 Requesting your location..."
+    );
+
+
+    navigator.geolocation.getCurrentPosition(
+
+        function(position) {
+
+            const latitude =
+                position.coords.latitude;
+
+            const longitude =
+                position.coords.longitude;
+
+
+            showStatus(
+                "✅ Location detected. Loading weather..."
+            );
+
+
+            getWeather(
+                latitude,
+                longitude,
+                "Your Location",
+                ""
+            );
+
+        },
+
+
+        function(error) {
+
+            let message =
+                "❌ Location permission was not available. " +
+                "Please enter your village or city name instead.";
+
+            if (error.code === 1) {
+
+                message =
+                    "❌ Location permission was denied. " +
+                    "Please allow location access or search your village/city manually.";
+
+            }
+
+            showStatus(message, true);
+
+        },
+
+        {
+            enableHighAccuracy: true,
+            timeout: 10000,
+            maximumAge: 300000
+        }
+
+    );
+
+}
+
+
+
+/* =========================================
+   GET WEATHER
+========================================= */
+
+async function getWeather(
+    latitude,
+    longitude,
+    placeName,
+    stateName
+) {
+
+    try {
+
+
+        const url =
+            "https://api.open-meteo.com/v1/forecast" +
+
+            "?latitude=" +
+            latitude +
+
+            "&longitude=" +
+            longitude +
+
+            "&current=" +
+            "temperature_2m," +
+            "relative_humidity_2m," +
+            "precipitation," +
+            "weather_code," +
+            "wind_speed_10m" +
+
+            "&daily=" +
+            "weather_code," +
+            "temperature_2m_max," +
+            "temperature_2m_min," +
+            "precipitation_probability_max" +
+
+            "&timezone=auto" +
+
+            "&forecast_days=7";
+
+
+        const response =
+            await fetch(url);
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "Weather request failed."
+            );
+
+        }
+
+
+        const data =
+            await response.json();
+
+
+        displayWeather(
+            data,
+            placeName,
+            stateName
+        );
+
+
+        showStatus(
+            "✅ Weather updated successfully."
+        );
+
+
+    } catch (error) {
+
+        showStatus(
+            "❌ Unable to load weather. Please try again.",
+            true
+        );
+
+        console.error(error);
+
+    }
+
+}
+
+
+
+/* =========================================
+   DISPLAY WEATHER
+========================================= */
+
+function displayWeather(
+    data,
+    placeName,
+    stateName
+) {
+
+
+    document.getElementById(
+        "locationName"
+    ).innerHTML =
+        "📍 " +
+        placeName +
+        (stateName ? ", " + stateName : "");
+
+
+    document.getElementById(
+        "temperature"
+    ).innerHTML =
+        Math.round(
+            data.current.temperature_2m
+        ) +
+        "°C";
+
+
+    document.getElementById(
+        "humidity"
+    ).innerHTML =
+        Math.round(
+            data.current.relative_humidity_2m
+        ) +
+        "%";
+
+
+    document.getElementById(
+        "rain"
+    ).innerHTML =
+        data.current.precipitation +
+        " mm";
+
+
+    document.getElementById(
+        "wind"
+    ).innerHTML =
+        Math.round(
+            data.current.wind_speed_10m
+        ) +
+        " km/h";
+
+
+    const code =
+        data.current.weather_code;
+
+
+    document.getElementById(
+        "weatherIcon"
+    ).innerHTML =
+        getWeatherIcon(code);
+
+
+    document.getElementById(
+        "description"
+    ).innerHTML =
+        getWeatherDescription(code);
+
+
+    displayForecast(
+        data.daily
+    );
+
+}
+
+
+
+/* =========================================
+   FORECAST
+========================================= */
+
+function displayForecast(daily) {
+
+    const container =
+        document.getElementById(
+            "forecast"
+        );
+
+
+    container.innerHTML = "";
+
+
+    for (
+        let i = 0;
+        i < daily.time.length;
+        i++
+    ) {
+
+
+        const date =
+            new Date(
+                daily.time[i] + "T00:00:00"
+            );
+
+
+        const day =
+            date.toLocaleDateString(
+                "en-IN",
+                {
+                    weekday: "short"
+                }
+            );
+
+
+        const max =
+            Math.round(
+                daily.temperature_2m_max[i]
+            );
+
+
+        const min =
+            Math.round(
+                daily.temperature_2m_min[i]
+            );
+
+
+        const rain =
+            daily.precipitation_probability_max[i];
+
+
+        const icon =
+            getWeatherIcon(
+                daily.weather_code[i]
+            );
+
+
+        const card =
+            document.createElement(
+                "div"
+            );
+
+
+        card.className =
+            "forecast";
+
+
+        card.innerHTML =
+
+            "<div class='day'>" +
+            day +
+            "</div>" +
+
+            "<div class='icon'>" +
+            icon +
+            "</div>" +
+
+            "<div class='temp'>" +
+            max +
+            "° / " +
+            min +
+            "°C" +
+            "</div>" +
+
+            "<div class='rain'>" +
+            "🌧️ " +
+            rain +
+            "% rain" +
+            "</div>";
+
+
+        container.appendChild(
+            card
+        );
+
+    }
+
+}
+
+
+
+/* =========================================
+   WEATHER ICON
+========================================= */
+
+function getWeatherIcon(code) {
+
+    if (code === 0)
+        return "☀️";
+
+    if (code === 1 ||
+        code === 2)
+        return "🌤️";
+
+    if (code === 3)
+        return "☁️";
+
+    if (code === 45 ||
+        code === 48)
+        return "🌫️";
+
+    if (code >= 51 &&
+        code <= 67)
+        return "🌧️";
+
+    if (code >= 71 &&
+        code <= 77)
+        return "🌨️";
+
+    if (code >= 80 &&
+        code <= 82)
+        return "🌦️";
+
+    if (code >= 95)
+        return "⛈️";
+
+    return "🌤️";
+
+}
+
+
+
+/* =========================================
+   WEATHER DESCRIPTION
+========================================= */
+
+function getWeatherDescription(code) {
+
+    if (code === 0)
+        return "Clear sky";
+
+    if (code === 1)
+        return "Mainly clear";
+
+    if (code === 2)
+        return "Partly cloudy";
+
+    if (code === 3)
+        return "Overcast";
+
+    if (code === 45 ||
+        code === 48)
+        return "Foggy";
+
+    if (code >= 51 &&
+        code <= 57)
+        return "Drizzle";
+
+    if (code >= 61 &&
+        code <= 67)
+        return "Rain";
+
+    if (code >= 71 &&
+        code <= 77)
+        return "Snow";
+
+    if (code >= 80 &&
+        code <= 82)
+        return "Rain showers";
+
+    if (code >= 95)
+        return "Thunderstorm";
+
+    return "Weather conditions";
+
+}
+
+
+
+/* =========================================
+   STATUS MESSAGE
+========================================= */
+
+function showStatus(
+    message,
+    error = false
+) {
+
+    const status =
+        document.getElementById(
+            "status"
+        );
+
+
+    status.innerHTML =
+        message;
+
+
+    status.style.color =
+        error
+        ? "#d32f2f"
+        : "#2e7d32";
+
+}
+
+
+
+/* =========================================
+   ENTER KEY
+========================================= */
+
+document.getElementById(
+    "cityInput"
+).addEventListener(
+    "keypress",
+    function(event) {
+
+        if (event.key === "Enter") {
+
+            searchCity();
+
+        }
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>

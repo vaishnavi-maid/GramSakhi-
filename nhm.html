@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GramSakhi - National Health Mission</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4faf8;
+            color: #333;
+        }
+
+        /* HEADER */
+        header {
+            background: #00897b;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        /* MAIN */
+        .container {
+            width: 92%;
+            max-width: 1000px;
+            margin: 25px auto;
+        }
+
+        /* BACK */
+        .back-btn {
+            display: inline-block;
+            color: #00897b;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .back-btn:hover {
+            color: #00695c;
+        }
+
+        /* CARD */
+        .card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 14px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .card h2 {
+            color: #00897b;
+            margin-bottom: 14px;
+        }
+
+        .card p {
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .card ul {
+            margin-left: 22px;
+            line-height: 1.8;
+        }
+
+        /* HIGHLIGHT */
+        .highlight {
+            background: #e0f2f1;
+            border-left: 5px solid #00897b;
+            padding: 18px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .highlight h3 {
+            color: #00695c;
+            margin-bottom: 8px;
+        }
+
+        /* SERVICE GRID */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .service-box {
+            background: #f4faf8;
+            padding: 18px;
+            border-radius: 10px;
+        }
+
+        .service-box h3 {
+            color: #00796b;
+            margin-bottom: 8px;
+        }
+
+        .service-box p {
+            margin-bottom: 0;
+        }
+
+        /* NOTE */
+        .note {
+            background: #fff8e1;
+            border-left: 5px solid #f9a825;
+            padding: 15px;
+            border-radius: 8px;
+            line-height: 1.6;
+        }
+
+        /* BUTTON */
+        .official-btn {
+            display: inline-block;
+            background: #00897b;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 7px;
+            margin-top: 12px;
+        }
+
+        .official-btn:hover {
+            background: #00695c;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #00695c;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 40px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 650px) {
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            .container {
+                width: 94%;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+    <h1>🏥 National Health Mission</h1>
+
+    <p>
+        GramSakhi - Government Healthcare Programme
+    </p>
+
+</header>
+
+
+<div class="container">
+
+    <!-- BACK -->
+    <a href="healthscheme.html" class="back-btn">
+        ← Back to Health Care Schemes
+    </a>
+
+
+    <!-- ABOUT -->
+    <div class="card">
+
+        <h2>📋 About National Health Mission</h2>
+
+        <p>
+            The National Health Mission (NHM) is a major
+            government health programme aimed at strengthening
+            public healthcare services and improving access to
+            affordable and quality healthcare.
+        </p>
+
+        <div class="highlight">
+
+            <h3>🎯 Main Purpose</h3>
+
+            <p>
+                To improve the availability, accessibility and
+                quality of healthcare services, particularly for
+                vulnerable and underserved populations.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- OBJECTIVES -->
+    <div class="card">
+
+        <h2>🎯 Objectives</h2>
+
+        <ul>
+
+            <li>
+                Improve access to essential healthcare services.
+            </li>
+
+            <li>
+                Strengthen public health infrastructure.
+            </li>
+
+            <li>
+                Improve maternal and child health.
+            </li>
+
+            <li>
+                Support prevention and control of diseases.
+            </li>
+
+            <li>
+                Improve healthcare services in rural and
+                underserved areas.
+            </li>
+
+            <li>
+                Promote affordable and quality healthcare.
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- MAJOR AREAS -->
+    <div class="card">
+
+        <h2>🏥 Major Areas Covered</h2>
+
+        <div class="service-grid">
+
+            <div class="service-box">
+
+                <h3>🤰 Maternal Health</h3>
+
+                <p>
+                    Supports programmes and services for
+                    pregnant women and mothers.
+                </p>
+
+            </div>
+
+
+            <div class="service-box">
+
+                <h3>👶 Child Health</h3>
+
+                <p>
+                    Supports newborn and child healthcare,
+                    screening and treatment services.
+                </p>
+
+            </div>
+
+
+            <div class="service-box">
+
+                <h3>💉 Immunization</h3>
+
+                <p>
+                    Supports vaccination and immunization
+                    services through public health facilities.
+                </p>
+
+            </div>
+
+
+            <div class="service-box">
+
+                <h3>🦠 Disease Control</h3>
+
+                <p>
+                    Supports prevention, detection and control
+                    of communicable and non-communicable diseases.
+                </p>
+
+            </div>
+
+
+            <div class="service-box">
+
+                <h3>🏘️ Rural Healthcare</h3>
+
+                <p>
+                    Strengthens healthcare delivery in rural
+                    and underserved communities.
+                </p>
+
+            </div>
+
+
+            <div class="service-box">
+
+                <h3>👩‍⚕️ Community Health</h3>
+
+                <p>
+                    Supports community-level healthcare and
+                    health awareness activities.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- SERVICES -->
+    <div class="card">
+
+        <h2>🩺 Healthcare Services</h2>
+
+        <ul>
+
+            <li>Primary healthcare services</li>
+
+            <li>Maternal and reproductive healthcare</li>
+
+            <li>Newborn and child healthcare</li>
+
+            <li>Adolescent healthcare</li>
+
+            <li>Immunization services</li>
+
+            <li>Health screening and disease prevention</li>
+
+            <li>Health awareness and community programmes</li>
+
+            <li>Referral and treatment services</li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- WHO BENEFITS -->
+    <div class="card">
+
+        <h2>👨‍👩‍👧 Who Benefits?</h2>
+
+        <p>
+            NHM supports public healthcare services for
+            communities across India, with particular attention
+            to vulnerable and underserved populations.
+        </p>
+
+        <ul>
+
+            <li>Women</li>
+
+            <li>Children</li>
+
+            <li>Adolescents</li>
+
+            <li>Rural communities</li>
+
+            <li>Low-income and vulnerable populations</li>
+
+            <li>People requiring public health services</li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- HOW TO ACCESS -->
+    <div class="card">
+
+        <h2>📝 How to Access NHM Services</h2>
+
+        <ul>
+
+            <li>
+                Visit your nearest government health facility.
+            </li>
+
+            <li>
+                Contact an ASHA worker or other frontline
+                health worker where applicable.
+            </li>
+
+            <li>
+                Visit a Sub-Centre, Primary Health Centre,
+                Community Health Centre or government hospital.
+            </li>
+
+            <li>
+                Ask the healthcare staff about available
+                government health services.
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- IMPORTANT -->
+    <div class="card">
+
+        <h2>⚠️ Important Information</h2>
+
+        <div class="note">
+
+            NHM is a broad government health mission that
+            supports many different health programmes and
+            services. Specific services, eligibility conditions
+            and facilities can vary by programme and state.
+
+            <br><br>
+
+            Always check with the nearest government health
+            facility for the latest information and available
+            services.
+
+        </div>
+
+    </div>
+
+
+    <!-- OFFICIAL -->
+    <div class="card">
+
+        <h2>🌐 Official Information</h2>
+
+        <p>
+            Visit the official National Health Mission website
+            for information about programmes, guidelines and
+            public healthcare initiatives.
+        </p>
+
+        <a
+            href="https://nhm.gov.in/"
+            target="_blank"
+            class="official-btn">
+
+            Visit Official NHM Website
+
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <p>
+        © 2026 GramSakhi | Government Schemes & Health Care
+    </p>
+
+</footer>
+
+</body>
+</html>
