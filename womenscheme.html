@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Women Government Schemes</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#f4f4f4;
+}
+
+header{
+background:#2E7D32;
+color:white;
+padding:18px;
+text-align:center;
+font-size:28px;
+font-weight:bold;
+}
+
+.search-box{
+padding:15px;
+text-align:center;
+}
+
+.search-box input{
+width:90%;
+padding:12px;
+font-size:16px;
+border:2px solid #2E7D32;
+border-radius:10px;
+outline:none;
+}
+
+.container{
+padding:15px;
+}
+
+.card{
+background:white;
+padding:18px;
+margin-bottom:15px;
+border-radius:15px;
+box-shadow:0 2px 10px rgba(0,0,0,0.2);
+}
+
+.card h2{
+color:#2E7D32;
+margin-top:0;
+}
+
+.btn{
+display:inline-block;
+margin-top:10px;
+padding:10px 18px;
+background:#2E7D32;
+color:white;
+text-decoration:none;
+border-radius:8px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>👩 Women Government Schemes</header>
+
+<div class="search-box">
+<input
+type="text"
+id="searchInput"
+placeholder="Search schemes..."
+onkeyup="searchScheme()">
+</div>
+<div class="container">
+
+<div class="card scheme">
+<h2>Beti Bachao Beti Padhao</h2>
+<a href="bbbp.html" class="btn">View Details</a>
+</div>
+
+<div class="card scheme">
+<h2>Sukanya Samriddhi Yojana</h2>
+<a href="sukanya.html" class="btn">View Details</a>
+</div>
+
+<div class="card Scheme">
+<h2>PM Ujjwala Yojana</h2>
+<a href="ujjwala.html" class="btn">View Details</a>
+</div>
+
+<div class="card scheme">
+<h2>PM Matru Vandana Yojana</h2>
+<a href="matruvandana.html" class="btn">View Details</a>
+</div>
+
+<div class="card scheme">
+<h2>DAY-NRLM</h2>
+<a href="daynrlm.html" class="btn">View Details</a>
+</div>
+
+<div class="card scheme">
+<h2>Mahila Shakti Kendra</h2>
+<a href="mahilashakti.html" class="btn">View Details</a>
+</div>
+
+<div class="card scheme">
+<h2>One Stop Centre Scheme</h2>
+<a href="onestop.html" class="btn">View Details</a>
+</div>
+
+<div class="card scheme">
+<h2>Working Women Hostel</h2>
+<a href="workingwomen.html" class="btn">View Details</a>
+</div>
+
+<div class="card scheme">
+<h2>STEP Scheme</h2>
+<a href="step.html" class="btn">View Details</a>
+</div>
+
+<div class="card scheme">
+<h2>Mahila e-Haat</h2>
+<a href="mahilahaat.html" class="btn">View Details</a>
+</div>
+
+<div class="card scheme">
+<h2>Stand Up India</h2>
+<a href="standupindia.html" class="btn">View Details</a>
+</div>
+
+<div class="card schem3">
+<h2>Nari Shakti Puraskar</h2>
+<a href="narishakti.html" class="btn">View Details</a>
+</div>
+
+</div>
+<script>
+function searchScheme() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let cards = document.getElementsByClassName("card");
+
+    for (let i = 0; i < cards.length; i++) {
+        let title = cards[i].getElementsByTagName("h2")[0].innerText.toLowerCase();
+
+        if (title.includes(input)) {
+            cards[i].style.display = "block";
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
+}
+</script>
+</body>
+</html>

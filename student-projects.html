@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GramSakhi - Projects & Skills Development</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4faf8;
+            color: #333;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #00897b;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        /* BACK BUTTON */
+
+        .top-bar {
+            width: 92%;
+            max-width: 1100px;
+            margin: 20px auto;
+        }
+
+        .back-btn {
+            color: #00897b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* CONTAINER */
+
+        .container {
+            width: 92%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* INTRO + SEARCH */
+
+        .intro,
+        .search-box {
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .intro h2,
+        .search-box h2 {
+            color: #00897b;
+            margin-bottom: 12px;
+        }
+
+        .intro p {
+            line-height: 1.7;
+        }
+
+        /* SEARCH */
+
+        #searchInput {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        #searchInput:focus {
+            border-color: #00897b;
+        }
+
+        /* INFORMATION */
+
+        .info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .info-card {
+            background: white;
+            padding: 23px;
+            border-left: 5px solid #00897b;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .info-card h2 {
+            color: #00796b;
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .info-card p {
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .info-card ul {
+            margin-left: 22px;
+            line-height: 1.8;
+        }
+
+        /* BUTTON */
+
+        .btn {
+            display: inline-block;
+            background: #00897b;
+            color: white;
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 7px;
+            margin: 8px 6px 0 0;
+        }
+
+        .btn:hover {
+            background: #00695c;
+        }
+
+        /* NOTE */
+
+        .note {
+            background: #e0f2f1;
+            padding: 18px;
+            border-radius: 10px;
+            margin-top: 25px;
+            line-height: 1.7;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #00695c;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 40px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 26px;
+            }
+
+            .container,
+            .top-bar {
+                width: 94%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <h1>🛠️ Projects & Skills Development</h1>
+
+    <p>
+        Build Projects • Learn Skills • Create Your Portfolio
+    </p>
+
+</header>
+
+
+<!-- BACK BUTTON -->
+
+<div class="top-bar">
+
+    <a href="student-corner.html" class="back-btn">
+        ← Back to Student Corner
+    </a>
+
+</div>
+
+
+<div class="container">
+
+
+    <!-- INTRODUCTION -->
+
+    <div class="intro">
+
+        <h2>🚀 Projects & Skills Development</h2>
+
+        <p>
+            Projects help students apply their academic knowledge
+            to practical problems. Developing technical and
+            professional skills can improve confidence, career
+            opportunities, internships and placements.
+        </p>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+        <h2>🔍 Search Projects & Skills</h2>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search Python, web development, communication, project ideas..."
+            onkeyup="searchInformation()">
+
+    </div>
+
+
+    <!-- INFORMATION -->
+
+    <div class="info-list">
+
+
+        <!-- 1 -->
+
+        <div class="info-card"
+             data-search="project what is project student college final year mini project">
+
+            <h2>💡 What is a Student Project?</h2>
+
+            <p>
+                A student project is a practical activity where
+                students use their knowledge and skills to develop
+                a solution, application, model, research work or
+                prototype.
+            </p>
+
+            <ul>
+
+                <li>Mini projects</li>
+
+                <li>Final-year projects</li>
+
+                <li>Research projects</li>
+
+                <li>Web and mobile applications</li>
+
+                <li>Hardware and IoT projects</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 2 -->
+
+        <div class="info-card"
+             data-search="project idea computer engineering website app ai machine learning cybersecurity">
+
+            <h2>💻 Computer Engineering Project Ideas</h2>
+
+            <ul>
+
+                <li>Web-based applications</li>
+
+                <li>Mobile applications</li>
+
+                <li>AI and machine learning projects</li>
+
+                <li>Cybersecurity projects</li>
+
+                <li>Data analysis projects</li>
+
+                <li>Cloud-based applications</li>
+
+                <li>IoT projects</li>
+
+                <li>Automation projects</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 3 -->
+
+        <div class="info-card"
+             data-search="web development html css javascript project">
+
+            <h2>🌐 Web Development Skills</h2>
+
+            <p>
+                Web development is useful for creating websites
+                and web applications.
+            </p>
+
+            <ul>
+
+                <li>HTML</li>
+
+                <li>CSS</li>
+
+                <li>JavaScript</li>
+
+                <li>Responsive web design</li>
+
+                <li>Basic databases</li>
+
+            </ul>
+
+            <a href="https://developer.mozilla.org/"
+               target="_blank"
+               class="btn">
+                Learn Web Development
+            </a>
+
+        </div>
+
+
+        <!-- 4 -->
+
+        <div class="info-card"
+             data-search="programming python c cpp java coding skills">
+
+            <h2>💻 Programming Skills</h2>
+
+            <p>
+                Programming is an important technical skill for
+                computer and technology students.
+            </p>
+
+            <ul>
+
+                <li>C / C++</li>
+
+                <li>Python</li>
+
+                <li>Java</li>
+
+                <li>JavaScript</li>
+
+                <li>Problem solving</li>
+
+                <li>Data structures and algorithms</li>
+
+            </ul>
+
+            <a href="https://www.python.org/"
+               target="_blank"
+               class="btn">
+                Python Official
+            </a>
+
+        </div>
+
+
+        <!-- 5 -->
+
+        <div class="info-card"
+             data-search="data structures algorithms dsa problem solving coding interview">
+
+            <h2>🧠 Data Structures & Algorithms</h2>
+
+            <p>
+                DSA helps students improve logical thinking,
+                programming efficiency and problem-solving skills.
+            </p>
+
+            <ul>
+
+                <li>Arrays</li>
+
+                <li>Strings</li>
+
+                <li>Linked lists</li>
+
+                <li>Stacks and queues</li>
+
+                <li>Trees and graphs</li>
+
+                <li>Sorting and searching</li>
+
+            </ul>
+
+            <a href="https://leetcode.com/"
+               target="_blank"
+               class="btn">
+                Practice DSA
+            </a>
+
+        </div>
+
+
+        <!-- 6 -->
+
+        <div class="info-card"
+             data-search="ai machine learning artificial intelligence skills project">
+
+            <h2>🤖 AI & Machine Learning</h2>
+
+            <p>
+                AI and machine learning skills are useful for
+                building intelligent applications and analysing data.
+            </p>
+
+            <ul>
+
+                <li>Python</li>
+
+                <li>Data preparation</li>
+
+                <li>Machine learning basics</li>
+
+                <li>Model evaluation</li>
+
+                <li>AI applications</li>
+
+            </ul>
+
+            <a href="https://www.nptel.ac.in/"
+               target="_blank"
+               class="btn">
+                NPTEL
+            </a>
+
+        </div>
+
+
+        <!-- 7 -->
+
+        <div class="info-card"
+             data-search="database sql mysql database management skills">
+
+            <h2>🗄️ Database Skills</h2>
+
+            <p>
+                Database knowledge is important for applications
+                that store and manage information.
+            </p>
+
+            <ul>
+
+                <li>Database concepts</li>
+
+                <li>SQL</li>
+
+                <li>Tables and relationships</li>
+
+                <li>Queries</li>
+
+                <li>Database management</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 8 -->
+
+        <div class="info-card"
+             data-search="github git version control portfolio project">
+
+            <h2>🐙 Git & GitHub</h2>
+
+            <p>
+                Git and GitHub help students manage code,
+                collaborate with others and showcase projects.
+            </p>
+
+            <ul>
+
+                <li>Version control</li>
+
+                <li>Repositories</li>
+
+                <li>Branches</li>
+
+                <li>Collaboration</li>
+
+                <li>Project portfolio</li>
+
+            </ul>
+
+            <a href="https://github.com/"
+               target="_blank"
+               class="btn">
+                GitHub
+            </a>
+
+        </div>
+
+
+        <!-- 9 -->
+
+        <div class="info-card"
+             data-search="communication soft skills presentation teamwork leadership">
+
+            <h2>🗣️ Communication & Soft Skills</h2>
+
+            <ul>
+
+                <li>Communication</li>
+
+                <li>Presentation skills</li>
+
+                <li>Teamwork</li>
+
+                <li>Leadership</li>
+
+                <li>Time management</li>
+
+                <li>Problem solving</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 10 -->
+
+        <div class="info-card"
+             data-search="resume portfolio project showcase skills linkedin">
+
+            <h2>📄 Build Your Portfolio</h2>
+
+            <p>
+                A portfolio allows students to showcase their
+                projects, skills, achievements and certifications.
+            </p>
+
+            <ul>
+
+                <li>Add your best projects.</li>
+
+                <li>Explain your role in each project.</li>
+
+                <li>Add technologies used.</li>
+
+                <li>Include GitHub or live project links.</li>
+
+                <li>Keep your information updated.</li>
+
+            </ul>
+
+            <a href="https://github.com/"
+               target="_blank"
+               class="btn">
+                GitHub
+            </a>
+
+        </div>
+
+
+        <!-- 11 -->
+
+        <div class="info-card"
+             data-search="project development steps idea planning design coding testing documentation">
+
+            <h2>📋 Steps to Build a Project</h2>
+
+            <ul>
+
+                <li>Identify a real-world problem.</li>
+
+                <li>Research existing solutions.</li>
+
+                <li>Define project objectives.</li>
+
+                <li>Plan the features.</li>
+
+                <li>Select suitable technologies.</li>
+
+                <li>Design the solution.</li>
+
+                <li>Develop the project.</li>
+
+                <li>Test and improve it.</li>
+
+                <li>Prepare documentation and presentation.</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 12 -->
+
+        <div class="info-card"
+             data-search="project documentation report presentation viva">
+
+            <h2>📚 Project Documentation & Presentation</h2>
+
+            <p>
+                Good documentation helps explain your project's
+                problem, objectives, methodology, implementation
+                and results.
+            </p>
+
+            <ul>
+
+                <li>Problem statement</li>
+
+                <li>Objectives</li>
+
+                <li>Methodology</li>
+
+                <li>Technology used</li>
+
+                <li>Results</li>
+
+                <li>Future scope</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- 13 -->
+
+        <div class="info-card"
+             data-search="certification skill development online courses certificate">
+
+            <h2>🎓 Improve Skills Through Certifications</h2>
+
+            <p>
+                Online courses and certifications can help students
+                learn new technologies and demonstrate their learning.
+            </p>
+
+            <a href="https://swayam.gov.in/"
+               target="_blank"
+               class="btn">
+                SWAYAM
+            </a>
+
+            <a href="https://www.nptel.ac.in/"
+               target="_blank"
+               class="btn">
+                NPTEL
+            </a>
+
+        </div>
+
+
+        <!-- 14 -->
+
+        <div class="info-card"
+             data-search="skill roadmap student career technical skills">
+
+            <h2>🛣️ Simple Skill Development Roadmap</h2>
+
+            <ul>
+
+                <li>Learn programming fundamentals.</li>
+
+                <li>Choose one technical field.</li>
+
+                <li>Build small projects.</li>
+
+                <li>Learn Git and GitHub.</li>
+
+                <li>Build a portfolio.</li>
+
+                <li>Participate in hackathons and competitions.</li>
+
+                <li>Apply for internships.</li>
+
+                <li>Keep learning new technologies.</li>
+
+            </ul>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- IMPORTANT NOTE -->
+
+    <div class="note">
+
+        💡 <b>Important:</b>
+        Students do not need to learn every technology.
+        Choose skills according to your course, interests and
+        career goals, and focus on building practical projects.
+
+    </div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 GramSakhi | Student Corner
+    </p>
+
+</footer>
+
+
+<script>
+
+    function searchInformation() {
+
+        let searchText =
+            document.getElementById("searchInput")
+            .value
+            .toLowerCase()
+            .trim();
+
+        let cards =
+            document.querySelectorAll(".info-card");
+
+
+        cards.forEach(function(card) {
+
+            let text =
+                card.innerText.toLowerCase();
+
+            let keywords =
+                card.getAttribute("data-search")
+                .toLowerCase();
+
+
+            if (
+                text.includes(searchText) ||
+                keywords.includes(searchText)
+            ) {
+
+                card.style.display = "block";
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+    }
+
+</script>
+
+
+</body>
+
+</html>

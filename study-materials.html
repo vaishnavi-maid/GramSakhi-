@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GramSakhi - Study Materials</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4faf8;
+            color: #333;
+        }
+
+        header {
+            background: #00897b;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        .top-bar {
+            width: 92%;
+            max-width: 1100px;
+            margin: 20px auto;
+        }
+
+        .back-btn {
+            color: #00897b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .intro,
+        .search-box {
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .intro h2,
+        .search-box h2 {
+            color: #00897b;
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            line-height: 1.7;
+        }
+
+        #searchInput {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        #searchInput:focus {
+            border-color: #00897b;
+        }
+
+        .resource-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .resource {
+            background: white;
+            padding: 22px;
+            border-left: 5px solid #00897b;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .resource h3 {
+            color: #00796b;
+            margin-bottom: 8px;
+            font-size: 21px;
+        }
+
+        .resource p {
+            line-height: 1.6;
+            margin-bottom: 12px;
+            color: #555;
+        }
+
+        .resource a {
+            display: inline-block;
+            background: #00897b;
+            color: white;
+            text-decoration: none;
+            padding: 9px 15px;
+            border-radius: 6px;
+            margin-right: 7px;
+            margin-top: 5px;
+        }
+
+        .resource a:hover {
+            background: #00695c;
+        }
+
+        #noResult {
+            display: none;
+            background: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
+        .note {
+            background: #e0f2f1;
+            padding: 18px;
+            border-radius: 10px;
+            margin-top: 25px;
+            line-height: 1.6;
+        }
+
+        footer {
+            background: #00695c;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 26px;
+            }
+
+            .container,
+            .top-bar {
+                width: 94%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <h1>📚 Study Materials</h1>
+
+    <p>
+        Useful Learning Resources for Students
+    </p>
+
+</header>
+
+
+<!-- BACK -->
+
+<div class="top-bar">
+
+    <a href="student-corner.html" class="back-btn">
+        ← Back to Student Corner
+    </a>
+
+</div>
+
+
+<div class="container">
+
+
+    <!-- INTRODUCTION -->
+
+    <div class="intro">
+
+        <h2>📖 Study Resources</h2>
+
+        <p>
+            Find useful study materials, educational websites,
+            online courses, programming resources, mathematics
+            resources, e-books and examination resources in one place.
+        </p>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+        <h2>🔍 Search Study Material</h2>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search programming, mathematics, books, courses..."
+            onkeyup="searchMaterials()">
+
+    </div>
+
+
+    <!-- ALL MATERIALS ONE BELOW ANOTHER -->
+
+    <div class="resource-list">
+
+
+        <!-- 1 -->
+
+        <div class="resource"
+             data-search="engineering computer engineering technical subjects">
+
+            <h3>💻 Engineering Study Resources</h3>
+
+            <p>
+                Useful educational resources for engineering
+                students, including technical subjects and
+                university-related information.
+            </p>
+
+            <a href="https://www.sppu.ac.in/"
+               target="_blank">
+                SPPU
+            </a>
+
+            <a href="https://swayam.gov.in/"
+               target="_blank">
+                SWAYAM
+            </a>
+
+        </div>
+
+
+        <!-- 2 -->
+
+        <div class="resource"
+             data-search="programming coding c cpp python java">
+
+            <h3>👨‍💻 Programming & Coding</h3>
+
+            <p>
+                Learn programming concepts and practice coding
+                in languages such as C, C++, Python and Java.
+            </p>
+
+            <a href="https://www.w3schools.com/"
+               target="_blank">
+                W3Schools
+            </a>
+
+            <a href="https://www.geeksforgeeks.org/"
+               target="_blank">
+                GeeksforGeeks
+            </a>
+
+        </div>
+
+
+        <!-- 3 -->
+
+        <div class="resource"
+             data-search="mathematics maths engineering mathematics formulas">
+
+            <h3>📐 Mathematics</h3>
+
+            <p>
+                Learn mathematical concepts, formulas and
+                problem-solving techniques through online resources.
+            </p>
+
+            <a href="https://www.khanacademy.org/math"
+               target="_blank">
+                Khan Academy
+            </a>
+
+        </div>
+
+
+        <!-- 4 -->
+
+        <div class="resource"
+             data-search="science physics chemistry biology">
+
+            <h3>🔬 Science Resources</h3>
+
+            <p>
+                Educational resources for physics, chemistry,
+                biology and other science subjects.
+            </p>
+
+            <a href="https://www.khanacademy.org/science"
+               target="_blank">
+                Science Learning
+            </a>
+
+        </div>
+
+
+        <!-- 5 -->
+
+        <div class="resource"
+             data-search="notes study notes revision subject notes">
+
+            <h3>📝 Study Notes & Revision</h3>
+
+            <p>
+                Use online learning resources to understand
+                difficult topics and revise important concepts.
+            </p>
+
+            <a href="https://www.khanacademy.org/"
+               target="_blank">
+                Learning Resources
+            </a>
+
+        </div>
+
+
+        <!-- 6 -->
+
+        <div class="resource"
+             data-search="ebooks books digital library educational">
+
+            <h3>📕 E-Books & Digital Library</h3>
+
+            <p>
+                Access digital educational books and learning
+                resources from trusted academic platforms.
+            </p>
+
+            <a href="https://ndl.iitkgp.ac.in/"
+               target="_blank">
+                National Digital Library
+            </a>
+
+        </div>
+
+
+        <!-- 7 -->
+
+        <div class="resource"
+             data-search="online courses free courses certificate skills">
+
+            <h3>🎓 Online Courses</h3>
+
+            <p>
+                Learn new subjects and technical skills through
+                online courses and educational platforms.
+            </p>
+
+            <a href="https://swayam.gov.in/"
+               target="_blank">
+                SWAYAM
+            </a>
+
+            <a href="https://www.coursera.org/"
+               target="_blank">
+                Coursera
+            </a>
+
+        </div>
+
+
+        <!-- 8 -->
+
+        <div class="resource"
+             data-search="previous year question papers exam papers">
+
+            <h3>📄 Previous Year Question Papers</h3>
+
+            <p>
+                Practice previous examination papers to understand
+                question patterns and improve exam preparation.
+            </p>
+
+            <a href="https://www.unipune.ac.in/"
+               target="_blank">
+                SPPU
+            </a>
+
+        </div>
+
+
+        <!-- 9 -->
+
+        <div class="resource"
+             data-search="competitive exams preparation study material">
+
+            <h3>🎯 Exam Preparation Resources</h3>
+
+            <p>
+                Find learning resources that can help with
+                competitive examinations and general exam preparation.
+            </p>
+
+            <a href="https://swayam.gov.in/"
+               target="_blank">
+                Learning Courses
+            </a>
+
+        </div>
+
+
+        <!-- 10 -->
+
+        <div class="resource"
+             data-search="digital learning education videos lectures">
+
+            <h3>🌐 Digital Learning Resources</h3>
+
+            <p>
+                Explore online educational platforms, lectures,
+                tutorials and other digital learning resources.
+            </p>
+
+            <a href="https://www.youtube.com/education"
+               target="_blank">
+                Educational Videos
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- NO RESULT -->
+
+    <div id="noResult">
+
+        <h3>😔 No study material found</h3>
+
+        <p>
+            Try another keyword.
+        </p>
+
+    </div>
+
+
+    <!-- NOTE -->
+
+    <div class="note">
+
+        💡 <b>Note:</b>
+        GramSakhi provides links to useful educational
+        resources. Students should verify important academic
+        information through official sources.
+
+    </div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 GramSakhi | Student Corner
+    </p>
+
+</footer>
+
+
+<script>
+
+    function searchMaterials() {
+
+        let searchText =
+            document.getElementById("searchInput")
+            .value
+            .toLowerCase()
+            .trim();
+
+        let resources =
+            document.querySelectorAll(".resource");
+
+        let count = 0;
+
+
+        resources.forEach(function(resource) {
+
+            let text =
+                resource.innerText.toLowerCase();
+
+            let keywords =
+                resource.getAttribute("data-search")
+                .toLowerCase();
+
+
+            if (
+                text.includes(searchText) ||
+                keywords.includes(searchText)
+            ) {
+
+                resource.style.display = "block";
+
+                count++;
+
+            } else {
+
+                resource.style.display = "none";
+
+            }
+
+        });
+
+
+        if (count === 0) {
+
+            document.getElementById("noResult")
+                .style.display = "block";
+
+        } else {
+
+            document.getElementById("noResult")
+                .style.display = "none";
+
+        }
+
+    }
+
+</script>
+
+
+</body>
+
+</html>

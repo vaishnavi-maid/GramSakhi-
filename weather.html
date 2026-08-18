@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Live Weather</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#E8F5E9;
+text-align:center;
+margin:0;
+}
+
+header{
+background:#2E7D32;
+color:white;
+padding:20px;
+font-size:28px;
+font-weight:bold;
+}
+
+.card{
+background:white;
+margin:20px;
+padding:20px;
+border-radius:15px;
+box-shadow:0 0 10px gray;
+}
+
+button{
+padding:12px 20px;
+font-size:18px;
+background:#2E7D32;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+}
+
+#weather{
+margin-top:20px;
+font-size:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+🌦 Live Weather
+</header>
+
+<div class="card">
+
+<h2>Check Weather</h2>
+
+<p>Click the button to know your current weather.</p>
+
+<button onclick="getLocation()">
+
+Get Weather
+
+</button>
+
+<div id="weather"></div>
+
+</div>
+
+<script>
+
+function getLocation(){
+
+if(navigator.geolocation){
+
+navigator.geolocation.getCurrentPosition(showPosition);
+
+}
+
+else{
+
+document.getElementById("weather").innerHTML="Location not supported.";
+
+}
+
+}
+
+function showPosition(position){
+
+let lat=position.coords.latitude;
+
+let lon=position.coords.longitude;
+
+document.getElementById("weather").innerHTML=
+
+"📍 Latitude : "+lat+
+"<br><br>📍 Longitude : "+lon+
+"<br><br>✅ Location detected successfully.";
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GramSakhi - Universal Immunization Programme</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4faf8;
+            color: #333;
+        }
+
+        /* HEADER */
+        header {
+            background: #00897b;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        /* MAIN CONTAINER */
+        .container {
+            width: 92%;
+            max-width: 1000px;
+            margin: 25px auto;
+        }
+
+        /* BACK BUTTON */
+        .back-btn {
+            display: inline-block;
+            color: #00897b;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .back-btn:hover {
+            color: #00695c;
+        }
+
+        /* CARD */
+        .card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 14px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .card h2 {
+            color: #00897b;
+            margin-bottom: 14px;
+        }
+
+        .card p {
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .card ul {
+            margin-left: 22px;
+            line-height: 1.8;
+        }
+
+        /* HIGHLIGHT */
+        .highlight {
+            background: #e0f2f1;
+            border-left: 5px solid #00897b;
+            padding: 18px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .highlight h3 {
+            color: #00695c;
+            margin-bottom: 8px;
+        }
+
+        /* VACCINE GRID */
+        .vaccine-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .vaccine-box {
+            background: #f4faf8;
+            padding: 18px;
+            border-radius: 10px;
+        }
+
+        .vaccine-box h3 {
+            color: #00796b;
+            margin-bottom: 8px;
+        }
+
+        .vaccine-box p {
+            margin-bottom: 0;
+        }
+
+        /* INFO GRID */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .info-box {
+            background: #f4faf8;
+            padding: 18px;
+            border-radius: 10px;
+        }
+
+        .info-box h3 {
+            color: #00796b;
+            margin-bottom: 8px;
+        }
+
+        /* NOTE */
+        .note {
+            background: #fff8e1;
+            border-left: 5px solid #f9a825;
+            padding: 15px;
+            border-radius: 8px;
+            line-height: 1.6;
+        }
+
+        /* BUTTON */
+        .official-btn {
+            display: inline-block;
+            background: #00897b;
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 7px;
+            margin-top: 12px;
+        }
+
+        .official-btn:hover {
+            background: #00695c;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #00695c;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 40px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 650px) {
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            .container {
+                width: 94%;
+            }
+
+            .vaccine-grid,
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+    <h1>💉 Universal Immunization Programme</h1>
+
+    <p>
+        GramSakhi - Government Vaccination Programme
+    </p>
+
+</header>
+
+
+<div class="container">
+
+    <!-- BACK -->
+    <a href="healthscheme.html" class="back-btn">
+        ← Back to Health Care Schemes
+    </a>
+
+
+    <!-- ABOUT -->
+    <div class="card">
+
+        <h2>📋 About the Programme</h2>
+
+        <p>
+            The Universal Immunization Programme (UIP) is a
+            Government of India programme that provides
+            vaccination services through the public health
+            system.
+        </p>
+
+        <div class="highlight">
+
+            <h3>🎯 Main Purpose</h3>
+
+            <p>
+                To protect children and pregnant women against
+                vaccine-preventable diseases through routine
+                immunization services.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- OBJECTIVES -->
+    <div class="card">
+
+        <h2>🎯 Objectives</h2>
+
+        <ul>
+
+            <li>
+                Protect children against vaccine-preventable
+                diseases.
+            </li>
+
+            <li>
+                Provide routine immunization through government
+                health facilities.
+            </li>
+
+            <li>
+                Protect pregnant women against selected
+                vaccine-preventable diseases.
+            </li>
+
+            <li>
+                Improve vaccination coverage across communities.
+            </li>
+
+            <li>
+                Reduce illness and deaths caused by
+                vaccine-preventable diseases.
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- BENEFICIARIES -->
+    <div class="card">
+
+        <h2>👶 Who Can Receive Vaccination?</h2>
+
+        <div class="info-grid">
+
+            <div class="info-box">
+
+                <h3>👶 Children</h3>
+
+                <p>
+                    Children receive vaccines according to
+                    the National Immunization Schedule and
+                    applicable government guidelines.
+                </p>
+
+            </div>
+
+
+            <div class="info-box">
+
+                <h3>🤰 Pregnant Women</h3>
+
+                <p>
+                    Pregnant women receive recommended
+                    vaccinations according to the national
+                    immunization schedule.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- VACCINATION -->
+    <div class="card">
+
+        <h2>💉 Vaccination Services</h2>
+
+        <div class="vaccine-grid">
+
+            <div class="vaccine-box">
+
+                <h3>🍼 Birth Vaccines</h3>
+
+                <p>
+                    Vaccines recommended at birth are provided
+                    according to the National Immunization
+                    Schedule.
+                </p>
+
+            </div>
+
+
+            <div class="vaccine-box">
+
+                <h3>👶 Infant Vaccines</h3>
+
+                <p>
+                    Infants receive vaccines at specified ages
+                    according to the national schedule.
+                </p>
+
+            </div>
+
+
+            <div class="vaccine-box">
+
+                <h3>🧒 Childhood Vaccines</h3>
+
+                <p>
+                    Additional vaccines and doses are provided
+                    during childhood as recommended.
+                </p>
+
+            </div>
+
+
+            <div class="vaccine-box">
+
+                <h3>🤰 Maternal Vaccination</h3>
+
+                <p>
+                    Recommended vaccination is provided to
+                    pregnant women through government health
+                    services.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- HOW TO GET VACCINATION -->
+    <div class="card">
+
+        <h2>📝 How to Get Vaccination</h2>
+
+        <ul>
+
+            <li>
+                Visit your nearest government health facility.
+            </li>
+
+            <li>
+                Ask the health worker about the child's or
+                mother's vaccination schedule.
+            </li>
+
+            <li>
+                Carry the vaccination/immunization record
+                if available.
+            </li>
+
+            <li>
+                Follow the recommended vaccination schedule.
+            </li>
+
+            <li>
+                Ask the healthcare worker about any missed
+                doses.
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- IMPORTANT -->
+    <div class="card">
+
+        <h2>⚠️ Important Information</h2>
+
+        <div class="note">
+
+            Vaccines and vaccination schedules should be
+            followed according to the current National
+            Immunization Schedule and advice from qualified
+            healthcare professionals.
+
+            <br><br>
+
+            If a vaccination dose has been missed, contact
+            your nearest government health facility for
+            guidance on the appropriate schedule.
+
+        </div>
+
+    </div>
+
+
+    <!-- OFFICIAL -->
+    <div class="card">
+
+        <h2>🌐 Official Information</h2>
+
+        <p>
+            For the latest information about India's
+            immunization programme and vaccination services,
+            visit the official Ministry of Health & Family
+            Welfare resources.
+        </p>
+
+        <a
+            href="https://mohfw.gov.in/"
+            target="_blank"
+            class="official-btn">
+
+            Visit Official Website
+
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <p>
+        © 2026 GramSakhi | Government Schemes & Health Care
+    </p>
+
+</footer>
+
+</body>
+</html>

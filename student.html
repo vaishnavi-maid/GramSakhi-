@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>GramSakhi - Student Corner</title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4faf8;
+            color: #333;
+        }
+
+
+        /* HEADER */
+
+        header {
+            background: #00897b;
+            color: white;
+            text-align: center;
+            padding: 35px 15px;
+        }
+
+
+        header h1 {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+
+        header p {
+            font-size: 17px;
+            line-height: 1.5;
+        }
+
+
+        /* BACK BUTTON */
+
+        .top-bar {
+            width: 92%;
+            max-width: 1200px;
+            margin: 20px auto 0;
+        }
+
+
+        .back-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: #00897b;
+            font-weight: bold;
+            padding: 8px 0;
+        }
+
+
+        .back-btn:hover {
+            color: #00695c;
+        }
+
+
+        /* MAIN CONTAINER */
+
+        .container {
+            width: 92%;
+            max-width: 1200px;
+            margin: 20px auto 40px;
+        }
+
+
+        /* INTRODUCTION */
+
+        .intro {
+            background: white;
+            padding: 28px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+
+        .intro h2 {
+            color: #00897b;
+            margin-bottom: 12px;
+        }
+
+
+        .intro p {
+            line-height: 1.7;
+        }
+
+
+        /* SEARCH */
+
+        .search-box {
+            background: white;
+            padding: 22px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+
+        .search-box h2 {
+            color: #00796b;
+            margin-bottom: 12px;
+        }
+
+
+        #searchInput {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+        }
+
+
+        #searchInput:focus {
+            border-color: #00897b;
+        }
+
+
+        /* SECTION TITLE */
+
+        .section-title {
+            color: #00796b;
+            margin-bottom: 20px;
+            font-size: 25px;
+        }
+
+
+        /* CARD GRID */
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+
+        /* CARDS */
+
+        .student-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            border-top: 5px solid #00897b;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: 0.25s;
+        }
+
+
+        .student-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 7px 18px rgba(0,0,0,0.12);
+        }
+
+
+        .icon {
+            font-size: 40px;
+            margin-bottom: 12px;
+        }
+
+
+        .student-card h3 {
+            color: #00796b;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+
+        .student-card p {
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+
+        .btn {
+            display: inline-block;
+            background: #00897b;
+            color: white;
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 7px;
+            font-size: 14px;
+        }
+
+
+        .btn:hover {
+            background: #00695c;
+        }
+
+
+        /* QUICK LINKS */
+
+        .quick-links {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 35px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+
+        .quick-links h2 {
+            color: #00897b;
+            margin-bottom: 15px;
+        }
+
+
+        .quick-links ul {
+            list-style: none;
+        }
+
+
+        .quick-links li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+
+        .quick-links a {
+            color: #00796b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+
+        .quick-links a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* NO RESULT */
+
+        #noResult {
+            display: none;
+            background: white;
+            text-align: center;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 20px;
+            color: #777;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            background: #00695c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 900px) {
+
+            .card-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 27px;
+            }
+
+
+            header p {
+                font-size: 15px;
+            }
+
+
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .container,
+            .top-bar {
+                width: 94%;
+            }
+
+
+            .intro,
+            .search-box,
+            .quick-links {
+                padding: 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <h1>📚 Student Corner</h1>
+
+    <p>
+        Learn • Explore • Build Skills • Find Opportunities
+    </p>
+
+</header>
+
+
+<!-- BACK BUTTON -->
+
+<div class="top-bar">
+
+    <a href="index.html" class="back-btn">
+        ← Back to GramSakhi Home
+    </a>
+
+</div>
+
+
+<!-- MAIN -->
+
+<div class="container">
+
+
+    <!-- INTRODUCTION -->
+
+    <div class="intro">
+
+        <h2>🎓 Welcome to Student Corner</h2>
+
+        <p>
+            Student Corner is a dedicated space for students
+            to find scholarships, study resources, competitive
+            exam information, internships, courses, projects,
+            competitions and other educational opportunities
+            in one place.
+        </p>
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div class="search-box">
+
+        <h2>🔍 Search Student Services</h2>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search scholarships, internships, courses, exams..."
+            onkeyup="searchServices()">
+
+    </div>
+
+
+    <!-- SECTION TITLE -->
+
+    <h2 class="section-title">
+        📌 Explore Student Services
+    </h2>
+
+
+    <!-- CARDS -->
+
+    <div class="card-grid" id="serviceList">
+
+
+        <!-- 1 SCHOLARSHIPS -->
+
+        <div class="student-card"
+             data-search="scholarships financial aid scholarship money students">
+
+            
+<div class="corner-card">
+
+    <div class="icon">🎓</div>
+
+    <h3>Scholarships & Financial Aid</h3>
+
+    <p>
+        Find scholarships, financial assistance and
+        government educational schemes for students.
+    </p>
+
+    <a href="studentschemes.html" class="btn">
+        View Student Schemes
+    </a>
+
+</div>
+        </div>
+
+
+        <!-- 2 STUDY MATERIAL -->
+
+        <div class="student-card"
+             data-search="study material notes books syllabus learning">
+
+            <div class="icon">📖</div>
+
+            <h3>Study Materials</h3>
+
+            <p>
+                Access notes, study resources, syllabus,
+                learning materials and useful academic content.
+            </p>
+
+            <a href="study-materials.html"
+               class="btn">
+                Explore
+            </a>
+
+        </div>
+
+
+        <!-- 3 COMPETITIVE EXAMS -->
+
+        <div class="student-card"
+             data-search="competitive exams upsc mpsc banking ssc railway">
+
+            <div class="icon">📝</div>
+
+            <h3>Competitive Exams</h3>
+
+            <p>
+                Explore information about UPSC, MPSC, banking,
+                SSC, railway and other competitive examinations.
+            </p>
+
+            <a href="competitive-exams.html"
+               class="btn">
+                Explore
+            </a>
+
+        </div>
+
+
+        <!-- 4 INTERNSHIPS -->
+
+        <div class="student-card"
+             data-search="internships jobs placement career work">
+
+            <div class="icon">💼</div>
+
+            <h3>Internships & Jobs</h3>
+
+            <p>
+                Discover internships, job opportunities,
+                placements and career-related resources.
+            </p>
+
+            <a href="internships.html"
+               class="btn">
+                Explore
+            </a>
+
+        </div>
+
+
+        <!-- 5 ADMISSION -->
+
+        <div class="student-card"
+             data-search="college admission courses entrance college information">
+
+            <div class="icon">🏫</div>
+
+            <h3>College & Admissions</h3>
+
+            <p>
+                Find information about admissions, entrance
+                exams, courses and important college resources.
+            </p>
+
+            <a href="college-admission.html"
+               class="btn">
+                Explore
+            </a>
+
+        </div>
+
+
+        <!-- 6 COURSES -->
+
+        <div class="student-card"
+             data-search="online courses certification skills coding programming">
+
+            <div class="icon">💻</div>
+
+            <h3>Courses & Certifications</h3>
+
+            <p>
+                Explore online courses and certifications
+                to improve technical and professional skills.
+            </p>
+
+            <a href="courses-certifications.html"
+               class="btn">
+                Explore
+            </a>
+
+        </div>
+
+
+        <!-- 7 COMPETITIONS -->
+
+        <div class="student-card"
+             data-search="hackathon competition quiz innovation project">
+
+            <div class="icon">🏆</div>
+
+            <h3>Competitions & Hackathons</h3>
+
+            <p>
+                Find hackathons, technical competitions,
+                quizzes, innovation challenges and events.
+            </p>
+
+            <a href="competitions.html"
+               class="btn">
+                Explore
+            </a>
+
+        </div>
+
+
+        <!-- 8 EXAMS -->
+
+        <div class="student-card"
+             data-search="exam result timetable university exam results">
+
+            <div class="icon">📅</div>
+
+            <h3>Exams & Results</h3>
+
+            <p>
+                Find examination information, timetables,
+                results and other important academic updates.
+            </p>
+
+            <a href="exams-results.html"
+               class="btn">
+                Explore
+            </a>
+
+        </div>
+
+
+        <!-- 9 PROJECTS -->
+
+        <div class="student-card"
+             data-search="projects programming skills development engineering">
+
+            <div class="icon">🧑‍💻</div>
+
+            <h3>Projects & Skill Development</h3>
+
+            <p>
+                Get project ideas, programming resources and
+                opportunities to develop practical skills.
+            </p>
+
+            <a href="student-projects.html"
+               class="btn">
+                Explore
+            </a>
+
+        </div>
+
+
+        <!-- 10 OPPORTUNITIES -->
+
+        <div class="student-card"
+             data-search="opportunities events fellowship student opportunities">
+
+            <div class="icon">📢</div>
+
+            <h3>Student Opportunities</h3>
+
+            <p>
+                Discover fellowships, events, programmes and
+                other opportunities for students.
+            </p>
+
+            <a href="student-opportunities.html"
+               class="btn">
+                Explore
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- NO RESULT -->
+
+    <div id="noResult">
+
+        <h3>😔 No service found</h3>
+
+        <p>
+            Try searching with another keyword.
+        </p>
+
+    </div>
+
+
+    
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 GramSakhi | Student Corner
+    </p>
+
+</footer>
+
+
+<!-- SEARCH SCRIPT -->
+
+<script>
+
+    function searchServices() {
+
+        let searchText =
+            document.getElementById("searchInput")
+            .value
+            .toLowerCase()
+            .trim();
+
+        let cards =
+            document.querySelectorAll(".student-card");
+
+        let visibleCount = 0;
+
+
+        cards.forEach(function(card) {
+
+            let text =
+                card.innerText.toLowerCase();
+
+            let searchData =
+                card.getAttribute("data-search")
+                .toLowerCase();
+
+
+            if (
+                text.includes(searchText) ||
+                searchData.includes(searchText)
+            ) {
+
+                card.style.display = "block";
+
+                visibleCount++;
+
+            }
+
+            else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+
+        if (visibleCount === 0) {
+
+            document.getElementById("noResult")
+                .style.display = "block";
+
+        }
+
+        else {
+
+            document.getElementById("noResult")
+                .style.display = "none";
+
+        }
+
+    }
+
+</script>
+
+
+</body>
+
+</html>

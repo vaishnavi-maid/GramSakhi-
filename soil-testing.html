@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GramSakhi - Soil Testing</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f8f1;
+    color:#333;
+    line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+    background:#5d4037;
+    color:white;
+    text-align:center;
+    padding:28px 15px;
+}
+
+header h1{
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+header p{
+    font-size:16px;
+}
+
+/* BACK */
+
+.back{
+    width:94%;
+    max-width:1100px;
+    margin:18px auto;
+}
+
+.back a{
+    text-decoration:none;
+    color:#5d4037;
+    font-weight:bold;
+}
+
+/* CONTAINER */
+
+.container{
+    width:94%;
+    max-width:1100px;
+    margin:auto;
+}
+
+/* INTRO */
+
+.intro{
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+.intro h2{
+    color:#5d4037;
+    margin-bottom:8px;
+}
+
+/* CARDS */
+
+.info-section{
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 3px 10px rgba(0,0,0,0.08);
+}
+
+.info-section h2{
+    color:#5d4037;
+    margin-bottom:15px;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.info-card{
+    background:#efebe9;
+    padding:17px;
+    border-radius:10px;
+}
+
+.info-card h3{
+    color:#5d4037;
+    margin-bottom:7px;
+}
+
+/* STEPS */
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.step{
+    background:#f5f5f5;
+    padding:18px;
+    border-radius:10px;
+    border-left:5px solid #795548;
+}
+
+.step-number{
+    display:inline-block;
+    background:#5d4037;
+    color:white;
+    width:32px;
+    height:32px;
+    text-align:center;
+    line-height:32px;
+    border-radius:50%;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+/* SOIL PARAMETERS */
+
+.parameter-table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+}
+
+.parameter-table th,
+.parameter-table td{
+    border:1px solid #ddd;
+    padding:12px;
+    text-align:left;
+}
+
+.parameter-table th{
+    background:#5d4037;
+    color:white;
+}
+
+/* SOIL HEALTH CARD */
+
+.health-card{
+    background:#e8f5e9;
+    padding:22px;
+    border-radius:15px;
+    margin-bottom:20px;
+}
+
+.health-card h2{
+    color:#2e7d32;
+    margin-bottom:10px;
+}
+
+/* BUTTON */
+
+.official-btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 18px;
+    background:#2e7d32;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+.official-btn:hover{
+    background:#1b5e20;
+}
+
+/* WARNING */
+
+.warning{
+    background:#fff8e1;
+    border-left:5px solid #f9a825;
+    padding:18px;
+    border-radius:8px;
+    margin-bottom:20px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#3e2723;
+    color:white;
+    text-align:center;
+    padding:18px;
+    margin-top:30px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .info-grid,
+    .steps{
+        grid-template-columns:1fr;
+    }
+
+    .parameter-table{
+        font-size:14px;
+    }
+
+    .parameter-table th,
+    .parameter-table td{
+        padding:9px;
+    }
+
+    header h1{
+        font-size:26px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<h1>🔬 Soil Testing</h1>
+
+<p>
+Know Your Soil, Grow Better Crops
+</p>
+
+</header>
+
+
+<!-- BACK -->
+
+<div class="back">
+
+<a href="farmer-corner.html">
+← Back to Farmer Corner
+</a>
+
+</div>
+
+
+<div class="container">
+
+
+<!-- INTRO -->
+
+<div class="intro">
+
+<h2>🌱 Why Soil Testing is Important</h2>
+
+<p>
+Soil testing helps farmers understand the nutrient
+status and important properties of their soil.
+It can help in making better decisions about
+fertilizers, soil management and crop selection.
+</p>
+
+</div>
+
+
+<!-- WHAT IS SOIL TESTING -->
+
+<div class="info-section">
+
+<h2>🔬 What is Soil Testing?</h2>
+
+<p>
+Soil testing is the process of examining a soil
+sample in a laboratory to determine its physical
+and chemical properties and nutrient status.
+</p>
+
+<br>
+
+<p>
+The test results can help farmers and agricultural
+experts recommend suitable nutrient management
+for a particular field.
+</p>
+
+</div>
+
+
+<!-- WHAT IS TESTED -->
+
+<div class="info-section">
+
+<h2>🧪 What is Tested in Soil?</h2>
+
+<div class="info-grid">
+
+
+<div class="info-card">
+
+<h3>⚗️ Soil pH</h3>
+
+<p>
+Shows whether soil is acidic, neutral or alkaline.
+Soil pH affects nutrient availability to plants.
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>💧 Electrical Conductivity</h3>
+
+<p>
+EC gives an indication of soluble salts present
+in the soil.
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>🌿 Nitrogen (N)</h3>
+
+<p>
+Nitrogen is important for plant growth,
+leaf development and chlorophyll formation.
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>🌱 Phosphorus (P)</h3>
+
+<p>
+Phosphorus supports root development,
+energy transfer and reproductive growth.
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>🌾 Potassium (K)</h3>
+
+<p>
+Potassium supports plant strength,
+water regulation and crop quality.
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>🔬 Micronutrients</h3>
+
+<p>
+Depending on the soil test, nutrients such as
+zinc, iron, boron, manganese and copper may
+also be assessed.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- SAMPLE COLLECTION -->
+
+<div class="info-section">
+
+<h2>🪣 How to Collect a Soil Sample</h2>
+
+<div class="steps">
+
+
+<div class="step">
+
+<span class="step-number">1</span>
+
+<h3>Select the Area</h3>
+
+<p>
+Divide the field into reasonably uniform areas
+based on soil type, crop history and appearance.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<span class="step-number">2</span>
+
+<h3>Avoid Unusual Spots</h3>
+
+<p>
+Avoid sampling from places such as manure heaps,
+compost piles, bunds, waterlogged areas or
+fertilizer storage locations.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<span class="step-number">3</span>
+
+<h3>Collect Soil</h3>
+
+<p>
+Take samples from the recommended soil depth
+using a clean tool and collect several
+representative spots from the field.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<span class="step-number">4</span>
+
+<h3>Mix the Samples</h3>
+
+<p>
+Mix the collected soil thoroughly in a clean
+container and prepare a representative sample
+according to local soil-testing instructions.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<span class="step-number">5</span>
+
+<h3>Remove Unwanted Material</h3>
+
+<p>
+Remove stones, roots, leaves and other unwanted
+material from the sample.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<span class="step-number">6</span>
+
+<h3>Label the Sample</h3>
+
+<p>
+Write useful details such as farmer name,
+field identification, village, crop and
+sampling date.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<span class="step-number">7</span>
+
+<h3>Submit the Sample</h3>
+
+<p>
+Submit the prepared sample to an appropriate
+soil-testing laboratory or agriculture facility.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<span class="step-number">8</span>
+
+<h3>Keep the Report</h3>
+
+<p>
+Keep the soil-test report safely and use it
+when planning nutrient management.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- SOIL PARAMETERS -->
+
+<div class="info-section">
+
+<h2>📊 Understanding Common Soil Test Parameters</h2>
+
+<table class="parameter-table">
+
+<tr>
+
+<th>Parameter</th>
+
+<th>What It Tells You</th>
+
+</tr>
+
+
+<tr>
+
+<td>pH</td>
+
+<td>
+Indicates soil acidity or alkalinity and
+influences nutrient availability.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>EC</td>
+
+<td>
+Indicates the level of soluble salts in soil.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>Organic Carbon</td>
+
+<td>
+Provides an indication of soil organic matter
+status and soil health.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>Nitrogen</td>
+
+<td>
+Indicates available nitrogen status.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>Phosphorus</td>
+
+<td>
+Indicates available phosphorus status.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>Potassium</td>
+
+<td>
+Indicates available potassium status.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>Micronutrients</td>
+
+<td>
+May identify deficiencies or adequate levels
+of nutrients such as zinc, iron and boron.
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+
+<!-- BENEFITS -->
+
+<div class="info-section">
+
+<h2>🌾 Benefits of Soil Testing</h2>
+
+<div class="info-grid">
+
+
+<div class="info-card">
+
+<h3>💰 Reduce Unnecessary Cost</h3>
+
+<p>
+Helps avoid unnecessary fertilizer application
+when combined with proper recommendations.
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>🌱 Better Crop Growth</h3>
+
+<p>
+Balanced nutrient management can support healthy
+crop growth.
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>🌍 Protect Soil</h3>
+
+<p>
+Avoiding excessive fertilizer use can contribute
+to better long-term soil management.
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>📈 Improve Planning</h3>
+
+<p>
+Soil-test information can help farmers and
+agricultural experts plan nutrient management
+for crops.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- SOIL HEALTH CARD -->
+
+<div class="health-card">
+
+<h2>📋 Soil Health Card</h2>
+
+<p>
+The Government of India's Soil Health Card programme
+provides farmers with information about important
+soil parameters and nutrient status along with
+recommendations for soil nutrient management.
+</p>
+
+<a
+href="https://soilhealth.dac.gov.in/"
+target="_blank"
+class="official-btn">
+
+🔬 Visit Soil Health Card Portal
+
+</a>
+
+</div>
+
+
+<!-- WHERE TO TEST -->
+
+<div class="info-section">
+
+<h2>🏢 Where Can Farmers Test Soil?</h2>
+
+<div class="info-grid">
+
+
+<div class="info-card">
+
+<h3>🔬 Soil Testing Laboratory</h3>
+
+<p>
+Farmers can submit samples to suitable
+government or approved soil-testing laboratories.
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>🌾 Agriculture Department</h3>
+
+<p>
+Contact the local agriculture office for
+information about available soil-testing
+facilities and procedures.
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>🏫 Krishi Vigyan Kendra</h3>
+
+<p>
+KVKs can provide agricultural guidance and
+may assist farmers in accessing soil-testing
+services.
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>👨‍🌾 Agricultural Expert</h3>
+
+<p>
+Farmers can discuss their soil-test report
+with a qualified agriculture professional
+before making major nutrient decisions.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<!-- IMPORTANT -->
+
+<div class="warning">
+
+<b>⚠️ Important:</b>
+
+<br><br>
+
+Do not apply a fixed quantity of fertilizer
+only from general information on the internet.
+
+The correct recommendation can vary according
+to soil-test results, crop, variety, field
+conditions, previous crop and local
+agricultural recommendations.
+
+For exact fertilizer recommendations,
+consult the Agriculture Department or a
+qualified agricultural expert.
+
+</div>
+
+
+<!-- OFFICIAL LINKS -->
+
+<div class="info-section">
+
+<h2>🏛️ Official Agricultural Resources</h2>
+
+<p>
+Use official government resources for reliable
+information about soil testing and agricultural
+services.
+</p>
+
+<br>
+
+<a
+href="https://soilhealth.dac.gov.in/"
+target="_blank"
+class="official-btn">
+
+🔬 Soil Health Card Portal
+
+</a>
+
+</div>
+
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+© 2026 GramSakhi | Farmer Corner
+
+</footer>
+
+
+</body>
+
+</html>

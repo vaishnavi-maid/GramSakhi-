@@ -1,0 +1,188 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Student Schemes</title>
+
+<style>
+body{
+font-family:Arial,sans-serif;
+background:#f4f4f4;
+margin:0;
+}
+
+header{
+background:#2E7D32;
+color:white;
+text-align:center;
+padding:18px;
+font-size:28px;
+font-weight:bold;
+}
+
+.container{
+padding:15px;
+}
+
+.card{
+background:white;
+padding:15px;
+margin-bottom:15px;
+border-radius:12px;
+box-shadow:0 3px 8px rgba(0,0,0,.15);
+}
+
+.card h2{
+margin:0;
+color:#2E7D32;
+font-size:20px;
+}
+
+.btn{
+display:inline-block;
+margin-top:10px;
+padding:10px 18px;
+background:#2E7D32;
+color:white;
+text-decoration:none;
+border-radius:8px;
+}
+  <style>
+
+body{
+...
+}
+
+header{
+...
+}
+
+.card{
+...
+}
+
+.btn{
+...
+}
+
+/* Paste here */
+
+.search-box{
+padding:15px;
+text-align:center;
+}
+
+.search-box input{
+width:90%;
+padding:12px;
+font-size:16px;
+border-radius:10px;
+border:2px solid #2E7D32;
+outline:none;
+}
+
+</style>
+</style>
+
+</head>
+
+<body>
+
+<header>🎓 Student Government Schemes</header>
+  
+<div class="search-box">
+<input
+type="text"
+id="searchInput"
+onkeyup="searchScheme()"
+placeholder="🔍 Search Scheme...">
+</div>
+<div class="container">
+
+<div class="card scheme">
+<h2>National Scholarship Portal</h2>
+<a href="nsp.html" class="btn">View Details</a>
+</div>
+
+<div class="card scheme">
+<h2>PM Vidya Lakshmi Scheme</h2>
+<a href="vidyalaxmi.html" class="btn">View Details</a>
+</div>
+
+<div class="card scheme">
+<h2>PM Internship Scheme</h2>
+<a href="internship.html" class="btn">View Details</a>
+</div>
+
+<div class="card scheme">
+<h2>PM Kaushal Vikas Yojana</h2>
+<a href="pmkvy.html" class="btn">View Details</a>
+</div>
+
+<div class="card scheme">
+<h2>Skill India Mission</h2>
+<a href="skillindia.html" class="btn">View Details</a>
+</div>
+  <div class="card scheme">
+<h2>PM Internship Scheme </h2>
+<a href="internship.html" class="btn">View Details</a>
+</div>
+<div class="card scheme">
+<h2>AICTE Pragati Scholarship</h2>
+<p>Scholarship for Girl Students.</p>
+
+<a href="pragati.html" class="btn">
+View Details
+</a>
+
+</div>
+  <div class="card scheme">
+<h2>AICTE Saksham Scholarship</h2>
+
+<p>Scholarship for Students with Disabilities.</p>
+
+<a href="saksham.html" class="btn">
+View Details
+</a>
+
+  </div>
+  <div class="card scheme">
+<h2>SWAYAM</h2>
+
+<p>Free Online Courses by Government of India.</p>
+
+<a href="swayam.html" class="btn">
+View Details
+</a>
+
+  </div>
+  <div class="card scheme">
+
+<h2>DigiLocker</h2>
+
+<p>Store and access government documents securely.</p>
+
+<a href="digilocker.html" class="btn">
+View Details
+</a>
+
+  </div>
+  <script>
+function searchScheme() {
+  let input = document.getElementById("searchInput").value.toLowerCase();
+  let cards = document.getElementsByClassName("scheme");
+
+  for (let i = 0; i < cards.length; i++) {
+    let title = cards[i].getElementsByTagName("h2")[0].innerText.toLowerCase();
+
+    if (title.includes(input)) {
+      cards[i].style.display = "block";
+    } else {
+      cards[i].style.display = "none";
+    }
+  }
+}
+  </script>
+</body>
+</html>

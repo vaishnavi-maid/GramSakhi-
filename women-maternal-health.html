@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GramSakhi - Women & Maternal Health</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4faf8;
+            color: #333;
+        }
+
+        header {
+            background-color: #00897b;
+            color: white;
+            text-align: center;
+            padding: 28px 15px;
+        }
+
+        header h1 {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        .breadcrumb {
+            width: 92%;
+            max-width: 1100px;
+            margin: 20px auto;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .breadcrumb span {
+            color: #00897b;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .intro {
+            background: white;
+            padding: 24px;
+            border-radius: 14px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .intro h2 {
+            color: #00897b;
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            line-height: 1.6;
+        }
+
+        .search-box {
+            margin-bottom: 25px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .search-box input:focus {
+            border-color: #00897b;
+        }
+
+        .scheme-card {
+            background: white;
+            padding: 23px;
+            margin-bottom: 20px;
+            border-radius: 14px;
+            border-left: 5px solid #00897b;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .scheme-card h2 {
+            color: #00796b;
+            margin-bottom: 12px;
+            font-size: 21px;
+        }
+
+        .scheme-card p {
+            line-height: 1.6;
+            margin: 8px 0;
+        }
+
+        .scheme-card ul {
+            margin: 10px 0 15px 20px;
+            line-height: 1.7;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #e0f2f1;
+            color: #00695c;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #00897b;
+            color: white;
+            text-decoration: none;
+            padding: 10px 17px;
+            border-radius: 6px;
+            margin-top: 8px;
+        }
+
+        .btn:hover {
+            background: #00695c;
+        }
+
+        #noResult {
+            display: none;
+            background: white;
+            text-align: center;
+            padding: 30px;
+            border-radius: 12px;
+            color: #777;
+        }
+
+        footer {
+            margin-top: 40px;
+            background: #00695c;
+            color: white;
+            text-align: center;
+            padding: 18px;
+        }
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            .container,
+            .breadcrumb {
+                width: 94%;
+            }
+
+            .scheme-card {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <h1>🤰 Women & Maternal Health</h1>
+    <p>GramSakhi - Government Health Support for Women</p>
+</header>
+
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+    Government Schemes → Health Care →
+    <span>Women & Maternal Health</span>
+</div>
+
+
+<div class="container">
+
+    <!-- INTRO -->
+    <div class="intro">
+
+        <h2>Women & Maternal Health Schemes</h2>
+
+        <p>
+            Find government programmes that support women during
+            pregnancy, childbirth and the postnatal period, along
+            with nutrition and maternal healthcare services.
+        </p>
+
+    </div>
+
+
+    <!-- SEARCH -->
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="🔍 Search women or maternal health scheme..."
+            onkeyup="searchSchemes()">
+
+    </div>
+
+
+    <!-- SCHEME 1 -->
+    <div class="scheme-card">
+
+        <span class="tag">Maternity Assistance</span>
+
+        <h2>🤰 Pradhan Mantri Matru Vandana Yojana (PMMVY)</h2>
+
+        <p>
+            <b>Purpose:</b>
+            Provides maternity-related financial assistance
+            to eligible women according to scheme guidelines.
+        </p>
+
+        <p><b>Focus Areas:</b></p>
+
+        <ul>
+            <li>Pregnancy and maternity support</li>
+            <li>Nutrition and health support</li>
+            <li>Financial assistance for eligible beneficiaries</li>
+        </ul>
+
+        <p>
+            <b>Eligibility:</b>
+            Eligible women as specified under the current
+            scheme guidelines.
+        </p>
+
+        <a href="#" class="btn">Know More</a>
+
+    </div>
+
+
+    <!-- SCHEME 2 -->
+    <div class="scheme-card">
+
+        <span class="tag">Safe Motherhood</span>
+
+        <h2>🏥 Janani Suraksha Yojana (JSY)</h2>
+
+        <p>
+            <b>Purpose:</b>
+            Promotes institutional delivery and aims to reduce
+            maternal and newborn mortality.
+        </p>
+
+        <p><b>Support:</b></p>
+
+        <ul>
+            <li>Encourages institutional delivery</li>
+            <li>Support for eligible pregnant women</li>
+            <li>Links beneficiaries with public health services</li>
+        </ul>
+
+        <a href="#" class="btn">Know More</a>
+
+    </div>
+
+
+    <!-- SCHEME 3 -->
+    <div class="scheme-card">
+
+        <span class="tag">Maternal Healthcare</span>
+
+        <h2>🩺 Janani Shishu Suraksha Karyakram (JSSK)</h2>
+
+        <p>
+            <b>Purpose:</b>
+            Provides free and cashless services to eligible
+            pregnant women and sick newborns in public health
+            institutions, as per programme provisions.
+        </p>
+
+        <p><b>Services may include:</b></p>
+
+        <ul>
+            <li>Free delivery services</li>
+            <li>Free medicines and diagnostics</li>
+            <li>Referral transport support</li>
+            <li>Post-delivery care</li>
+        </ul>
+
+        <a href="#" class="btn">Know More</a>
+
+    </div>
+
+
+    <!-- SCHEME 4 -->
+    <div class="scheme-card">
+
+        <span class="tag">Maternal Care</span>
+
+        <h2>❤️ Pradhan Mantri Surakshit Matritva Abhiyan (PMSMA)</h2>
+
+        <p>
+            <b>Purpose:</b>
+            Provides assured antenatal care to pregnant women
+            at designated government health facilities.
+        </p>
+
+        <p><b>Focus:</b></p>
+
+        <ul>
+            <li>Antenatal check-ups</li>
+            <li>Identification of high-risk pregnancies</li>
+            <li>Specialist consultation where available</li>
+            <li>Maternal health awareness</li>
+        </ul>
+
+        <a href="#" class="btn">Know More</a>
+
+    </div>
+
+
+    <!-- SCHEME 5 -->
+    <div class="scheme-card">
+
+        <span class="tag">Nutrition</span>
+
+        <h2>🥗 POSHAN Abhiyaan</h2>
+
+        <p>
+            <b>Purpose:</b>
+            Improves nutrition outcomes for women, children
+            and other vulnerable groups.
+        </p>
+
+        <p><b>Focus Areas:</b></p>
+
+        <ul>
+            <li>Maternal nutrition</li>
+            <li>Awareness about healthy nutrition</li>
+            <li>Prevention of malnutrition</li>
+            <li>Improving nutrition-related outcomes</li>
+        </ul>
+
+        <a href="#" class="btn">Know More</a>
+
+    </div>
+
+
+    <!-- SCHEME 6 -->
+    <div class="scheme-card">
+
+        <span class="tag">Women & Child Health</span>
+
+        <h2>🏥 National Health Mission - RMNCH+A Services</h2>
+
+        <p>
+            <b>Purpose:</b>
+            Supports reproductive, maternal, newborn, child and
+            adolescent healthcare through public health services.
+        </p>
+
+        <p><b>Services include:</b></p>
+
+        <ul>
+            <li>Maternal healthcare</li>
+            <li>Newborn healthcare</li>
+            <li>Child healthcare</li>
+            <li>Adolescent health services</li>
+        </ul>
+
+        <a href="#" class="btn">Know More</a>
+
+    </div>
+
+
+    <!-- NO RESULT -->
+    <div id="noResult">
+
+        <h3>😔 No scheme found</h3>
+
+        <p>
+            Try searching with another keyword.
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 GramSakhi | Government Schemes & Health Care</p>
+</footer>
+
+
+<!-- SEARCH SCRIPT -->
+<script>
+
+function searchSchemes() {
+
+    let input =
+        document.getElementById("searchInput")
+        .value
+        .toLowerCase()
+        .trim();
+
+    let cards =
+        document.getElementsByClassName("scheme-card");
+
+    let count = 0;
+
+    for (let i = 0; i < cards.length; i++) {
+
+        let text =
+            cards[i].innerText.toLowerCase();
+
+        if (text.includes(input)) {
+
+            cards[i].style.display = "block";
+            count++;
+
+        } else {
+
+            cards[i].style.display = "none";
+
+        }
+    }
+
+    if (count === 0) {
+
+        document.getElementById("noResult").style.display =
+            "block";
+
+    } else {
+
+        document.getElementById("noResult").style.display =
+            "none";
+
+    }
+}
+
+</script>
+
+</body>
+</html>

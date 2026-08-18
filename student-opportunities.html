@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GramSakhi - Student Opportunities</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4faf8;
+            color: #333;
+        }
+
+        header {
+            background: #00897b;
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        .top-bar {
+            width: 92%;
+            max-width: 1100px;
+            margin: 20px auto;
+        }
+
+        .back-btn {
+            color: #00897b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container {
+            width: 92%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .intro,
+        .search-box {
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            margin-bottom: 25px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .intro h2,
+        .search-box h2 {
+            color: #00897b;
+            margin-bottom: 12px;
+        }
+
+        .intro p {
+            line-height: 1.7;
+        }
+
+        #searchInput {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        #searchInput:focus {
+            border-color: #00897b;
+        }
+
+        .opportunity-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .opportunity-card {
+            background: white;
+            padding: 23px;
+            border-left: 5px solid #00897b;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+
+        .opportunity-card h2 {
+            color: #00796b;
+            font-size: 21px;
+            margin-bottom: 10px;
+        }
+
+        .opportunity-card p {
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .opportunity-card ul {
+            margin-left: 22px;
+            line-height: 1.8;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #00897b;
+            color: white;
+            text-decoration: none;
+            padding: 10px 16px;
+            border-radius: 7px;
+            margin: 8px 6px 0 0;
+        }
+
+        .btn:hover {
+            background: #00695c;
+        }
+
+        .note {
+            background: #e0f2f1;
+            padding: 18px;
+            border-radius: 10px;
+            margin-top: 25px;
+            line-height: 1.7;
+        }
+
+        footer {
+            background: #00695c;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 26px;
+            }
+
+            .container,
+            .top-bar {
+                width: 94%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <h1>🌟 Student Opportunities</h1>
+
+    <p>
+        Discover • Apply • Learn • Grow
+    </p>
+
+</header>
+
+
+<div class="top-bar">
+
+    <a href="student-corner.html" class="back-btn">
+        ← Back to Student Corner
+    </a>
+
+</div>
+
+
+<div class="container">
+
+
+    <div class="intro">
+
+        <h2>🎯 Student Opportunities</h2>
+
+        <p>
+            Explore opportunities that can help students gain
+            practical experience, improve their skills, build
+            networks and prepare for future careers.
+        </p>
+
+    </div>
+
+
+    <div class="search-box">
+
+        <h2>🔍 Search Opportunities</h2>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search internship, fellowship, hackathon, volunteering..."
+            onkeyup="searchOpportunities()">
+
+    </div>
+
+
+    <div class="opportunity-list">
+
+
+        <!-- 1 -->
+
+        <div class="opportunity-card"
+             data-search="internship internships students industry experience">
+
+            <h2>💼 Internships</h2>
+
+            <p>
+                Internships allow students to gain practical
+                experience by working on real projects or
+                learning in professional environments.
+            </p>
+
+            <ul>
+                <li>Technical internships</li>
+                <li>Research internships</li>
+                <li>Industry internships</li>
+                <li>Remote internships</li>
+            </ul>
+
+            <a href="https://internship.aicte-india.org/"
+               target="_blank"
+               class="btn">
+                AICTE Internship Portal
+            </a>
+
+        </div>
+
+
+        <!-- 2 -->
+
+        <div class="opportunity-card"
+             data-search="fellowship student fellowship research education">
+
+            <h2>🎓 Fellowships</h2>
+
+            <p>
+                Fellowships may provide students with opportunities
+                for research, learning, leadership and professional
+                development.
+            </p>
+
+            <a href="https://www.indiascienceandtechnology.gov.in/"
+               target="_blank"
+               class="btn">
+                India Science Portal
+            </a>
+
+        </div>
+
+
+        <!-- 3 -->
+
+        <div class="opportunity-card"
+             data-search="scholarship financial aid students education">
+
+            <h2>💰 Scholarships & Financial Aid</h2>
+
+            <p>
+                Students can explore scholarships and financial
+                assistance according to eligibility, course,
+                institution and other conditions.
+            </p>
+
+            <a href="https://scholarships.gov.in/"
+               target="_blank"
+               class="btn">
+                National Scholarship Portal
+            </a>
+
+        </div>
+
+
+        <!-- 4 -->
+
+        <div class="opportunity-card"
+             data-search="hackathon coding competition innovation students">
+
+            <h2>🏆 Hackathons & Competitions</h2>
+
+            <p>
+                Participate in hackathons and competitions to
+                solve problems, build projects and demonstrate
+                your skills.
+            </p>
+
+            <a href="https://www.sih.gov.in/"
+               target="_blank"
+               class="btn">
+                Smart India Hackathon
+            </a>
+
+            <a href="https://unstop.com/"
+               target="_blank"
+               class="btn">
+                Unstop
+            </a>
+
+        </div>
+
+
+        <!-- 5 -->
+
+        <div class="opportunity-card"
+             data-search="research research internship project students">
+
+            <h2>🔬 Research Opportunities</h2>
+
+            <p>
+                Students interested in research can look for
+                research projects, internships, workshops and
+                academic opportunities.
+            </p>
+
+            <ul>
+                <li>Research internships</li>
+                <li>Student research projects</li>
+                <li>Academic workshops</li>
+                <li>Research competitions</li>
+            </ul>
+
+            <a href="https://www.inspire-dst.gov.in/"
+               target="_blank"
+               class="btn">
+                INSPIRE
+            </a>
+
+        </div>
+
+
+        <!-- 6 -->
+
+        <div class="opportunity-card"
+             data-search="volunteering volunteer students social work nss">
+
+            <h2>🤝 Volunteering Opportunities</h2>
+
+            <p>
+                Volunteering helps students develop teamwork,
+                leadership and social responsibility while
+                contributing to community activities.
+            </p>
+
+            <ul>
+                <li>Community service</li>
+                <li>Social awareness activities</li>
+                <li>Environmental activities</li>
+                <li>College volunteering</li>
+            </ul>
+
+        </div>
+
+
+        <!-- 7 -->
+
+        <div class="opportunity-card"
+             data-search="nss national service scheme student volunteering">
+
+            <h2>🇮🇳 National Service Scheme (NSS)</h2>
+
+            <p>
+                NSS provides students with opportunities to
+                participate in community service and social
+                development activities through participating
+                institutions.
+            </p>
+
+            <a href="https://nss.gov.in/"
+               target="_blank"
+               class="btn">
+                NSS Official Website
+            </a>
+
+        </div>
+
+
+        <!-- 8 -->
+
+        <div class="opportunity-card"
+             data-search="study abroad exchange international students education">
+
+            <h2>🌍 Study Abroad & Exchange Opportunities</h2>
+
+            <p>
+                Students can explore international education,
+                exchange and learning opportunities according to
+                eligibility and programme requirements.
+            </p>
+
+            <a href="https://www.education.gov.in/"
+               target="_blank"
+               class="btn">
+                Ministry of Education
+            </a>
+
+        </div>
+
+
+        <!-- 9 -->
+
+        <div class="opportunity-card"
+             data-search="startup entrepreneurship student business innovation">
+
+            <h2>🚀 Startup & Entrepreneurship Opportunities</h2>
+
+            <p>
+                Students with innovative ideas can explore
+                entrepreneurship programmes, startup support,
+                mentoring and innovation opportunities.
+            </p>
+
+            <a href="https://www.startupindia.gov.in/"
+               target="_blank"
+               class="btn">
+                Startup India
+            </a>
+
+        </div>
+
+
+        <!-- 10 -->
+
+        <div class="opportunity-card"
+             data-search="skill development student training courses">
+
+            <h2>🛠️ Skill Development Opportunities</h2>
+
+            <p>
+                Learn industry-relevant skills through online
+                courses, training programmes and skill-development
+                initiatives.
+            </p>
+
+            <a href="https://www.skillindiadigital.gov.in/"
+               target="_blank"
+               class="btn">
+                Skill India Digital
+            </a>
+
+            <a href="https://swayam.gov.in/"
+               target="_blank"
+               class="btn">
+                SWAYAM
+            </a>
+
+        </div>
+
+
+        <!-- 11 -->
+
+        <div class="opportunity-card"
+             data-search="student ambassador campus ambassador leadership">
+
+            <h2>📢 Student Ambassador Programs</h2>
+
+            <p>
+                Student ambassador programmes may help students
+                develop communication, networking, leadership and
+                promotional skills.
+            </p>
+
+            <ul>
+                <li>Campus representation</li>
+                <li>Community building</li>
+                <li>Networking</li>
+                <li>Leadership experience</li>
+            </ul>
+
+        </div>
+
+
+        <!-- 12 -->
+
+        <div class="opportunity-card"
+             data-search="career placement job opportunity students graduates">
+
+            <h2>🎯 Career & Placement Opportunities</h2>
+
+            <p>
+                Students can prepare for placements by developing
+                technical skills, communication skills, resumes,
+                portfolios and interview skills.
+            </p>
+
+            <ul>
+                <li>Placement preparation</li>
+                <li>Resume building</li>
+                <li>Interview preparation</li>
+                <li>Job opportunities</li>
+            </ul>
+
+            <a href="https://www.ncs.gov.in/"
+               target="_blank"
+               class="btn">
+                National Career Service
+            </a>
+
+        </div>
+
+
+        <!-- 13 -->
+
+        <div class="opportunity-card"
+             data-search="online learning courses certification student">
+
+            <h2>📚 Online Learning Opportunities</h2>
+
+            <p>
+                Online learning platforms allow students to learn
+                technical, academic and professional skills from
+                anywhere.
+            </p>
+
+            <a href="https://swayam.gov.in/"
+               target="_blank"
+               class="btn">
+                SWAYAM
+            </a>
+
+            <a href="https://www.nptel.ac.in/"
+               target="_blank"
+               class="btn">
+                NPTEL
+            </a>
+
+        </div>
+
+
+        <!-- 14 -->
+
+        <div class="opportunity-card"
+             data-search="how to apply student opportunities eligibility deadline documents">
+
+            <h2>📝 How to Apply for an Opportunity</h2>
+
+            <ul>
+                <li>Read the official opportunity details.</li>
+                <li>Check eligibility requirements.</li>
+                <li>Note the application deadline.</li>
+                <li>Prepare your resume and documents.</li>
+                <li>Complete the application carefully.</li>
+                <li>Save the application confirmation.</li>
+            </ul>
+
+        </div>
+
+
+        <!-- 15 -->
+
+        <div class="opportunity-card"
+             data-search="student opportunity safety scam fake internship fraud">
+
+            <h2>⚠️ Opportunity Safety Tips</h2>
+
+            <ul>
+                <li>Verify the organisation before applying.</li>
+                <li>Use official websites whenever possible.</li>
+                <li>Be careful with suspicious offers.</li>
+                <li>Do not share passwords or OTPs.</li>
+                <li>Never pay money for a suspicious job offer.</li>
+                <li>Read the terms and requirements carefully.</li>
+            </ul>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="note">
+
+        💡 <b>Important:</b>
+        Opportunities, eligibility, deadlines and application
+        requirements can change. Always verify the latest details
+        on the official website before applying.
+
+    </div>
+
+
+</div>
+
+
+<footer>
+
+    <p>
+        © 2026 GramSakhi | Student Corner
+    </p>
+
+</footer>
+
+
+<script>
+
+    function searchOpportunities() {
+
+        let searchText =
+            document.getElementById("searchInput")
+            .value
+            .toLowerCase()
+            .trim();
+
+        let cards =
+            document.querySelectorAll(".opportunity-card");
+
+        cards.forEach(function(card) {
+
+            let text =
+                card.innerText.toLowerCase();
+
+            let keywords =
+                card.getAttribute("data-search")
+                .toLowerCase();
+
+            if (
+                text.includes(searchText) ||
+                keywords.includes(searchText)
+            ) {
+
+                card.style.display = "block";
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+    }
+
+</script>
+
+
+</body>
+
+</html>
