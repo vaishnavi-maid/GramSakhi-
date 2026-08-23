@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact Us | GramSakhi</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#f4f8ff;
+    color:#333;
+}
+
+header{
+    background:linear-gradient(135deg,#1565c0,#42a5f5);
+    color:white;
+    text-align:center;
+    padding:30px 15px;
+}
+
+header h1{
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+header p{
+    font-size:16px;
+}
+
+.topbar{
+    background:white;
+    padding:12px 18px;
+    display:flex;
+    justify-content:space-between;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.topbar button{
+    border:none;
+    padding:10px 16px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.home-btn{
+    background:#1976d2;
+    color:white;
+}
+
+.lang-btn{
+    background:#ff9800;
+    color:white;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:25px 15px;
+}
+
+.title{
+    text-align:center;
+    color:#1565c0;
+    margin-bottom:25px;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px 18px;
+    text-align:center;
+    border-radius:16px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+.icon{
+    font-size:45px;
+    margin-bottom:12px;
+}
+
+.card h3{
+    color:#1565c0;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#555;
+    margin-bottom:18px;
+    word-break:break-word;
+}
+
+.action-btn{
+    border:none;
+    color:white;
+    padding:11px 18px;
+    border-radius:8px;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+    text-decoration:none;
+    display:inline-block;
+}
+
+.call-btn{
+    background:#2e7d32;
+}
+
+.whatsapp-btn{
+    background:#25D366;
+}
+
+.email-btn{
+    background:#d32f2f;
+}
+
+.map-btn{
+    background:#1976d2;
+}
+
+.form-box{
+    background:white;
+    margin-top:30px;
+    padding:25px;
+    border-radius:16px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+.form-box h2{
+    text-align:center;
+    color:#1565c0;
+    margin-bottom:20px;
+}
+
+.form-group{
+    margin-bottom:15px;
+}
+
+.form-group label{
+    display:block;
+    font-weight:bold;
+    margin-bottom:6px;
+}
+
+.form-group input,
+.form-group textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:15px;
+}
+
+.form-group textarea{
+    height:120px;
+    resize:vertical;
+}
+
+.submit-btn{
+    width:100%;
+    background:#1565c0;
+    color:white;
+    border:none;
+    padding:13px;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+#status{
+    text-align:center;
+    margin-top:15px;
+    font-weight:bold;
+}
+
+footer{
+    background:#263238;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+}
+
+@media(max-width:600px){
+
+    header h1{
+        font-size:24px;
+    }
+
+    .container{
+        padding:20px 12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>📞 Contact Us</h1>
+
+<p>We are here to help you</p>
+
+</header>
+
+
+<div class="topbar">
+
+<button class="home-btn" onclick="goHome()">
+🏠 Home
+</button>
+
+<button class="lang-btn" onclick="toggleLanguage()">
+मराठी
+</button>
+
+</div>
+
+
+<div class="container">
+
+<h2 class="title">
+Get in Touch with GramSakhi
+</h2>
+
+
+<div class="contact-grid">
+
+
+<!-- CALL -->
+
+<div class="card">
+
+<div class="icon">📞</div>
+
+<h3>Call Us</h3>
+
+<p>+91 9518946122</p>
+
+<button
+class="action-btn call-btn"
+onclick="callUs()">
+
+📞 Call Now
+
+</button>
+
+</div>
+
+
+<!-- WHATSAPP -->
+
+<div class="card">
+
+<div class="icon">💬</div>
+
+<h3>WhatsApp</h3>
+
+<p>+91 9518946122</p>
+
+<button
+class="action-btn whatsapp-btn"
+onclick="openWhatsApp()">
+
+💬 Chat on WhatsApp
+
+</button>
+
+</div>
+
+
+
+
+
+<!-- GRAMSAKHI EMAIL -->
+
+<div class="card">
+
+<div class="icon">📩</div>
+
+<h3>GramSakhi Email</h3>
+
+<p>gramsakhi0104@gmail.com</p>
+
+<button
+class="action-btn email-btn"
+onclick="openGramSakhiEmail()">
+
+📩 Contact GramSakhi
+
+</button>
+
+</div>
+
+
+<!-- MAP -->
+
+<div class="card">
+
+<div class="icon">📍</div>
+
+<h3>Location</h3>
+
+<p>
+Samarth College of Engineering Belhe
+</p>
+
+<button
+class="action-btn map-btn"
+onclick="openMap()">
+
+📍 Open Maps
+
+</button>
+
+</div>
+
+
+</div>
+
+
+<!-- CONTACT FORM -->
+
+<div class="form-box">
+
+<h2>📝 Send Us a Message</h2>
+
+<form onsubmit="sendMessage(event)">
+
+<div class="form-group">
+
+<label>Your Name</label>
+
+<input
+type="text"
+id="name"
+placeholder="Enter your name"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Mobile Number</label>
+
+<input
+type="tel"
+id="mobile"
+placeholder="Enter 10-digit mobile number"
+maxlength="10"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Your Email</label>
+
+<input
+type="email"
+id="email"
+placeholder="Enter your email"
+required>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Message</label>
+
+<textarea
+id="message"
+placeholder="Write your message..."
+required></textarea>
+
+</div>
+
+
+<button
+type="submit"
+class="submit-btn">
+
+📧 Send Message
+
+</button>
+
+<div id="status"></div>
+
+</form>
+
+</div>
+
+</div>
+
+
+<footer>
+
+<p>
+© 2026 GramSakhi | Smart Digital Village Platform
+</p>
+
+</footer>
+
+
+<script>
+
+/* HOME */
+
+function goHome(){
+
+    window.location.href = "index.html";
+
+}
+
+
+/* CALL */
+
+function callUs(){
+
+    window.location.href =
+    "tel:+919518946122";
+
+}
+
+
+/* WHATSAPP */
+
+function openWhatsApp(){
+
+    window.open(
+        "https://wa.me/919518946122",
+        "_blank"
+    );
+
+}
+
+
+/* PERSONAL EMAIL */
+
+function openPersonalEmail(){
+
+    window.location.href =
+    "mailto:maidvaishnavi8@gmail.com";
+
+}
+
+
+/* GRAMSAKHI EMAIL */
+
+function openGramSakhiEmail(){
+
+    window.location.href =
+    "mailto:gramsakhi0104@gmail.com";
+
+}
+
+
+/* GOOGLE MAP */
+
+function openMap(){
+
+    window.open(
+        "https://www.google.com/maps/search/?api=1&query=Samarth+College+of+Engineering+Belhe",
+        "_blank"
+    );
+
+}
+
+
+/* SEND MESSAGE */
+
+function sendMessage(event){
+
+    event.preventDefault();
+
+    const name =
+    document.getElementById("name").value.trim();
+
+    const mobile =
+    document.getElementById("mobile").value.trim();
+
+    const email =
+    document.getElementById("email").value.trim();
+
+    const message =
+    document.getElementById("message").value.trim();
+
+
+    if(!/^[0-9]{10}$/.test(mobile)){
+
+        document.getElementById("status").innerText =
+        "❌ Please enter a valid 10-digit mobile number.";
+
+        document.getElementById("status").style.color="red";
+
+        return;
+
+    }
+
+
+    const subject =
+    encodeURIComponent(
+        "GramSakhi Contact - " + name
+    );
+
+
+    const body =
+    encodeURIComponent(
+        "Name: " + name +
+        "\nMobile: " + mobile +
+        "\nEmail: " + email +
+        "\n\nMessage:\n" + message
+    );
+
+
+    window.location.href =
+    "mailto:gramsakhi0104@gmail.com" +
+    "?subject=" + subject +
+    "&body=" + body;
+
+}
+
+
+/* LANGUAGE */
+
+let marathi=false;
+
+function toggleLanguage(){
+
+    marathi=!marathi;
+
+    if(marathi){
+
+        document.querySelector("header h1").innerText =
+        "📞 आमच्याशी संपर्क साधा";
+
+        document.querySelector("header p").innerText =
+        "आम्ही तुमच्या मदतीसाठी येथे आहोत";
+
+        document.querySelector(".home-btn").innerText =
+        "🏠 मुख्यपृष्ठ";
+
+        document.querySelector(".lang-btn").innerText =
+        "English";
+
+        document.querySelector(".title").innerText =
+        "GramSakhi शी संपर्क साधा";
+
+    }else{
+
+        location.reload();
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>

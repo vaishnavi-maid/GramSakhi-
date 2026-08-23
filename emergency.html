@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Emergency Services | GramSakhi</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f7fb;
+            color: #222;
+        }
+
+        header {
+            background: linear-gradient(135deg, #b71c1c, #e53935);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 15px;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 20px;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .home-btn,
+        .language-btn {
+            border: none;
+            padding: 9px 15px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .home-btn {
+            background: #1976d2;
+            color: white;
+        }
+
+        .language-btn {
+            background: #ff9800;
+            color: white;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 25px 15px;
+        }
+
+        .warning {
+            background: #fff3cd;
+            border-left: 5px solid #ff9800;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .warning strong {
+            color: #c62828;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #b71c1c;
+        }
+
+        .emergency-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+
+        .card {
+            background: white;
+            padding: 22px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .number {
+            font-size: 22px;
+            font-weight: bold;
+            color: #d32f2f;
+            margin-bottom: 15px;
+        }
+
+        .call-btn {
+            display: inline-block;
+            background: #2e7d32;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .call-btn:hover {
+            background: #1b5e20;
+        }
+
+        .location-box {
+            margin-top: 30px;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+        }
+
+        .location-box h2 {
+            color: #1976d2;
+            margin-bottom: 10px;
+        }
+
+        #location {
+            margin: 15px 0;
+            color: #555;
+        }
+
+        .location-btn {
+            border: none;
+            background: #1976d2;
+            color: white;
+            padding: 11px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 30px;
+            background: #263238;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media(max-width:600px) {
+
+            header h1 {
+                font-size: 23px;
+            }
+
+            .top-bar {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 20px 12px;
+            }
+
+            .number {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1 id="pageTitle">🚨 Emergency Services</h1>
+    <p id="pageSubtitle">
+        Quick access to important emergency services
+    </p>
+</header>
+
+<div class="top-bar">
+
+    <button class="home-btn" onclick="goHome()">
+        🏠 Home
+    </button>
+
+    <button class="language-btn" onclick="changeLanguage()">
+        मराठी
+    </button>
+
+</div>
+
+<div class="container">
+
+    <div class="warning">
+        <strong id="warningTitle">⚠️ Important:</strong>
+        <span id="warningText">
+            In a serious emergency, contact the appropriate emergency service immediately.
+        </span>
+    </div>
+
+    <h2 class="section-title" id="serviceTitle">
+        Emergency Helpline Numbers
+    </h2>
+
+    <div class="emergency-grid">
+
+        <!-- Ambulance -->
+        <div class="card">
+            <div class="icon">🚑</div>
+
+            <h3 id="ambulanceTitle">Ambulance</h3>
+
+            <p id="ambulanceText">
+                For medical emergencies and ambulance assistance.
+            </p>
+
+            <div class="number">108</div>
+
+            <a href="tel:108" class="call-btn" id="ambulanceCall">
+                📞 Call 108
+            </a>
+        </div>
+
+
+        <!-- Police -->
+        <div class="card">
+            <div class="icon">🚓</div>
+
+            <h3 id="policeTitle">Police</h3>
+
+            <p id="policeText">
+                For crime, danger, accidents and police assistance.
+            </p>
+
+            <div class="number">112</div>
+
+            <a href="tel:112" class="call-btn" id="policeCall">
+                📞 Call 112
+            </a>
+        </div>
+
+
+        <!-- Fire -->
+        <div class="card">
+            <div class="icon">🚒</div>
+
+            <h3 id="fireTitle">Fire Brigade</h3>
+
+            <p id="fireText">
+                For fire accidents and rescue assistance.
+            </p>
+
+            <div class="number">101</div>
+
+            <a href="tel:101" class="call-btn" id="fireCall">
+                📞 Call 101
+            </a>
+        </div>
+
+
+        <!-- Women -->
+        <div class="card">
+            <div class="icon">👩</div>
+
+            <h3 id="womenTitle">Women Helpline</h3>
+
+            <p id="womenText">
+                Support for women facing violence or emergency situations.
+            </p>
+
+            <div class="number">181</div>
+
+            <a href="tel:181" class="call-btn" id="womenCall">
+                📞 Call 181
+            </a>
+        </div>
+
+
+        <!-- Child -->
+        <div class="card">
+            <div class="icon">👶</div>
+
+            <h3 id="childTitle">Child Helpline</h3>
+
+            <p id="childText">
+                Help and protection services for children.
+            </p>
+
+            <div class="number">1098</div>
+
+            <a href="tel:1098" class="call-btn" id="childCall">
+                📞 Call 1098
+            </a>
+        </div>
+
+
+        <!-- Disaster -->
+        <div class="card">
+            <div class="icon">🌪️</div>
+
+            <h3 id="disasterTitle">Disaster Emergency</h3>
+
+            <p id="disasterText">
+                Emergency assistance during natural or major disasters.
+            </p>
+
+            <div class="number">1070</div>
+
+            <a href="tel:1070" class="call-btn" id="disasterCall">
+                📞 Call 1070
+            </a>
+        </div>
+
+    </div>
+
+
+    <!-- Location -->
+    <div class="location-box">
+
+        <h2 id="locationTitle">
+            📍 Share Your Location
+        </h2>
+
+        <p id="locationDescription">
+            Use this feature to identify your current location during an emergency.
+        </p>
+
+        <button class="location-btn" onclick="getLocation()" id="locationButton">
+            📍 Get My Location
+        </button>
+
+        <div id="location">
+            Location not detected yet.
+        </div>
+
+    </div>
+
+</div>
+
+
+<footer>
+    <p>
+        © 2026 GramSakhi | Smart Digital Village Platform
+    </p>
+</footer>
+
+
+<script>
+
+    function goHome() {
+        window.location.href = "index.html";
+    }
+
+
+    let marathi = false;
+
+    function changeLanguage() {
+
+        marathi = !marathi;
+
+        if (marathi) {
+
+            document.getElementById("pageTitle").innerText =
+                "🚨 आपत्कालीन सेवा";
+
+            document.getElementById("pageSubtitle").innerText =
+                "महत्त्वाच्या आपत्कालीन सेवांचा जलद वापर";
+
+            document.querySelector(".home-btn").innerText =
+                "🏠 मुख्यपृष्ठ";
+
+            document.querySelector(".language-btn").innerText =
+                "English";
+
+            document.getElementById("warningTitle").innerText =
+                "⚠️ महत्त्वाचे:";
+
+            document.getElementById("warningText").innerText =
+                "गंभीर आपत्कालीन परिस्थितीत योग्य आपत्कालीन सेवेशी त्वरित संपर्क साधा.";
+
+            document.getElementById("serviceTitle").innerText =
+                "आपत्कालीन हेल्पलाइन क्रमांक";
+
+            document.getElementById("ambulanceTitle").innerText =
+                "रुग्णवाहिका";
+
+            document.getElementById("ambulanceText").innerText =
+                "वैद्यकीय आपत्कालीन परिस्थिती आणि रुग्णवाहिका सेवेसाठी.";
+
+            document.getElementById("ambulanceCall").innerText =
+                "📞 108 वर कॉल करा";
+
+            document.getElementById("policeTitle").innerText =
+                "पोलीस";
+
+            document.getElementById("policeText").innerText =
+                "गुन्हा, धोका, अपघात आणि पोलीस मदतीसाठी.";
+
+            document.getElementById("policeCall").innerText =
+                "📞 112 वर कॉल करा";
+
+            document.getElementById("fireTitle").innerText =
+                "अग्निशमन दल";
+
+            document.getElementById("fireText").innerText =
+                "आगीच्या दुर्घटना आणि बचाव कार्यासाठी.";
+
+            document.getElementById("fireCall").innerText =
+                "📞 101 वर कॉल करा";
+
+            document.getElementById("womenTitle").innerText =
+                "महिला हेल्पलाइन";
+
+            document.getElementById("womenText").innerText =
+                "महिलांवरील हिंसा किंवा आपत्कालीन परिस्थितीत मदतीसाठी.";
+
+            document.getElementById("womenCall").innerText =
+                "📞 181 वर कॉल करा";
+
+            document.getElementById("childTitle").innerText =
+                "बाल हेल्पलाइन";
+
+            document.getElementById("childText").innerText =
+                "मुलांच्या मदतीसाठी आणि संरक्षणासाठी.";
+
+            document.getElementById("childCall").innerText =
+                "📞 1098 वर कॉल करा";
+
+            document.getElementById("disasterTitle").innerText =
+                "आपत्ती आपत्कालीन सेवा";
+
+            document.getElementById("disasterText").innerText =
+                "नैसर्गिक किंवा मोठ्या आपत्तीच्या वेळी मदतीसाठी.";
+
+            document.getElementById("disasterCall").innerText =
+                "📞 1070 वर कॉल करा";
+
+            document.getElementById("locationTitle").innerText =
+                "📍 तुमचे स्थान";
+
+            document.getElementById("locationDescription").innerText =
+                "आपत्कालीन परिस्थितीत तुमचे वर्तमान स्थान शोधण्यासाठी वापरा.";
+
+            document.getElementById("locationButton").innerText =
+                "📍 माझे स्थान मिळवा";
+
+        } else {
+
+            location.reload();
+
+        }
+
+    }
+
+
+        function getLocation() {
+    const locationBox = document.getElementById("location");
+    const button = document.getElementById("locationButton");
+
+    // Check browser support
+    if (!navigator.geolocation) {
+        locationBox.innerHTML =
+            "❌ Location service is not supported by this browser.";
+        return;
+    }
+
+    // Check HTTPS
+    if (location.protocol !== "https:" && location.hostname !== "localhost") {
+        locationBox.innerHTML =
+            "❌ Location requires HTTPS. Please open the GramSakhi website using its HTTPS link.";
+        return;
+    }
+
+    button.disabled = true;
+    button.innerText = "📍 Detecting...";
+
+    locationBox.innerHTML =
+        "⏳ Getting your current location... Please allow location permission.";
+
+    navigator.geolocation.getCurrentPosition(
+
+        function(position) {
+
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+
+            locationBox.innerHTML = `
+                <strong>✅ Location Found!</strong><br><br>
+                Latitude: ${latitude.toFixed(6)}<br>
+                Longitude: ${longitude.toFixed(6)}<br><br>
+
+                <a
+                    href="https://www.google.com/maps?q=${latitude},${longitude}"
+                    target="_blank"
+                    style="
+                        display:inline-block;
+                        background:#1976d2;
+                        color:white;
+                        padding:10px 18px;
+                        border-radius:8px;
+                        text-decoration:none;
+                        font-weight:bold;
+                    ">
+                    📍 Open in Google Maps
+                </a>
+            `;
+
+            button.disabled = false;
+            button.innerText = "📍 Get My Location";
+        },
+
+        function(error) {
+
+            button.disabled = false;
+            button.innerText = "📍 Try Again";
+
+            let message = "";
+
+            switch (error.code) {
+
+                case error.PERMISSION_DENIED:
+                    message =
+                        "❌ Location permission was denied. Please allow location permission in your browser settings and try again.";
+                    break;
+
+                case error.POSITION_UNAVAILABLE:
+                    message =
+                        "❌ Your location could not be detected. Please turn ON GPS/Location services and try again.";
+                    break;
+
+                case error.TIMEOUT:
+                    message =
+                        "⏳ Location request timed out. Please try again.";
+                    break;
+
+                default:
+                    message =
+                        "❌ Unable to get your location. Please try again.";
+            }
+
+            locationBox.innerText = message;
+        },
+
+        {
+            enableHighAccuracy: true,
+            timeout: 15000,
+            maximumAge: 0
+        }
+    );
+        }
+
+</script>
+
+</body>
+</html>

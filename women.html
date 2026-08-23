@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Women & SHG | GramSakhi</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#fff7fb;
+    color:#333;
+}
+
+header{
+    background:linear-gradient(135deg,#ad1457,#e91e63);
+    color:white;
+    padding:25px 15px;
+    text-align:center;
+}
+
+header h1{
+    font-size:28px;
+    margin-bottom:8px;
+}
+
+header p{
+    font-size:15px;
+}
+
+.topbar{
+    background:white;
+    padding:12px 18px;
+    display:flex;
+    justify-content:space-between;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+button{
+    border:none;
+    padding:10px 16px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.home-btn{
+    background:#1976d2;
+    color:white;
+}
+
+.lang-btn{
+    background:#ff9800;
+    color:white;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:25px 15px;
+}
+
+.search-box{
+    display:flex;
+    margin-bottom:25px;
+}
+
+.search-box input{
+    width:100%;
+    padding:13px;
+    border:1px solid #ccc;
+    border-radius:8px 0 0 8px;
+    font-size:16px;
+}
+
+.search-box button{
+    background:#ad1457;
+    color:white;
+    border-radius:0 8px 8px 0;
+}
+
+.section-title{
+    text-align:center;
+    color:#ad1457;
+    margin:20px 0;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:18px;
+}
+
+.card{
+    background:white;
+    padding:22px;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    text-align:center;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.icon{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.card h3{
+    color:#ad1457;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#666;
+    line-height:1.5;
+    font-size:14px;
+    margin-bottom:15px;
+}
+
+.card a{
+    display:inline-block;
+    background:#ad1457;
+    color:white;
+    text-decoration:none;
+    padding:9px 16px;
+    border-radius:7px;
+    font-weight:bold;
+}
+
+.info-box{
+    background:#fce4ec;
+    padding:20px;
+    margin-top:30px;
+    border-radius:12px;
+    line-height:1.6;
+}
+
+.info-box h2{
+    color:#ad1457;
+    margin-bottom:10px;
+}
+
+footer{
+    background:#263238;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:30px;
+}
+
+@media(max-width:600px){
+
+    header h1{
+        font-size:23px;
+    }
+
+    .search-box{
+        flex-direction:column;
+    }
+
+    .search-box input{
+        border-radius:8px;
+        margin-bottom:8px;
+    }
+
+    .search-box button{
+        border-radius:8px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1 id="title">👩‍🌾 Women & Self Help Groups</h1>
+
+<p id="subtitle">
+Empowering rural women through information, skills and opportunities
+</p>
+
+</header>
+
+
+<div class="topbar">
+
+<button class="home-btn" onclick="goHome()">
+🏠 Home
+</button>
+
+<button class="lang-btn" onclick="changeLanguage()">
+मराठी
+</button>
+
+</div>
+
+
+<div class="container">
+
+<!-- SEARCH -->
+
+<div class="search-box">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search women & SHG services..."
+onkeyup="searchCards()"
+>
+
+<button onclick="searchCards()">
+🔍 Search
+</button>
+
+</div>
+
+
+<h2 class="section-title">
+Women Empowerment & SHG Services
+</h2>
+
+
+<div class="grid" id="cardContainer">
+
+
+<!-- SHG -->
+
+<div class="card">
+
+<div class="icon">🤝</div>
+
+<h3>Self Help Groups</h3>
+
+<p>
+Learn about SHG formation, group activities,
+savings and community development.
+</p>
+
+<a href="#shg">
+Learn More
+</a>
+
+</div>
+
+
+<!-- Government Schemes -->
+
+<div class="card">
+
+<div class="icon">🏛️</div>
+
+<h3>Government Schemes</h3>
+
+<p>
+Find government schemes and financial support
+available for women.
+</p>
+
+<a href="#schemes">
+View Schemes
+</a>
+
+</div>
+
+
+<!-- Skill -->
+
+<div class="card">
+
+<div class="icon">🎓</div>
+
+<h3>Skill Development</h3>
+
+<p>
+Explore opportunities to learn tailoring,
+computer skills, food processing and more.
+</p>
+
+<a href="#skills">
+Explore Skills
+</a>
+
+</div>
+
+
+<!-- Business -->
+
+<div class="card">
+
+<div class="icon">💼</div>
+
+<h3>Women Entrepreneurship</h3>
+
+<p>
+Learn how to start and grow your own small business.
+</p>
+
+<a href="#business">
+Start Business
+</a>
+
+</div>
+
+
+<!-- Finance -->
+
+<div class="card">
+
+<div class="icon">💰</div>
+
+<h3>Financial Support</h3>
+
+<p>
+Information about SHG loans, savings and
+financial assistance.
+</p>
+
+<a href="#finance">
+Learn More
+</a>
+
+</div>
+
+
+<!-- Local Business -->
+
+<div class="card">
+
+<div class="icon">🛍️</div>
+
+<h3>Women-Owned Businesses</h3>
+
+<p>
+Discover and promote businesses operated by
+local women.
+</p>
+
+<a href="#businesses">
+Explore
+</a>
+
+</div>
+
+
+</div>
+
+
+<!-- SHG INFORMATION -->
+
+<div class="info-box" id="shg">
+
+<h2>🤝 Self Help Groups (SHGs)</h2>
+
+<p>
+A Self Help Group is a small community-based group
+where members save money together, support each other
+and work towards financial independence.
+</p>
+
+<br>
+
+<p>
+<strong>Benefits:</strong>
+</p>
+
+<ul>
+<li>Regular savings</li>
+<li>Access to credit</li>
+<li>Skill development</li>
+<li>Income generation</li>
+<li>Women empowerment</li>
+<li>Community development</li>
+</ul>
+
+</div>
+
+
+<!-- SCHEMES -->
+
+<div class="info-box" id="schemes">
+
+<h2>🏛️ Government Support</h2>
+
+<p>
+Women can explore government programmes related to
+self-employment, entrepreneurship, skill development,
+financial inclusion and SHG activities.
+</p>
+
+<br>
+
+<p>
+👉 For detailed scheme information, visit the
+Government Schemes section of GramSakhi.
+</p>
+
+</div>
+
+
+<!-- SKILLS -->
+
+<div class="info-box" id="skills">
+
+<h2>🎓 Skill Development</h2>
+
+<p>
+Women can develop skills such as:
+</p>
+
+<ul>
+<li>💻 Computer & Digital Skills</li>
+<li>🧵 Tailoring & Embroidery</li>
+<li>🍱 Food Processing</li>
+<li>🌾 Agricultural Processing</li>
+<li>🎨 Handicrafts</li>
+<li>📱 Digital Marketing</li>
+</ul>
+
+</div>
+
+
+<!-- BUSINESS -->
+
+<div class="info-box" id="business">
+
+<h2>💼 Women Entrepreneurship</h2>
+
+<p>
+GramSakhi encourages rural women to turn their
+skills into sustainable businesses.
+</p>
+
+<br>
+
+<p>
+<strong>Steps:</strong>
+</p>
+
+<ol>
+<li>Identify your skill</li>
+<li>Choose a business idea</li>
+<li>Learn required skills</li>
+<li>Prepare a simple business plan</li>
+<li>Explore financial support</li>
+<li>Start and promote your business</li>
+</ol>
+
+</div>
+
+
+<!-- FINANCE -->
+
+<div class="info-box" id="finance">
+
+<h2>💰 Financial Support</h2>
+
+<p>
+SHG members may explore bank-linked credit,
+microfinance and government-supported programmes.
+Always verify eligibility and current terms before applying.
+</p>
+
+</div>
+
+
+<!-- LOCAL BUSINESS -->
+
+<div class="info-box" id="businesses">
+
+<h2>🛍️ Promote Local Women Businesses</h2>
+
+<p>
+GramSakhi can help connect villagers with women-owned
+local businesses such as tailoring, food products,
+handicrafts, farming products and home-based services.
+</p>
+
+</div>
+
+</div>
+
+
+<footer>
+
+<p>
+© 2026 GramSakhi | Smart Digital Village Platform
+</p>
+
+</footer>
+
+
+<script>
+
+function goHome(){
+
+    window.location.href="index.html";
+
+}
+
+
+/* SEARCH */
+
+function searchCards(){
+
+    const input =
+    document.getElementById("searchInput")
+    .value.toLowerCase();
+
+    const cards =
+    document.querySelectorAll(".card");
+
+    cards.forEach(function(card){
+
+        const text =
+        card.innerText.toLowerCase();
+
+        if(text.includes(input)){
+
+            card.style.display="block";
+
+        }else{
+
+            card.style.display="none";
+
+        }
+
+    });
+
+}
+
+
+/* LANGUAGE */
+
+let marathi=false;
+
+function changeLanguage(){
+
+    marathi=!marathi;
+
+    if(marathi){
+
+        document.getElementById("title").innerText=
+        "👩‍🌾 महिला आणि बचत गट";
+
+        document.getElementById("subtitle").innerText=
+        "ग्रामीण महिलांना माहिती, कौशल्य आणि संधींद्वारे सक्षम बनवणे";
+
+        document.querySelector(".home-btn").innerText=
+        "🏠 मुख्यपृष्ठ";
+
+        document.querySelector(".lang-btn").innerText=
+        "English";
+
+        document.querySelector(".section-title").innerText=
+        "महिला सक्षमीकरण आणि बचत गट सेवा";
+
+        document.getElementById("searchInput").placeholder=
+        "महिला आणि बचत गट सेवा शोधा...";
+
+    }else{
+
+        location.reload();
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
