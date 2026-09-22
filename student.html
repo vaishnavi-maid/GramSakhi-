@@ -618,7 +618,948 @@
 
 
     </div>
+<section id="gs-career-pathway">
 
+<style>
+#gs-career-pathway {
+    font-family: Arial, sans-serif;
+    background: #f4f8ff;
+    padding: 30px 15px;
+    color: #1f2937;
+}
+
+#gs-career-pathway * {
+    box-sizing: border-box;
+}
+
+.gs-cp-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.gs-cp-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.gs-cp-header h1 {
+    color: #2563eb;
+    margin-bottom: 8px;
+}
+
+.gs-cp-header p {
+    color: #64748b;
+}
+
+.gs-cp-card {
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.gs-cp-start {
+    text-align: center;
+}
+
+.gs-cp-start-icon {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.gs-cp-button {
+    border: none;
+    border-radius: 10px;
+    padding: 14px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.gs-cp-start-btn {
+    background: #2563eb;
+    color: white;
+}
+
+.gs-cp-start-btn:hover {
+    background: #1d4ed8;
+}
+
+.gs-cp-analyze-btn {
+    background: #16a34a;
+    color: white;
+}
+
+.gs-cp-analyze-btn:hover {
+    background: #15803d;
+}
+
+.gs-cp-retake-btn {
+    background: #f59e0b;
+    color: white;
+}
+
+.gs-cp-retake-btn:hover {
+    background: #d97706;
+}
+
+.gs-cp-question {
+    margin-bottom: 25px;
+}
+
+.gs-cp-question h3 {
+    margin-bottom: 12px;
+    color: #1e40af;
+}
+
+.gs-cp-option {
+    display: block;
+    background: #f8fafc;
+    border: 1px solid #dbeafe;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.gs-cp-option:hover {
+    background: #eff6ff;
+}
+
+.gs-cp-option input {
+    margin-right: 10px;
+}
+
+.gs-cp-progress-box {
+    margin-bottom: 25px;
+}
+
+.gs-cp-progress-bg {
+    width: 100%;
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.gs-cp-progress {
+    width: 0%;
+    height: 100%;
+    background: #2563eb;
+    transition: width 0.3s;
+}
+
+.gs-cp-progress-text {
+    text-align: right;
+    font-size: 13px;
+    margin-top: 5px;
+    color: #64748b;
+}
+
+.gs-cp-result {
+    display: none;
+}
+
+.gs-cp-career-title {
+    color: #2563eb;
+    text-align: center;
+    font-size: 28px;
+}
+
+.gs-cp-description {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+.gs-cp-path {
+    background: #f8fafc;
+    border-left: 5px solid #2563eb;
+    padding: 18px;
+    margin: 15px 0;
+    border-radius: 8px;
+}
+
+.gs-cp-path h3 {
+    color: #1e40af;
+    margin-top: 0;
+}
+
+.gs-cp-path li {
+    margin: 8px 0;
+}
+
+.gs-cp-skills {
+    background: #f0fdf4;
+    border-left: 5px solid #16a34a;
+    padding: 18px;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+.gs-cp-skills h3 {
+    color: #15803d;
+    margin-top: 0;
+}
+
+.gs-cp-skills li {
+    margin: 7px 0;
+}
+
+.gs-cp-center {
+    text-align: center;
+}
+</style>
+
+
+<div class="gs-cp-container">
+
+    <div class="gs-cp-header">
+        <h1>🎯 Career Pathway</h1>
+        <p>Find a suitable career direction based on your interests.</p>
+    </div>
+
+
+    <!-- START SCREEN -->
+    <div class="gs-cp-card gs-cp-start" id="gs-cp-start">
+
+        <div class="gs-cp-start-icon">🚀</div>
+
+        <h2>Discover Your Career Path</h2>
+
+        <p>
+            Answer a few simple questions and get career suggestions
+            along with pathways after 10th and 12th.
+        </p>
+
+        <button
+            type="button"
+            class="gs-cp-button gs-cp-start-btn"
+            id="gs-cp-start-button">
+            🚀 Start Career Test
+        </button>
+
+    </div>
+
+
+    <!-- TEST SCREEN -->
+    <div class="gs-cp-card" id="gs-cp-test" style="display:none;">
+
+        <div class="gs-cp-progress-box">
+
+            <div class="gs-cp-progress-bg">
+                <div
+                    class="gs-cp-progress"
+                    id="gs-cp-progress">
+                </div>
+            </div>
+
+            <div
+                class="gs-cp-progress-text"
+                id="gs-cp-progress-text">
+                0 / 8 Questions
+            </div>
+
+        </div>
+
+
+        <!-- QUESTION 1 -->
+        <div class="gs-cp-question">
+
+            <h3>1. What do you enjoy most?</h3>
+
+            <label class="gs-cp-option">
+                <input type="radio" name="gsq1" value="technology">
+                💻 Computers and Technology
+            </label>
+
+            <label class="gs-cp-option">
+                <input type="radio" name="gsq1" value="science">
+                🔬 Science and Experiments
+            </label>
+
+            <label class="gs-cp-option">
+                <input type="radio" name="gsq1" value="business">
+                💼 Business and Management
+            </label>
+
+            <label class="gs-cp-option">
+                <input type="radio" name="gsq1" value="creative">
+                🎨 Drawing and Creativity
+            </label>
+
+        </div>
+
+
+        <!-- QUESTION 2 -->
+        <div class="gs-cp-question">
+
+            <h3>2. Which activity sounds interesting?</h3>
+
+            <label class="gs-cp-option">
+                <input type="radio" name="gsq2" value="technology">
+                Creating a website or app
+            </label>
+
+            <label class="gs-cp-option">
+                <input type="radio" name="gsq2" value="science">
+                Doing a science experiment
+            </label>
+
+            <label class="gs-cp-option">
+                <input type="radio" name="gsq2" value="business">
+                Starting a small business
+            </label>
+
+            <label class="gs-cp-option">
+                <input type="radio" name="gsq2" value="creative">
+                Designing a poster
+            </label>
+
+        </div>
+
+
+        <!-- QUESTION 3 -->
+        <div class="gs-cp-question">
+
+            <h3>3. What type of problem do you like solving?</h3>
+
+            <label class="gs-cp-option">
+                <input type="radio" name="gsq3" value="technology">
+                Logical and computer problems
+            </label>
+
+            <label class="gs-cp-option">
+                <input type="radio" name="gsq3" value="science">
+                Scientific problems
+            </label>
+
+            <label class="gs-cp-option">
+                <input type="radio" name="gsq3" value="business">
+                Business problems
+            </label>
+
+            <label class="gs-cp-option">
+                <input type="radio" name="gsq3" value="creative">
+                Creative problems
+            </label>
+
+        </div>
+
+
+        <!-- QUESTION 4 -->
+        <div class="gs-cp-question">
+
+            <h3>4. Which subject do you prefer?</h3>
+
+            <label class="gs-cp-option">
+                <input type="radio" name="gsq4" value="technology">
+                Computer Science
+            </label>
+
+            <label class="gs-cp-option">
+                <input type="radio" name="gsq4" value="science">
+                Physics / Chemistry / Biology
+            </label>
+
+            <label class="gs-cp-option">
+                <input type="radio" name="gsq4" value="business">
+                Economics / Business Studies
+            </label>
+
+            <label class="gs-cp-option">
+                <input type="radio" name="gsq4" value="creative">
+                Art / Design
+            </label>
+
+        </div>
+
+
+        <!-- QUESTION 5 -->
+        <div class="gs-cp-question">
+
+            <h3>5. What would you like to create?</h3>
+
+            <label class="gs-cp-option">
+                <input type="radio" name="gsq5" value="technology">
+                Software or mobile applications
+            </label>
+
+            <label class="gs-cp-option">
+                <input type="radio" name="gsq5" value="science">
+                Scientific projects
+            </label>
+
+            <label class="gs-cp-option">
+                <input type="radio" name="gsq5" value="business">
+                A company or business
+            </label>
+
+            <label class="gs-cp-option">
+                <input type="radio" name="gsq5" value="creative">
+                Artwork or designs
+            </label>
+
+        </div>
+
+
+        <!-- QUESTION 6 -->
+        <div class="gs-cp-question">
+
+            <h3>6. Which skill would you like to develop?</h3>
+
+            <label class="gs-cp-option">
+                <input type="radio" name="gsq6" value="technology">
+                Programming
+            </label>
+
+            <label class="gs-cp-option">
+                <input type="radio" name="gsq6" value="science">
+                Research
+            </label>
+
+            <label class="gs-cp-option">
+                <input type="radio" name="gsq6" value="business">
+                Leadership
+            </label>
+
+            <label class="gs-cp-option">
+                <input type="radio" name="gsq6" value="creative">
+                Design
+            </label>
+
+        </div>
+
+
+        <!-- QUESTION 7 -->
+        <div class="gs-cp-question">
+
+            <h3>7. What kind of work environment do you prefer?</h3>
+
+            <label class="gs-cp-option">
+                <input type="radio" name="gsq7" value="technology">
+                Working with computers
+            </label>
+
+            <label class="gs-cp-option">
+                <input type="radio" name="gsq7" value="science">
+                Laboratory / Research
+            </label>
+
+            <label class="gs-cp-option">
+                <input type="radio" name="gsq7" value="business">
+                Office / Business
+            </label>
+
+            <label class="gs-cp-option">
+                <input type="radio" name="gsq7" value="creative">
+                Creative studio
+            </label>
+
+        </div>
+
+
+        <!-- QUESTION 8 -->
+        <div class="gs-cp-question">
+
+            <h3>8. What describes you best?</h3>
+
+            <label class="gs-cp-option">
+                <input type="radio" name="gsq8" value="technology">
+                Logical and curious
+            </label>
+
+            <label class="gs-cp-option">
+                <input type="radio" name="gsq8" value="science">
+                Curious and analytical
+            </label>
+
+            <label class="gs-cp-option">
+                <input type="radio" name="gsq8" value="business">
+                Confident and communicative
+            </label>
+
+            <label class="gs-cp-option">
+                <input type="radio" name="gsq8" value="creative">
+                Imaginative and creative
+            </label>
+
+        </div>
+
+
+        <div class="gs-cp-center">
+
+            <button
+                type="button"
+                class="gs-cp-button gs-cp-analyze-btn"
+                id="gs-cp-analyze-button">
+                🎯 Analyze My Career
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- RESULT SCREEN -->
+    <div class="gs-cp-card gs-cp-result" id="gs-cp-result">
+
+        <h2
+            class="gs-cp-career-title"
+            id="gs-cp-career-name">
+        </h2>
+
+        <p
+            class="gs-cp-description"
+            id="gs-cp-career-description">
+        </p>
+
+
+        <div
+            class="gs-cp-path"
+            id="gs-cp-after10">
+        </div>
+
+
+        <div
+            class="gs-cp-path"
+            id="gs-cp-after12">
+        </div>
+
+
+        <div
+            class="gs-cp-skills">
+
+            <h3>⭐ Skills to Develop</h3>
+
+            <ul id="gs-cp-skills-list"></ul>
+
+        </div>
+
+
+        <div class="gs-cp-center">
+
+            <button
+                type="button"
+                class="gs-cp-button gs-cp-retake-btn"
+                id="gs-cp-retake-button">
+                🔄 Retake Career Test
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+(function () {
+
+    /* START BUTTON */
+
+    document.getElementById("gs-cp-start-button").onclick = function () {
+
+        document.getElementById("gs-cp-start").style.display = "none";
+
+        document.getElementById("gs-cp-test").style.display = "block";
+
+        window.scrollTo({
+            top: document.getElementById("gs-cp-test").offsetTop,
+            behavior: "smooth"
+        });
+
+    };
+
+
+    /* PROGRESS */
+
+    function updateProgress() {
+
+        var answered = 0;
+
+        for (var i = 1; i <= 8; i++) {
+
+            var selected = document.querySelector(
+                'input[name="gsq' + i + '"]:checked'
+            );
+
+            if (selected) {
+                answered++;
+            }
+        }
+
+        var percentage = (answered / 8) * 100;
+
+        document.getElementById("gs-cp-progress").style.width =
+            percentage + "%";
+
+        document.getElementById("gs-cp-progress-text").innerHTML =
+            answered + " / 8 Questions";
+    }
+
+
+    /* RADIO BUTTON EVENTS */
+
+    var radios = document.querySelectorAll(
+        '#gs-career-pathway input[type="radio"]'
+    );
+
+    radios.forEach(function (radio) {
+
+        radio.addEventListener("change", updateProgress);
+
+    });
+
+
+    /* ANALYZE BUTTON */
+
+    document.getElementById("gs-cp-analyze-button").onclick = function () {
+
+        var scores = {
+
+            technology: 0,
+            science: 0,
+            business: 0,
+            creative: 0
+
+        };
+
+
+        /* CHECK ALL QUESTIONS */
+
+        for (var i = 1; i <= 8; i++) {
+
+            var answer = document.querySelector(
+                'input[name="gsq' + i + '"]:checked'
+            );
+
+
+            if (!answer) {
+
+                alert(
+                    "Please answer all 8 questions before analyzing your career."
+                );
+
+                return;
+            }
+
+
+            scores[answer.value]++;
+
+        }
+
+
+        /* FIND HIGHEST SCORE */
+
+        var career = "technology";
+
+        var highest = scores.technology;
+
+
+        if (scores.science > highest) {
+
+            career = "science";
+
+            highest = scores.science;
+
+        }
+
+
+        if (scores.business > highest) {
+
+            career = "business";
+
+            highest = scores.business;
+
+        }
+
+
+        if (scores.creative > highest) {
+
+            career = "creative";
+
+            highest = scores.creative;
+
+        }
+
+
+        showCareerResult(career);
+
+    };
+
+
+    /* SHOW RESULT */
+
+    function showCareerResult(career) {
+
+        var name = "";
+
+        var description = "";
+
+        var after10 = "";
+
+        var after12 = "";
+
+        var skills = [];
+
+
+        /* TECHNOLOGY */
+
+        if (career === "technology") {
+
+            name = "💻 Technology & Computer Science";
+
+            description =
+                "Your answers show a strong interest in computers, technology and logical problem solving.";
+
+
+            after10 = `
+                <h3>📘 After 10th</h3>
+                <ul>
+                    <li>Choose Science with Mathematics</li>
+                    <li>Explore Diploma in Computer Engineering</li>
+                    <li>Learn basic programming</li>
+                    <li>Explore Web Development</li>
+                </ul>
+            `;
+
+
+            after12 = `
+                <h3>🎓 After 12th</h3>
+                <ul>
+                    <li>B.E. / B.Tech Computer Engineering</li>
+                    <li>B.Tech Computer Science</li>
+                    <li>Information Technology</li>
+                    <li>Artificial Intelligence</li>
+                    <li>Data Science</li>
+                    <li>BCA / B.Sc. Computer Science</li>
+                </ul>
+            `;
+
+
+            skills = [
+                "Programming",
+                "Web Development",
+                "Problem Solving",
+                "Logical Thinking",
+                "Artificial Intelligence",
+                "Communication"
+            ];
+
+        }
+
+
+        /* SCIENCE */
+
+        else if (career === "science") {
+
+            name = "🔬 Science & Research";
+
+            description =
+                "Your answers show interest in science, experiments, analysis and research.";
+
+
+            after10 = `
+                <h3>📘 After 10th</h3>
+                <ul>
+                    <li>Choose Science stream</li>
+                    <li>Study Physics and Chemistry</li>
+                    <li>Choose Mathematics or Biology according to your interest</li>
+                    <li>Participate in science projects</li>
+                </ul>
+            `;
+
+
+            after12 = `
+                <h3>🎓 After 12th</h3>
+                <ul>
+                    <li>B.Sc.</li>
+                    <li>B.Pharm</li>
+                    <li>B.E. / B.Tech</li>
+                    <li>Medical-related courses</li>
+                    <li>Research and higher studies</li>
+                </ul>
+            `;
+
+
+            skills = [
+                "Scientific Thinking",
+                "Research",
+                "Problem Solving",
+                "Mathematics",
+                "Analytical Thinking"
+            ];
+
+        }
+
+
+        /* BUSINESS */
+
+        else if (career === "business") {
+
+            name = "💼 Business & Management";
+
+            description =
+                "Your answers show interest in business, communication, leadership and management.";
+
+
+            after10 = `
+                <h3>📘 After 10th</h3>
+                <ul>
+                    <li>Consider Commerce stream</li>
+                    <li>Study Economics</li>
+                    <li>Study Business Studies</li>
+                    <li>Develop communication skills</li>
+                </ul>
+            `;
+
+
+            after12 = `
+                <h3>🎓 After 12th</h3>
+                <ul>
+                    <li>B.Com</li>
+                    <li>BBA</li>
+                    <li>BBM</li>
+                    <li>Economics</li>
+                    <li>Management</li>
+                    <li>Entrepreneurship</li>
+                </ul>
+            `;
+
+
+            skills = [
+                "Leadership",
+                "Communication",
+                "Marketing",
+                "Financial Literacy",
+                "Management",
+                "Entrepreneurship"
+            ];
+
+        }
+
+
+        /* CREATIVE */
+
+        else {
+
+            name = "🎨 Creative & Design";
+
+            description =
+                "Your answers show strong interest in creativity, design and creating new things.";
+
+
+            after10 = `
+                <h3>📘 After 10th</h3>
+                <ul>
+                    <li>Explore Arts / Design</li>
+                    <li>Learn Graphic Design</li>
+                    <li>Learn Video Editing</li>
+                    <li>Explore Animation</li>
+                </ul>
+            `;
+
+
+            after12 = `
+                <h3>🎓 After 12th</h3>
+                <ul>
+                    <li>B.Des</li>
+                    <li>BFA</li>
+                    <li>Animation</li>
+                    <li>Multimedia</li>
+                    <li>UI/UX Design</li>
+                    <li>Graphic Design</li>
+                </ul>
+            `;
+
+
+            skills = [
+                "Creativity",
+                "Graphic Design",
+                "UI/UX Design",
+                "Visual Thinking",
+                "Communication",
+                "Digital Tools"
+            ];
+
+        }
+
+
+        /* DISPLAY RESULT */
+
+        document.getElementById("gs-cp-career-name").innerHTML = name;
+
+        document.getElementById("gs-cp-career-description").innerHTML =
+            description;
+
+        document.getElementById("gs-cp-after10").innerHTML =
+            after10;
+
+        document.getElementById("gs-cp-after12").innerHTML =
+            after12;
+
+
+        var skillsHTML = "";
+
+        for (var i = 0; i < skills.length; i++) {
+
+            skillsHTML += "<li>" + skills[i] + "</li>";
+
+        }
+
+
+        document.getElementById("gs-cp-skills-list").innerHTML =
+            skillsHTML;
+
+
+        document.getElementById("gs-cp-test").style.display = "none";
+
+        document.getElementById("gs-cp-result").style.display = "block";
+
+
+        document.getElementById("gs-cp-result").scrollIntoView({
+            behavior: "smooth"
+        });
+
+    }
+    /* RETAKE BUTTON */
+
+    document.getElementById("gs-cp-retake-button").onclick = function () {
+
+        for (var i = 1; i <= 8; i++) {
+
+            var answers = document.querySelectorAll(
+                'input[name="gsq' + i + '"]'
+            );
+
+            answers.forEach(function (answer) {
+                answer.checked = false;
+            });
+        }
+
+        document.getElementById("gs-cp-progress").style.width = "0%";
+
+        document.getElementById("gs-cp-progress-text").innerHTML =
+            "0 / 8 Questions";
+
+        document.getElementById("gs-cp-result").style.display = "none";
+
+        document.getElementById("gs-cp-test").style.display = "block";
+
+        document.getElementById("gs-cp-test").scrollIntoView({
+            behavior: "smooth"
+        });
+
+    };
+
+})();
+</script>
+
+</section>
 
     <!-- NO RESULT -->
 

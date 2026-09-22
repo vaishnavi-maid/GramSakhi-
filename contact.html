@@ -180,6 +180,11 @@ header p{
     cursor:pointer;
 }
 
+.submit-btn:disabled{
+    background:#90caf9;
+    cursor:not-allowed;
+}
+
 #status{
     text-align:center;
     margin-top:15px;
@@ -283,9 +288,6 @@ onclick="openWhatsApp()">
 </div>
 
 
-
-
-
 <!-- GRAMSAKHI EMAIL -->
 
 <div class="card">
@@ -339,7 +341,16 @@ onclick="openMap()">
 
 <h2>📝 Send Us a Message</h2>
 
-<form onsubmit="sendMessage(event)">
+
+<!-- FORMSPREE FORM -->
+
+<form
+id="contactForm"
+action="https://formspree.io/f/mgavkdzn"
+method="POST"
+onsubmit="sendMessage(event)"
+>
+
 
 <div class="form-group">
 
@@ -348,6 +359,7 @@ onclick="openMap()">
 <input
 type="text"
 id="name"
+name="name"
 placeholder="Enter your name"
 required>
 
@@ -361,8 +373,10 @@ required>
 <input
 type="tel"
 id="mobile"
+name="mobile"
 placeholder="Enter 10-digit mobile number"
 maxlength="10"
+pattern="[0-9]{10}"
 required>
 
 </div>
@@ -375,6 +389,7 @@ required>
 <input
 type="email"
 id="email"
+name="email"
 placeholder="Enter your email"
 required>
 
@@ -387,19 +402,30 @@ required>
 
 <textarea
 id="message"
+name="message"
 placeholder="Write your message..."
 required></textarea>
 
 </div>
 
 
+<!-- Email subject -->
+
+<input
+type="hidden"
+name="_subject"
+value="New GramSakhi Contact Message">
+
+
 <button
 type="submit"
-class="submit-btn">
+class="submit-btn"
+id="submitBtn">
 
 📧 Send Message
 
 </button>
+
 
 <div id="status"></div>
 
@@ -452,16 +478,6 @@ function openWhatsApp(){
 }
 
 
-/* PERSONAL EMAIL */
-
-function openPersonalEmail(){
-
-    window.location.href =
-    "mailto:maidvaishnavi8@gmail.com";
-
-}
-
-
 /* GRAMSAKHI EMAIL */
 
 function openGramSakhiEmail(){
@@ -484,56 +500,97 @@ function openMap(){
 }
 
 
-/* SEND MESSAGE */
+/* SEND MESSAGE THROUGH FORMSPREE */
 
-function sendMessage(event){
+async function sendMessage(event){
 
     event.preventDefault();
 
-    const name =
-    document.getElementById("name").value.trim();
+    const form =
+    document.getElementById("contactForm");
+
+    const status =
+    document.getElementById("status");
+
+    const submitBtn =
+    document.getElementById("submitBtn");
 
     const mobile =
     document.getElementById("mobile").value.trim();
 
-    const email =
-    document.getElementById("email").value.trim();
 
-    const message =
-    document.getElementById("message").value.trim();
-
+    /* Check mobile number */
 
     if(!/^[0-9]{10}$/.test(mobile)){
 
-        document.getElementById("status").innerText =
+        status.innerText =
         "❌ Please enter a valid 10-digit mobile number.";
 
-        document.getElementById("status").style.color="red";
+        status.style.color="red";
 
         return;
 
     }
 
 
-    const subject =
-    encodeURIComponent(
-        "GramSakhi Contact - " + name
-    );
+    /* Disable button while sending */
+
+    submitBtn.disabled = true;
+
+    submitBtn.innerText = "📤 Sending...";
+
+    status.innerText = "";
 
 
-    const body =
-    encodeURIComponent(
-        "Name: " + name +
-        "\nMobile: " + mobile +
-        "\nEmail: " + email +
-        "\n\nMessage:\n" + message
-    );
+    try{
+
+        const response =
+        await fetch(form.action,{
+
+            method:"POST",
+
+            body:new FormData(form),
+
+            headers:{
+                "Accept":"application/json"
+            }
+
+        });
 
 
-    window.location.href =
-    "mailto:gramsakhi0104@gmail.com" +
-    "?subject=" + subject +
-    "&body=" + body;
+        if(response.ok){
+
+            status.innerText =
+            "✅ Thank you! Your message has been sent successfully to GramSakhi.";
+
+            status.style.color="#2e7d32";
+
+            form.reset();
+
+        }else{
+
+            status.innerText =
+            "❌ Sorry, your message could not be sent. Please try again.";
+
+            status.style.color="red";
+
+        }
+
+    }catch(error){
+
+        status.innerText =
+        "❌ Something went wrong. Please check your internet connection and try again.";
+
+        status.style.color="red";
+
+    }
+
+
+    /* Enable button again */
+
+    submitBtn.disabled = false;
+
+    submitBtn.innerText = "📧 Send Message";
 
 }
 
