@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>About GramSakhi</title>
 
 <style>
-
 *{
     margin:0;
     padding:0;
@@ -17,246 +15,199 @@
 }
 
 body{
-    background:#f4f9f6;
-    color:#333;
+    background:#f4fff4;
+    color:#222;
+    line-height:1.6;
 }
 
-/* HEADER */
-
 header{
-    background:linear-gradient(135deg,#2e7d32,#66bb6a);
+    background:linear-gradient(135deg,#168a45,#56c271);
     color:white;
     text-align:center;
-    padding:35px 15px;
+    padding:35px 20px;
 }
 
 header h1{
-    font-size:32px;
-    margin-bottom:10px;
+    font-size:36px;
+    margin-bottom:8px;
 }
 
 header p{
-    font-size:16px;
+    font-size:18px;
 }
 
-/* TOP BAR */
-
 .topbar{
-    background:white;
-    padding:12px 18px;
     display:flex;
-    justify-content:space-between;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:10px;
+    padding:15px;
+    background:white;
     box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    position:sticky;
+    top:0;
+    z-index:10;
 }
 
 .topbar button{
     border:none;
-    padding:10px 16px;
-    border-radius:8px;
+    padding:10px 18px;
+    border-radius:25px;
     cursor:pointer;
+    font-size:15px;
     font-weight:bold;
 }
 
 .home-btn{
-    background:#1976d2;
+    background:#168a45;
     color:white;
 }
 
 .lang-btn{
-    background:#ff9800;
-    color:white;
+    background:#ffb703;
+    color:#222;
 }
-
-/* CONTAINER */
 
 .container{
     max-width:1100px;
     margin:auto;
-    padding:25px 15px;
+    padding:25px 20px;
 }
 
 .section{
     background:white;
-    padding:25px;
-    margin-bottom:25px;
-    border-radius:16px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    margin:25px 0;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
 }
 
 .section h2{
-    color:#2e7d32;
+    color:#168a45;
     margin-bottom:15px;
-    text-align:center;
+    font-size:28px;
 }
 
 .section p{
-    line-height:1.7;
-    color:#555;
+    font-size:17px;
 }
 
-/* VISION MISSION */
-
-.vm-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:20px;
-}
-
-.vm-card{
-    padding:25px;
-    border-radius:15px;
+.tagline{
     text-align:center;
-    background:#e8f5e9;
+    background:#e8f8ec;
 }
-
-.vm-card .icon{
-    font-size:45px;
-    margin-bottom:12px;
-}
-
-.vm-card h3{
-    color:#2e7d32;
-    margin-bottom:10px;
-}
-
-/* FEATURES */
-
-.features{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:15px;
-}
-
-.feature{
-    background:#f1f8e9;
-    padding:18px;
-    border-radius:12px;
-    text-align:center;
-}
-
-.feature .icon{
-    font-size:35px;
-    margin-bottom:8px;
-}
-
-.feature h3{
-    color:#388e3c;
-    margin-bottom:8px;
-}
-
-.feature p{
-    font-size:14px;
-    line-height:1.5;
-}
-
-/* USERS */
 
 .users{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
     gap:15px;
+    margin-top:20px;
 }
 
 .user-card{
-    background:#fff8e1;
+    background:#f4fff4;
     padding:20px;
-    border-radius:12px;
     text-align:center;
+    border-radius:15px;
+    font-weight:bold;
+    border:2px solid #d7f0dc;
 }
 
-.user-card .icon{
-    font-size:38px;
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin-top:20px;
+}
+
+.feature-card{
+    background:#f8fff9;
+    padding:22px;
+    border-radius:15px;
+    border-left:5px solid #168a45;
+}
+
+.feature-card h3{
+    color:#168a45;
     margin-bottom:8px;
 }
 
-.user-card h3{
-    color:#ef6c00;
-}
-
-/* FUTURE */
-
 .future-list{
-    margin-top:10px;
+    margin-top:15px;
     padding-left:25px;
 }
 
 .future-list li{
-    margin-bottom:10px;
-    line-height:1.5;
+    margin:10px 0;
+    font-size:16px;
 }
 
-/* TAGLINE */
-
-.tagline{
+.goal{
     text-align:center;
-    background:linear-gradient(135deg,#2e7d32,#43a047);
-    color:white;
-    padding:30px 15px;
-    border-radius:16px;
-    margin-bottom:25px;
+    background:linear-gradient(135deg,#e8f8ec,#f8fff9);
 }
-
-.tagline h2{
-    font-size:25px;
-    margin-bottom:8px;
-}
-
-/* FOOTER */
 
 footer{
-    background:#263238;
+    background:#168a45;
     color:white;
     text-align:center;
-    padding:20px;
+    padding:22px;
+    margin-top:30px;
 }
-
-/* MOBILE */
 
 @media(max-width:600px){
 
     header h1{
-        font-size:25px;
+        font-size:28px;
     }
 
-    .container{
-        padding:20px 12px;
+    .section{
+        padding:22px;
     }
 
+    .section h2{
+        font-size:23px;
+    }
+
+    .topbar button{
+        padding:9px 14px;
+        font-size:14px;
+    }
 }
-
 </style>
-
 </head>
 
 <body>
 
-
-<!-- HEADER -->
-
 <header>
 
-<h1 id="mainTitle">
-🌱 About GramSakhi
-</h1>
+    <h1 id="mainTitle">🌱 GramSakhi बद्दल</h1>
 
-<p id="mainSubtitle">
-One Platform for Every Rural Citizen
-</p>
+    <p id="mainSubtitle">
+        प्रत्येक ग्रामीण नागरिकासाठी एक डिजिटल व्यासपीठ
+    </p>
 
 </header>
 
 
-<!-- TOP BAR -->
-
 <div class="topbar">
 
-<button class="home-btn" onclick="goHome()">
-🏠 Home
-</button>
+    <button class="home-btn" onclick="goHome()">
+        🏠 मुख्यपृष्ठ
+    </button>
 
-<button class="lang-btn" onclick="changeLanguage()">
-मराठी
-</button>
+    <button class="lang-btn" onclick="setMarathi()">
+        मराठी
+    </button>
+
+    <button class="lang-btn" onclick="setHindi()">
+        हिंदी
+    </button>
+
+    <button class="lang-btn" onclick="setEnglish()">
+        English
+    </button>
 
 </div>
 
@@ -264,475 +215,742 @@ One Platform for Every Rural Citizen
 <div class="container">
 
 
-<!-- INTRODUCTION -->
+    <div class="section">
 
-<div class="section">
+        <h2 id="aboutTitle">
+            🌱 GramSakhi म्हणजे काय?
+        </h2>
 
-<h2 id="aboutTitle">
-🌱 What is GramSakhi?
-</h2>
+        <p id="aboutText">
+            GramSakhi हे ग्रामीण नागरिकांना महत्त्वाची माहिती आणि डिजिटल सेवा
+            त्यांच्या जवळ उपलब्ध करून देण्यासाठी तयार केलेले Smart Digital Village
+            Platform आहे. या प्लॅटफॉर्मवर सरकारी योजना, विद्यार्थी, शेतकरी,
+            आरोग्य, रोजगार, आपत्कालीन सेवा, महिला सक्षमीकरण आणि स्थानिक व्यवसाय
+            यासंबंधी उपयुक्त माहिती एकाच ठिकाणी उपलब्ध आहे.
+        </p>
 
-<p id="aboutText">
+    </div>
 
-GramSakhi is a Smart Digital Village Platform designed
-to bring important information and digital services
-closer to rural citizens.
 
-It provides useful information related to government
-schemes, students, farmers, healthcare, employment,
-emergency services, women empowerment and local
-businesses — all in one platform.
+    <div class="section tagline">
 
-The goal of GramSakhi is to reduce the information gap
-between rural citizens and available digital services.
+        <h2 id="taglineTitle">
+            "प्रत्येक ग्रामीण नागरिकासाठी एक व्यासपीठ"
+        </h2>
 
-</p>
+        <p id="taglineText">
+            गावांना माहिती, संधी आणि डिजिटल सेवांशी जोडणे.
+        </p>
 
-</div>
+    </div>
 
 
-<!-- TAGLINE -->
+    <div class="section">
 
-<div class="tagline">
+        <h2 id="vmTitle">
+            🎯 दृष्टी आणि ध्येय
+        </h2>
 
-<h2>
-"One Platform for Every Rural Citizen"
-</h2>
+        <h3 id="visionTitle">
+            आमची दृष्टी
+        </h3>
 
-<p>
-Connecting villages with information, opportunities
-and digital services.
-</p>
+        <p id="visionText">
+            प्रत्येक नागरिकाला महत्त्वाची माहिती, सरकारी सेवा आणि संधी सहज
+            उपलब्ध होतील अशी डिजिटल सक्षम गावे तयार करणे.
+        </p>
 
-</div>
+        <br>
 
+        <h3 id="missionTitle">
+            आमचे ध्येय
+        </h3>
 
-<!-- VISION MISSION -->
+        <p id="missionText">
+            ग्रामीण नागरिकांना चांगले निर्णय घेण्यास आणि जीवनमान सुधारण्यास
+            मदत करणारे सोपे, सुलभ आणि वापरण्यास सोयीचे डिजिटल व्यासपीठ उपलब्ध
+            करून देणे.
+        </p>
 
-<div class="section">
+    </div>
 
-<h2 id="vmTitle">
-🎯 Vision & Mission
-</h2>
 
-<div class="vm-grid">
+    <div class="section">
 
+        <h2 id="whyTitle">
+            💡 GramSakhi का?
+        </h2>
 
-<div class="vm-card">
+        <p id="whyText">
+            अनेक ग्रामीण नागरिकांना सरकारी योजना, शिक्षण, आरोग्य, रोजगार आणि
+            इतर सेवांबद्दल योग्य माहिती शोधण्यात अडचणी येतात. GramSakhi ही
+            माहिती एका सोप्या आणि वापरण्यास सुलभ प्लॅटफॉर्मवर एकत्र आणते आणि
+            डिजिटल माहिती प्रत्येकासाठी उपलब्ध करून देण्याचा प्रयत्न करते.
+        </p>
 
-<div class="icon">
-🌍
-</div>
+    </div>
 
-<h3 id="visionTitle">
-Our Vision
-</h3>
 
-<p id="visionText">
+    <div class="section">
 
-To create digitally empowered villages where every
-citizen can easily access important information,
-government services and opportunities.
+        <h2 id="usersTitle">
+            👥 GramSakhi कोण वापरू शकते?
+        </h2>
 
-</p>
+        <div class="users">
 
-</div>
+            <div class="user-card" id="farmerUser">
+                👨‍🌾 शेतकरी
+            </div>
 
+            <div class="user-card" id="studentUser">
+                🎓 विद्यार्थी
+            </div>
 
-<div class="vm-card">
+            <div class="user-card" id="womenUser">
+                👩 महिला
+            </div>
 
-<div class="icon">
-🚀
-</div>
+            <div class="user-card" id="seniorUser">
+                👴 ज्येष्ठ नागरिक
+            </div>
 
-<h3 id="missionTitle">
-Our Mission
-</h3>
+            <div class="user-card" id="jobUser">
+                💼 रोजगार शोधणारे
+            </div>
 
-<p id="missionText">
+            <div class="user-card" id="ruralUser">
+                🏡 ग्रामीण नागरिक
+            </div>
 
-To provide a simple, accessible and user-friendly
-digital platform that helps rural citizens make
-better decisions and improve their quality of life.
+        </div>
 
-</p>
+    </div>
 
-</div>
 
+    <div class="section">
 
-</div>
+        <h2 id="featuresTitle">
+            ⭐ प्रमुख वैशिष्ट्ये
+        </h2>
 
-</div>
+        <div class="features">
 
 
-<!-- WHY -->
+            <div class="feature-card">
 
-<div class="section">
+                <h3 id="feature1Title">
+                    🏛️ सरकारी योजना
+                </h3>
 
-<h2 id="whyTitle">
-💡 Why GramSakhi?
-</h2>
+                <p id="feature1Text">
+                    उपयुक्त सरकारी योजनांची माहिती.
+                </p>
 
-<p id="whyText">
+            </div>
 
-Many rural citizens face difficulties in finding
-correct information about government schemes,
-education, healthcare, employment and other services.
 
-GramSakhi brings this information together in one
-easy-to-use platform and aims to make digital
-information accessible to everyone.
+            <div class="feature-card">
 
-</p>
+                <h3 id="feature2Title">
+                    🎓 विद्यार्थी विभाग
+                </h3>
 
-</div>
+                <p id="feature2Text">
+                    शिष्यवृत्ती, अभ्यासक्रम, इंटर्नशिप आणि करिअरची माहिती.
+                </p>
 
+            </div>
 
-<!-- USERS -->
 
-<div class="section">
+            <div class="feature-card">
 
-<h2 id="usersTitle">
-👥 Who Can Use GramSakhi?
-</h2>
+                <h3 id="feature3Title">
+                    🌾 शेतकरी विभाग
+                </h3>
 
-<div class="users">
+                <p id="feature3Text">
+                    हवामान, बाजारपेठेची माहिती आणि शेतीविषयक संसाधने.
+                </p>
 
+            </div>
 
-<div class="user-card">
 
-<div class="icon">👨‍🌾</div>
+            <div class="feature-card">
 
-<h3>Farmers</h3>
+                <h3 id="feature4Title">
+                    🏥 आरोग्य विभाग
+                </h3>
 
-</div>
+                <p id="feature4Text">
+                    आरोग्यविषयक माहिती आणि उपयुक्त आरोग्य संसाधने.
+                </p>
 
+            </div>
 
-<div class="user-card">
 
-<div class="icon">🎓</div>
+            <div class="feature-card">
 
-<h3>Students</h3>
+                <h3 id="feature5Title">
+                    🚨 आपत्कालीन सेवा
+                </h3>
 
-</div>
+                <p id="feature5Text">
+                    महत्त्वाच्या आपत्कालीन सेवांपर्यंत जलद प्रवेश.
+                </p>
 
+            </div>
 
-<div class="user-card">
 
-<div class="icon">👩‍🌾</div>
+            <div class="feature-card">
 
-<h3>Women</h3>
+                <h3 id="feature6Title">
+                    💼 रोजगार आणि करिअर
+                </h3>
 
-</div>
+                <p id="feature6Text">
+                    रोजगार आणि करिअरच्या संधी.
+                </p>
 
+            </div>
 
-<div class="user-card">
 
-<div class="icon">👴</div>
+            <div class="feature-card">
 
-<h3>Senior Citizens</h3>
+                <h3 id="feature7Title">
+                    👩‍🌾 महिला आणि SHG
+                </h3>
 
-</div>
+                <p id="feature7Text">
+                    महिला सक्षमीकरण आणि Self Help Group ची माहिती.
+                </p>
 
+            </div>
 
-<div class="user-card">
 
-<div class="icon">💼</div>
+        </div>
 
-<h3>Job Seekers</h3>
+    </div>
 
-</div>
 
+    <div class="section">
 
-<div class="user-card">
+        <h2 id="futureTitle">
+            🚀 भविष्यातील संधी
+        </h2>
 
-<div class="icon">🏘️</div>
+        <ul class="future-list">
 
-<h3>Rural Citizens</h3>
+            <li id="future1">
+                प्रादेशिक भाषांमध्ये AI आधारित सहाय्य
+            </li>
 
-</div>
+            <li id="future2">
+                अधिक सरकारी सेवांचे एकत्रीकरण
+            </li>
 
+            <li id="future3">
+                रिअल-टाइम कृषी बाजारपेठेची माहिती
+            </li>
 
-</div>
+            <li id="future4">
+                ऑनलाइन अर्ज करण्यासाठी मार्गदर्शन
+            </li>
 
-</div>
+            <li id="future5">
+                स्थानिक व्यवसाय आणि रोजगार मार्केटप्लेस
+            </li>
 
+            <li id="future6">
+                ज्येष्ठ नागरिकांसाठी अधिक चांगली सुलभता
+            </li>
 
-<!-- FEATURES -->
+            <li id="future7">
+                अधिक गावांमध्ये विस्तार
+            </li>
 
-<div class="section">
+        </ul>
 
-<h2 id="featuresTitle">
-⭐ Key Features
-</h2>
+    </div>
 
-<div class="features">
 
+    <div class="section goal">
 
-<div class="feature">
+        <h2 id="impactTitle">
+            🌟 आमचे ध्येय
+        </h2>
 
-<div class="icon">🏛️</div>
+        <p id="impactText">
+            GramSakhi चे उद्दिष्ट ग्रामीण समुदायांसाठी डिजिटल माहिती सोपी,
+            सुलभ आणि उपयुक्त बनवणे आहे. तंत्रज्ञानाने फक्त लोकांना इंटरनेटशी
+            जोडू नये, तर लोकांना संधींशी देखील जोडले पाहिजे.
+        </p>
 
-<h3>Government Schemes</h3>
-
-<p>
-Information about useful government schemes.
-</p>
-
-</div>
-
-
-<div class="feature">
-
-<div class="icon">🎓</div>
-
-<h3>Student Corner</h3>
-
-<p>
-Scholarships, courses, internships and career information.
-</p>
-
-</div>
-
-
-<div class="feature">
-
-<div class="icon">🌾</div>
-
-<h3>Farmer Corner</h3>
-
-<p>
-Weather, market information and farming resources.
-</p>
-
-</div>
-
-
-<div class="feature">
-
-<div class="icon">🏥</div>
-
-<h3>Health Corner</h3>
-
-<p>
-Healthcare information and useful health resources.
-</p>
-
-</div>
-
-
-<div class="feature">
-
-<div class="icon">🚨</div>
-
-<h3>Emergency Services</h3>
-
-<p>
-Quick access to important emergency services.
-</p>
-
-</div>
-
-
-<div class="feature">
-
-<div class="icon">💼</div>
-
-<h3>Jobs & Career</h3>
-
-<p>
-Employment and career opportunities.
-</p>
-
-</div>
-
-
-<div class="feature">
-
-<div class="icon">🤝</div>
-
-<h3>Women & SHG</h3>
-
-<p>
-Women empowerment and Self Help Group information.
-</p>
-
-</div>
-
-
-
+    </div>
 
 
 </div>
 
-</div>
-
-
-<!-- FUTURE SCOPE -->
-
-<div class="section">
-
-<h2 id="futureTitle">
-🚀 Future Scope
-</h2>
-
-<ul class="future-list" id="futureList">
-
-<li>
-AI-powered assistance in regional languages
-</li>
-
-<li>
-More government service integration
-</li>
-
-<li>
-Real-time agricultural market information
-</li>
-
-<li>
-Online application guidance
-</li>
-
-<li>
-Local business and employment marketplace
-</li>
-
-<li>
-Improved accessibility for senior citizens
-</li>
-
-<li>
-Expansion to more villages
-</li>
-
-</ul>
-
-</div>
-
-
-<!-- IMPACT -->
-
-<div class="section">
-
-<h2 id="impactTitle">
-🌟 Our Goal
-</h2>
-
-<p id="impactText">
-
-GramSakhi aims to make digital information simple,
-accessible and useful for rural communities.
-
-We believe that technology should not only connect
-people to the internet — it should connect people
-to opportunities.
-
-</p>
-
-</div>
-
-
-</div>
-
-
-<!-- FOOTER -->
 
 <footer>
 
-<p>
-© 2026 GramSakhi | Smart Digital Village Platform
-</p>
+    <p id="footerText">
+        © 2026 GramSakhi | Smart Digital Village Platform
+    </p>
 
 </footer>
 
 
 <script>
 
-/* HOME */
-
 function goHome(){
 
-    window.location.href="index.html";
+    window.location.href = "index.html";
 
 }
 
 
-/* LANGUAGE */
+/* =========================
+   MARATHI
+========================= */
 
-let marathi=false;
+function setMarathi(){
 
-function changeLanguage(){
+    document.getElementById("mainTitle").innerText =
+    "🌱 GramSakhi बद्दल";
 
-    marathi=!marathi;
+    document.getElementById("mainSubtitle").innerText =
+    "प्रत्येक ग्रामीण नागरिकासाठी एक डिजिटल व्यासपीठ";
 
-    if(marathi){
+    document.getElementById("aboutTitle").innerText =
+    "🌱 GramSakhi म्हणजे काय?";
 
-        document.getElementById("mainTitle").innerText=
-        "🌱 GramSakhi बद्दल";
+    document.getElementById("aboutText").innerText =
+    "GramSakhi हे ग्रामीण नागरिकांना महत्त्वाची माहिती आणि डिजिटल सेवा त्यांच्या जवळ उपलब्ध करून देण्यासाठी तयार केलेले Smart Digital Village Platform आहे. या प्लॅटफॉर्मवर सरकारी योजना, विद्यार्थी, शेतकरी, आरोग्य, रोजगार, आपत्कालीन सेवा, महिला सक्षमीकरण आणि स्थानिक व्यवसाय यासंबंधी उपयुक्त माहिती एकाच ठिकाणी उपलब्ध आहे.";
 
-        document.getElementById("mainSubtitle").innerText=
-        "प्रत्येक ग्रामीण नागरिकासाठी एक व्यासपीठ";
+    document.getElementById("taglineTitle").innerText =
+    "\"प्रत्येक ग्रामीण नागरिकासाठी एक व्यासपीठ\"";
 
-        document.querySelector(".home-btn").innerText=
-        "🏠 मुख्यपृष्ठ";
+    document.getElementById("taglineText").innerText =
+    "गावांना माहिती, संधी आणि डिजिटल सेवांशी जोडणे.";
 
-        document.querySelector(".lang-btn").innerText=
-        "English";
+    document.getElementById("vmTitle").innerText =
+    "🎯 दृष्टी आणि ध्येय";
 
-        document.getElementById("aboutTitle").innerText=
-        "🌱 GramSakhi म्हणजे काय?";
+    document.getElementById("visionTitle").innerText =
+    "आमची दृष्टी";
 
-        document.getElementById("aboutText").innerText=
-        "GramSakhi हे ग्रामीण नागरिकांसाठी तयार केलेले स्मार्ट डिजिटल व्हिलेज प्लॅटफॉर्म आहे. सरकारी योजना, शिक्षण, शेती, आरोग्य, रोजगार, आपत्कालीन सेवा, महिला सक्षमीकरण आणि स्थानिक व्यवसाय यासंबंधी माहिती एकाच ठिकाणी उपलब्ध करून देणे हा याचा उद्देश आहे.";
+    document.getElementById("visionText").innerText =
+    "प्रत्येक नागरिकाला महत्त्वाची माहिती, सरकारी सेवा आणि संधी सहज उपलब्ध होतील अशी डिजिटल सक्षम गावे तयार करणे.";
 
-        document.getElementById("vmTitle").innerText=
-        "🎯 आमचे ध्येय आणि उद्दिष्ट";
+    document.getElementById("missionTitle").innerText =
+    "आमचे ध्येय";
 
-        document.getElementById("visionTitle").innerText=
-        "आमचे व्हिजन";
+    document.getElementById("missionText").innerText =
+    "ग्रामीण नागरिकांना चांगले निर्णय घेण्यास आणि जीवनमान सुधारण्यास मदत करणारे सोपे, सुलभ आणि वापरण्यास सोयीचे डिजिटल व्यासपीठ उपलब्ध करून देणे.";
 
-        document.getElementById("visionText").innerText=
-        "प्रत्येक ग्रामीण नागरिकाला डिजिटल माहिती, सरकारी सेवा आणि विविध संधी सहज उपलब्ध करून देणारी डिजिटल गावे तयार करणे.";
+    document.getElementById("whyTitle").innerText =
+    "💡 GramSakhi का?";
 
-        document.getElementById("missionTitle").innerText=
-        "आमचे मिशन";
+    document.getElementById("whyText").innerText =
+    "अनेक ग्रामीण नागरिकांना सरकारी योजना, शिक्षण, आरोग्य, रोजगार आणि इतर सेवांबद्दल योग्य माहिती शोधण्यात अडचणी येतात. GramSakhi ही माहिती एका सोप्या आणि वापरण्यास सुलभ प्लॅटफॉर्मवर एकत्र आणते आणि डिजिटल माहिती प्रत्येकासाठी उपलब्ध करून देण्याचा प्रयत्न करते.";
 
-        document.getElementById("missionText").innerText=
-        "ग्रामीण नागरिकांसाठी सोपे, उपयुक्त आणि वापरण्यास सुलभ डिजिटल व्यासपीठ उपलब्ध करून देणे.";
+    document.getElementById("usersTitle").innerText =
+    "👥 GramSakhi कोण वापरू शकते?";
 
-        document.getElementById("whyTitle").innerText=
-        "💡 GramSakhi का?";
+    document.getElementById("farmerUser").innerText =
+    "👨‍🌾 शेतकरी";
 
-        document.getElementById("whyText").innerText=
-        "ग्रामीण नागरिकांना सरकारी योजना, शिक्षण, आरोग्य, रोजगार आणि इतर सेवांची योग्य माहिती शोधताना अनेक अडचणी येतात. GramSakhi ही माहिती एका सोप्या प्लॅटफॉर्मवर आणण्याचा प्रयत्न करते.";
+    document.getElementById("studentUser").innerText =
+    "🎓 विद्यार्थी";
 
-        document.getElementById("usersTitle").innerText=
-        "👥 GramSakhi कोण वापरू शकतात?";
+    document.getElementById("womenUser").innerText =
+    "👩 महिला";
 
-        document.getElementById("featuresTitle").innerText=
-        "⭐ प्रमुख वैशिष्ट्ये";
+    document.getElementById("seniorUser").innerText =
+    "👴 ज्येष्ठ नागरिक";
 
-        document.getElementById("futureTitle").innerText=
-        "🚀 भविष्यातील विस्तार";
+    document.getElementById("jobUser").innerText =
+    "💼 रोजगार शोधणारे";
 
-        document.getElementById("impactTitle").innerText=
-        "🌟 आमचे उद्दिष्ट";
+    document.getElementById("ruralUser").innerText =
+    "🏡 ग्रामीण नागरिक";
 
-        document.getElementById("impactText").innerText=
-        "ग्रामीण समुदायांसाठी डिजिटल माहिती सोपी, सहज उपलब्ध आणि उपयुक्त बनवणे हे GramSakhi चे उद्दिष्ट आहे.";
+    document.getElementById("featuresTitle").innerText =
+    "⭐ प्रमुख वैशिष्ट्ये";
 
-    }
-    else{
+    document.getElementById("feature1Title").innerText =
+    "🏛️ सरकारी योजना";
 
-        location.reload();
+    document.getElementById("feature1Text").innerText =
+    "उपयुक्त सरकारी योजनांची माहिती.";
 
-    }
+    document.getElementById("feature2Title").innerText =
+    "🎓 विद्यार्थी विभाग";
+
+    document.getElementById("feature2Text").innerText =
+    "शिष्यवृत्ती, अभ्यासक्रम, इंटर्नशिप आणि करिअरची माहिती.";
+
+    document.getElementById("feature3Title").innerText =
+    "🌾 शेतकरी विभाग";
+
+    document.getElementById("feature3Text").innerText =
+    "हवामान, बाजारपेठेची माहिती आणि शेतीविषयक संसाधने.";
+
+    document.getElementById("feature4Title").innerText =
+    "🏥 आरोग्य विभाग";
+
+    document.getElementById("feature4Text").innerText =
+    "आरोग्यविषयक माहिती आणि उपयुक्त आरोग्य संसाधने.";
+
+    document.getElementById("feature5Title").innerText =
+    "🚨 आपत्कालीन सेवा";
+
+    document.getElementById("feature5Text").innerText =
+    "महत्त्वाच्या आपत्कालीन सेवांपर्यंत जलद प्रवेश.";
+
+    document.getElementById("feature6Title").innerText =
+    "💼 रोजगार आणि करिअर";
+
+    document.getElementById("feature6Text").innerText =
+    "रोजगार आणि करिअरच्या संधी.";
+
+    document.getElementById("feature7Title").innerText =
+    "👩‍🌾 महिला आणि SHG";
+
+    document.getElementById("feature7Text").innerText =
+    "महिला सक्षमीकरण आणि Self Help Group ची माहिती.";
+
+    document.getElementById("futureTitle").innerText =
+    "🚀 भविष्यातील संधी";
+
+    document.getElementById("future1").innerText =
+    "प्रादेशिक भाषांमध्ये AI आधारित सहाय्य";
+
+    document.getElementById("future2").innerText =
+    "अधिक सरकारी सेवांचे एकत्रीकरण";
+
+    document.getElementById("future3").innerText =
+    "रिअल-टाइम कृषी बाजारपेठेची माहिती";
+
+    document.getElementById("future4").innerText =
+    "ऑनलाइन अर्ज करण्यासाठी मार्गदर्शन";
+
+    document.getElementById("future5").innerText =
+    "स्थानिक व्यवसाय आणि रोजगार मार्केटप्लेस";
+
+    document.getElementById("future6").innerText =
+    "ज्येष्ठ नागरिकांसाठी अधिक चांगली सुलभता";
+
+    document.getElementById("future7").innerText =
+    "अधिक गावांमध्ये विस्तार";
+
+    document.getElementById("impactTitle").innerText =
+    "🌟 आमचे ध्येय";
+
+    document.getElementById("impactText").innerText =
+    "GramSakhi चे उद्दिष्ट ग्रामीण समुदायांसाठी डिजिटल माहिती सोपी, सुलभ आणि उपयुक्त बनवणे आहे. तंत्रज्ञानाने फक्त लोकांना इंटरनेटशी जोडू नये, तर लोकांना संधींशी देखील जोडले पाहिजे.";
+
+    document.getElementById("footerText").innerText =
+    "© 2026 GramSakhi | Smart Digital Village Platform";
+
+}
+
+
+/* =========================
+   HINDI
+========================= */
+
+function setHindi(){
+
+    document.getElementById("mainTitle").innerText =
+    "🌱 GramSakhi के बारे में";
+
+    document.getElementById("mainSubtitle").innerText =
+    "हर ग्रामीण नागरिक के लिए एक डिजिटल प्लेटफॉर्म";
+
+    document.getElementById("aboutTitle").innerText =
+    "🌱 GramSakhi क्या है?";
+
+    document.getElementById("aboutText").innerText =
+    "GramSakhi एक Smart Digital Village Platform है जिसे ग्रामीण नागरिकों तक महत्वपूर्ण जानकारी और डिजिटल सेवाएँ पहुँचाने के लिए बनाया गया है। इस प्लेटफॉर्म पर सरकारी योजनाओं, छात्रों, किसानों, स्वास्थ्य, रोजगार, आपातकालीन सेवाओं, महिला सशक्तिकरण और स्थानीय व्यवसायों से संबंधित उपयोगी जानकारी एक ही जगह उपलब्ध है।";
+
+    document.getElementById("taglineTitle").innerText =
+    "\"हर ग्रामीण नागरिक के लिए एक प्लेटफॉर्म\"";
+
+    document.getElementById("taglineText").innerText =
+    "गाँवों को जानकारी, अवसरों और डिजिटल सेवाओं से जोड़ना।";
+
+    document.getElementById("vmTitle").innerText =
+    "🎯 दृष्टि और मिशन";
+
+    document.getElementById("visionTitle").innerText =
+    "हमारी दृष्टि";
+
+    document.getElementById("visionText").innerText =
+    "ऐसे डिजिटल रूप से सक्षम गाँव बनाना जहाँ हर नागरिक महत्वपूर्ण जानकारी, सरकारी सेवाओं और अवसरों तक आसानी से पहुँच सके।";
+
+    document.getElementById("missionTitle").innerText =
+    "हमारा मिशन";
+
+    document.getElementById("missionText").innerText =
+    "ग्रामीण नागरिकों को बेहतर निर्णय लेने और उनके जीवन स्तर को सुधारने में मदद करने वाला सरल, सुलभ और उपयोगकर्ता-अनुकूल डिजिटल प्लेटफॉर्म उपलब्ध कराना।";
+
+    document.getElementById("whyTitle").innerText =
+    "💡 GramSakhi क्यों?";
+
+    document.getElementById("whyText").innerText =
+    "कई ग्रामीण नागरिकों को सरकारी योजनाओं, शिक्षा, स्वास्थ्य, रोजगार और अन्य सेवाओं की सही जानकारी खोजने में कठिनाई होती है। GramSakhi इस जानकारी को एक आसान और उपयोगकर्ता-अनुकूल प्लेटफॉर्म पर एकत्र करता है और डिजिटल जानकारी को सभी के लिए सुलभ बनाने का प्रयास करता है।";
+
+    document.getElementById("usersTitle").innerText =
+    "👥 GramSakhi का उपयोग कौन कर सकता है?";
+
+    document.getElementById("farmerUser").innerText =
+    "👨‍🌾 किसान";
+
+    document.getElementById("studentUser").innerText =
+    "🎓 विद्यार्थी";
+
+    document.getElementById("womenUser").innerText =
+    "👩 महिलाएँ";
+
+    document.getElementById("seniorUser").innerText =
+    "👴 वरिष्ठ नागरिक";
+
+    document.getElementById("jobUser").innerText =
+    "💼 नौकरी खोजने वाले";
+
+    document.getElementById("ruralUser").innerText =
+    "🏡 ग्रामीण नागरिक";
+
+    document.getElementById("featuresTitle").innerText =
+    "⭐ प्रमुख विशेषताएँ";
+
+    document.getElementById("feature1Title").innerText =
+    "🏛️ सरकारी योजनाएँ";
+
+    document.getElementById("feature1Text").innerText =
+    "उपयोगी सरकारी योजनाओं की जानकारी।";
+
+    document.getElementById("feature2Title").innerText =
+    "🎓 विद्यार्थी कॉर्नर";
+
+    document.getElementById("feature2Text").innerText =
+    "छात्रवृत्ति, पाठ्यक्रम, इंटर्नशिप और करियर की जानकारी।";
+
+    document.getElementById("feature3Title").innerText =
+    "🌾 किसान कॉर्नर";
+
+    document.getElementById("feature3Text").innerText =
+    "मौसम, बाजार की जानकारी और कृषि संसाधन।";
+
+    document.getElementById("feature4Title").innerText =
+    "🏥 स्वास्थ्य कॉर्नर";
+
+    document.getElementById("feature4Text").innerText =
+    "स्वास्थ्य संबंधी जानकारी और उपयोगी स्वास्थ्य संसाधन।";
+
+    document.getElementById("feature5Title").innerText =
+    "🚨 आपातकालीन सेवाएँ";
+
+    document.getElementById("feature5Text").innerText =
+    "महत्वपूर्ण आपातकालीन सेवाओं तक तेज पहुँच।";
+
+    document.getElementById("feature6Title").innerText =
+    "💼 नौकरी और करियर";
+
+    document.getElementById("feature6Text").innerText =
+    "रोजगार और करियर के अवसर।";
+
+    document.getElementById("feature7Title").innerText =
+    "👩‍🌾 महिला और SHG";
+
+    document.getElementById("feature7Text").innerText =
+    "महिला सशक्तिकरण और Self Help Group की जानकारी।";
+
+    document.getElementById("futureTitle").innerText =
+    "🚀 भविष्य की संभावनाएँ";
+
+    document.getElementById("future1").innerText =
+    "क्षेत्रीय भाषाओं में AI आधारित सहायता";
+
+    document.getElementById("future2").innerText =
+    "अधिक सरकारी सेवाओं का एकीकरण";
+
+    document.getElementById("future3").innerText =
+    "रियल-टाइम कृषि बाजार की जानकारी";
+
+    document.getElementById("future4").innerText =
+    "ऑनलाइन आवेदन के लिए मार्गदर्शन";
+
+    document.getElementById("future5").innerText =
+    "स्थानीय व्यवसाय और रोजगार मार्केटप्लेस";
+
+    document.getElementById("future6").innerText =
+    "वरिष्ठ नागरिकों के लिए बेहतर सुविधा";
+
+    document.getElementById("future7").innerText =
+    "अधिक गाँवों तक विस्तार";
+
+    document.getElementById("impactTitle").innerText =
+    "🌟 हमारा लक्ष्य";
+
+    document.getElementById("impactText").innerText =
+    "GramSakhi का उद्देश्य ग्रामीण समुदायों के लिए डिजिटल जानकारी को सरल, सुलभ और उपयोगी बनाना है। हमारा मानना है कि तकनीक को केवल लोगों को इंटरनेट से नहीं, बल्कि अवसरों से भी जोड़ना चाहिए।";
+
+    document.getElementById("footerText").innerText =
+    "© 2026 GramSakhi | Smart Digital Village Platform";
+
+}
+
+
+/* =========================
+   ENGLISH
+========================= */
+
+function setEnglish(){
+
+    document.getElementById("mainTitle").innerText =
+    "🌱 About GramSakhi";
+
+    document.getElementById("mainSubtitle").innerText =
+    "One Platform for Every Rural Citizen";
+
+    document.getElementById("aboutTitle").innerText =
+    "🌱 What is GramSakhi?";
+
+    document.getElementById("aboutText").innerText =
+    "GramSakhi is a Smart Digital Village Platform designed to bring important information and digital services closer to rural citizens. It provides useful information related to government schemes, students, farmers, healthcare, employment, emergency services, women empowerment and local businesses — all in one platform.";
+
+    document.getElementById("taglineTitle").innerText =
+    "\"One Platform for Every Rural Citizen\"";
+
+    document.getElementById("taglineText").innerText =
+    "Connecting villages with information, opportunities and digital services.";
+
+    document.getElementById("vmTitle").innerText =
+    "🎯 Vision & Mission";
+
+    document.getElementById("visionTitle").innerText =
+    "Our Vision";
+
+    document.getElementById("visionText").innerText =
+    "To create digitally empowered villages where every citizen can easily access important information, government services and opportunities.";
+
+    document.getElementById("missionTitle").innerText =
+    "Our Mission";
+
+    document.getElementById("missionText").innerText =
+    "To provide a simple, accessible and user-friendly digital platform that helps rural citizens make better decisions and improve their quality of life.";
+
+    document.getElementById("whyTitle").innerText =
+    "💡 Why GramSakhi?";
+
+    document.getElementById("whyText").innerText =
+    "Many rural citizens face difficulties in finding correct information about government schemes, education, healthcare, employment and other services. GramSakhi brings this information together in one easy-to-use platform and aims to make digital information accessible to everyone.";
+
+    document.getElementById("usersTitle").innerText =
+    "👥 Who Can Use GramSakhi?";
+
+    document.getElementById("farmerUser").innerText =
+    "👨‍🌾 Farmers";
+
+    document.getElementById("studentUser").innerText =
+    "🎓 Students";
+
+    document.getElementById("womenUser").innerText =
+    "👩 Women";
+
+    document.getElementById("seniorUser").innerText =
+    "👴 Senior Citizens";
+
+    document.getElementById("jobUser").innerText =
+    "💼 Job Seekers";
+
+    document.getElementById("ruralUser").innerText =
+    "🏡 Rural Citizens";
+
+    document.getElementById("featuresTitle").innerText =
+    "⭐ Key Features";
+
+    document.getElementById("feature1Title").innerText =
+    "🏛️ Government Schemes";
+
+    document.getElementById("feature1Text").innerText =
+    "Information about useful government schemes.";
+
+    document.getElementById("feature2Title").innerText =
+    "🎓 Student Corner";
+
+    document.getElementById("feature2Text").innerText =
+    "Scholarships, courses, internships and career information.";
+
+    document.getElementById("feature3Title").innerText =
+    "🌾 Farmer Corner";
+
+    document.getElementById("feature3Text").innerText =
+    "Weather, market information and farming resources.";
+
+    document.getElementById("feature4Title").innerText =
+    "🏥 Health Corner";
+
+    document.getElementById("feature4Text").innerText =
+    "Healthcare information and useful health resources.";
+
+    document.getElementById("feature5Title").innerText =
+    "🚨 Emergency Services";
+
+    document.getElementById("feature5Text").innerText =
+    "Quick access to important emergency services.";
+
+    document.getElementById("feature6Title").innerText =
+    "💼 Jobs & Career";
+
+    document.getElementById("feature6Text").innerText =
+    "Employment and career opportunities.";
+
+    document.getElementById("feature7Title").innerText =
+    "👩‍🌾 Women & SHG";
+
+    document.getElementById("feature7Text").innerText =
+    "Women empowerment and Self Help Group information.";
+
+    document.getElementById("futureTitle").innerText =
+    "🚀 Future Scope";
+
+    document.getElementById("future1").innerText =
+    "AI-powered assistance in regional languages";
+
+    document.getElementById("future2").innerText =
+    "More government service integration";
+
+    document.getElementById("future3").innerText =
+    "Real-time agricultural market information";
+
+    document.getElementById("future4").innerText =
+    "Online application guidance";
+
+    document.getElementById("future5").innerText =
+    "Local business and employment marketplace";
+
+    document.getElementById("future6").innerText =
+    "Improved accessibility for senior citizens";
+
+    document.getElementById("future7").innerText =
+    "Expansion to more villages";
+
+    document.getElementById("impactTitle").innerText =
+    "🌟 Our Goal";
+
+    document.getElementById("impactText").innerText =
+    "GramSakhi aims to make digital information simple, accessible and useful for rural communities. We believe that technology should not only connect people to the internet — it should connect people to opportunities.";
+
+    document.getElementById("footerText").innerText =
+    "© 2026 GramSakhi | Smart Digital Village Platform";
 
 }
 
 </script>
-
 
 </body>
 </html>

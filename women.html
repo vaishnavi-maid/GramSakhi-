@@ -2,181 +2,51 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Women & SHG | GramSakhi</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>GramSakhi - Women & SHGs</title>
 
 <style>
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-    font-family:Arial,sans-serif;
-}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#fff5fa;color:#444}
+header{background:linear-gradient(135deg,#b80055,#f20b67);color:white;text-align:center;padding:30px 15px}
+header h1{margin:0 0 8px;font-size:32px}
+header p{margin:0;font-size:17px}
 
-body{
-    background:#fff7fb;
-    color:#333;
-}
+nav{background:white;padding:15px;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 10px #0002}
+button{cursor:pointer;font-family:Arial}
+.home{background:#2584d8;color:white;border:0;border-radius:10px;padding:12px 24px;font-size:17px;font-weight:bold}
+.languages{display:flex;gap:5px}
+.lang{border:0;background:#eee;padding:10px 14px;border-radius:8px;font-weight:bold}
+.lang.active{background:#ff9800;color:white}
 
-header{
-    background:linear-gradient(135deg,#ad1457,#e91e63);
-    color:white;
-    padding:25px 15px;
-    text-align:center;
-}
+.search{max-width:900px;margin:35px auto;padding:0 20px}
+.search input{width:100%;padding:16px;border:1px solid #ddd;border-radius:12px;font-size:17px}
+.search button{width:100%;margin-top:10px;padding:14px;background:#b80055;color:white;border:0;border-radius:12px;font-size:17px;font-weight:bold}
 
-header h1{
-    font-size:28px;
-    margin-bottom:8px;
-}
+h2.section{text-align:center;color:#a0004d;margin:30px 10px}
 
-header p{
-    font-size:15px;
-}
+.cards{max-width:1100px;margin:auto;padding:10px 20px 50px;display:grid;grid-template-columns:repeat(2,1fr);gap:25px}
+.card{background:white;border-radius:22px;padding:28px;text-align:center;box-shadow:0 4px 18px #0002}
+.icon{font-size:50px}
+.card h3{color:#a0004d;font-size:23px}
+.card p{min-height:60px}
+.learn{background:#b80055;color:white;border:0;border-radius:10px;padding:12px 22px;font-size:16px;font-weight:bold}
 
-.topbar{
-    background:white;
-    padding:12px 18px;
-    display:flex;
-    justify-content:space-between;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
-}
+#noResult{text-align:center;color:#a0004d;font-size:20px;display:none}
 
-button{
-    border:none;
-    padding:10px 16px;
-    border-radius:8px;
-    cursor:pointer;
-    font-weight:bold;
-}
+.modal{display:none;position:fixed;z-index:9999;left:0;top:0;width:100%;height:100%;background:#0008;padding:20px}
+.modalBox{background:white;max-width:650px;margin:8% auto;padding:30px;border-radius:20px;position:relative}
+.close{position:absolute;right:15px;top:8px;background:none;border:0;font-size:32px;color:#a0004d}
+.modalBox h2{color:#a0004d}
+.modalBox li{margin:8px 0}
 
-.home-btn{
-    background:#1976d2;
-    color:white;
-}
+footer{background:#a0004d;color:white;text-align:center;padding:20px}
 
-.lang-btn{
-    background:#ff9800;
-    color:white;
-}
-
-.container{
-    max-width:1100px;
-    margin:auto;
-    padding:25px 15px;
-}
-
-.search-box{
-    display:flex;
-    margin-bottom:25px;
-}
-
-.search-box input{
-    width:100%;
-    padding:13px;
-    border:1px solid #ccc;
-    border-radius:8px 0 0 8px;
-    font-size:16px;
-}
-
-.search-box button{
-    background:#ad1457;
-    color:white;
-    border-radius:0 8px 8px 0;
-}
-
-.section-title{
-    text-align:center;
-    color:#ad1457;
-    margin:20px 0;
-}
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-    gap:18px;
-}
-
-.card{
-    background:white;
-    padding:22px;
-    border-radius:15px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.1);
-    text-align:center;
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-}
-
-.icon{
-    font-size:42px;
-    margin-bottom:10px;
-}
-
-.card h3{
-    color:#ad1457;
-    margin-bottom:10px;
-}
-
-.card p{
-    color:#666;
-    line-height:1.5;
-    font-size:14px;
-    margin-bottom:15px;
-}
-
-.card a{
-    display:inline-block;
-    background:#ad1457;
-    color:white;
-    text-decoration:none;
-    padding:9px 16px;
-    border-radius:7px;
-    font-weight:bold;
-}
-
-.info-box{
-    background:#fce4ec;
-    padding:20px;
-    margin-top:30px;
-    border-radius:12px;
-    line-height:1.6;
-}
-
-.info-box h2{
-    color:#ad1457;
-    margin-bottom:10px;
-}
-
-footer{
-    background:#263238;
-    color:white;
-    text-align:center;
-    padding:20px;
-    margin-top:30px;
-}
-
-@media(max-width:600px){
-
-    header h1{
-        font-size:23px;
-    }
-
-    .search-box{
-        flex-direction:column;
-    }
-
-    .search-box input{
-        border-radius:8px;
-        margin-bottom:8px;
-    }
-
-    .search-box button{
-        border-radius:8px;
-    }
+@media(max-width:700px){
+nav{flex-direction:column;gap:12px}
+.home{width:100%}
+.languages{width:100%;justify-content:center}
+.cards{grid-template-columns:1fr;padding:10px 15px 40px}
 }
 </style>
 </head>
@@ -184,398 +54,366 @@ footer{
 <body>
 
 <header>
-
-<h1 id="title">👩‍🌾 Women & Self Help Groups</h1>
-
-<p id="subtitle">
-Empowering rural women through information, skills and opportunities
-</p>
-
+<h1 id="title">👩 Women & Self Help Groups</h1>
+<p id="subtitle">Empowering rural women through information, skills and opportunities</p>
 </header>
 
+<nav>
 
-<div class="topbar">
+<button class="home" id="home">🏠 Home</button>
 
-<button class="home-btn" onclick="goHome()">
-🏠 Home
-</button>
+<div class="languages">
+<button class="lang active" id="en">English</button>
+<button class="lang" id="mr">मराठी</button>
+<button class="lang" id="hi">हिन्दी</button>
+</div>
 
-<button class="lang-btn" onclick="changeLanguage()">
-मराठी
-</button>
+</nav>
+
+<div class="search">
+
+<input id="searchInput" type="text"
+placeholder="Search women & SHG services">
+
+<button id="searchButton">🔍 Search</button>
 
 </div>
 
-
-<div class="container">
-
-<!-- SEARCH -->
-
-<div class="search-box">
-
-<input
-type="text"
-id="searchInput"
-placeholder="Search women & SHG services..."
-onkeyup="searchCards()"
->
-
-<button onclick="searchCards()">
-🔍 Search
-</button>
-
-</div>
-
-
-<h2 class="section-title">
+<h2 class="section" id="sectionTitle">
 Women Empowerment & SHG Services
 </h2>
 
+<div class="cards" id="cards">
 
-<div class="grid" id="cardContainer">
-
-
-<!-- SHG -->
-
-<div class="card">
-
+<div class="card" data-key="shg self help group savings">
 <div class="icon">🤝</div>
-
-<h3>Self Help Groups</h3>
-
-<p>
-Learn about SHG formation, group activities,
-savings and community development.
-</p>
-
-<a href="#shg">
-Learn More
-</a>
-
+<h3 id="c1">Self Help Groups</h3>
+<p>Learn about SHG formation, savings, meetings and community development.</p>
+<button class="learn" data-info="shg">Learn More</button>
 </div>
 
-
-<!-- Government Schemes -->
-
-<div class="card">
-
+<div class="card" data-key="government schemes yojana women">
 <div class="icon">🏛️</div>
-
 <h3>Government Schemes</h3>
-
-<p>
-Find government schemes and financial support
-available for women.
-</p>
-
-<a href="#schemes">
-View Schemes
-</a>
-
+<p>Find government schemes and support programmes available for women.</p>
+<button class="learn" data-info="schemes">Learn More</button>
 </div>
 
-
-<!-- Skill -->
-
-<div class="card">
-
+<div class="card" data-key="skills training tailoring computer">
 <div class="icon">🎓</div>
-
 <h3>Skill Development</h3>
-
-<p>
-Explore opportunities to learn tailoring,
-computer skills, food processing and more.
-</p>
-
-<a href="#skills">
-Explore Skills
-</a>
-
+<p>Explore training in tailoring, food processing, digital skills and more.</p>
+<button class="learn" data-info="skills">Learn More</button>
 </div>
 
-
-<!-- Business -->
-
-<div class="card">
-
+<div class="card" data-key="business employment job entrepreneurship">
 <div class="icon">💼</div>
-
-<h3>Women Entrepreneurship</h3>
-
-<p>
-Learn how to start and grow your own small business.
-</p>
-
-<a href="#business">
-Start Business
-</a>
-
+<h3>Business & Employment</h3>
+<p>Explore small business ideas, entrepreneurship and employment opportunities.</p>
+<button class="learn" data-info="business">Learn More</button>
 </div>
 
-
-<!-- Finance -->
-
-<div class="card">
-
+<div class="card" data-key="finance bank savings loan">
 <div class="icon">💰</div>
-
-<h3>Financial Support</h3>
-
-<p>
-Information about SHG loans, savings and
-financial assistance.
-</p>
-
-<a href="#finance">
-Learn More
-</a>
-
+<h3>Financial Literacy</h3>
+<p>Learn about savings, banking, loans, insurance and digital payments.</p>
+<button class="learn" data-info="finance">Learn More</button>
 </div>
 
+<div class="card" data-key="health nutrition hygiene">
+<div class="icon">🏥</div>
+<h3>Health & Nutrition</h3>
+<p>Useful information about women's health, nutrition and hygiene.</p>
+<button class="learn" data-info="health">Learn More</button>
+</div>
 
-<!-- Local Business -->
+<div class="card" data-key="education scholarship learning">
+<div class="icon">📚</div>
+<h3>Education</h3>
+<p>Discover scholarships, digital learning and educational opportunities.</p>
+<button class="learn" data-info="education">Learn More</button>
+</div>
 
-<div class="card">
+<div class="card" data-key="safety legal cyber rights">
+<div class="icon">🛡️</div>
+<h3>Safety & Legal Awareness</h3>
+<p>Learn about women's rights, cyber safety and support services.</p>
+<button class="learn" data-info="safety">Learn More</button>
+</div>
 
+<div class="card" data-key="products shg market pickle papad">
 <div class="icon">🛍️</div>
-
-<h3>Women-Owned Businesses</h3>
-
-<p>
-Discover and promote businesses operated by
-local women.
-</p>
-
-<a href="#businesses">
-Explore
-</a>
-
+<h3>SHG Products</h3>
+<p>Showcase and discover products made by local Self Help Groups.</p>
+<button class="learn" data-info="products">Learn More</button>
 </div>
 
-
-</div>
-
-
-<!-- SHG INFORMATION -->
-
-<div class="info-box" id="shg">
-
-<h2>🤝 Self Help Groups (SHGs)</h2>
-
-<p>
-A Self Help Group is a small community-based group
-where members save money together, support each other
-and work towards financial independence.
-</p>
-
-<br>
-
-<p>
-<strong>Benefits:</strong>
-</p>
-
-<ul>
-<li>Regular savings</li>
-<li>Access to credit</li>
-<li>Skill development</li>
-<li>Income generation</li>
-<li>Women empowerment</li>
-<li>Community development</li>
-</ul>
-
-</div>
-
-
-<!-- SCHEMES -->
-
-<div class="info-box" id="schemes">
-
-<h2>🏛️ Government Support</h2>
-
-<p>
-Women can explore government programmes related to
-self-employment, entrepreneurship, skill development,
-financial inclusion and SHG activities.
-</p>
-
-<br>
-
-<p>
-👉 For detailed scheme information, visit the
-Government Schemes section of GramSakhi.
-</p>
-
-</div>
-
-
-<!-- SKILLS -->
-
-<div class="info-box" id="skills">
-
-<h2>🎓 Skill Development</h2>
-
-<p>
-Women can develop skills such as:
-</p>
-
-<ul>
-<li>💻 Computer & Digital Skills</li>
-<li>🧵 Tailoring & Embroidery</li>
-<li>🍱 Food Processing</li>
-<li>🌾 Agricultural Processing</li>
-<li>🎨 Handicrafts</li>
-<li>📱 Digital Marketing</li>
-</ul>
-
-</div>
-
-
-<!-- BUSINESS -->
-
-<div class="info-box" id="business">
-
-<h2>💼 Women Entrepreneurship</h2>
-
-<p>
-GramSakhi encourages rural women to turn their
-skills into sustainable businesses.
-</p>
-
-<br>
-
-<p>
-<strong>Steps:</strong>
-</p>
-
-<ol>
-<li>Identify your skill</li>
-<li>Choose a business idea</li>
-<li>Learn required skills</li>
-<li>Prepare a simple business plan</li>
-<li>Explore financial support</li>
-<li>Start and promote your business</li>
-</ol>
-
-</div>
-
-
-<!-- FINANCE -->
-
-<div class="info-box" id="finance">
-
-<h2>💰 Financial Support</h2>
-
-<p>
-SHG members may explore bank-linked credit,
-microfinance and government-supported programmes.
-Always verify eligibility and current terms before applying.
-</p>
-
-</div>
-
-
-<!-- LOCAL BUSINESS -->
-
-<div class="info-box" id="businesses">
-
-<h2>🛍️ Promote Local Women Businesses</h2>
-
-<p>
-GramSakhi can help connect villagers with women-owned
-local businesses such as tailoring, food products,
-handicrafts, farming products and home-based services.
-</p>
-
+<div class="card" data-key="success stories achievement women">
+<div class="icon">🌟</div>
+<h3>Success Stories</h3>
+<p>Read inspiring stories of women and successful SHGs.</p>
+<button class="learn" data-info="success">Learn More</button>
 </div>
 
 </div>
 
+<div id="noResult">No matching service found.</div>
+
+<div class="modal" id="modal">
+
+<div class="modalBox">
+
+<button class="close" id="close">×</button>
+
+<h2 id="modalTitle"></h2>
+
+<p id="modalText"></p>
+
+<ul id="modalList"></ul>
+
+</div>
+
+</div>
 
 <footer>
-
-<p>
-© 2026 GramSakhi | Smart Digital Village Platform
-</p>
-
+© 2026 GramSakhi - Smart Digital Village
 </footer>
 
 
 <script>
 
-function goHome(){
+var currentLanguage="en";
 
-    window.location.href="index.html";
+var translations={
+
+en:{
+title:"👩 Women & Self Help Groups",
+subtitle:"Empowering rural women through information, skills and opportunities",
+section:"Women Empowerment & SHG Services",
+search:"Search women & SHG services...",
+home:"🏠 Home"
+},
+
+mr:{
+title:"👩 महिला आणि स्वयं सहायता गट",
+subtitle:"माहिती, कौशल्ये आणि संधींद्वारे ग्रामीण महिलांचे सक्षमीकरण",
+section:"महिला सक्षमीकरण आणि SHG सेवा",
+search:"महिला आणि SHG सेवा शोधा...",
+home:"🏠 मुख्यपृष्ठ"
+},
+
+hi:{
+title:"👩 महिलाएँ और स्वयं सहायता समूह",
+subtitle:"जानकारी, कौशल और अवसरों के माध्यम से ग्रामीण महिलाओं का सशक्तिकरण",
+section:"महिला सशक्तिकरण और SHG सेवाएँ",
+search:"महिला और SHG सेवाएँ खोजें...",
+home:"🏠 होम"
+}
+
+};
+
+var info={
+
+shg:{
+en:["🤝 Self Help Groups","Self Help Groups help women work together for savings, skills and income generation.",["SHG formation","Regular savings","Group meetings","Bank linkage","Skill development","Income generation"]],
+mr:["🤝 स्वयं सहायता गट","स्वयं सहायता गट महिलांना बचत, कौशल्य विकास आणि उत्पन्न निर्मितीसाठी एकत्र आणतात.",["SHG स्थापना","नियमित बचत","गट बैठका","बँक जोडणी","कौशल्य विकास","उत्पन्न निर्मिती"]],
+hi:["🤝 स्वयं सहायता समूह","स्वयं सहायता समूह महिलाओं को बचत, कौशल विकास और आय के अवसरों के लिए एक साथ लाते हैं।",["SHG गठन","नियमित बचत","समूह बैठकें","बैंक सहायता","कौशल विकास","आय सृजन"]]
+},
+
+schemes:{
+en:["🏛️ Government Schemes","Information about government programmes that may support women.",["Women empowerment","Skill development","Education","Scholarships","Entrepreneurship support","Financial assistance"]],
+mr:["🏛️ सरकारी योजना","महिलांसाठी उपलब्ध सरकारी योजनांची माहिती.",["महिला सक्षमीकरण","कौशल्य विकास","शिक्षण","शिष्यवृत्ती","उद्योजकता सहाय्य","आर्थिक सहाय्य"]],
+hi:["🏛️ सरकारी योजनाएँ","महिलाओं के लिए उपलब्ध सरकारी योजनाओं की जानकारी।",["महिला सशक्तिकरण","कौशल विकास","शिक्षा","छात्रवृत्ति","उद्यमिता सहायता","वित्तीय सहायता"]]
+},
+
+skills:{
+en:["🎓 Skill Development","Training can help women develop skills for employment or business.",["Tailoring","Food processing","Handicrafts","Computer skills","Digital skills","Business management"]],
+mr:["🎓 कौशल्य विकास","प्रशिक्षणामुळे महिलांना रोजगार किंवा व्यवसायासाठी कौशल्ये विकसित करता येतात.",["शिवणकाम","अन्न प्रक्रिया","हस्तकला","संगणक कौशल्य","डिजिटल कौशल्य","व्यवसाय व्यवस्थापन"]],
+hi:["🎓 कौशल विकास","प्रशिक्षण महिलाओं को रोजगार या व्यवसाय के लिए कौशल विकसित करने में मदद करता है।",["सिलाई","खाद्य प्रसंस्करण","हस्तशिल्प","कंप्यूटर कौशल","डिजिटल कौशल","व्यवसाय प्रबंधन"]]
+},
+
+business:{
+en:["💼 Business & Employment","Explore business and employment opportunities.",["Home businesses","Food products","Tailoring","Handicrafts","Dairy","Local jobs","Online selling"]],
+mr:["💼 व्यवसाय आणि रोजगार","व्यवसाय आणि रोजगाराच्या संधी शोधा.",["घरगुती व्यवसाय","अन्नपदार्थ","शिवणकाम","हस्तकला","दुग्ध व्यवसाय","स्थानिक रोजगार","ऑनलाइन विक्री"]],
+hi:["💼 व्यवसाय और रोजगार","व्यवसाय और रोजगार के अवसर खोजें।",["घरेलू व्यवसाय","खाद्य उत्पाद","सिलाई","हस्तशिल्प","डेयरी","स्थानीय रोजगार","ऑनलाइन बिक्री"]]
+},
+
+finance:{
+en:["💰 Financial Literacy","Learn how to manage money safely.",["Savings","Budgeting","Bank account","Loans","Insurance","UPI","Fraud awareness"]],
+mr:["💰 आर्थिक साक्षरता","पैशांचे सुरक्षित व्यवस्थापन कसे करावे ते शिका.",["बचत","बजेट","बँक खाते","कर्ज","विमा","UPI","फसवणूक जागरूकता"]],
+hi:["💰 वित्तीय साक्षरता","पैसों का सुरक्षित प्रबंधन सीखें।",["बचत","बजट","बैंक खाता","ऋण","बीमा","UPI","धोखाधड़ी जागरूकता"]]
+},
+
+health:{
+en:["🏥 Health & Nutrition","Important health and nutrition information.",["Women's health","Maternal health","Child nutrition","Menstrual hygiene","Balanced diet","Health services"]],
+mr:["🏥 आरोग्य आणि पोषण","आरोग्य आणि पोषणाबाबत महत्त्वाची माहिती.",["महिलांचे आरोग्य","मातृ आरोग्य","बाल पोषण","मासिक पाळी स्वच्छता","संतुलित आहार","आरोग्य सेवा"]],
+hi:["🏥 स्वास्थ्य और पोषण","स्वास्थ्य और पोषण की महत्वपूर्ण जानकारी।",["महिला स्वास्थ्य","मातृ स्वास्थ्य","बाल पोषण","मासिक धर्म स्वच्छता","संतुलित आहार","स्वास्थ्य सेवाएँ"]]
+},
+
+education:{
+en:["📚 Education","Educational opportunities for women and girls.",["Scholarships","Digital learning","Vocational courses","Computer education","Career guidance","Adult education"]],
+mr:["📚 शिक्षण","महिला आणि मुलींसाठी शैक्षणिक संधी.",["शिष्यवृत्ती","डिजिटल शिक्षण","व्यावसायिक अभ्यासक्रम","संगणक शिक्षण","करिअर मार्गदर्शन","प्रौढ शिक्षण"]],
+hi:["📚 शिक्षा","महिलाओं और लड़कियों के लिए शैक्षिक अवसर।",["छात्रवृत्ति","डिजिटल शिक्षा","व्यावसायिक पाठ्यक्रम","कंप्यूटर शिक्षा","करियर मार्गदर्शन","वयस्क शिक्षा"]]
+},
+
+safety:{
+en:["🛡️ Safety & Legal Awareness","Information about safety and basic legal awareness.",["Women's rights","Cyber safety","Workplace safety","Emergency support","Legal support"]],
+mr:["🛡️ सुरक्षा आणि कायदेविषयक माहिती","सुरक्षा आणि मूलभूत कायदेविषयक माहिती.",["महिलांचे अधिकार","सायबर सुरक्षा","कामाच्या ठिकाणी सुरक्षा","आपत्कालीन मदत","कायदेशीर मदत"]],
+hi:["🛡️ सुरक्षा और कानूनी जागरूकता","सुरक्षा और बुनियादी कानूनी जानकारी।",["महिलाओं के अधिकार","साइबर सुरक्षा","कार्यस्थल सुरक्षा","आपातकालीन सहायता","कानूनी सहायता"]]
+},
+
+products:{
+en:["🛍️ SHG Products","Products made by local Self Help Groups.",["Pickles","Papad","Spices","Handicrafts","Clothing","Food products"]],
+mr:["🛍️ SHG उत्पादने","स्थानिक SHG ने तयार केलेली उत्पादने.",["लोणची","पापड","मसाले","हस्तकला","कपडे","अन्नपदार्थ"]],
+hi:["🛍️ SHG उत्पाद","स्थानीय SHG द्वारा बनाए गए उत्पाद।",["अचार","पापड़","मसाले","हस्तशिल्प","कपड़े","खाद्य उत्पाद"]]
+},
+
+success:{
+en:["🌟 Success Stories","Stories of women and SHGs and their achievements.",["Woman's name","Village","SHG name","Business","Achievement","Story"]],
+mr:["🌟 यशोगाथा","महिला आणि SHG यांच्या यशोगाथा.",["महिलेचे नाव","गाव","SHG चे नाव","व्यवसाय","उपलब्धी","कथा"]],
+hi:["🌟 सफलता की कहानियाँ","महिलाओं और SHG की सफलता की कहानियाँ।",["महिला का नाम","गाँव","SHG का नाम","व्यवसाय","उपलब्धि","कहानी"]]
+}
+
+};
+
+
+/* LANGUAGE BUTTONS */
+
+document.getElementById("en").onclick=function(){
+currentLanguage="en";
+changeLanguage();
+};
+
+document.getElementById("mr").onclick=function(){
+currentLanguage="mr";
+changeLanguage();
+};
+
+document.getElementById("hi").onclick=function(){
+currentLanguage="hi";
+changeLanguage();
+};
+
+
+function changeLanguage(){
+
+var t=translations[currentLanguage];
+
+document.getElementById("title").innerText=t.title;
+document.getElementById("subtitle").innerText=t.subtitle;
+document.getElementById("sectionTitle").innerText=t.section;
+document.getElementById("searchInput").placeholder=t.search;
+document.getElementById("home").innerText=t.home;
+
+document.getElementById("en").classList.remove("active");
+document.getElementById("mr").classList.remove("active");
+document.getElementById("hi").classList.remove("active");
+
+document.getElementById(currentLanguage).classList.add("active");
 
 }
 
 
 /* SEARCH */
 
-function searchCards(){
+document.getElementById("searchButton").onclick=function(){
 
-    const input =
-    document.getElementById("searchInput")
-    .value.toLowerCase();
+var value=
+document.getElementById("searchInput").value.toLowerCase();
 
-    const cards =
-    document.querySelectorAll(".card");
+var cards=document.querySelectorAll(".card");
 
-    cards.forEach(function(card){
+var found=0;
 
-        const text =
-        card.innerText.toLowerCase();
+cards.forEach(function(card){
 
-        if(text.includes(input)){
+var text=
+card.innerText.toLowerCase()+
+card.getAttribute("data-key").toLowerCase();
 
-            card.style.display="block";
+if(value==="" || text.includes(value)){
 
-        }else{
+card.style.display="block";
+found++;
 
-            card.style.display="none";
+}else{
 
-        }
-
-    });
+card.style.display="none";
 
 }
 
+});
 
-/* LANGUAGE */
+document.getElementById("noResult").style.display=
+found===0?"block":"none";
 
-let marathi=false;
+};
 
-function changeLanguage(){
 
-    marathi=!marathi;
+/* LEARN MORE */
 
-    if(marathi){
+document.querySelectorAll(".learn").forEach(function(button){
 
-        document.getElementById("title").innerText=
-        "👩‍🌾 महिला आणि बचत गट";
+button.onclick=function(){
 
-        document.getElementById("subtitle").innerText=
-        "ग्रामीण महिलांना माहिती, कौशल्य आणि संधींद्वारे सक्षम बनवणे";
+var type=button.getAttribute("data-info");
 
-        document.querySelector(".home-btn").innerText=
-        "🏠 मुख्यपृष्ठ";
+var data=info[type][currentLanguage];
 
-        document.querySelector(".lang-btn").innerText=
-        "English";
+document.getElementById("modalTitle").innerText=data[0];
 
-        document.querySelector(".section-title").innerText=
-        "महिला सक्षमीकरण आणि बचत गट सेवा";
+document.getElementById("modalText").innerText=data[1];
 
-        document.getElementById("searchInput").placeholder=
-        "महिला आणि बचत गट सेवा शोधा...";
+var list=document.getElementById("modalList");
 
-    }else{
+list.innerHTML="";
 
-        location.reload();
+data[2].forEach(function(item){
 
-    }
+var li=document.createElement("li");
+
+li.innerText=item;
+
+list.appendChild(li);
+
+});
+
+document.getElementById("modal").style.display="block";
+
+};
+
+});
+
+
+/* CLOSE */
+
+document.getElementById("close").onclick=function(){
+
+document.getElementById("modal").style.display="none";
+
+};
+
+
+/* CLICK OUTSIDE */
+
+window.onclick=function(event){
+
+if(event.target===document.getElementById("modal")){
+
+document.getElementById("modal").style.display="none";
 
 }
+
+};
+
+
+/* HOME */
+
+document.getElementById("home").onclick=function(){
+
+window.location.href="index.html";
+
+};
 
 </script>
 

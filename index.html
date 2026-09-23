@@ -5,11 +5,9 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>GramSakhi - Smart Digital Village</title>
-
 
 <style>
 
@@ -21,7 +19,7 @@ content="width=device-width, initial-scale=1.0">
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:Arial,sans-serif;
 }
 
 
@@ -41,16 +39,9 @@ body{
 ========================= */
 
 header{
-    background:linear-gradient(
-        135deg,
-        #2e7d32,
-        #66bb6a
-    );
-
+    background:linear-gradient(135deg,#2e7d32,#66bb6a);
     color:white;
-
     text-align:center;
-
     padding:32px 15px;
 }
 
@@ -69,52 +60,34 @@ header p{
 ========================= */
 
 .quick-tools{
-
     background:white;
-
     padding:14px;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     gap:10px;
-
     flex-wrap:wrap;
-
-    box-shadow:
-    0 2px 8px rgba(0,0,0,0.10);
+    box-shadow:0 2px 8px rgba(0,0,0,0.10);
 }
 
-
 .tool-btn{
-
     border:1px solid #ddd;
-
     background:#f1f1f1;
-
     color:#333;
-
     padding:10px 17px;
-
     border-radius:25px;
-
     cursor:pointer;
-
     font-size:14px;
-
     font-weight:bold;
-
     transition:0.2s;
 }
 
-
 .tool-btn:hover{
-
     transform:scale(1.05);
+}
 
+select.tool-btn{
+    outline:none;
 }
 
 
@@ -123,43 +96,24 @@ header p{
 ========================= */
 
 .search-box{
-
     max-width:700px;
-
     margin:28px auto;
-
     padding:0 15px;
-
 }
-
 
 .search-box input{
-
     width:100%;
-
     padding:15px 20px;
-
-    border:
-
-    2px solid #4caf50;
-
+    border:2px solid #4caf50;
     border-radius:30px;
-
     font-size:16px;
-
     outline:none;
-
     background:white;
-
     color:#333;
-
 }
 
-
 .search-box input:focus{
-
     border-color:#2e7d32;
-
 }
 
 
@@ -168,161 +122,84 @@ header p{
 ========================= */
 
 .welcome{
-
     text-align:center;
-
-    padding:
-    5px 15px 25px;
-
+    padding:5px 15px 25px;
 }
-
 
 .welcome h2{
-
     color:#2e7d32;
-
     margin-bottom:8px;
-
     font-size:27px;
-
 }
 
-
 .welcome p{
-
     color:#666;
-
     font-size:15px;
-
 }
 
 
 /* =========================
-   CARDS CONTAINER
+   CARDS
 ========================= */
 
 .container{
-
     max-width:1150px;
-
     margin:auto;
-
-    padding:
-    5px 15px 40px;
-
+    padding:5px 15px 40px;
 }
-
 
 .cards{
-
     display:grid;
-
-    grid-template-columns:
-    repeat(
-        auto-fit,
-        minmax(220px,1fr)
-    );
-
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:20px;
-
 }
-
-
-/* =========================
-   CARD
-========================= */
 
 .card{
-
     background:white;
-
     border-radius:17px;
-
     padding:25px 18px;
-
     text-align:center;
-
-    box-shadow:
-    0 4px 12px
-    rgba(0,0,0,0.10);
-
+    box-shadow:0 4px 12px rgba(0,0,0,0.10);
     transition:0.3s;
-
 }
-
 
 .card:hover{
-
-    transform:
-    translateY(-6px);
-
-    box-shadow:
-    0 8px 18px
-    rgba(0,0,0,0.15);
-
+    transform:translateY(-6px);
+    box-shadow:0 8px 18px rgba(0,0,0,0.15);
 }
-
 
 .card-icon{
-
     font-size:45px;
-
     margin-bottom:12px;
-
 }
-
 
 .card h3{
-
     color:#2e7d32;
-
     margin-bottom:10px;
-
     font-size:20px;
-
 }
-
 
 .card p{
-
     color:#666;
-
     font-size:14px;
-
     line-height:1.5;
-
     min-height:63px;
-
     margin-bottom:17px;
-
 }
-
 
 .card a{
-
     display:inline-block;
-
     background:#2e7d32;
-
     color:white;
-
     padding:9px 20px;
-
     border-radius:8px;
-
     text-decoration:none;
-
     font-weight:bold;
-
     transition:0.2s;
-
 }
 
-
 .card a:hover{
-
     background:#1b5e20;
-
 }
 
 
@@ -331,24 +208,15 @@ header p{
 ========================= */
 
 footer{
-
     background:#263238;
-
     color:white;
-
     text-align:center;
-
     padding:23px 10px;
-
 }
 
-
 footer p{
-
     margin:5px;
-
     font-size:14px;
-
 }
 
 
@@ -357,77 +225,45 @@ footer p{
 ========================= */
 
 body.dark{
-
     background:#121212;
-
     color:#eee;
-
 }
-
 
 body.dark .quick-tools{
-
     background:#1e1e1e;
-
 }
-
 
 body.dark .tool-btn{
-
     background:#333;
-
     color:white;
-
     border-color:#555;
-
 }
-
 
 body.dark .search-box input{
-
     background:#222;
-
     color:white;
-
     border-color:#66bb6a;
-
 }
-
 
 body.dark .welcome h2{
-
     color:#81c784;
-
 }
-
 
 body.dark .welcome p{
-
     color:#ccc;
-
 }
-
 
 body.dark .card{
-
     background:#1e1e1e;
-
     color:white;
-
 }
-
 
 body.dark .card h3{
-
     color:#81c784;
-
 }
 
-
 body.dark .card p{
-
     color:#ccc;
-
 }
 
 
@@ -438,90 +274,51 @@ body.dark .card p{
 @media(max-width:600px){
 
     header h1{
-
         font-size:28px;
-
     }
-
 
     header p{
-
         font-size:14px;
-
     }
-
 
     .tool-btn{
-
         font-size:13px;
-
-        padding:
-        9px 13px;
-
+        padding:9px 13px;
     }
-
 
     .cards{
-
-        grid-template-columns:
-        repeat(2,1fr);
-
+        grid-template-columns:repeat(2,1fr);
         gap:12px;
-
     }
-
 
     .card{
-
-        padding:
-        20px 10px;
-
+        padding:20px 10px;
     }
-
 
     .card-icon{
-
         font-size:35px;
-
     }
-
 
     .card h3{
-
         font-size:16px;
-
     }
-
 
     .card p{
-
         font-size:12px;
-
         min-height:auto;
-
     }
-
 
     .card a{
-
         font-size:13px;
-
-        padding:
-        8px 14px;
-
+        padding:8px 14px;
     }
-
 }
-
 
 @media(max-width:380px){
 
     .cards{
-
         grid-template-columns:1fr;
-
     }
-
 }
 
 </style>
@@ -538,14 +335,10 @@ body.dark .card p{
 
 <header>
 
-    <h1>
-        🌱 GramSakhi
-    </h1>
+    <h1>🌱 GramSakhi</h1>
 
     <p id="siteSubtitle">
-
         One Platform for Every Rural Citizen
-
     </p>
 
 </header>
@@ -557,20 +350,18 @@ body.dark .card p{
 
 <div class="quick-tools">
 
+    <!-- THREE LANGUAGE BUTTON -->
 
-    <!-- LANGUAGE -->
-
-    <button
+    <select
         class="tool-btn"
-        onclick="toggleLanguage()">
+        id="languageSelect"
+        onchange="changeLanguage()">
 
-        🌐
+        <option value="mr">मराठी</option>
+        <option value="en">English</option>
+        <option value="hi">हिन्दी</option>
 
-        <span id="languageBtn">
-            मराठी
-        </span>
-
-    </button>
+    </select>
 
 
     <!-- DARK / LIGHT -->
@@ -579,16 +370,11 @@ body.dark .card p{
         class="tool-btn"
         onclick="toggleTheme()">
 
-        <span id="themeIcon">
-            🌙
-        </span>
+        <span id="themeIcon">🌙</span>
 
-        <span id="themeBtn">
-            Dark
-        </span>
+        <span id="themeBtn">Dark</span>
 
     </button>
-
 
 </div>
 
@@ -600,13 +386,9 @@ body.dark .card p{
 <div class="search-box">
 
     <input
-
         type="search"
-
         id="searchInput"
-
         placeholder="🔎 Search GramSakhi..."
-
         onkeyup="searchCards()">
 
 </div>
@@ -619,17 +401,12 @@ body.dark .card p{
 <div class="welcome">
 
     <h2 id="welcomeTitle">
-
         Welcome to GramSakhi
-
     </h2>
 
-
     <p id="welcomeText">
-
         Digital information and services
         for rural citizens.
-
     </p>
 
 </div>
@@ -644,396 +421,222 @@ body.dark .card p{
 <div class="cards">
 
 
-<!-- =========================
-     1 GOVERNMENT SCHEMES
-========================= -->
+<!-- 1 GOVERNMENT -->
 
 <div class="card">
 
-    <div class="card-icon">
-        🏛️
-    </div>
-
+    <div class="card-icon">🏛️</div>
 
     <h3
-
         data-en="Government Schemes"
-
         data-mr="सरकारी योजना">
-
         Government Schemes
-
     </h3>
 
-
     <p
-
         data-en="Find useful Central and Maharashtra government schemes."
-
         data-mr="केंद्र आणि महाराष्ट्र सरकारच्या उपयुक्त योजना शोधा.">
-
         Find useful Central and Maharashtra
         government schemes.
-
     </p>
 
-
-    <a href="government.html">
-
-        View
-
-    </a>
+    <a href="government.html">View</a>
 
 </div>
 
 
-<!-- =========================
-     2 STUDENT CORNER
-========================= -->
+<!-- 2 STUDENT -->
 
 <div class="card">
 
-    <div class="card-icon">
-        🎓
-    </div>
-
+    <div class="card-icon">🎓</div>
 
     <h3
-
         data-en="Student Corner"
-
         data-mr="विद्यार्थी विभाग">
-
         Student Corner
-
     </h3>
 
-
     <p
-
         data-en="Scholarships, courses, internships and career guidance."
-
         data-mr="शिष्यवृत्ती, अभ्यासक्रम, इंटर्नशिप आणि करिअर मार्गदर्शन.">
-
         Scholarships, courses,
         internships and career guidance.
-
     </p>
 
-
-    <a href="student.html">
-
-        View
-
-    </a>
+    <a href="student.html">View</a>
 
 </div>
 
 
-<!-- =========================
-     3 FARMER CORNER
-========================= -->
+<!-- 3 FARMER -->
 
 <div class="card">
 
-    <div class="card-icon">
-        🌾
-    </div>
-
+    <div class="card-icon">🌾</div>
 
     <h3
-
         data-en="Farmer Corner"
-
         data-mr="शेतकरी विभाग">
-
         Farmer Corner
-
     </h3>
 
-
     <p
-
         data-en="Weather, mandi prices, crop guidance and schemes."
-
         data-mr="हवामान, बाजारभाव, पीक मार्गदर्शन आणि योजना.">
-
         Weather, mandi prices,
         crop guidance and schemes.
-
     </p>
 
-
-    <a href="farmer.html">
-
-        View
-
-    </a>
+    <a href="farmer.html">View</a>
 
 </div>
 
 
-<!-- =========================
-     4 HEALTH CORNER
-========================= -->
+<!-- 4 HEALTH -->
 
 <div class="card">
 
-    <div class="card-icon">
-        🏥
-    </div>
-
+    <div class="card-icon">🏥</div>
 
     <h3
-
         data-en="Health Corner"
-
         data-mr="आरोग्य विभाग">
-
         Health Corner
-
     </h3>
 
-
     <p
-
         data-en="Healthcare information and important health resources."
-
         data-mr="आरोग्यविषयक माहिती आणि महत्त्वाची आरोग्य संसाधने.">
-
         Healthcare information
         and important health resources.
-
     </p>
 
-
-    <a href="healthscheme.html">
-
-        View
-
-    </a>
+    <a href="healthscheme.html">View</a>
 
 </div>
 
 
-<!-- =========================
-     5 EMERGENCY
-========================= -->
+<!-- 5 EMERGENCY -->
 
 <div class="card">
 
-    <div class="card-icon">
-        🚨
-    </div>
-
+    <div class="card-icon">🚨</div>
 
     <h3
-
         data-en="Emergency Services"
-
         data-mr="आपत्कालीन सेवा">
-
         Emergency Services
-
     </h3>
 
-
     <p
-
         data-en="Quick access to important emergency contacts."
-
         data-mr="महत्त्वाच्या आपत्कालीन संपर्कांची जलद माहिती.">
-
         Quick access to important
         emergency contacts.
-
     </p>
 
-
-    <a href="emergency.html">
-
-        View
-
-    </a>
+    <a href="emergency.html">View</a>
 
 </div>
 
 
-<!-- =========================
-     6 JOBS & CAREER
-========================= -->
+<!-- 6 JOBS -->
 
 <div class="card">
 
-    <div class="card-icon">
-        💼
-    </div>
-
+    <div class="card-icon">💼</div>
 
     <h3
-
         data-en="Jobs & Career"
-
         data-mr="नोकरी आणि करिअर">
-
         Jobs & Career
-
     </h3>
 
-
     <p
-
         data-en="Find employment opportunities and career resources."
-
         data-mr="रोजगाराच्या संधी आणि करिअर संसाधने शोधा.">
-
         Find employment opportunities
         and career resources.
-
     </p>
 
-
-    <a href="jobs.html">
-
-        View
-
-    </a>
+    <a href="jobs.html">View</a>
 
 </div>
 
 
-<!-- =========================
-     7 WOMEN & SHG
-========================= -->
+<!-- 7 WOMEN -->
 
 <div class="card">
 
-    <div class="card-icon">
-        🤝
-    </div>
-
+    <div class="card-icon">🤝</div>
 
     <h3
-
         data-en="Women & SHG"
-
         data-mr="महिला आणि बचत गट">
-
         Women & SHG
-
     </h3>
 
-
     <p
-
         data-en="Women empowerment and Self Help Group resources."
-
         data-mr="महिला सक्षमीकरण आणि बचत गटांसाठी माहिती.">
-
         Women empowerment and
         Self Help Group resources.
-
     </p>
 
-
-    <a href="women.html">
-
-        View
-
-    </a>
+    <a href="women.html">View</a>
 
 </div>
 
 
-
-
-<!-- =========================
-     9 CONTACT US
-========================= -->
+<!-- 8 CONTACT -->
 
 <div class="card">
 
-    <div class="card-icon">
-        📞
-    </div>
-
+    <div class="card-icon">📞</div>
 
     <h3
-
         data-en="Contact Us"
-
         data-mr="आमच्याशी संपर्क साधा">
-
         Contact Us
-
     </h3>
 
-
     <p
-
         data-en="Contact the GramSakhi team."
-
         data-mr="GramSakhi टीमशी संपर्क साधा.">
-
         Contact the GramSakhi team.
-
     </p>
 
-
-    <a href="contact.html">
-
-        View
-
-    </a>
+    <a href="contact.html">View</a>
 
 </div>
 
 
-<!-- =========================
-     10 ABOUT GRAMSAKHI
-========================= -->
+<!-- 9 ABOUT -->
 
 <div class="card">
 
-    <div class="card-icon">
-        🌱
-    </div>
-
+    <div class="card-icon">🌱</div>
 
     <h3
-
         data-en="About GramSakhi"
-
         data-mr="GramSakhi बद्दल">
-
         About GramSakhi
-
     </h3>
 
-
     <p
-
         data-en="Learn about our vision, mission and purpose."
-
         data-mr="आमचे व्हिजन, मिशन आणि उद्देश जाणून घ्या.">
-
         Learn about our vision,
         mission and purpose.
-
     </p>
 
-
-    <a href="about.html">
-
-        View
-
-    </a>
+    <a href="about.html">View</a>
 
 </div>
 
 
 </div>
-
 </div>
 
 
@@ -1043,15 +646,14 @@ body.dark .card p{
 
 <footer>
 
-    <p>
-        #GramSakhi
-    </p>
+    <p>#GramSakhi</p>
 
     <p>
         Smart Digital Village Platform 🌱
-      </p>
-  <p>
-      By Vaishnavi Chima Maid 
+    </p>
+
+    <p>
+        By Vaishnavi Chima Maid
     </p>
 
 </footer>
@@ -1063,20 +665,20 @@ body.dark .card p{
 
 <script>
 
-
 /* =====================================
    LANGUAGE
 ===================================== */
 
-let isMarathi = false;
+let currentLanguage = "mr";
 
 
-function toggleLanguage(){
+function changeLanguage(){
 
-    isMarathi = !isMarathi;
+    currentLanguage =
+        document.getElementById("languageSelect").value;
 
 
-    /* Change card text */
+    /* CARD TEXT */
 
     const elements =
         document.querySelectorAll(
@@ -1086,99 +688,165 @@ function toggleLanguage(){
 
     elements.forEach(function(element){
 
-        if(isMarathi){
+        const english =
+            element.getAttribute("data-en");
 
-            element.textContent =
-                element.getAttribute(
-                    "data-mr"
-                );
+        const marathi =
+            element.getAttribute("data-mr");
+
+
+        if(currentLanguage === "mr"){
+
+            element.textContent = marathi;
+
+        }
+
+        else if(currentLanguage === "en"){
+
+            element.textContent = english;
 
         }
 
         else{
 
+            const hindi = {
+
+                "Government Schemes":
+                    "सरकारी योजनाएं",
+
+                "Find useful Central and Maharashtra government schemes.":
+                    "केंद्र और महाराष्ट्र सरकार की उपयोगी योजनाएं खोजें।",
+
+                "Student Corner":
+                    "विद्यार्थी विभाग",
+
+                "Scholarships, courses, internships and career guidance.":
+                    "छात्रवृत्ति, पाठ्यक्रम, इंटर्नशिप और करियर मार्गदर्शन।",
+
+                "Farmer Corner":
+                    "किसान विभाग",
+
+                "Weather, mandi prices, crop guidance and schemes.":
+                    "मौसम, मंडी भाव, फसल मार्गदर्शन और योजनाएं।",
+
+                "Health Corner":
+                    "स्वास्थ्य विभाग",
+
+                "Healthcare information and important health resources.":
+                    "स्वास्थ्य संबंधी जानकारी और महत्वपूर्ण स्वास्थ्य संसाधन।",
+
+                "Emergency Services":
+                    "आपातकालीन सेवाएं",
+
+                "Quick access to important emergency contacts.":
+                    "महत्वपूर्ण आपातकालीन संपर्कों तक त्वरित पहुंच।",
+
+                "Jobs & Career":
+                    "नौकरी और करियर",
+
+                "Find employment opportunities and career resources.":
+                    "रोजगार के अवसर और करियर संसाधन खोजें।",
+
+                "Women & SHG":
+                    "महिला और स्वयं सहायता समूह",
+
+                "Women empowerment and Self Help Group resources.":
+                    "महिला सशक्तिकरण और स्वयं सहायता समूहों के लिए जानकारी।",
+
+                "Contact Us":
+                    "हमसे संपर्क करें",
+
+                "Contact the GramSakhi team.":
+                    "GramSakhi टीम से संपर्क करें।",
+
+                "About GramSakhi":
+                    "GramSakhi के बारे में",
+
+                "Learn about our vision, mission and purpose.":
+                    "हमारे विजन, मिशन और उद्देश्य के बारे में जानें।"
+
+            };
+
+
             element.textContent =
-                element.getAttribute(
-                    "data-en"
-                );
+                hindi[english] || english;
 
         }
 
     });
 
 
-    /* Language button */
-
-    document.getElementById(
-        "languageBtn"
-    ).textContent =
-        isMarathi
-        ? "English"
-        : "मराठी";
-
-
-    /* Header subtitle */
+    /* HEADER */
 
     document.getElementById(
         "siteSubtitle"
     ).textContent =
-        isMarathi
+
+        currentLanguage === "mr"
+
         ? "प्रत्येक ग्रामीण नागरिकासाठी एक व्यासपीठ"
+
+        : currentLanguage === "hi"
+
+        ? "हर ग्रामीण नागरिक के लिए एक मंच"
+
         : "One Platform for Every Rural Citizen";
 
 
-    /* Welcome title */
+    /* WELCOME TITLE */
 
     document.getElementById(
         "welcomeTitle"
     ).textContent =
-        isMarathi
+
+        currentLanguage === "mr"
+
         ? "GramSakhi मध्ये आपले स्वागत आहे"
+
+        : currentLanguage === "hi"
+
+        ? "GramSakhi में आपका स्वागत है"
+
         : "Welcome to GramSakhi";
 
 
-    /* Welcome paragraph */
+    /* WELCOME TEXT */
 
     document.getElementById(
         "welcomeText"
     ).textContent =
-        isMarathi
+
+        currentLanguage === "mr"
+
         ? "ग्रामीण नागरिकांसाठी डिजिटल माहिती आणि सेवा."
+
+        : currentLanguage === "hi"
+
+        ? "ग्रामीण नागरिकों के लिए डिजिटल जानकारी और सेवाएं।"
+
         : "Digital information and services for rural citizens.";
 
 
-    /* Search placeholder */
+    /* SEARCH */
 
     document.getElementById(
         "searchInput"
     ).placeholder =
-        isMarathi
+
+        currentLanguage === "mr"
+
         ? "🔎 GramSakhi शोधा..."
+
+        : currentLanguage === "hi"
+
+        ? "🔎 GramSakhi खोजें..."
+
         : "🔎 Search GramSakhi...";
 
 
-    /* Theme button */
+    /* THEME BUTTON */
 
-    const dark =
-        document.body.classList.contains(
-            "dark"
-        );
-
-
-    document.getElementById(
-        "themeBtn"
-    ).textContent =
-        dark
-        ? (
-            isMarathi
-            ? "प्रकाश"
-            : "Light"
-          )
-        : (
-            isMarathi
-            ? "गडद"
-            : "Dark"
-          );
+    updateThemeText();
 
 }
 
@@ -1189,49 +857,64 @@ function toggleLanguage(){
 
 function toggleTheme(){
 
-    document.body.classList.toggle(
-        "dark"
-    );
-
+    document.body.classList.toggle("dark");
 
     const dark =
-        document.body.classList.contains(
-            "dark"
-        );
+        document.body.classList.contains("dark");
 
 
     document.getElementById(
         "themeIcon"
     ).textContent =
-        dark
-        ? "☀️"
-        : "🌙";
+        dark ? "☀️" : "🌙";
+
+
+    updateThemeText();
+
+
+    localStorage.setItem(
+        "gramsakhiTheme",
+        dark ? "dark" : "light"
+    );
+
+}
+
+
+/* =====================================
+   THEME TEXT
+===================================== */
+
+function updateThemeText(){
+
+    const dark =
+        document.body.classList.contains("dark");
 
 
     document.getElementById(
         "themeBtn"
     ).textContent =
+
         dark
+
         ? (
-            isMarathi
+            currentLanguage === "mr"
             ? "प्रकाश"
+
+            : currentLanguage === "hi"
+            ? "प्रकाश"
+
             : "Light"
           )
+
         : (
-            isMarathi
+            currentLanguage === "mr"
             ? "गडद"
+
+            : currentLanguage === "hi"
+            ? "डार्क"
+
             : "Dark"
           );
-
-
-    /* Remember user's choice */
-
-    localStorage.setItem(
-        "gramsakhiTheme",
-        dark
-        ? "dark"
-        : "light"
-    );
 
 }
 
@@ -1252,21 +935,17 @@ window.addEventListener(
 
         if(savedTheme === "dark"){
 
-            document.body.classList.add(
-                "dark"
-            );
+            document.body.classList.add("dark");
 
 
             document.getElementById(
                 "themeIcon"
             ).textContent = "☀️";
 
-
-            document.getElementById(
-                "themeBtn"
-            ).textContent = "Light";
-
         }
+
+
+        updateThemeText();
 
     }
 );
@@ -1288,16 +967,13 @@ function searchCards(){
 
 
     const cards =
-        document.querySelectorAll(
-            ".card"
-        );
+        document.querySelectorAll(".card");
 
 
     cards.forEach(function(card){
 
         const text =
-            card.innerText
-            .toLowerCase();
+            card.innerText.toLowerCase();
 
 
         if(text.includes(search)){
@@ -1320,5 +996,4 @@ function searchCards(){
 
 
 </body>
-
 </html>
