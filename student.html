@@ -367,19 +367,7 @@
     </div>
 
 
-    <!-- SEARCH -->
-
-    <div class="search-box">
-
-        <h2>🔍 Search Student Services</h2>
-
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="Search scholarships, internships, courses, exams..."
-            onkeyup="searchServices()">
-
-    </div>
+  
 
 
     <!-- SECTION TITLE -->
@@ -618,9 +606,264 @@
 
 
     </div>
-<section id="gs-career-pathway">
+
+<!-- ========================================================= -->
+<!-- GRAMSAKHI EDUCATION & COURSE GUIDE - FINAL VERSION -->
+<!-- ========================================================= -->
+<section id="gs-education-guide">
 
 <style>
+#gs-education-guide{font-family:Arial,sans-serif;background:#f4f8ff;padding:35px 15px;color:#1f2937}
+#gs-education-guide *{box-sizing:border-box}
+.gs-edu-container{max-width:1200px;margin:auto}
+.gs-edu-header{text-align:center;margin-bottom:30px}
+.gs-edu-header h1{color:#2563eb;margin-bottom:10px;font-size:30px}
+.gs-edu-header p{color:#64748b;line-height:1.6}
+.gs-edu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.gs-edu-card{background:white;border-radius:16px;padding:22px;box-shadow:0 5px 18px rgba(0,0,0,.08);border-top:5px solid #2563eb;transition:.25s;cursor:pointer}
+.gs-edu-card:hover{transform:translateY(-5px);box-shadow:0 8px 22px rgba(0,0,0,.12)}
+.gs-edu-icon{font-size:42px;margin-bottom:10px}
+.gs-edu-card h3{color:#1e40af;margin-bottom:10px;font-size:20px}
+.gs-edu-card p{color:#555;line-height:1.6;margin-bottom:15px}
+.gs-edu-btn{border:none;background:#2563eb;color:white;padding:10px 17px;border-radius:8px;cursor:pointer;font-size:14px;font-weight:bold}
+.gs-edu-btn:hover{background:#1d4ed8}
+
+/* MODAL - OPENS IN CENTER, NOT AT BOTTOM */
+.gs-edu-modal{display:none;position:fixed;z-index:99999;left:0;top:0;width:100%;height:100%;background:rgba(15,23,42,.72);padding:20px;overflow-y:auto}
+.gs-edu-modal-box{position:relative;width:min(1000px,100%);margin:30px auto;background:white;border-radius:20px;box-shadow:0 15px 50px rgba(0,0,0,.35);overflow:hidden;animation:gsEduOpen .22s ease}
+@keyframes gsEduOpen{from{transform:scale(.96);opacity:0}to{transform:scale(1);opacity:1}}
+.gs-edu-modal-head{background:#2563eb;color:white;padding:22px 55px 22px 25px;position:relative}
+.gs-edu-modal-head h2{margin:0;font-size:26px}
+.gs-edu-modal-head p{margin:8px 0 0;line-height:1.5}
+.gs-edu-modal-close{position:absolute;right:15px;top:12px;border:none;background:white;color:#1d4ed8;width:38px;height:38px;border-radius:50%;font-size:22px;font-weight:bold;cursor:pointer}
+.gs-edu-modal-body{padding:25px}
+.gs-edu-info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.gs-edu-info{background:#f8fafc;border-left:5px solid #2563eb;padding:16px;border-radius:10px}
+.gs-edu-info h3{margin:0 0 8px;color:#15803d;font-size:17px}
+.gs-edu-info p{margin:0;color:#374151;line-height:1.6}
+.gs-edu-info ul{margin:5px 0 0;padding-left:20px;color:#374151}
+.gs-edu-info li{margin:6px 0}
+.gs-edu-resources{margin-top:22px}
+.gs-edu-resources h3{color:#1e40af;margin-bottom:12px}
+.gs-edu-resource-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.gs-edu-resource{display:block;text-decoration:none;background:#eff6ff;border:1px solid #bfdbfe;color:#1d4ed8;padding:13px;border-radius:10px;font-weight:bold;text-align:center;transition:.2s}
+.gs-edu-resource:hover{background:#dbeafe;transform:translateY(-2px)}
+.gs-edu-note{margin-top:20px;padding:14px;background:#fff7ed;border-left:5px solid #f97316;border-radius:8px;color:#7c2d12;line-height:1.6}
+.gs-edu-bottom-close{margin-top:22px;border:none;background:#dc2626;color:white;padding:11px 20px;border-radius:8px;cursor:pointer;font-weight:bold}
+.gs-edu-bottom-close:hover{background:#b91c1c}
+
+@media(max-width:900px){
+.gs-edu-grid{grid-template-columns:repeat(2,1fr)}
+.gs-edu-resource-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+#gs-education-guide{padding:25px 12px}
+.gs-edu-grid{grid-template-columns:1fr}
+.gs-edu-info-grid{grid-template-columns:1fr}
+.gs-edu-resource-grid{grid-template-columns:1fr}
+.gs-edu-header h1{font-size:26px}
+.gs-edu-modal{padding:10px}
+.gs-edu-modal-box{margin:10px auto;border-radius:14px}
+.gs-edu-modal-head{padding:20px 50px 20px 18px}
+.gs-edu-modal-head h2{font-size:22px}
+.gs-edu-modal-body{padding:18px}
+}
+</style>
+
+<div class="gs-edu-container">
+
+<div class="gs-edu-header">
+<h1>🎓 Education & Course Guide</h1>
+<p>Explore courses, eligibility, admission process, entrance exams, study resources, notes, video lectures, career options and higher-study pathways.</p>
+</div>
+
+<div class="gs-edu-grid">
+
+<div class="gs-edu-card" data-edu-search="engineering be btech computer civil mechanical electrical electronics information technology ai data science">
+<div class="gs-edu-icon">💻</div><h3>Engineering</h3><p>B.E. / B.Tech in technical and engineering fields.</p><button type="button" class="gs-edu-btn" onclick="showEducation('engineering')">View Complete Guide</button>
+</div>
+
+<div class="gs-edu-card" data-edu-search="polytechnic diploma engineering technical diploma after 10th">
+<div class="gs-edu-icon">🏫</div><h3>Polytechnic / Diploma</h3><p>Practical technical diploma pathways after 10th.</p><button type="button" class="gs-edu-btn" onclick="showEducation('polytechnic')">View Complete Guide</button>
+</div>
+
+<div class="gs-edu-card" data-edu-search="bcs bca computer science computer applications programming it">
+<div class="gs-edu-icon">🖥️</div><h3>BCS / BCA</h3><p>Computer applications, programming and IT education.</p><button type="button" class="gs-edu-btn" onclick="showEducation('bcs')">View Complete Guide</button>
+</div>
+
+<div class="gs-edu-card" data-edu-search="bsc science physics chemistry mathematics biology computer science biotechnology microbiology">
+<div class="gs-edu-icon">🔬</div><h3>B.Sc.</h3><p>Science degree options across pure, applied and computer sciences.</p><button type="button" class="gs-edu-btn" onclick="showEducation('bsc')">View Complete Guide</button>
+</div>
+
+<div class="gs-edu-card" data-edu-search="msc master science physics chemistry mathematics computer biotechnology microbiology">
+<div class="gs-edu-icon">🧪</div><h3>M.Sc.</h3><p>Postgraduate science specialisation and research pathways.</p><button type="button" class="gs-edu-btn" onclick="showEducation('msc')">View Complete Guide</button>
+</div>
+
+<div class="gs-edu-card" data-edu-search="ba arts humanities english marathi history economics political science psychology sociology">
+<div class="gs-edu-icon">📚</div><h3>B.A.</h3><p>Arts, humanities, languages and social-science education.</p><button type="button" class="gs-edu-btn" onclick="showEducation('ba')">View Complete Guide</button>
+</div>
+
+<div class="gs-edu-card" data-edu-search="ma master arts humanities languages history economics political science psychology sociology">
+<div class="gs-edu-icon">🎓</div><h3>M.A.</h3><p>Postgraduate humanities and social-science education.</p><button type="button" class="gs-edu-btn" onclick="showEducation('ma')">View Complete Guide</button>
+</div>
+
+<div class="gs-edu-card" data-edu-search="bcom commerce accounting finance taxation economics banking business">
+<div class="gs-edu-icon">💰</div><h3>B.Com.</h3><p>Commerce, accounting, finance, taxation and business.</p><button type="button" class="gs-edu-btn" onclick="showEducation('bcom')">View Complete Guide</button>
+</div>
+
+<div class="gs-edu-card" data-edu-search="mcom master commerce accounting finance taxation business economics">
+<div class="gs-edu-icon">📊</div><h3>M.Com.</h3><p>Advanced commerce, finance, accounting and business studies.</p><button type="button" class="gs-edu-btn" onclick="showEducation('mcom')">View Complete Guide</button>
+</div>
+
+<div class="gs-edu-card" data-edu-search="agriculture farming horticulture agribusiness agricultural engineering crop science">
+<div class="gs-edu-icon">🌾</div><h3>Agriculture</h3><p>Agriculture, horticulture, agribusiness and allied fields.</p><button type="button" class="gs-edu-btn" onclick="showEducation('agriculture')">View Complete Guide</button>
+</div>
+
+<div class="gs-edu-card" data-edu-search="pharmacy dpharm bpharm mpharm medicines pharmaceutical sciences">
+<div class="gs-edu-icon">💊</div><h3>Pharmacy</h3><p>D.Pharm, B.Pharm and pharmaceutical-science pathways.</p><button type="button" class="gs-edu-btn" onclick="showEducation('pharmacy')">View Complete Guide</button>
+</div>
+
+<div class="gs-edu-card" data-edu-search="mbbs medical doctor medicine neet healthcare">
+<div class="gs-edu-icon">🩺</div><h3>MBBS / Medical</h3><p>Medical education pathway for aspiring doctors.</p><button type="button" class="gs-edu-btn" onclick="showEducation('mbbs')">View Complete Guide</button>
+</div>
+
+<div class="gs-edu-card" data-edu-search="dental bds dentist dental surgery oral health neet">
+<div class="gs-edu-icon">🦷</div><h3>Dental / BDS</h3><p>Dental education and oral-health career pathway.</p><button type="button" class="gs-edu-btn" onclick="showEducation('dental')">View Complete Guide</button>
+</div>
+
+<div class="gs-edu-card" data-edu-search="teaching education bed deled med teacher school teaching">
+<div class="gs-edu-icon">👩‍🏫</div><h3>Teaching & Education</h3><p>Teacher-training courses and education careers.</p><button type="button" class="gs-edu-btn" onclick="showEducation('teaching')">View Complete Guide</button>
+</div>
+
+<div class="gs-edu-card" data-edu-search="law llb llm legal clat mah llb law career">
+<div class="gs-edu-icon">⚖️</div><h3>Law</h3><p>Integrated law, LL.B., LL.M. and legal careers.</p><button type="button" class="gs-edu-btn" onclick="showEducation('law')">View Complete Guide</button>
+</div>
+
+<div class="gs-edu-card" data-edu-search="nursing bsc nursing gnm anm nursing officer healthcare">
+<div class="gs-edu-icon">👩‍⚕️</div><h3>Nursing</h3><p>ANM, GNM, B.Sc. Nursing and higher pathways.</p><button type="button" class="gs-edu-btn" onclick="showEducation('nursing')">View Complete Guide</button>
+</div>
+
+<div class="gs-edu-card" data-edu-search="paramedical laboratory radiology physiotherapy medical imaging healthcare">
+<div class="gs-edu-icon">🏥</div><h3>Paramedical</h3><p>Laboratory, imaging, physiotherapy and allied-health fields.</p><button type="button" class="gs-edu-btn" onclick="showEducation('paramedical')">View Complete Guide</button>
+</div>
+
+<div class="gs-edu-card" data-edu-search="veterinary bvsc animal doctor animal husbandry veterinary science">
+<div class="gs-edu-icon">🐄</div><h3>Veterinary</h3><p>Animal health, veterinary science and animal husbandry.</p><button type="button" class="gs-edu-btn" onclick="showEducation('veterinary')">View Complete Guide</button>
+</div>
+
+<div class="gs-edu-card" data-edu-search="architecture barch nata building design planning interior">
+<div class="gs-edu-icon">🏛️</div><h3>Architecture</h3><p>Architecture, planning, building design and related fields.</p><button type="button" class="gs-edu-btn" onclick="showEducation('architecture')">View Complete Guide</button>
+</div>
+
+<div class="gs-edu-card" data-edu-search="design creative arts graphic fashion ui ux animation fine arts nift">
+<div class="gs-edu-icon">🎨</div><h3>Design & Creative Arts</h3><p>Graphic, fashion, UI/UX, animation and creative careers.</p><button type="button" class="gs-edu-btn" onclick="showEducation('design')">View Complete Guide</button>
+</div>
+
+<div class="gs-edu-card" data-edu-search="hotel management hospitality tourism food production event management nchm">
+<div class="gs-edu-icon">🏨</div><h3>Hotel Management</h3><p>Hospitality, hotel, tourism, food service and events.</p><button type="button" class="gs-edu-btn" onclick="showEducation('hotel')">View Complete Guide</button>
+</div>
+
+<div class="gs-edu-card" data-edu-search="iti skill courses electrician fitter welder mechanic plumber vocational">
+<div class="gs-edu-icon">🔧</div><h3>ITI & Skill Courses</h3><p>Practical skill-based technical and vocational education.</p><button type="button" class="gs-edu-btn" onclick="showEducation('iti')">View Complete Guide</button>
+</div>
+
+</div>
+</div>
+
+<!-- EDUCATION MODAL -->
+
+<div id="gsEducationModal" class="gs-edu-modal" role="dialog" aria-modal="true">
+
+<div class="gs-edu-modal-box">
+
+<div class="gs-edu-modal-head">
+
+<button type="button"
+class="gs-edu-modal-close"
+onclick="closeEducation()">×</button>
+
+<h2 id="gsEducationTitle">Education Guide</h2>
+
+<p id="gsEducationIntro"></p>
+
+</div>
+
+<div class="gs-edu-modal-body">
+
+<div class="gs-edu-info-grid">
+
+<div class="gs-edu-info">
+<h3>🎯 Eligibility</h3>
+<p id="gsEduEligibility"></p>
+</div>
+
+<div class="gs-edu-info">
+<h3>⏳ Duration</h3>
+<p id="gsEduDuration"></p>
+</div>
+
+<div class="gs-edu-info">
+<h3>📝 Admission Process</h3>
+<p id="gsEduAdmission"></p>
+</div>
+
+<div class="gs-edu-info">
+<h3>📋 Required Entrance Exam</h3>
+<p id="gsEduEntrance"></p>
+</div>
+
+<div class="gs-edu-info">
+<h3>📘 Courses / Areas</h3>
+<ul id="gsEduAreas"></ul>
+</div>
+
+<div class="gs-edu-info">
+<h3>🛣️ Education Pathway</h3>
+<p id="gsEduPathway"></p>
+</div>
+
+<div class="gs-edu-info">
+<h3>💼 Career Options</h3>
+<p id="gsEduCareers"></p>
+</div>
+
+<div class="gs-edu-info">
+<h3>🎓 Higher Studies</h3>
+<p id="gsEduHigher"></p>
+</div>
+
+</div>
+
+<div class="gs-edu-resources">
+
+<h3>📚 Study Material, Notes & Video Lectures</h3>
+
+<div class="gs-edu-resource-grid"
+id="gsEduResources"></div>
+
+</div>
+
+<div class="gs-edu-note"
+id="gsEduNote"></div>
+
+<button type="button"
+class="gs-edu-bottom-close"
+onclick="closeEducation()">
+✖ Close Guide
+</button>
+
+</div>
+</div>
+</div>
+
+</section>
+
+<!-- END OF FINAL EDUCATION GUIDE -->
+
+<section id="gs-career-pathway">
+
+  <style>
+
 #gs-career-pathway {
     font-family: Arial, sans-serif;
     background: #f4f8ff;
@@ -804,15 +1047,10 @@
     margin-top: 0;
 }
 
-.gs-cp-skills li {
-    margin: 7px 0;
-}
+  </style>
 
-.gs-cp-center {
-    text-align: center;
-}
+
 </style>
-
 
 <div class="gs-cp-container">
 
@@ -820,7 +1058,6 @@
         <h1>🎯 Career Pathway</h1>
         <p>Find a suitable career direction based on your interests.</p>
     </div>
-
 
     <!-- START SCREEN -->
     <div class="gs-cp-card gs-cp-start" id="gs-cp-start">
@@ -843,17 +1080,13 @@
 
     </div>
 
-
     <!-- TEST SCREEN -->
     <div class="gs-cp-card" id="gs-cp-test" style="display:none;">
 
         <div class="gs-cp-progress-box">
 
             <div class="gs-cp-progress-bg">
-                <div
-                    class="gs-cp-progress"
-                    id="gs-cp-progress">
-                </div>
+                <div class="gs-cp-progress" id="gs-cp-progress"></div>
             </div>
 
             <div
@@ -864,8 +1097,6 @@
 
         </div>
 
-
-        <!-- QUESTION 1 -->
         <div class="gs-cp-question">
 
             <h3>1. What do you enjoy most?</h3>
@@ -892,8 +1123,6 @@
 
         </div>
 
-
-        <!-- QUESTION 2 -->
         <div class="gs-cp-question">
 
             <h3>2. Which activity sounds interesting?</h3>
@@ -920,8 +1149,6 @@
 
         </div>
 
-
-        <!-- QUESTION 3 -->
         <div class="gs-cp-question">
 
             <h3>3. What type of problem do you like solving?</h3>
@@ -948,8 +1175,6 @@
 
         </div>
 
-
-        <!-- QUESTION 4 -->
         <div class="gs-cp-question">
 
             <h3>4. Which subject do you prefer?</h3>
@@ -976,8 +1201,6 @@
 
         </div>
 
-
-        <!-- QUESTION 5 -->
         <div class="gs-cp-question">
 
             <h3>5. What would you like to create?</h3>
@@ -1004,8 +1227,6 @@
 
         </div>
 
-
-        <!-- QUESTION 6 -->
         <div class="gs-cp-question">
 
             <h3>6. Which skill would you like to develop?</h3>
@@ -1032,8 +1253,6 @@
 
         </div>
 
-
-        <!-- QUESTION 7 -->
         <div class="gs-cp-question">
 
             <h3>7. What kind of work environment do you prefer?</h3>
@@ -1060,8 +1279,6 @@
 
         </div>
 
-
-        <!-- QUESTION 8 -->
         <div class="gs-cp-question">
 
             <h3>8. What describes you best?</h3>
@@ -1088,7 +1305,6 @@
 
         </div>
 
-
         <div class="gs-cp-center">
 
             <button
@@ -1102,42 +1318,28 @@
 
     </div>
 
-
     <!-- RESULT SCREEN -->
+
     <div class="gs-cp-card gs-cp-result" id="gs-cp-result">
 
-        <h2
-            class="gs-cp-career-title"
-            id="gs-cp-career-name">
-        </h2>
+        <h2 class="gs-cp-career-title" id="gs-cp-career-name"></h2>
 
         <p
             class="gs-cp-description"
             id="gs-cp-career-description">
         </p>
 
+        <div class="gs-cp-path" id="gs-cp-after10"></div>
 
-        <div
-            class="gs-cp-path"
-            id="gs-cp-after10">
-        </div>
+        <div class="gs-cp-path" id="gs-cp-after12"></div>
 
-
-        <div
-            class="gs-cp-path"
-            id="gs-cp-after12">
-        </div>
-
-
-        <div
-            class="gs-cp-skills">
+        <div class="gs-cp-skills">
 
             <h3>⭐ Skills to Develop</h3>
 
             <ul id="gs-cp-skills-list"></ul>
 
         </div>
-
 
         <div class="gs-cp-center">
 
@@ -1154,12 +1356,9 @@
 
 </div>
 
-
 <script>
 
 (function () {
-
-    /* START BUTTON */
 
     document.getElementById("gs-cp-start-button").onclick = function () {
 
@@ -1167,15 +1366,12 @@
 
         document.getElementById("gs-cp-test").style.display = "block";
 
-        window.scrollTo({
-            top: document.getElementById("gs-cp-test").offsetTop,
+        document.getElementById("gs-cp-test").scrollIntoView({
             behavior: "smooth"
         });
 
     };
 
-
-    /* PROGRESS */
 
     function updateProgress() {
 
@@ -1190,6 +1386,7 @@
             if (selected) {
                 answered++;
             }
+
         }
 
         var percentage = (answered / 8) * 100;
@@ -1199,10 +1396,9 @@
 
         document.getElementById("gs-cp-progress-text").innerHTML =
             answered + " / 8 Questions";
+
     }
 
-
-    /* RADIO BUTTON EVENTS */
 
     var radios = document.querySelectorAll(
         '#gs-career-pathway input[type="radio"]'
@@ -1215,28 +1411,20 @@
     });
 
 
-    /* ANALYZE BUTTON */
-
     document.getElementById("gs-cp-analyze-button").onclick = function () {
 
         var scores = {
-
             technology: 0,
             science: 0,
             business: 0,
             creative: 0
-
         };
-
-
-        /* CHECK ALL QUESTIONS */
 
         for (var i = 1; i <= 8; i++) {
 
             var answer = document.querySelector(
                 'input[name="gsq' + i + '"]:checked'
             );
-
 
             if (!answer) {
 
@@ -1245,15 +1433,13 @@
                 );
 
                 return;
-            }
 
+            }
 
             scores[answer.value]++;
 
         }
 
-
-        /* FIND HIGHEST SCORE */
 
         var career = "technology";
 
@@ -1263,7 +1449,6 @@
         if (scores.science > highest) {
 
             career = "science";
-
             highest = scores.science;
 
         }
@@ -1272,7 +1457,6 @@
         if (scores.business > highest) {
 
             career = "business";
-
             highest = scores.business;
 
         }
@@ -1281,7 +1465,6 @@
         if (scores.creative > highest) {
 
             career = "creative";
-
             highest = scores.creative;
 
         }
@@ -1292,22 +1475,14 @@
     };
 
 
-    /* SHOW RESULT */
-
     function showCareerResult(career) {
 
         var name = "";
-
         var description = "";
-
         var after10 = "";
-
         var after12 = "";
-
         var skills = [];
 
-
-        /* TECHNOLOGY */
 
         if (career === "technology") {
 
@@ -1315,7 +1490,6 @@
 
             description =
                 "Your answers show a strong interest in computers, technology and logical problem solving.";
-
 
             after10 = `
                 <h3>📘 After 10th</h3>
@@ -1326,7 +1500,6 @@
                     <li>Explore Web Development</li>
                 </ul>
             `;
-
 
             after12 = `
                 <h3>🎓 After 12th</h3>
@@ -1340,7 +1513,6 @@
                 </ul>
             `;
 
-
             skills = [
                 "Programming",
                 "Web Development",
@@ -1353,15 +1525,12 @@
         }
 
 
-        /* SCIENCE */
-
         else if (career === "science") {
 
             name = "🔬 Science & Research";
 
             description =
                 "Your answers show interest in science, experiments, analysis and research.";
-
 
             after10 = `
                 <h3>📘 After 10th</h3>
@@ -1372,7 +1541,6 @@
                     <li>Participate in science projects</li>
                 </ul>
             `;
-
 
             after12 = `
                 <h3>🎓 After 12th</h3>
@@ -1385,7 +1553,6 @@
                 </ul>
             `;
 
-
             skills = [
                 "Scientific Thinking",
                 "Research",
@@ -1397,15 +1564,12 @@
         }
 
 
-        /* BUSINESS */
-
         else if (career === "business") {
 
             name = "💼 Business & Management";
 
             description =
                 "Your answers show interest in business, communication, leadership and management.";
-
 
             after10 = `
                 <h3>📘 After 10th</h3>
@@ -1416,7 +1580,6 @@
                     <li>Develop communication skills</li>
                 </ul>
             `;
-
 
             after12 = `
                 <h3>🎓 After 12th</h3>
@@ -1430,7 +1593,6 @@
                 </ul>
             `;
 
-
             skills = [
                 "Leadership",
                 "Communication",
@@ -1443,15 +1605,12 @@
         }
 
 
-        /* CREATIVE */
-
         else {
 
             name = "🎨 Creative & Design";
 
             description =
                 "Your answers show strong interest in creativity, design and creating new things.";
-
 
             after10 = `
                 <h3>📘 After 10th</h3>
@@ -1462,7 +1621,6 @@
                     <li>Explore Animation</li>
                 </ul>
             `;
-
 
             after12 = `
                 <h3>🎓 After 12th</h3>
@@ -1476,7 +1634,6 @@
                 </ul>
             `;
 
-
             skills = [
                 "Creativity",
                 "Graphic Design",
@@ -1488,8 +1645,6 @@
 
         }
 
-
-        /* DISPLAY RESULT */
 
         document.getElementById("gs-cp-career-name").innerHTML = name;
 
@@ -1511,7 +1666,6 @@
 
         }
 
-
         document.getElementById("gs-cp-skills-list").innerHTML =
             skillsHTML;
 
@@ -1520,13 +1674,12 @@
 
         document.getElementById("gs-cp-result").style.display = "block";
 
-
         document.getElementById("gs-cp-result").scrollIntoView({
             behavior: "smooth"
         });
 
     }
-    /* RETAKE BUTTON */
+
 
     document.getElementById("gs-cp-retake-button").onclick = function () {
 
@@ -1539,6 +1692,7 @@
             answers.forEach(function (answer) {
                 answer.checked = false;
             });
+
         }
 
         document.getElementById("gs-cp-progress").style.width = "0%";
@@ -1557,24 +1711,25 @@
     };
 
 })();
+
 </script>
 
 </section>
 
-    <!-- NO RESULT -->
 
-    <div id="noResult">
+<!-- NO RESULT -->
 
-        <h3>😔 No service found</h3>
+<div id="noResult">
 
-        <p>
-            Try searching with another keyword.
-        </p>
+    <h3>😔 No service found</h3>
 
-    </div>
+    <p>
+        Try searching with another keyword.
+    </p>
+
+</div>
 
 
-    
 <!-- FOOTER -->
 
 <footer>
@@ -1586,72 +1741,586 @@
 </footer>
 
 
-<!-- SEARCH SCRIPT -->
+<!-- ========================================================= -->
+<!-- EDUCATION GUIDE WORKING BUTTON SCRIPT -->
+<!-- ========================================================= -->
 
 <script>
 
-    function searchServices() {
+var gsEducationData = {
 
-        let searchText =
-            document.getElementById("searchInput")
-            .value
-            .toLowerCase()
-            .trim();
+engineering:{
+title:'💻 Engineering',
+intro:'Professional technical education in engineering, technology, design and problem solving.',
+eligibility:'Usually 12th Science with the required subjects for the chosen branch, or a relevant diploma for lateral-entry routes.',
+duration:'Usually 4 years for B.E./B.Tech.',
+admission:'Check the relevant admission authority, register for the entrance exam if required, check result/rank, participate in counselling/CAP and complete document verification.',
+entrance:'MHT-CET and/or JEE Main may apply.',
+areas:['Computer Engineering','Computer Science','Information Technology','Mechanical Engineering','Civil Engineering','Electrical Engineering','AI & Data Science'],
+pathway:'10th → 11th-12th Science / Diploma → Entrance or Merit → B.E./B.Tech → Internship → Job / Higher Studies',
+careers:'Software Developer, Engineer, Data Analyst, Network Engineer, Core Engineer and Entrepreneur.',
+higher:'M.E./M.Tech, MBA, M.Sc./MS, certifications and Ph.D.',
+links:[
+['🏛️ Admission – Maharashtra CET Cell','https://cetcell.mahacet.org/'],
+['📝 JEE Main – NTA','https://jeemain.nta.nic.in/'],
+['📚 Courses – SWAYAM','https://swayam.gov.in/'],
+['🎥 Video Lectures – NPTEL','https://nptel.ac.in/'],
+['📖 Notes – ePathshala','https://epathshala.nic.in/'],
+['🎓 Scholarships – NSP','https://scholarships.gov.in/']
+],
+note:'Always check the current admission brochure and eligibility rules.'
+  },
 
-        let cards =
-            document.querySelectorAll(".student-card");
+  bcs:{
+title:'🖥️ BCS / BCA',
+intro:'Computer-focused undergraduate education.',
+eligibility:'Usually 12th pass with university-prescribed subjects and marks.',
+duration:'Usually 3 or 4 years.',
+admission:'Admission may be merit-based, university entrance or CUET depending on the institution.',
+entrance:'University entrance, CUET or applicable state admission route.',
+areas:['Programming','Web Development','Database','Operating Systems','Networking','Cyber Security','Data and Cloud'],
+pathway:'12th → BCS/BCA → Projects + Internship → IT Job / MCA / M.Sc.',
+careers:'Software Developer, Web Developer, Programmer, QA Tester and IT Support.',
+higher:'MCA, M.Sc. Computer Science/IT, MBA-IT and certifications.',
+links:[
+['🏛️ Maharashtra CET Cell','https://cetcell.mahacet.org/'],
+['📝 CUET – NTA','https://cuet.nta.nic.in/'],
+['📚 Programming – SWAYAM','https://swayam.gov.in/'],
+['🎥 Programming – NPTEL','https://nptel.ac.in/'],
+['📖 Notes – ePathshala','https://epathshala.nic.in/'],
+['🎓 Scholarships – NSP','https://scholarships.gov.in/']
+],
+note:'Check the exact university prospectus before applying.'
+},
 
-        let visibleCount = 0;
+  bcs:{
+title:'🖥️ BCS / BCA',
+intro:'Computer-focused undergraduate education.',
+eligibility:'Usually 12th pass with university-prescribed subjects and marks.',
+duration:'Usually 3 or 4 years.',
+admission:'Admission may be merit-based, university entrance or CUET depending on the institution.',
+entrance:'University entrance, CUET or applicable state admission route.',
+areas:['Programming','Web Development','Database','Operating Systems','Networking','Cyber Security','Data and Cloud'],
+pathway:'12th → BCS/BCA → Projects + Internship → IT Job / MCA / M.Sc.',
+careers:'Software Developer, Web Developer, Programmer, QA Tester and IT Support.',
+higher:'MCA, M.Sc. Computer Science/IT, MBA-IT and certifications.',
+links:[
+['🏛️ Maharashtra CET Cell','https://cetcell.mahacet.org/'],
+['📝 CUET – NTA','https://cuet.nta.nic.in/'],
+['📚 Programming – SWAYAM','https://swayam.gov.in/'],
+['🎥 Programming – NPTEL','https://nptel.ac.in/'],
+['📖 Notes – ePathshala','https://epathshala.nic.in/'],
+['🎓 Scholarships – NSP','https://scholarships.gov.in/']
+],
+note:'Check the exact university prospectus before applying.'
+},
+
+bsc:{
+title:'🔬 B.Sc.',
+intro:'Bachelor of Science education in pure, applied and computer sciences.',
+eligibility:'Usually 12th Science with the required subject combination.',
+duration:'Usually 3 or 4 years.',
+admission:'Apply through the university/college portal. Admission may be merit or entrance based.',
+entrance:'Merit, university entrance or CUET where applicable.',
+areas:['Physics','Chemistry','Mathematics','Biology','Computer Science','IT','Biotechnology','Microbiology'],
+pathway:'12th Science → B.Sc. → Project / Internship → Job / M.Sc. / Research',
+careers:'Research Assistant, Laboratory Professional, Data Professional, Teacher and Technical Executive.',
+higher:'M.Sc., research, certifications and Ph.D.',
+links:[
+['📝 CUET – NTA','https://cuet.nta.nic.in/'],
+['📚 Science Courses – SWAYAM','https://swayam.gov.in/'],
+['🎥 Science Lectures – NPTEL','https://nptel.ac.in/'],
+['📖 Notes – ePathshala','https://epathshala.nic.in/'],
+['🎓 Scholarships – NSP','https://scholarships.gov.in/']
+],
+note:'Subject combinations vary by university.'
+},
+
+  msc:{
+title:'🧪 M.Sc.',
+intro:'Postgraduate science education for advanced study and research.',
+eligibility:'Usually a relevant bachelor degree such as B.Sc.',
+duration:'Usually 2 years.',
+admission:'Apply to universities, appear for entrance if applicable and complete merit/counselling.',
+entrance:'University entrance or CUET-PG where applicable.',
+areas:['Physics','Chemistry','Mathematics','Computer Science','Biotechnology','Microbiology'],
+pathway:'B.Sc. → M.Sc. → Research / Teaching / Industry / Ph.D.',
+careers:'Scientist, Researcher, Lecturer, Analyst and Technical Specialist.',
+higher:'Ph.D., research fellowships and specialised certifications.',
+links:[
+['📝 CUET-PG – NTA','https://exams.nta.ac.in/CUET-PG/'],
+['📚 Courses – SWAYAM','https://swayam.gov.in/'],
+['📖 eBooks – eGyanKosh','https://egyankosh.ac.in/'],
+['🎥 Lectures – NPTEL','https://nptel.ac.in/'],
+['🎓 UGC','https://www.ugc.gov.in/']
+],
+note:'Entrance requirements differ between universities.'
+},
+
+ba:{
+title:'📚 B.A.',
+intro:'Bachelor of Arts in humanities, languages and social sciences.',
+eligibility:'Usually 12th pass.',
+duration:'Usually 3 or 4 years.',
+admission:'Apply through university/college admission. Merit or entrance may apply.',
+entrance:'Merit, university entrance or CUET where applicable.',
+areas:['English','Marathi','History','Political Science','Economics','Psychology','Sociology'],
+pathway:'12th → B.A. → Skills + Internship → M.A. / Competitive Exams / Jobs',
+careers:'Teacher, Writer, Content Professional, Researcher and Government Career Aspirant.',
+higher:'M.A., B.Ed., MBA, Law, Journalism and Social Work.',
+links:[
+['📝 CUET – NTA','https://cuet.nta.nic.in/'],
+['📚 Humanities – SWAYAM','https://swayam.gov.in/'],
+['📖 Notes – ePathshala','https://epathshala.nic.in/'],
+['🎥 Learning – DIKSHA','https://diksha.gov.in/'],
+['🎓 Scholarships – NSP','https://scholarships.gov.in/']
+],
+note:'Admission rules differ between universities.'
+},
+
+  ma:{
+title:'🎓 M.A.',
+intro:'Postgraduate education in humanities and social sciences.',
+eligibility:'Usually a relevant bachelor degree.',
+duration:'Usually 2 years.',
+admission:'University application, entrance if required and counselling/merit.',
+entrance:'University entrance or CUET-PG where applicable.',
+areas:['English','Marathi','History','Economics','Political Science','Psychology','Sociology'],
+pathway:'B.A. → M.A. → Teaching / Research / Government / Industry',
+careers:'Lecturer, Teacher, Researcher, Writer and Policy Professional.',
+higher:'Ph.D., NET/SET-oriented academic pathway and specialised certifications.',
+links:[
+['📝 CUET-PG – NTA','https://exams.nta.ac.in/CUET-PG/'],
+['📚 Courses – SWAYAM','https://swayam.gov.in/'],
+['📖 eBooks – eGyanKosh','https://egyankosh.ac.in/'],
+['🎥 Video Lectures – DIKSHA','https://diksha.gov.in/'],
+['🎓 UGC','https://www.ugc.gov.in/']
+],
+note:'Check exact subject eligibility before applying.'
+},
+
+bcom:{
+title:'💰 B.Com.',
+intro:'Commerce education covering accounting, finance, taxation and business.',
+eligibility:'Usually 12th Commerce or equivalent.',
+duration:'Usually 3 or 4 years.',
+admission:'Merit, university entrance or CUET depending on institution.',
+entrance:'Merit or applicable university/CUET process.',
+areas:['Accounting','Finance','Taxation','Economics','Banking','Business Management'],
+pathway:'12th Commerce → B.Com. → Internship → M.Com. / CA / CMA / MBA',
+careers:'Accountant, Banking Professional, Finance Executive and Entrepreneur.',
+higher:'M.Com., CA, CMA, CS, MBA and finance certifications.',
+links:[
+['📝 CUET – NTA','https://cuet.nta.nic.in/'],
+['📚 Commerce – SWAYAM','https://swayam.gov.in/'],
+['📖 Notes – ePathshala','https://epathshala.nic.in/'],
+['🎥 Learning – DIKSHA','https://diksha.gov.in/'],
+['🎓 Scholarships – NSP','https://scholarships.gov.in/']
+],
+note:'Professional courses have separate admission and examination bodies.'
+},
+  mcom:{
+title:'📊 M.Com.',
+intro:'Advanced postgraduate commerce, accounting and finance education.',
+eligibility:'Usually B.Com. or relevant bachelor degree.',
+duration:'Usually 2 years.',
+admission:'University application and entrance/merit process.',
+entrance:'University entrance or CUET-PG where applicable.',
+areas:['Advanced Accounting','Finance','Taxation','Business Management','Economics','Banking'],
+pathway:'B.Com. → M.Com. → Finance / Teaching / Research / Industry',
+careers:'Accountant, Finance Manager, Lecturer, Banking Professional and Business Analyst.',
+higher:'Ph.D., NET/SET-oriented academic pathway and MBA.',
+links:[
+['📝 CUET-PG – NTA','https://exams.nta.ac.in/CUET-PG/'],
+['📚 Courses – SWAYAM','https://swayam.gov.in/'],
+['📖 eBooks – eGyanKosh','https://egyankosh.ac.in/'],
+['🎥 Lectures – NPTEL','https://nptel.ac.in/'],
+['🎓 UGC','https://www.ugc.gov.in/']
+],
+note:'Check university-specific entrance requirements.'
+},
+
+agriculture:{
+title:'🌾 Agriculture',
+intro:'Agriculture, horticulture, agribusiness and allied fields.',
+eligibility:'Usually 12th with required science/agriculture subjects.',
+duration:'Common undergraduate agriculture degrees are generally 4 years.',
+admission:'Apply through the agriculture admission authority and complete entrance/CAP/merit process.',
+entrance:'Entrance requirements vary by course and state.',
+areas:['B.Sc. Agriculture','Horticulture','Agricultural Engineering','Agribusiness','Animal Husbandry','Crop Science'],
+pathway:'12th → Agriculture Course → Practical Training → Job / Agribusiness / Higher Studies',
+careers:'Agriculture Officer, Farm Manager, Researcher, Agribusiness Professional and Entrepreneur.',
+higher:'M.Sc./M.Tech Agriculture, MBA Agribusiness and Ph.D.',
+links:[
+['🏛️ Maharashtra CET Cell','https://cetcell.mahacet.org/'],
+['📚 Agriculture – SWAYAM','https://swayam.gov.in/'],
+['🎥 Lectures – NPTEL','https://nptel.ac.in/'],
+['📖 Notes – ePathshala','https://epathshala.nic.in/'],
+['🎓 Scholarships – NSP','https://scholarships.gov.in/']
+],
+note:'Check the current agriculture CAP brochure for the exact course.'
+},
+
+pharmacy:{
+title:'💊 Pharmacy',
+intro:'Education focused on medicines, pharmaceutical sciences and healthcare.',
+eligibility:'D.Pharm/B.Pharm eligibility depends on programme; undergraduate routes generally require 12th Science.',
+duration:'D.Pharm and B.Pharm have different durations; B.Pharm is generally 4 years.',
+admission:'Apply through the relevant state/university admission process and complete counselling.',
+entrance:'MHT-CET or other approved routes may apply.',
+areas:['D.Pharm','B.Pharm','M.Pharm','Pharmacology','Pharmaceutical Chemistry','Quality Control'],
+pathway:'12th Science → D.Pharm/B.Pharm → Job / Higher Studies',
+careers:'Pharmacist, Pharmaceutical Industry Professional, Quality Control and Research Professional.',
+higher:'M.Pharm, Pharma Management, research and Ph.D.',
+links:[
+['🏛️ Maharashtra CET Cell','https://cetcell.mahacet.org/'],
+['📚 Pharmacy Courses – SWAYAM','https://swayam.gov.in/'],
+['🎥 Science Lectures – NPTEL','https://nptel.ac.in/'],
+['📖 Notes – ePathshala','https://epathshala.nic.in/'],
+['🎓 Scholarships – NSP','https://scholarships.gov.in/']
+],
+note:'Check the latest pharmacy admission and registration rules.'
+},
+  mbbs:{
+title:'🩺 MBBS / Medical',
+intro:'Medical education for diagnosis, treatment and healthcare.',
+eligibility:'Generally 12th Science with Physics, Chemistry and Biology/Biotechnology.',
+duration:'Generally 4.5 academic years plus 1-year internship.',
+admission:'Register for NEET-UG, appear for the exam, obtain rank and participate in counselling.',
+entrance:'NEET-UG.',
+areas:['Anatomy','Physiology','Biochemistry','Pathology','Pharmacology','Medicine','Surgery'],
+pathway:'12th PCB → NEET-UG → Counselling → MBBS → Internship → Medical Practice / PG',
+careers:'Doctor, Medical Officer, Hospital Professional, Researcher and Specialist after higher study.',
+higher:'MD/MS, super-specialisation, research and public-health programmes.',
+links:[
+['📝 NEET-UG – NTA','https://neet.nta.nic.in/'],
+['🏛️ Maharashtra CET Cell','https://cetcell.mahacet.org/'],
+['📚 Medical Learning – SWAYAM','https://swayam.gov.in/'],
+['📖 eBooks – eGyanKosh','https://egyankosh.ac.in/'],
+['🎓 Scholarships – NSP','https://scholarships.gov.in/']
+],
+note:'Always verify current NEET and counselling information on official portals.'
+},
+
+dental:{
+title:'🦷 Dental / BDS',
+intro:'Dental education focused on oral health and dental treatment.',
+eligibility:'Generally 12th Science with prescribed PCB eligibility.',
+duration:'Generally 4 academic years plus 1-year internship.',
+admission:'NEET-UG → Rank → Counselling → College admission.',
+entrance:'NEET-UG.',
+areas:['Dental Anatomy','Oral Pathology','Periodontics','Prosthodontics','Oral Surgery','Community Dentistry'],
+pathway:'12th PCB → NEET-UG → Counselling → BDS → Internship → Dental Practice',
+careers:'Dentist, Dental Surgeon, Researcher and Teaching Professional.',
+higher:'MDS, research and specialised dental practice.',
+links:[
+['📝 NEET-UG – NTA','https://neet.nta.nic.in/'],
+['📚 Courses – SWAYAM','https://swayam.gov.in/'],
+['📖 eBooks – eGyanKosh','https://egyankosh.ac.in/'],
+['🎥 Lectures – NPTEL','https://nptel.ac.in/'],
+['🎓 Scholarships – NSP','https://scholarships.gov.in/']
+],
+note:'Check the current counselling authority for dental admissions.'
+},
+
+teaching:{
+title:'👩‍🏫 Teaching & Education',
+intro:'Education pathway for students interested in teaching and learning.',
+eligibility:'Depends on the teacher-training course. B.Ed. generally requires a bachelor degree.',
+duration:'B.Ed. is generally 2 years.',
+admission:'Apply through the relevant education/CET portal and complete entrance, merit and counselling.',
+entrance:'MAH-B.Ed. CET for applicable Maharashtra B.Ed. admissions.',
+areas:['D.El.Ed.','B.Ed.','M.Ed.','Special Education','Educational Technology'],
+pathway:'12th → Bachelor Degree → B.Ed./Teacher Training → Recruitment → Teaching Career',
+careers:'School Teacher, Tutor, Trainer, Educational Content Creator and Education Professional.',
+higher:'M.Ed., NET/SET pathway, research and Ph.D.',
+links:[
+['🏛️ Maharashtra CET Cell','https://cetcell.mahacet.org/'],
+['📚 Teacher Courses – SWAYAM','https://swayam.gov.in/'],
+['📖 School Resources – DIKSHA','https://diksha.gov.in/'],
+['📖 ePathshala','https://epathshala.nic.in/'],
+['🎓 Scholarships – NSP','https://scholarships.gov.in/']
+],
+note:'Degree admission and teacher recruitment are separate processes.'
+},
+  law:{
+title:'⚖️ Law',
+intro:'Legal education for careers in law, justice and legal services.',
+eligibility:'Integrated law generally starts after 12th; 3-year LL.B. generally requires graduation.',
+duration:'5-year integrated law, 3-year LL.B. after graduation, and LL.M. varies.',
+admission:'Register for the relevant entrance, check rank, participate in counselling and complete admission.',
+entrance:'CLAT for participating NLUs; MAH-LLB CET for applicable Maharashtra admissions.',
+areas:['Constitutional Law','Criminal Law','Corporate Law','Civil Law','Family Law','Cyber Law'],
+pathway:'12th → 5-Year Law OR Graduation → 3-Year LL.B. → Legal Career / Higher Studies',
+careers:'Lawyer, Legal Advisor, Corporate Legal Professional, Legal Researcher and Compliance Professional.',
+higher:'LL.M., specialised diplomas, competitive examinations and Ph.D.',
+links:[
+['⚖️ CLAT','https://consortiumofnlus.ac.in/'],
+['🏛️ Maharashtra CET Cell','https://cetcell.mahacet.org/'],
+['📚 Law Courses – SWAYAM','https://swayam.gov.in/'],
+['📖 eBooks – eGyanKosh','https://egyankosh.ac.in/'],
+['🎓 Scholarships – NSP','https://scholarships.gov.in/']
+],
+note:'Check the exact entrance requirement of your chosen law college.'
+},
+
+nursing:{
+title:'👩‍⚕️ Nursing',
+intro:'Professional healthcare education focused on patient care.',
+eligibility:'Eligibility differs for ANM, GNM and B.Sc. Nursing.',
+duration:'B.Sc. Nursing is generally 4 years.',
+admission:'Apply through the relevant nursing admission portal and complete entrance/counselling.',
+entrance:'MH-NURSING CET for applicable Maharashtra admissions.',
+areas:['ANM','GNM','B.Sc. Nursing','M.Sc. Nursing','Community Health','Medical-Surgical Nursing'],
+pathway:'Required Qualification → Nursing Course → Clinical Training → Registration → Nursing Career',
+careers:'Staff Nurse, Nursing Officer, Community Health Professional and Nursing Educator.',
+higher:'M.Sc. Nursing, specialisations, teaching and research.',
+links:[
+['🏛️ Maharashtra CET Cell','https://cetcell.mahacet.org/'],
+['📚 Healthcare Courses – SWAYAM','https://swayam.gov.in/'],
+['📖 eBooks – eGyanKosh','https://egyankosh.ac.in/'],
+['🎥 Learning – DIKSHA','https://diksha.gov.in/'],
+['🎓 Scholarships – NSP','https://scholarships.gov.in/']
+],
+note:'Check the current nursing brochure for eligibility and admission dates.'
+},
+
+paramedical:{
+title:'🏥 Paramedical',
+intro:'Healthcare support and diagnostic education.',
+eligibility:'Usually 12th Science for many programmes, but varies by course.',
+duration:'Common programmes range from 1-4 years.',
+admission:'Check the institution/state admission process and complete required clinical training.',
+entrance:'Course/state specific; may include CET, NEET or merit.',
+areas:['Medical Laboratory Technology','Radiology','Medical Imaging','Physiotherapy','OT Technology','Optometry'],
+pathway:'Required Qualification → Paramedical Course → Clinical Training → Job / Higher Study',
+careers:'Laboratory Professional, Radiology Technician, Physiotherapy Professional and Imaging Professional.',
+higher:'Postgraduate allied-health programmes and specialisations.',
+links:[
+['🏛️ Maharashtra CET Cell','https://cetcell.mahacet.org/'],
+['📚 Healthcare Courses – SWAYAM','https://swayam.gov.in/'],
+['📖 eBooks – eGyanKosh','https://egyankosh.ac.in/'],
+['🎥 Learning – DIKSHA','https://diksha.gov.in/'],
+['🎓 Scholarships – NSP','https://scholarships.gov.in/']
+],
+note:'Confirm the exact admission process for the selected paramedical course.'
+},
+  veterinary:{
+title:'🐄 Veterinary Science',
+intro:'Education focused on animal health and veterinary science.',
+eligibility:'Generally 12th Science with Biology and prescribed eligibility.',
+duration:'Veterinary undergraduate programmes are generally around 5 years including clinical components.',
+admission:'Complete applicable entrance/counselling and college admission.',
+entrance:'NEET-UG or other approved route depending on programme/state.',
+areas:['Veterinary Medicine','Animal Surgery','Animal Nutrition','Animal Husbandry','Livestock'],
+pathway:'12th PCB → Veterinary Admission → Degree → Clinical Training → Veterinary Career',
+careers:'Veterinary Doctor, Animal Health Professional, Government Veterinary Professional and Researcher.',
+higher:'Postgraduate specialisation, research and Ph.D.',
+links:[
+['📝 NEET-UG','https://neet.nta.nic.in/'],
+['🏛️ Maharashtra CET Cell','https://cetcell.mahacet.org/'],
+['📚 Science Courses – SWAYAM','https://swayam.gov.in/'],
+['🎥 Science Lectures – NPTEL','https://nptel.ac.in/'],
+['🎓 Scholarships – NSP','https://scholarships.gov.in/']
+],
+note:'Verify the current veterinary admission brochure.'
+},
+
+architecture:{
+title:'🏛️ Architecture',
+intro:'Design, planning, creativity and technical education for buildings and spaces.',
+eligibility:'Usually 12th with prescribed subjects or eligible diploma route.',
+duration:'B.Arch. is generally 5 years.',
+admission:'Complete NATA/JEE Paper 2 or applicable admission process, then counselling and document verification.',
+entrance:'NATA or JEE Main Paper 2 depending on institution.',
+areas:['Architecture','Building Design','Urban Planning','Sustainable Design','Interior Design'],
+pathway:'12th / Diploma → Entrance → B.Arch. → Internship → Architecture Career',
+careers:'Architect, Interior Designer, Urban Planner, BIM Professional and Consultant.',
+higher:'M.Arch., Urban Planning, Landscape Architecture and research.',
+links:[
+['🏛️ NATA','https://www.nata.in/'],
+['📝 JEE Main','https://jeemain.nta.nic.in/'],
+['🏛️ Maharashtra CET Cell','https://cetcell.mahacet.org/'],
+['📚 Design Courses – SWAYAM','https://swayam.gov.in/'],
+['🎓 Scholarships – NSP','https://scholarships.gov.in/']
+],
+note:'Check the current Council of Architecture and admission authority rules.'
+},
+
+design:{
+title:'🎨 Design & Creative Arts',
+intro:'Creative education for graphic, fashion, UI/UX, animation and visual industries.',
+eligibility:'Many undergraduate design programmes accept 12th pass; exact rules vary.',
+duration:'Usually 3-4 years for many undergraduate programmes.',
+admission:'Apply to the selected institute, take its entrance if required and complete portfolio/interview stages where applicable.',
+entrance:'NIFTEE, NID DAT, UCEED or institute-specific exams depending on programme.',
+areas:['Graphic Design','Fashion Design','UI/UX','Animation','Fine Arts','Multimedia','Product Design'],
+pathway:'10th/12th → Entrance / Merit → Design Course → Portfolio + Internship → Creative Career',
+careers:'Graphic Designer, UI/UX Designer, Animator, Fashion Designer and Illustrator.',
+higher:'M.Des., specialised certifications and research.',
+links:[
+['🎨 NIFT Admissions','https://www.nift.ac.in/admissions'],
+['📝 NIFTEE – NTA','https://exams.nta.nic.in/niftee/'],
+['📚 Creative Courses – SWAYAM','https://swayam.gov.in/'],
+['🎥 Technology Lectures – NPTEL','https://nptel.ac.in/'],
+['🎓 Scholarships – NSP','https://scholarships.gov.in/']
+],
+note:'Entrance requirements vary by design institute.'
+},
+  hotel:{
+title:'🏨 Hotel Management',
+intro:'Hospitality education for hotels, restaurants, tourism and events.',
+eligibility:'Many undergraduate hospitality programmes accept 12th pass.',
+duration:'NCHM B.Sc. Hospitality & Hotel Administration is generally 3 years.',
+admission:'Register for NCHM JEE or relevant institute admission, check rank and complete counselling.',
+entrance:'NCHM JEE for participating NCHMCT institutes.',
+areas:['Hotel Management','Food Production','Food & Beverage','Front Office','Housekeeping','Tourism','Events'],
+pathway:'12th → NCHM JEE / Admission → Hospitality Course → Internship → Hospitality Career',
+careers:'Hotel Manager, Chef, Front Office Professional, Event Professional and Tourism Professional.',
+higher:'MBA/PG hospitality, culinary specialisation and tourism management.',
+links:[
+['🏨 NCHM JEE – NTA','https://exams.nta.nic.in/nchm-jee/'],
+['📚 Hospitality Courses – SWAYAM','https://swayam.gov.in/'],
+['📖 Notes – ePathshala','https://epathshala.nic.in/'],
+['🎥 Learning – DIKSHA','https://diksha.gov.in/'],
+['🎓 Scholarships – NSP','https://scholarships.gov.in/']
+],
+note:'Check the current NCHMCT institute list and admission brochure.'
+},
+
+iti:{
+title:'🔧 ITI & Skill Courses',
+intro:'Practical technical and vocational education for employment and self-employment.',
+eligibility:'Many ITI trades accept 10th pass.',
+duration:'Trade duration commonly ranges from 6 months to 2 years.',
+admission:'Apply through the state ITI admission portal and complete merit/admission process.',
+entrance:'Often merit/admission based; rules vary by state and trade.',
+areas:['Electrician','Fitter','Welder','COPA','Mechanic','Plumber','Draughtsman'],
+pathway:'10th → ITI / Skill Course → Apprenticeship → Job / Self Employment',
+careers:'Technician, Skilled Worker, Apprentice, Maintenance Professional and Entrepreneur.',
+higher:'Advanced certifications, apprenticeships and diploma pathways.',
+links:[
+['🏛️ DTE Maharashtra','https://dte.maharashtra.gov.in/'],
+['📚 Skill Courses – SWAYAM','https://swayam.gov.in/'],
+['📖 Learning – DIKSHA','https://diksha.gov.in/'],
+['🎥 Technical Lectures – NPTEL','https://nptel.ac.in/'],
+['🎓 Scholarships – NSP','https://scholarships.gov.in/']
+],
+note:'ITI admission is state and trade specific.'
+}
+
+};
+  function showEducation(course){
+
+    var d = gsEducationData[course];
+
+    if(!d){
+        return;
+    }
+
+    document.getElementById('gsEducationTitle').innerHTML =
+        d.title;
+
+    document.getElementById('gsEducationIntro').innerHTML =
+        d.intro;
+
+    document.getElementById('gsEduEligibility').innerHTML =
+        d.eligibility;
+
+    document.getElementById('gsEduDuration').innerHTML =
+        d.duration;
+
+    document.getElementById('gsEduAdmission').innerHTML =
+        d.admission;
+
+    document.getElementById('gsEduEntrance').innerHTML =
+        d.entrance;
+
+    document.getElementById('gsEduPathway').innerHTML =
+        d.pathway;
+
+    document.getElementById('gsEduCareers').innerHTML =
+        d.careers;
+
+    document.getElementById('gsEduHigher').innerHTML =
+        d.higher;
+
+    document.getElementById('gsEduNote').innerHTML =
+        'ℹ️ ' + d.note;
 
 
-        cards.forEach(function(card) {
+    var areaHTML = "";
 
-            let text =
-                card.innerText.toLowerCase();
+    for(var i = 0; i < d.areas.length; i++){
 
-            let searchData =
-                card.getAttribute("data-search")
-                .toLowerCase();
-
-
-            if (
-                text.includes(searchText) ||
-                searchData.includes(searchText)
-            ) {
-
-                card.style.display = "block";
-
-                visibleCount++;
-
-            }
-
-            else {
-
-                card.style.display = "none";
-
-            }
-
-        });
-
-
-        if (visibleCount === 0) {
-
-            document.getElementById("noResult")
-                .style.display = "block";
-
-        }
-
-        else {
-
-            document.getElementById("noResult")
-                .style.display = "none";
-
-        }
+        areaHTML +=
+            "<li>" + d.areas[i] + "</li>";
 
     }
 
-</script>
+    document.getElementById('gsEduAreas').innerHTML =
+        areaHTML;
 
+
+    var resourceHTML = "";
+
+    for(var j = 0; j < d.links.length; j++){
+
+        resourceHTML +=
+            '<a class="gs-edu-resource" href="' +
+            d.links[j][1] +
+            '" target="_blank" rel="noopener noreferrer">' +
+            d.links[j][0] +
+            '</a>';
+
+    }
+
+    document.getElementById('gsEduResources').innerHTML =
+        resourceHTML;
+
+
+    var modal =
+        document.getElementById('gsEducationModal');
+
+    modal.style.display = 'block';
+
+    document.body.style.overflow = 'hidden';
+
+}
+
+
+function closeEducation(){
+
+    document.getElementById('gsEducationModal').style.display =
+        'none';
+
+    document.body.style.overflow = '';
+
+}
+
+
+document.getElementById('gsEducationModal')
+.addEventListener('click', function(event){
+
+    if(event.target === this){
+
+        closeEducation();
+
+    }
+
+});
+
+
+document.addEventListener('keydown', function(event){
+
+    if(event.key === 'Escape'){
+
+        closeEducation();
+
+    }
+
+});
+  </script>
 
 </body>
 
