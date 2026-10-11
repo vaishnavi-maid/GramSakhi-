@@ -297,16 +297,16 @@ Identify Problems Early and Protect Your Crops
 <style>
 #gsOfflineLanguages{width:94%;max-width:1100px;margin:15px auto;padding:16px;background:#fff;border-radius:12px;box-shadow:0 3px 10px rgba(0,0,0,.08);text-align:center}
 #gsOfflineLanguages h3{color:#558b2f;margin-bottom:10px}
-#gsOfflineLanguages button{padding:10px 16px;margin:4px;border:0;border-radius:8px;color:#fff;cursor:pointer;font-weight:bold}
+  #gsOfflineLanguages button{padding:10px 16px;margin:4px;border:0;border-radius:8px;color:#fff;cursor:pointer;font-weight:bold}
 #gsLangEN{background:#558b2f}#gsLangMR{background:#e67e22}#gsLangHI{background:#1565c0}
 #gsOfflineLanguages button[aria-pressed="true"]{outline:3px solid #263238;outline-offset:2px}
-  </style>
+</style>
 <div id="gsOfflineLanguages" aria-label="Choose language">
  <h3>🌐 Choose Your Language / भाषा निवडा / अपनी भाषा चुनें</h3>
  <button id="gsLangEN" type="button" onclick="gsSetLanguage('en')" aria-pressed="true">English</button>
  <button id="gsLangMR" type="button" onclick="gsSetLanguage('mr')" aria-pressed="false">मराठी</button>
  <button id="gsLangHI" type="button" onclick="gsSetLanguage('hi')" aria-pressed="false">हिंदी</button>
- <p style="font-size:12px;margin-top:8px;color:#555">Offline translations included in this page; no Google Translator used.</p>
+ <p style="font-size:12px;margin-top:8px;color:#555"></p>
 </div>
 <script>
 (function(){
@@ -329,7 +329,6 @@ Identify Problems Early and Protect Your Crops
    Object.keys(dict).sort((a,b)=>b.length-a.length).forEach(k=>{
       if(value.includes(k)) value=value.split(k).join(dict[k]);
    });
-   // Avoid repeatedly triggering MutationObserver when the text is already translated.
    if(node.nodeValue !== value) node.nodeValue=value;
  }
  let current='en';
@@ -355,14 +354,10 @@ Identify Problems Early and Protect Your Crops
  window.addEventListener('DOMContentLoaded',()=>{
    const root=document.getElementById('cropResult'); if(root) observer.observe(root,{childList:true,subtree:true,characterData:true});
  });
-})</script>
+})();
+</script>
 <!-- End GramSakhi Offline Language Options -->
-
-
-
-
-
-<!-- INTRO -->
+  <!-- INTRO -->
 
 <div class="intro">
 
@@ -443,6 +438,7 @@ farmers manage crop problems effectively.
 <option value="cotton">🌿 Cotton</option>
 
 </select>
+
 </div>
 
 
@@ -595,6 +591,8 @@ biological control methods where suitable.
 </p>
 
 </div>
+
+
 <div class="step">
 
 <span class="step-number">5</span>
@@ -770,6 +768,8 @@ labelled containers.
 </ul>
 
 </div>
+
+
 <!-- NATURAL METHODS -->
 
 <div class="section">
@@ -838,7 +838,6 @@ plant material where appropriate.
 <b>⚠️ Important:</b>
 
 <br><br>
-
 Not every leaf spot, insect or yellow leaf
 requires pesticide treatment.
 
@@ -940,8 +939,7 @@ symptoms:"Leaf curling, insect colonies, white powdery growth and damaged pods."
 prevention:"Maintain field hygiene and avoid excessive moisture.",
 management:"Monitor crops regularly and obtain expert advice for serious infestations."
 },
-
-fenugreek:{
+  fenugreek:{
 name:"🌿 Fenugreek",
 pests:"Aphids and leaf-feeding insects.",
 diseases:"Powdery mildew and leaf diseases.",
@@ -1003,8 +1001,7 @@ symptoms:"Wilting, bored shoots, holes in fruits and yellowing.",
 prevention:"Remove affected shoots and fruits, use healthy seedlings and maintain field hygiene.",
 management:"Use IPM and appropriate registered control measures when required."
 },
-
-okra:{
+  kra:{
 name:"🌱 Okra",
 pests:"Jassids, aphids and fruit/shoot borers.",
 diseases:"Yellow vein mosaic and other leaf diseases.",
@@ -1179,9 +1176,7 @@ function showCrop(){
 
         return;
     }
-
-
-    const crop =
+  const crop =
     crops[selected];
 
 
