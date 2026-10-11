@@ -1,1037 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>GramSakhi - Irrigation Information</title>
-
 <style>
-
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
-
-body{
-    font-family:Arial,sans-serif;
-    background:#f1f8fb;
-    color:#333;
-    line-height:1.6;
-}
-
-/* HEADER */
-
-header{
-    background:#0277bd;
-    color:white;
-    text-align:center;
-    padding:28px 15px;
-}
-
-header h1{
-    font-size:30px;
-    margin-bottom:8px;
-}
-
-header p{
-    font-size:16px;
-}
-
-/* BACK BUTTON */
-
-.back{
-    width:94%;
-    max-width:1100px;
-    margin:18px auto;
-}
-
-.back a{
-    text-decoration:none;
-    color:#0277bd;
-    font-weight:bold;
-}
-
-/* CONTAINER */
-
-.container{
-    width:94%;
-    max-width:1100px;
-    margin:auto;
-}
-
-/* INTRO */
-
-.intro{
-    background:white;
-    padding:22px;
-    border-radius:15px;
-    margin-bottom:20px;
-    box-shadow:0 3px 10px rgba(0,0,0,0.08);
-}
-
-.intro h2{
-    color:#0277bd;
-    margin-bottom:8px;
-}
-
-/* SECTION */
-
-.info-section{
-    background:white;
-    padding:22px;
-    border-radius:15px;
-    margin-bottom:20px;
-    box-shadow:0 3px 10px rgba(0,0,0,0.08);
-}
-
-.info-section h2{
-    color:#0277bd;
-    margin-bottom:15px;
-}
-
-/* GRID */
-
-.info-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
-}
-
-.info-card{
-    background:#e1f5fe;
-    padding:17px;
-    border-radius:10px;
-}
-
-.info-card h3{
-    color:#0277bd;
-    margin-bottom:7px;
-}
-
-/* IRRIGATION TYPES */
-
-.type-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
-}
-
-.type-card{
-    background:#f5fbfd;
-    border:1px solid #cfd8dc;
-    padding:18px;
-    border-radius:12px;
-}
-
-.type-card h3{
-    color:#0277bd;
-    margin-bottom:8px;
-}
-
-/* CROP TABLE */
-
-.crop-table{
-    width:100%;
-    border-collapse:collapse;
-    margin-top:10px;
-}
-
-.crop-table th,
-.crop-table td{
-    border:1px solid #ddd;
-    padding:12px;
-    text-align:left;
-}
-
-.crop-table th{
-    background:#0277bd;
-    color:white;
-}
-
-/* TIPS */
-
-.tips{
-    background:#e0f7fa;
-    padding:22px;
-    border-radius:15px;
-    margin-bottom:20px;
-}
-
-.tips h2{
-    color:#006064;
-    margin-bottom:12px;
-}
-
-.tips ul{
-    padding-left:22px;
-}
-
-/* WARNING */
-
-.warning{
-    background:#fff8e1;
-    border-left:5px solid #f9a825;
-    padding:18px;
-    border-radius:8px;
-    margin-bottom:20px;
-}
-
-/* OFFICIAL */
-
-.official{
-    background:#e3f2fd;
-    padding:22px;
-    border-radius:15px;
-    margin-bottom:25px;
-}
-
-.official h2{
-    color:#1565c0;
-    margin-bottom:8px;
-}
-
-.official-btn{
-    display:inline-block;
-    margin-top:15px;
-    padding:12px 18px;
-    background:#1565c0;
-    color:white;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:bold;
-}
-
-/* FOOTER */
-
-footer{
-    background:#01579b;
-    color:white;
-    text-align:center;
-    padding:18px;
-    margin-top:30px;
-}
-
-/* MOBILE */
-
-@media(max-width:700px){
-
-    .info-grid,
-    .type-grid{
-        grid-template-columns:1fr;
-    }
-
-    .crop-table{
-        font-size:13px;
-    }
-
-    .crop-table th,
-    .crop-table td{
-        padding:8px;
-    }
-
-    header h1{
-        font-size:26px;
-    }
-
-}
-
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f1f8fb;color:#333;line-height:1.6;padding-top:58px}
+.language-bar{position:fixed;top:0;left:0;width:100%;z-index:1000;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.15);display:flex;justify-content:center;gap:10px;padding:10px;flex-wrap:wrap}
+.language-bar button{border:0;border-radius:7px;background:#0277bd;color:#fff;padding:9px 16px;font-size:15px;font-weight:bold;cursor:pointer}
+.language-bar button:hover,.language-bar button.active{background:#01579b;outline:2px solid #81d4fa}
+header{background:#0277bd;color:white;text-align:center;padding:28px 15px}
+header h1{font-size:30px;margin-bottom:8px}header p{font-size:16px}
+.back{width:94%;max-width:1100px;margin:18px auto}.back a{text-decoration:none;color:#0277bd;font-weight:bold}
+.container{width:94%;max-width:1100px;margin:auto}
+.intro{background:white;padding:22px;border-radius:15px;margin:20px auto;width:94%;max-width:1100px;box-shadow:0 3px 10px rgba(0,0,0,.08)}
+.intro h2{color:#0277bd;margin-bottom:8px}
+.info-section{background:white;padding:22px;border-radius:15px;margin:0 auto 20px;width:94%;max-width:1100px;box-shadow:0 3px 10px rgba(0,0,0,.08)}
+.info-section h2{color:#0277bd;margin-bottom:15px}
+.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
+.info-card{background:#e1f5fe;padding:17px;border-radius:10px}.info-card h3{color:#0277bd;margin-bottom:7px}
+.type-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
+.type-card{background:#f5fbfd;border:1px solid #cfd8dc;padding:18px;border-radius:12px}.type-card h3{color:#0277bd;margin-bottom:8px}.type-card ul{padding-left:22px}
+.crop-table{width:100%;border-collapse:collapse;margin-top:10px}.crop-table th,.crop-table td{border:1px solid #ddd;padding:12px;text-align:left}.crop-table th{background:#0277bd;color:white}
+.tips{background:#e0f7fa;padding:22px;border-radius:15px;margin:0 auto 20px;width:94%;max-width:1100px}.tips h2{color:#006064;margin-bottom:12px}.tips ul{padding-left:22px}
+.warning{background:#fff8e1;border-left:5px solid #f9a825;padding:18px;border-radius:8px;margin:0 auto 20px;width:94%;max-width:1100px}.warning ul{padding-left:22px}
+.official{background:#e3f2fd;padding:22px;border-radius:15px;margin:0 auto 25px;width:94%;max-width:1100px}.official h2{color:#1565c0;margin-bottom:8px}
+.official-btn{display:inline-block;margin-top:15px;padding:12px 18px;background:#1565c0;color:white;text-decoration:none;border-radius:8px;font-weight:bold}
+footer{background:#01579b;color:white;text-align:center;padding:18px;margin-top:30px}
+@media(max-width:700px){.info-grid,.type-grid{grid-template-columns:1fr}.crop-table{font-size:13px;display:block;overflow-x:auto;white-space:normal}.crop-table th,.crop-table td{padding:8px}header h1{font-size:26px}.language-bar button{padding:8px 12px;font-size:14px}}
 </style>
-
 </head>
-
-
 <body>
-
-
-<!-- HEADER -->
-
-<header>
-
-<h1>💧 Irrigation Information</h1>
-
-<p>
-Use Water Wisely, Grow Better Crops
-</p>
-
-</header>
-
-
-
-
-
-<!-- INTRO -->
-
-<div class="intro">
-
-<h2>🌱 Importance of Irrigation</h2>
-
-<p>
-Irrigation provides crops with the water they
-need when rainfall is not sufficient. Proper
-irrigation can support healthy crop growth,
-improve water-use efficiency and reduce
-unnecessary water loss.
-</p>
-
+<div class="language-bar" aria-label="Language options">
+<button type="button" class="active" onclick="changeLanguage('en',this)">English</button>
+<button type="button" onclick="changeLanguage('mr',this)">मराठी</button>
+<button type="button" onclick="changeLanguage('hi',this)">हिन्दी</button>
 </div>
-
-
-<!-- WHAT IS IRRIGATION -->
-
-<div class="info-section">
-
-<h2>💧 What is Irrigation?</h2>
-
-<p>
-Irrigation is the artificial application of water
-to agricultural land to meet crop water
-requirements.
-</p>
-
-<br>
-
-<p>
-The amount and timing of irrigation depend on
-the crop, soil, weather, crop growth stage,
-rainfall and available water.
-</p>
-
-</div>
-
-
-<!-- METHODS -->
-
-<div class="info-section">
-
-<h2>🚜 Main Irrigation Methods</h2>
-
-<div class="type-grid">
-
-
-<div class="type-card">
-
-<h3>💧 Drip Irrigation</h3>
-
-<p>
-Water is delivered slowly near the root zone
-through emitters.
-</p>
-
-<br>
-
-<b>Benefits:</b>
-
-<ul>
-<li>Can reduce water loss.</li>
-<li>Delivers water close to roots.</li>
-<li>Useful for many vegetables and fruit crops.</li>
-<li>Can be combined with fertigation where appropriate.</li>
-</ul>
-
-</div>
-
-
-<div class="type-card">
-
-<h3>🌧️ Sprinkler Irrigation</h3>
-
-<p>
-Water is sprayed over the crop or soil surface
-like rainfall.
-</p>
-
-<br>
-
-<b>Benefits:</b>
-
-<ul>
-<li>Useful for many field and vegetable crops.</li>
-<li>Can provide relatively uniform water application.</li>
-<li>Suitable for some light and uneven soils.</li>
-</ul>
-
-</div>
-
-
-<div class="type-card">
-
-<h3>🌊 Surface / Flood Irrigation</h3>
-
-<p>
-Water is distributed over the soil surface.
-</p>
-
-<br>
-
-<b>Important:</b>
-
-<ul>
-<li>Simple to operate.</li>
-<li>Can require more water than efficient methods.</li>
-<li>Careful field leveling and water management can reduce losses.</li>
-</ul>
-
-</div>
-
-
-<div class="type-card">
-
-<h3>🌱 Furrow Irrigation</h3>
-
-<p>
-Water flows through small channels between
-crop rows.
-</p>
-
-<br>
-
-<b>Benefits:</b>
-
-<ul>
-<li>Suitable for certain row crops.</li>
-<li>Keeps much of the plant canopy away from direct water flow.</li>
-<li>Requires proper field layout and water management.</li>
-</ul>
-
-</div>
-
-
-</div>
-
-</div>
-
-
-<!-- CROP WISE -->
-
-<div class="info-section">
-
-<h2>🌾 General Crop-wise Irrigation Information</h2>
-
-<p>
-The following is general guidance. Actual irrigation
-needs vary according to soil, weather, crop stage,
-rainfall and irrigation system.
-</p>
-
-<br>
-
-
-<table class="crop-table">
-
-<tr>
-
-<th>Crop</th>
-
-<th>General Irrigation Information</th>
-
-<th>Commonly Suitable Methods</th>
-
-</tr>
-
-
-<tr>
-
-<td>🥬 Cabbage</td>
-
-<td>
-Requires regular moisture, especially during
-head development. Avoid prolonged waterlogging.
-</td>
-
-<td>
-Drip, sprinkler
-</td>
-
-</tr>
-
-
-<tr>
-
-<td>🥦 Cauliflower</td>
-
-<td>
-Maintain adequate soil moisture during
-vegetative growth and curd development.
-</td>
-
-<td>
-Drip, sprinkler
-</td>
-
-</tr>
-
-
-<tr>
-
-<td>🫛 Green Peas</td>
-
-<td>
-Provide irrigation when soil moisture becomes
-insufficient, particularly during flowering
-and pod development.
-</td>
-
-<td>
-Drip, sprinkler
-</td>
-
-</tr>
-
-
-<tr>
-
-<td>🌶️ Chilli</td>
-
-<td>
-Regular and controlled irrigation is important.
-Avoid waterlogging.
-</td>
-
-<td>
-Drip
-</td>
-
-</tr>
-
-
-<tr>
-
-<td>🍅 Tomato</td>
-
-<td>
-Maintain fairly uniform soil moisture and avoid
-extreme wet and dry conditions.
-</td>
-
-<td>
-Drip, sprinkler
-</td>
-
-</tr>
-
-
-<tr>
-
-<td>🧅 Onion</td>
-
-<td>
-Requires careful moisture management. Avoid
-excessive irrigation near maturity.
-</td>
-
-<td>
-Drip, sprinkler
-</td>
-
-</tr>
-
-
-<tr>
-
-<td>🥔 Potato</td>
-
-<td>
-Adequate moisture is important during tuber
-formation and development.
-</td>
-
-<td>
-Drip, sprinkler, furrow
-</td>
-
-</tr>
-
-
-<tr>
-
-<td>🍇 Grapes</td>
-
-<td>
-Irrigation should be carefully scheduled
-according to growth stage and vineyard
-conditions.
-</td>
-
-<td>
-Drip
-</td>
-
-</tr>
-
-
-<tr>
-
-<td>🍎 Pomegranate</td>
-
-<td>
-Controlled irrigation is important. Avoid
-water stress and excessive water.
-</td>
-
-<td>
-Drip
-</td>
-
-</tr>
-
-
-<tr>
-
-<td>🍌 Banana</td>
-
-<td>
-Requires regular water supply because of its
-high water requirement.
-</td>
-
-<td>
-Drip, micro-irrigation
-</td>
-
-</tr>
-
-
-<tr>
-
-<td>🥭 Mango</td>
-
-<td>
-Young trees require regular irrigation for
-establishment. Mature trees need stage-based
-water management.
-</td>
-
-<td>
-Drip, basin irrigation
-</td>
-
-</tr>
-
-
-<tr>
-
-<td>🌾 Wheat</td>
-
-<td>
-Irrigation should be planned around important
-crop growth stages when rainfall is insufficient.
-</td>
-
-<td>
-Furrow, sprinkler
-</td>
-
-</tr>
-
-
-<tr>
-
-<td>🌽 Maize</td>
-
-<td>
-Adequate moisture is especially important
-during critical growth and reproductive stages.
-</td>
-
-<td>
-Drip, sprinkler, furrow
-</td>
-
-</tr>
-
-
-<tr>
-
-<td>🌱 Gram</td>
-
-<td>
-Usually has lower water requirement than many
-irrigated crops. Avoid excessive irrigation.
-</td>
-
-<td>
-Furrow, sprinkler
-</td>
-
-</tr>
-
-
-<tr>
-
-<td>🌱 Soybean</td>
-
-<td>
-Often grown under rainfall conditions, but
-irrigation may be useful during important
-water-stress periods where available.
-</td>
-
-<td>
-Sprinkler
-</td>
-
-</tr>
-
-
-<tr>
-
-<td>🌿 Cotton</td>
-
-<td>
-Irrigation scheduling should consider soil,
-rainfall and crop growth stage. Avoid excessive
-water.
-</td>
-
-<td>
-Drip, furrow
-</td>
-
-</tr>
-
-
-</table>
-
-</div>
-
-
-<!-- WHEN TO IRRIGATE -->
-
-<div class="info-section">
-
-<h2>⏰ When Should Farmers Irrigate?</h2>
-
-<div class="info-grid">
-
-
-<div class="info-card">
-
-<h3>🌱 Check Soil Moisture</h3>
-
-<p>
-Check the soil near the root zone rather than
-irrigating only according to a fixed calendar.
-</p>
-
-</div>
-
-
-<div class="info-card">
-
-<h3>🌦️ Consider Rainfall</h3>
-
-<p>
-Reduce or postpone irrigation when sufficient
-rainfall has already supplied the crop's needs.
-</p>
-
-</div>
-
-
-<div class="info-card">
-
-<h3>🌾 Consider Crop Stage</h3>
-
-<p>
-Water requirements change during germination,
-vegetative growth, flowering, fruiting and
-maturity.
-</p>
-
-</div>
-
-
-<div class="info-card">
-
-<h3>🌡️ Consider Weather</h3>
-
-<p>
-Temperature, wind, humidity and rainfall affect
-how quickly soil loses water.
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-
-<!-- WATER SAVING -->
-
-<div class="tips">
-
-<h2>💧 Water-Saving Tips</h2>
-
-<ul>
-
-<li>
-Prefer efficient irrigation systems such as drip
-or sprinkler where suitable.
-</li>
-
-<li>
-Irrigate according to soil moisture and crop
-requirements.
-</li>
-
-<li>
-Repair leaking pipes, valves and emitters.
-</li>
-
-<li>
-Use mulching where appropriate to reduce
-evaporation.
-</li>
-
-<li>
-Avoid unnecessary irrigation during or immediately
-after adequate rainfall.
-</li>
-
-<li>
-Maintain irrigation equipment regularly.
-</li>
-
-<li>
-Keep fields properly leveled where surface
-irrigation is used.
-</li>
-
-<li>
-Use rainwater and available water resources
-carefully.
-</li>
-
-</ul>
-
-</div>
-
-
-<!-- RAINWATER -->
-
-<div class="info-section">
-
-<h2>🌧️ Rainwater Harvesting</h2>
-
-<p>
-Rainwater harvesting can help collect and store
-rainfall for later agricultural use where
-appropriate.
-</p>
-
-<br>
-
-<div class="info-grid">
-
-
-<div class="info-card">
-
-<h3>🏞️ Farm Pond</h3>
-
-<p>
-A properly designed farm pond can store
-rainwater for later use.
-</p>
-
-</div>
-
-
-<div class="info-card">
-
-<h3>🌱 Field Bunding</h3>
-
-<p>
-Suitable bunding can help slow runoff and
-support water conservation.
-</p>
-
-</div>
-
-
-<div class="info-card">
-
-<h3>💧 Recharge Structures</h3>
-
-<p>
-Suitable recharge structures can help support
-groundwater recharge where technically feasible.
-</p>
-
-</div>
-
-
-<div class="info-card">
-
-<h3>🌧️ Rooftop Rainwater</h3>
-
-<p>
-Rainwater from suitable structures can be
-collected and managed for appropriate uses.
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-
-<!-- OVER IRRIGATION -->
-
-<div class="warning">
-
-<b>⚠️ Problems Caused by Over-Irrigation</b>
-
-<br><br>
-
-<ul>
-
-<li>Waterlogging</li>
-
-<li>Root damage</li>
-
-<li>Nutrient losses</li>
-
-<li>Higher disease risk in some crops</li>
-
-<li>Soil salinity problems in susceptible areas</li>
-
-<li>Unnecessary electricity and water costs</li>
-
-</ul>
-
-</div>
-
-
-<!-- MAINTENANCE -->
-
-<div class="info-section">
-
-<h2>🔧 Irrigation System Maintenance</h2>
-
-<div class="info-grid">
-
-
-<div class="info-card">
-
-<h3>🔍 Check Pipes</h3>
-
-<p>
-Regularly inspect pipes and connections for
-leakage.
-</p>
-
-</div>
-
-
-<div class="info-card">
-
-<h3>💧 Clean Filters</h3>
-
-<p>
-Clean irrigation filters according to the
-equipment manufacturer's recommendations.
-</p>
-
-</div>
-
-
-<div class="info-card">
-
-<h3>🚿 Check Emitters</h3>
-
-<p>
-Inspect drip emitters and sprinklers for
-blockage or uneven discharge.
-</p>
-
-</div>
-
-
-<div class="info-card">
-
-<h3>⚡ Check Pump</h3>
-
-<p>
-Maintain pumps and electrical equipment safely
-and according to manufacturer instructions.
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-
-<!-- WARNING -->
-
-<div class="warning">
-
-<b>⚠️ Important:</b>
-
-<br><br>
-
-There is no single irrigation schedule that
-works for every farm.
-
-The correct amount and timing of irrigation
-depend on crop, soil type, crop growth stage,
-rainfall, temperature, irrigation method and
-water availability.
-
-For crop-specific irrigation scheduling,
-farmers should consult the local Agriculture
-Department or a qualified agricultural expert.
-
-</div>
-
-
-<!-- OFFICIAL -->
-
-<div class="official">
-
-<h2>🏛️ Official Agriculture Resources</h2>
-
-<p>
-For reliable information about agricultural
-water management, irrigation schemes and
-government programmes, use official government
-resources.
-</p>
-
-<a
-href="https://pmksy.gov.in/"
-target="_blank"
-class="official-btn">
-
-💧 Visit PMKSY Official Website
-
-</a>
-
-</div>
-
-
-</div>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-© 2026 GramSakhi | Farmer Corner
-
-</footer>
-
-
+<header><h1>💧 Irrigation Information</h1><p>Use Water Wisely, Grow Better Crops</p></header>
+<div class="intro"><h2>🌱 Importance of Irrigation</h2><p>Irrigation provides crops with the water they need when rainfall is not sufficient. Proper irrigation can support healthy crop growth, improve water-use efficiency and reduce unnecessary water loss.</p></div>
+<div class="info-section"><h2>💧 What is Irrigation?</h2><p>Irrigation is the artificial application of water to agricultural land to meet crop water requirements.</p><br><p>The amount and timing of irrigation depend on the crop, soil, weather, crop growth stage, rainfall and available water.</p></div>
+<div class="info-section"><h2>🚜 Main Irrigation Methods</h2><div class="type-grid">
+<div class="type-card"><h3>💧 Drip Irrigation</h3><p>Water is delivered slowly near the root zone through emitters.</p><br><b>Benefits:</b><ul><li>Can reduce water loss.</li><li>Delivers water close to roots.</li><li>Useful for many vegetables and fruit crops.</li><li>Can be combined with fertigation where appropriate.</li></ul></div>
+<div class="type-card"><h3>🌧️ Sprinkler Irrigation</h3><p>Water is sprayed over the crop or soil surface like rainfall.</p><br><b>Benefits:</b><ul><li>Useful for many field and vegetable crops.</li><li>Can provide relatively uniform water application.</li><li>Suitable for some light and uneven soils.</li></ul></div>
+<div class="type-card"><h3>🌊 Surface / Flood Irrigation</h3><p>Water is distributed over the soil surface.</p><br><b>Important:</b><ul><li>Simple to operate.</li><li>Can require more water than efficient methods.</li><li>Careful field leveling and water management can reduce losses.</li></ul></div>
+<div class="type-card"><h3>🌱 Furrow Irrigation</h3><p>Water flows through small channels between crop rows.</p><br><b>Benefits:</b><ul><li>Suitable for certain row crops.</li><li>Keeps much of the plant canopy away from direct water flow.</li><li>Requires proper field layout and water management.</li></ul></div>
+</div></div>
+<div class="info-section"><h2>🌾 General Crop-wise Irrigation Information</h2><p>The following is general guidance. Actual irrigation needs vary according to soil, weather, crop stage, rainfall and irrigation system.</p><br><table class="crop-table"><tr><th>Crop</th><th>General Irrigation Information</th><th>Commonly Suitable Methods</th></tr>
+<tr><td>🥬 Cabbage</td><td>Requires regular moisture, especially during head development. Avoid prolonged waterlogging.</td><td>Drip, sprinkler</td></tr>
+<tr><td>🥦 Cauliflower</td><td>Maintain adequate soil moisture during vegetative growth and curd development.</td><td>Drip, sprinkler</td></tr>
+<tr><td>🫛 Green Peas</td><td>Provide irrigation when soil moisture becomes insufficient, particularly during flowering and pod development.</td><td>Drip, sprinkler</td></tr>
+<tr><td>🌶️ Chilli</td><td>Regular and controlled irrigation is important. Avoid waterlogging.</td><td>Drip</td></tr>
+<tr><td>🍅 Tomato</td><td>Maintain fairly uniform soil moisture and avoid extreme wet and dry conditions.</td><td>Drip, sprinkler</td></tr>
+<tr><td>🧅 Onion</td><td>Requires careful moisture management. Avoid excessive irrigation near maturity.</td><td>Drip, sprinkler</td></tr>
+<tr><td>🥔 Potato</td><td>Adequate moisture is important during tuber formation and development.</td><td>Drip, sprinkler, furrow</td></tr>
+<tr><td>🍇 Grapes</td><td>Irrigation should be carefully scheduled according to growth stage and vineyard conditions.</td><td>Drip</td></tr>
+<tr><td>🍎 Pomegranate</td><td>Controlled irrigation is important. Avoid water stress and excessive water.</td><td>Drip</td></tr>
+<tr><td>🍌 Banana</td><td>Requires regular water supply because of its high water requirement.</td><td>Drip, micro-irrigation</td></tr>
+<tr><td>🥭 Mango</td><td>Young trees require regular irrigation for establishment. Mature trees need stage-based water management.</td><td>Drip, basin irrigation</td></tr>
+<tr><td>🌾 Wheat</td><td>Irrigation should be planned around important crop growth stages when rainfall is insufficient.</td><td>Furrow, sprinkler</td></tr>
+<tr><td>🌽 Maize</td><td>Adequate moisture is especially important during critical growth and reproductive stages.</td><td>Drip, sprinkler, furrow</td></tr>
+<tr><td>🌱 Gram</td><td>Usually has lower water requirement than many irrigated crops. Avoid excessive irrigation.</td><td>Furrow, sprinkler</td></tr>
+<tr><td>🌱 Soybean</td><td>Often grown under rainfall conditions, but irrigation may be useful during important water-stress periods where available.</td><td>Sprinkler</td></tr>
+<tr><td>🌿 Cotton</td><td>Irrigation scheduling should consider soil, rainfall and crop growth stage. Avoid excessive water.</td><td>Drip, furrow</td></tr>
+</table></div>
+<div class="info-section"><h2>⏰ When Should Farmers Irrigate?</h2><div class="info-grid">
+<div class="info-card"><h3>🌱 Check Soil Moisture</h3><p>Check the soil near the root zone rather than irrigating only according to a fixed calendar.</p></div>
+<div class="info-card"><h3>🌦️ Consider Rainfall</h3><p>Reduce or postpone irrigation when sufficient rainfall has already supplied the crop's needs.</p></div>
+<div class="info-card"><h3>🌾 Consider Crop Stage</h3><p>Water requirements change during germination, vegetative growth, flowering, fruiting and maturity.</p></div>
+<div class="info-card"><h3>🌡️ Consider Weather</h3><p>Temperature, wind, humidity and rainfall affect how quickly soil loses water.</p></div>
+</div></div>
+<div class="tips"><h2>💧 Water-Saving Tips</h2><ul><li>Prefer efficient irrigation systems such as drip or sprinkler where suitable.</li><li>Irrigate according to soil moisture and crop requirements.</li><li>Repair leaking pipes, valves and emitters.</li><li>Use mulching where appropriate to reduce evaporation.</li><li>Avoid unnecessary irrigation during or immediately after adequate rainfall.</li><li>Maintain irrigation equipment regularly.</li><li>Keep fields properly leveled where surface irrigation is used.</li><li>Use rainwater and available water resources carefully.</li></ul></div>
+<div class="info-section"><h2>🌧️ Rainwater Harvesting</h2><p>Rainwater harvesting can help collect and store rainfall for later agricultural use where appropriate.</p><br><div class="info-grid">
+<div class="info-card"><h3>🏞️ Farm Pond</h3><p>A properly designed farm pond can store rainwater for later use.</p></div>
+<div class="info-card"><h3>🌱 Field Bunding</h3><p>Suitable bunding can help slow runoff and support water conservation.</p></div>
+<div class="info-card"><h3>💧 Recharge Structures</h3><p>Suitable recharge structures can help support groundwater recharge where technically feasible.</p></div>
+<div class="info-card"><h3>🌧️ Rooftop Rainwater</h3><p>Rainwater from suitable structures can be collected and managed for appropriate uses.</p></div>
+</div></div>
+<div class="warning"><b>⚠️ Problems Caused by Over-Irrigation</b><br><br><ul><li>Waterlogging</li><li>Root damage</li><li>Nutrient losses</li><li>Higher disease risk in some crops</li><li>Soil salinity problems in susceptible areas</li><li>Unnecessary electricity and water costs</li></ul></div>
+<div class="info-section"><h2>🔧 Irrigation System Maintenance</h2><div class="info-grid">
+<div class="info-card"><h3>🔍 Check Pipes</h3><p>Regularly inspect pipes and connections for leakage.</p></div>
+<div class="info-card"><h3>💧 Clean Filters</h3><p>Clean irrigation filters according to the equipment manufacturer's recommendations.</p></div>
+<div class="info-card"><h3>🚿 Check Emitters</h3><p>Inspect drip emitters and sprinklers for blockage or uneven discharge.</p></div>
+<div class="info-card"><h3>⚡ Check Pump</h3><p>Maintain pumps and electrical equipment safely and according to manufacturer instructions.</p></div>
+</div></div>
+<div class="warning"><b>⚠️ Important:</b><br><br>There is no single irrigation schedule that works for every farm.<br><br>The correct amount and timing of irrigation depend on crop, soil type, crop growth stage, rainfall, temperature, irrigation method and water availability.<br><br>For crop-specific irrigation scheduling, farmers should consult the local Agriculture Department or a qualified agricultural expert.</div>
+<div class="official"><h2>🏛️ Official Agriculture Resources</h2><p>For reliable information about agricultural water management, irrigation schemes and government programmes, use official government resources.</p><a href="https://pmksy.gov.in/" target="_blank" rel="noopener noreferrer" class="official-btn">💧 Visit PMKSY Official Website</a></div>
+<footer>© 2026 GramSakhi | Farmer Corner</footer>
+<script>
+/* Language buttons translate the complete page using Google Translate. Internet is required. */
+(function(){
+  const translations={
+    mr:{"Irrigation Information":"सिंचन माहिती","Use Water Wisely, Grow Better Crops":"पाण्याचा योग्य वापर करा, पिके चांगली वाढवा","Importance of Irrigation":"सिंचनाचे महत्त्व","Irrigation provides crops with the water they need when rainfall is not sufficient. Proper irrigation can support healthy crop growth, improve water-use efficiency and reduce unnecessary water loss.":"पाऊस पुरेसा नसताना सिंचनामुळे पिकांना आवश्यक पाणी मिळते. योग्य सिंचनामुळे पिकांची निरोगी वाढ होते, पाण्याचा कार्यक्षम वापर होतो आणि पाण्याचा अनावश्यक अपव्यय कमी होतो.","What is Irrigation?":"सिंचन म्हणजे काय?","Irrigation is the artificial application of water to agricultural land to meet crop water requirements.":"पिकांची पाण्याची गरज पूर्ण करण्यासाठी शेतीच्या जमिनीला कृत्रिमरीत्या पाणी देण्याच्या प्रक्रियेला सिंचन म्हणतात.","The amount and timing of irrigation depend on the crop, soil, weather, crop growth stage, rainfall and available water.":"सिंचनाचे प्रमाण आणि वेळ पीक, माती, हवामान, पिकाची वाढीची अवस्था, पाऊस आणि उपलब्ध पाण्यावर अवलंबून असते.","Main Irrigation Methods":"सिंचनाच्या प्रमुख पद्धती","Drip Irrigation":"ठिबक सिंचन","Sprinkler Irrigation":"तुषार सिंचन","Surface / Flood Irrigation":"पाटाने / पृष्ठभागीय सिंचन","Furrow Irrigation":"सरी सिंचन","Benefits:":"फायदे:","Important:":"महत्त्वाचे:","General Crop-wise Irrigation Information":"पिकानुसार सिंचनाची सामान्य माहिती","Crop":"पीक","General Irrigation Information":"सिंचनाची सामान्य माहिती","Commonly Suitable Methods":"सामान्यतः योग्य पद्धती","When Should Farmers Irrigate?":"शेतकऱ्यांनी सिंचन कधी करावे?","Check Soil Moisture":"मातीतील ओलावा तपासा","Consider Rainfall":"पावसाचा विचार करा","Consider Crop Stage":"पिकाच्या अवस्थेचा विचार करा","Consider Weather":"हवामानाचा विचार करा","Water-Saving Tips":"पाणी बचतीसाठी टिप्स","Rainwater Harvesting":"पावसाचे पाणी साठवणे","Farm Pond":"शेततळे","Field Bunding":"शेतातील बांधबंदिस्ती","Recharge Structures":"भूजल पुनर्भरण संरचना","Rooftop Rainwater":"छतावरील पावसाचे पाणी","Problems Caused by Over-Irrigation":"अतिसिंचनामुळे होणारे त्रास","Waterlogging":"पाणी साचणे","Root damage":"मुळांचे नुकसान","Nutrient losses":"पोषकद्रव्यांची हानी","Irrigation System Maintenance":"सिंचन प्रणालीची देखभाल","Check Pipes":"पाईप तपासा","Clean Filters":"फिल्टर स्वच्छ करा","Check Emitters":"ड्रिप एमिटर तपासा","Check Pump":"पंप तपासा","Important:":"महत्त्वाचे:","Official Agriculture Resources":"अधिकृत कृषी संसाधने","Visit PMKSY Official Website":"PMKSY अधिकृत संकेतस्थळाला भेट द्या","Drip, sprinkler":"ठिबक, तुषार","Drip":"ठिबक","Furrow, sprinkler":"सरी, तुषार","Drip, sprinkler, furrow":"ठिबक, तुषार, सरी","Drip, micro-irrigation":"ठिबक, सूक्ष्म सिंचन","Drip, basin irrigation":"ठिबक, आळे सिंचन"},
+    hi:{"Irrigation Information":"सिंचाई की जानकारी","Use Water Wisely, Grow Better Crops":"पानी का समझदारी से उपयोग करें, बेहतर फसल उगाएँ","Importance of Irrigation":"सिंचाई का महत्व","Irrigation provides crops with the water they need when rainfall is not sufficient. Proper irrigation can support healthy crop growth, improve water-use efficiency and reduce unnecessary water loss.":"जब वर्षा पर्याप्त नहीं होती, तब सिंचाई फसलों को आवश्यक पानी देती है। उचित सिंचाई स्वस्थ फसल वृद्धि, पानी के कुशल उपयोग और अनावश्यक जल हानि को कम करने में मदद करती है।","What is Irrigation?":"सिंचाई क्या है?","Irrigation is the artificial application of water to agricultural land to meet crop water requirements.":"फसलों की पानी की आवश्यकता पूरी करने के लिए कृषि भूमि में कृत्रिम रूप से पानी देने की प्रक्रिया को सिंचाई कहते हैं।","The amount and timing of irrigation depend on the crop, soil, weather, crop growth stage, rainfall and available water.":"सिंचाई की मात्रा और समय फसल, मिट्टी, मौसम, फसल की अवस्था, वर्षा और उपलब्ध पानी पर निर्भर करते हैं।","Main Irrigation Methods":"सिंचाई की मुख्य विधियाँ","Drip Irrigation":"ड्रिप सिंचाई","Sprinkler Irrigation":"स्प्रिंकलर सिंचाई","Surface / Flood Irrigation":"सतही / बाढ़ सिंचाई","Furrow Irrigation":"नाली सिंचाई","Benefits:":"लाभ:","Important:":"महत्वपूर्ण:","General Crop-wise Irrigation Information":"फसल के अनुसार सिंचाई की सामान्य जानकारी","Crop":"फसल","General Irrigation Information":"सिंचाई की सामान्य जानकारी","Commonly Suitable Methods":"आमतौर पर उपयुक्त विधियाँ","When Should Farmers Irrigate?":"किसानों को सिंचाई कब करनी चाहिए?","Check Soil Moisture":"मिट्टी की नमी जाँचें","Consider Rainfall":"वर्षा को ध्यान में रखें","Consider Crop Stage":"फसल की अवस्था को ध्यान में रखें","Consider Weather":"मौसम को ध्यान में रखें","Water-Saving Tips":"पानी बचाने के सुझाव","Rainwater Harvesting":"वर्षा जल संचयन","Farm Pond":"खेत का तालाब","Field Bunding":"खेत की मेड़बंदी","Recharge Structures":"भूजल पुनर्भरण संरचनाएँ","Rooftop Rainwater":"छत का वर्षा जल","Problems Caused by Over-Irrigation":"अधिक सिंचाई से होने वाली समस्याएँ","Waterlogging":"जलभराव","Root damage":"जड़ों को नुकसान","Nutrient losses":"पोषक तत्वों की हानि","Irrigation System Maintenance":"सिंचाई प्रणाली का रखरखाव","Check Pipes":"पाइप जाँचें","Clean Filters":"फ़िल्टर साफ़ करें","Check Emitters":"ड्रिप एमिटर जाँचें","Check Pump":"पंप जाँचें","Official Agriculture Resources":"आधिकारिक कृषि संसाधन","Visit PMKSY Official Website":"PMKSY की आधिकारिक वेबसाइट देखें","Drip, sprinkler":"ड्रिप, स्प्रिंकलर","Drip":"ड्रिप","Furrow, sprinkler":"नाली, स्प्रिंकलर","Drip, sprinkler, furrow":"ड्रिप, स्प्रिंकलर, नाली","Drip, micro-irrigation":"ड्रिप, सूक्ष्म सिंचाई","Drip, basin irrigation":"ड्रिप, थाला सिंचाई"}
+  };
+  let originalNodes=[];
+  function saveOriginal(){originalNodes=[];const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n;while(n=walker.nextNode()){if(n.parentElement.closest('.language-bar,script,style'))continue;originalNodes.push({node:n,text:n.nodeValue});}}
+  function translateLocal(lang){
+    if(!originalNodes.length)saveOriginal();
+    const dict=translations[lang]||{};
+    originalNodes.forEach(item=>{let s=item.text;const trimmed=s.trim();if(dict[trimmed]){const lead=s.match(/^\s*/)[0],tail=s.match(/\s*$/)[0];item.node.nodeValue=lead+dict[trimmed]+tail;}});
+    document.documentElement.lang=lang;
+  }
+  window.changeLanguage=function(lang,button){
+    document.querySelectorAll('.language-bar button').forEach(b=>b.classList.remove('active'));if(button)button.classList.add('active');
+    if(lang==='en'){
+      if(!originalNodes.length)saveOriginal();originalNodes.forEach(item=>item.node.nodeValue=item.text);document.documentElement.lang='en';return;
+    }
+    translateLocal(lang);
+    // Use Google Translate for remaining sentences and longer descriptions not in the local glossary.
+    const code=lang==='mr'?'mr':'hi';
+    if(!window.googleTranslateElementInit){window.googleTranslateElementInit=function(){try{new google.translate.TranslateElement({pageLanguage:'en',includedLanguages:'en,mr,hi',autoDisplay:false},'google_translate_element');}catch(e){}};}
+    if(!document.getElementById('google-translate-script')){const s=document.createElement('script');s.id='google-translate-script';s.src='https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';s.onerror=function(){console.warn('Online translation unavailable. Some text may remain in English.');};document.head.appendChild(s);}
+    const trySelect=()=>{const sel=document.querySelector('.goog-te-combo');if(sel){sel.value=code;sel.dispatchEvent(new Event('change'));return true;}return false;};
+    let attempts=0;const timer=setInterval(()=>{attempts++;if(trySelect()||attempts>20)clearInterval(timer);},300);
+  };
+  document.addEventListener('DOMContentLoaded',saveOriginal);
+})();
+</script>
+<div id="google_translate_element" style="display:none"></div>
 </body>
-
 </html>

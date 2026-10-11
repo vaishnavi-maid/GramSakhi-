@@ -961,10 +961,7 @@ function displayForecast(daily) {
     }
 
 }
-
-
-
-/* =========================================
+  /* =========================================
    WEATHER ICON
 ========================================= */
 
@@ -1099,6 +1096,151 @@ document.getElementById(
     }
 );
 
+</script>
+
+
+<!-- GRAMSAKHI LANGUAGE BUTTONS: added without replacing existing weather code -->
+<div id="gs-weather-language" role="group" aria-label="Choose language">
+  <button type="button" data-lang="en" onclick="gsWeatherSetLanguage('en')">English</button>
+  <button type="button" data-lang="mr" onclick="gsWeatherSetLanguage('mr')">मराठी</button>
+  <button type="button" data-lang="hi" onclick="gsWeatherSetLanguage('hi')">हिन्दी</button>
+</div>
+<style>
+  #gs-weather-language {
+    position: fixed; top: 10px; right: 10px; z-index: 999999;
+    display: flex; gap: 5px; flex-wrap: wrap; justify-content: center;
+    background: #fff; padding: 7px; border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.22); max-width: calc(100vw - 20px);
+  }
+  #gs-weather-language button {
+    border: 0; border-radius: 6px; padding: 8px 10px;
+    background: #0277bd; color: #fff; font-size: 13px; cursor: pointer;
+  }
+  #gs-weather-language button:disabled { opacity: .65; cursor: wait; }
+  @media (max-width: 700px) {
+    #gs-weather-language { top: 5px; right: 5px; padding: 5px; gap: 3px; }
+    #gs-weather-language button { padding: 6px 8px; font-size: 12px; }
+    header { padding-top: 65px; }
+  }
+</style>
+<script>
+(function () {
+  const bar = document.getElementById('gs-weather-language');
+  if (!bar) return;
+  const originalText = new WeakMap();
+  const originalAttrs = new WeakMap();
+  const cache = new Map();
+  let currentLanguage = 'en';
+  let busy = false;
+  let internalChange = false;
+  let mutationTimer = null;
+
+  function collectTextNodes() {
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+      acceptNode(node) {
+        if (!node.nodeValue || !node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+        if (node.parentElement && (node.parentElement.closest('#gs-weather-language, script, style, noscript'))) return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    const nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    return nodes;
+  }
+
+  function saveOriginals() {
+    collectTextNodes().forEach(node => {
+      if (!originalText.has(node)) originalText.set(node, node.nodeValue);
+    });
+    document.querySelectorAll('input[placeholder],textarea[placeholder]').forEach(el => {
+      if (!originalAttrs.has(el)) originalAttrs.set(el, { placeholder: el.getAttribute('placeholder') });
+    });
+  }
+
+  async function translateText(text, lang) {
+    const key = lang + '|' + text;
+    if (cache.has(key)) return cache.get(key);
+    const url = 'https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl=' + lang + '&dt=t&q=' + encodeURIComponent(text);
+    const response = await fetch(url);
+    if (!response.ok) throw new Error('Translation service returned an error');
+    const data = await response.json();
+    const result = (data[0] || []).map(part => part[0]).join('');
+    cache.set(key, result || text);
+    return result || text;
+  }
+
+  async function translateNodes(nodes, lang) {
+    const eligible = nodes.filter(node => {
+      const original = originalText.get(node) || node.nodeValue;
+      return original.trim() && !/^([\d\s.,:%°/+-]+)$/.test(original.trim());
+    });
+    for (let i = 0; i < eligible.length; i += 5) {
+      await Promise.all(eligible.slice(i, i + 5).map(async node => {
+        const original = originalText.get(node) || node.nodeValue;
+        try { node.nodeValue = await translateText(original, lang); }
+        catch (e) { throw e; }
+      }));
+    }
+  }
+
+  window.gsWeatherSetLanguage = async function (lang) {
+    if (busy || !['en', 'mr', 'hi'].includes(lang)) return;
+    saveOriginals();
+    busy = true;
+    bar.querySelectorAll('button').forEach(button => button.disabled = true);
+    internalChange = true;
+    try {
+      if (lang === 'en') {
+        collectTextNodes().forEach(node => {
+          if (originalText.has(node)) node.nodeValue = originalText.get(node);
+        });
+        document.querySelectorAll('input[placeholder],textarea[placeholder]').forEach(el => {
+          const attrs = originalAttrs.get(el);
+          if (attrs) el.setAttribute('placeholder', attrs.placeholder || '');
+        });
+        currentLanguage = 'en';
+      } else {
+        const nodes = collectTextNodes();
+        await translateNodes(nodes, lang);
+        const fields = Array.from(document.querySelectorAll('input[placeholder],textarea[placeholder]'));
+        for (let i = 0; i < fields.length; i += 5) {
+          await Promise.all(fields.slice(i, i + 5).map(async el => {
+            const attrs = originalAttrs.get(el);
+            if (attrs && attrs.placeholder) el.setAttribute('placeholder', await translateText(attrs.placeholder, lang));
+          }));
+        }
+        currentLanguage = lang;
+      }
+    } catch (error) {
+      alert('Language translation could not be completed. Please check your internet connection and try again.');
+    } finally {
+      internalChange = false;
+      busy = false;
+      bar.querySelectorAll('button').forEach(button => button.disabled = false);
+    }
+  };
+
+  saveOriginals();
+  const observer = new MutationObserver(() => {
+    if (internalChange || busy || currentLanguage === 'en') return;
+    clearTimeout(mutationTimer);
+    mutationTimer = setTimeout(async () => {
+      if (busy || currentLanguage === 'en') return;
+      saveOriginals();
+      const lang = currentLanguage;
+      busy = true;
+      internalChange = true;
+      bar.querySelectorAll('button').forEach(button => button.disabled = true);
+      try { await translateNodes(collectTextNodes(), lang); }
+      catch (e) { /* Existing weather functionality remains usable if translation fails. */ }
+      finally {
+        internalChange = false; busy = false;
+        bar.querySelectorAll('button').forEach(button => button.disabled = false);
+      }
+    }, 250);
+  });
+  observer.observe(document.body, { childList: true, subtree: true, characterData: true });
+})();
 </script>
 
 

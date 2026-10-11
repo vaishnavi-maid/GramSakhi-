@@ -1,927 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>GramSakhi - Fertilizer Guide</title>
-
 <style>
-
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-}
-
-body{
-    font-family:Arial,sans-serif;
-    background:#f4f8f1;
-    color:#333;
-    line-height:1.6;
-}
-
-/* HEADER */
-
-header{
-    background:#2e7d32;
-    color:white;
-    text-align:center;
-    padding:28px 15px;
-}
-
-header h1{
-    font-size:30px;
-    margin-bottom:8px;
-}
-
-header p{
-    font-size:16px;
-}
-
-/* BACK BUTTON */
-
-.back{
-    width:94%;
-    max-width:1100px;
-    margin:18px auto;
-}
-
-.back a{
-    text-decoration:none;
-    color:#2e7d32;
-    font-weight:bold;
-}
-
-/* CONTAINER */
-
-.container{
-    width:94%;
-    max-width:1100px;
-    margin:auto;
-}
-
-/* INTRO */
-
-.intro{
-    background:white;
-    padding:22px;
-    border-radius:15px;
-    margin-bottom:20px;
-    box-shadow:0 3px 10px rgba(0,0,0,0.08);
-}
-
-.intro h2{
-    color:#2e7d32;
-    margin-bottom:8px;
-}
-
-/* SEARCH */
-
-.search-box{
-    background:white;
-    padding:22px;
-    border-radius:15px;
-    margin-bottom:20px;
-    box-shadow:0 3px 10px rgba(0,0,0,0.08);
-}
-
-.search-box h2{
-    color:#2e7d32;
-    margin-bottom:15px;
-}
-
-select{
-    width:100%;
-    padding:13px;
-    border:2px solid #ddd;
-    border-radius:8px;
-    font-size:15px;
-    background:white;
-}
-
-select:focus{
-    outline:none;
-    border-color:#2e7d32;
-}
-
-/* FERTILIZER INFORMATION */
-
-.fertilizer-info{
-    background:white;
-    padding:22px;
-    border-radius:15px;
-    margin-bottom:20px;
-    box-shadow:0 3px 10px rgba(0,0,0,0.08);
-}
-
-.fertilizer-info h2{
-    color:#2e7d32;
-    margin-bottom:18px;
-}
-
-/* CARDS */
-
-.info-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:15px;
-}
-
-.info-card{
-    background:#f1f8e9;
-    padding:17px;
-    border-radius:10px;
-}
-
-.info-card h3{
-    color:#2e7d32;
-    margin-bottom:7px;
-}
-
-/* NPK */
-
-.npk-section{
-    background:white;
-    padding:22px;
-    border-radius:15px;
-    margin-bottom:20px;
-    box-shadow:0 3px 10px rgba(0,0,0,0.08);
-}
-
-.npk-section h2{
-    color:#2e7d32;
-    margin-bottom:15px;
-}
-
-.npk-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:15px;
-}
-
-.npk-card{
-    padding:18px;
-    text-align:center;
-    border-radius:12px;
-    background:#f1f8e9;
-}
-
-.npk-card h3{
-    color:#2e7d32;
-    margin-bottom:6px;
-}
-
-.npk-card p{
-    font-size:14px;
-}
-
-/* APPLICATION */
-
-.application{
-    background:#e8f5e9;
-    padding:22px;
-    border-radius:15px;
-    margin-bottom:20px;
-}
-
-.application h2{
-    color:#2e7d32;
-    margin-bottom:12px;
-}
-
-.application ul{
-    padding-left:22px;
-}
-
-/* SOIL */
-
-.soil{
-    background:white;
-    padding:22px;
-    border-radius:15px;
-    margin-bottom:20px;
-    box-shadow:0 3px 10px rgba(0,0,0,0.08);
-}
-
-.soil h2{
-    color:#2e7d32;
-    margin-bottom:10px;
-}
-
-.soil-btn{
-    display:inline-block;
-    margin-top:14px;
-    background:#2e7d32;
-    color:white;
-    padding:12px 18px;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-/* WARNING */
-
-.warning{
-    background:#fff8e1;
-    border-left:5px solid #f9a825;
-    padding:18px;
-    border-radius:8px;
-    margin-bottom:20px;
-}
-
-/* OFFICIAL */
-
-.official{
-    background:#e3f2fd;
-    padding:22px;
-    border-radius:15px;
-    margin-bottom:25px;
-}
-
-.official h2{
-    color:#1565c0;
-    margin-bottom:8px;
-}
-
-.official-btn{
-    display:inline-block;
-    margin-top:14px;
-    padding:12px 18px;
-    background:#1565c0;
-    color:white;
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:bold;
-}
-
-/* FOOTER */
-
-footer{
-    background:#1b5e20;
-    color:white;
-    text-align:center;
-    padding:18px;
-    margin-top:30px;
-}
-
-/* MOBILE */
-
-@media(max-width:700px){
-
-    .info-grid{
-        grid-template-columns:1fr;
-    }
-
-    .npk-grid{
-        grid-template-columns:1fr;
-    }
-
-    header h1{
-        font-size:26px;
-    }
-
-}
-
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f4f4;color:#333;line-height:1.6}
+header{background:#2E7D32;color:white;padding:22px 16px 18px;text-align:center;font-size:28px;font-weight:bold;padding-top:76px}
+header p{font-size:16px;font-weight:normal;margin:5px 0 0}
+.container{max-width:1050px;width:94%;margin:20px auto}
+.search-box{text-align:center;margin:18px 0}
+.search-box input{width:100%;padding:12px;font-size:16px;border:2px solid #2E7D32;border-radius:10px;outline:none}
+.back{display:inline-block;margin:15px 3%;padding:10px 18px;background:#2E7D32;color:white;text-decoration:none;border-radius:8px}
+.card{background:white;margin:15px 0;padding:20px;border-radius:15px;box-shadow:0 4px 10px rgba(0,0,0,.12)}
+.card h2{color:#2E7D32;margin-bottom:8px}
+.card h3{color:#286c2c;margin:12px 0 5px}
+select{width:100%;padding:12px;border:2px solid #2E7D32;border-radius:8px;font-size:16px;background:white}
+.btn{display:inline-block;margin-top:10px;padding:10px 18px;background:#2E7D32;color:white;text-decoration:none;border:0;border-radius:8px;cursor:pointer;font-size:15px}
+.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:14px}
+.info-card{background:#f5faf3;border-left:4px solid #2E7D32;padding:14px;border-radius:8px}
+.warning{background:#fff4db;border-left:5px solid #e0a126;padding:16px;border-radius:8px;margin:16px 0}
+footer{text-align:center;background:#2E7D32;color:white;padding:15px;margin-top:25px}
+.language-bar{position:fixed;top:8px;right:8px;z-index:9999;display:flex;gap:6px;flex-wrap:wrap;justify-content:center;background:#fff;padding:7px;border-radius:12px;box-shadow:0 2px 8px #0003}
+.language-bar button{border:0;border-radius:7px;padding:8px 11px;background:#2E7D32;color:white;font-size:14px;cursor:pointer}
+.language-bar button:hover{background:#1b5e20}.language-bar button:disabled{opacity:.65;cursor:wait}
+@media(max-width:520px){.language-bar{left:6px;right:6px}.language-bar button{padding:7px 9px;font-size:13px}header{font-size:23px}.card{padding:16px}}
 </style>
-
 </head>
-
-
 <body>
-
-
-<!-- HEADER -->
-
+<div class="language-bar" aria-label="Choose language">
+  <button type="button" onclick="changeLanguage('en')">English</button>
+  <button type="button" onclick="changeLanguage('mr')">मराठी</button>
+  <button type="button" onclick="changeLanguage('hi')">हिन्दी</button>
+</div>
 <header>
-
-<h1>🧪 Fertilizer Guide</h1>
-
-<p>
-Choose the Right Fertilizer for Better Crop Growth
-</p>
-
+  🌱 GramSakhi - Fertilizer Guide
+  <p>Learn about nutrients, fertilizer use and responsible application</p>
 </header>
-
-
-
-
-
-<!-- INTRO -->
-
-<div class="intro">
-
-<h2>🌱 Fertilizer Information for Farmers</h2>
-
-<p>
-Learn about different fertilizers, nutrients,
-organic manure, application methods and important
-precautions for safe fertilizer use.
-</p>
-
-</div>
-
-
-<!-- FERTILIZER SELECT -->
-
-<div class="search-box">
-
-<h2>🔎 Select Fertilizer</h2>
-
-<select id="fertilizerSelect"
-        onchange="showFertilizer()">
-
-<option value="">
--- Select Fertilizer --
-</option>
-
-<option value="urea">
-Urea
-</option>
-
-<option value="dap">
-DAP
-</option>
-
-<option value="mop">
-MOP
-</option>
-
-<option value="ssp">
-SSP
-</option>
-
-<option value="npk">
-NPK Fertilizer
-</option>
-
-<option value="ammonium">
-Ammonium Sulphate
-</option>
-
-<option value="organic">
-Organic Manure
-</option>
-
-<option value="vermicompost">
-Vermicompost
-</option>
-
-<option value="compost">
-Compost
-</option>
-
-<option value="farmyard">
-Farmyard Manure (FYM)
-</option>
-
-</select>
-
-</div>
-
-
-<!-- FERTILIZER RESULT -->
-
-<div class="fertilizer-info"
-     id="fertilizerInfo">
-
-<h2>🧪 Fertilizer Information</h2>
-
-<p>
-Select a fertilizer above to see its general
-purpose and nutrient information.
-</p>
-
-</div>
-
-
-<!-- NPK -->
-
-<div class="npk-section">
-
-<h2>🌱 Understanding NPK</h2>
-
-<div class="npk-grid">
-
-<div class="npk-card">
-
-<h3>🟢 Nitrogen (N)</h3>
-
-<p>
-Helps in leaf growth, plant development
-and green colour.
-</p>
-
-</div>
-
-
-<div class="npk-card">
-
-<h3>🟡 Phosphorus (P)</h3>
-
-<p>
-Supports root development, flowering,
-energy transfer and seed formation.
-</p>
-
-</div>
-
-
-<div class="npk-card">
-
-<h3>🔵 Potassium (K)</h3>
-
-<p>
-Supports overall plant strength,
-water regulation and crop quality.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-
-<!-- APPLICATION -->
-
-<div class="application">
-
-<h2>🚜 How to Apply Fertilizer</h2>
-
-<ul>
-
-<li>
-Test your soil before applying fertilizers.
-</li>
-
-<li>
-Use the fertilizer according to soil-test
-and crop recommendations.
-</li>
-
-<li>
-Apply fertilizer at the recommended crop stage.
-</li>
-
-<li>
-Keep fertilizer away from direct contact
-with seeds unless the method specifically
-allows it.
-</li>
-
-<li>
-Irrigate appropriately after fertilizer
-application when recommended.
-</li>
-
-<li>
-Avoid excessive fertilizer application.
-</li>
-
-<li>
-Use protective equipment while handling
-fertilizers.
-</li>
-
-<li>
-Store fertilizer in a dry and safe place.
-</li>
-
-</ul>
-
-</div>
-
-
-<!-- CROP GUIDANCE -->
-
-<div class="fertilizer-info">
-
-<h2>🌾 General Crop-wise Nutrient Guidance</h2>
-
-<div class="info-grid">
-
-
-<div class="info-card">
-
-<h3>🥬 Vegetables</h3>
-
-<p>
-Vegetables require balanced nutrients.
-Nitrogen supports vegetative growth, while
-phosphorus and potassium support roots,
-flowering and quality.
-</p>
-
-</div>
-
-
-<div class="info-card">
-
-<h3>🌾 Cereals</h3>
-
-<p>
-Crops such as wheat, maize, jowar and bajra
-require balanced nutrition. Nitrogen is
-especially important for healthy vegetative
-growth.
-</p>
-
-</div>
-
-
-<div class="info-card">
-
-<h3>🌱 Pulses</h3>
-
-<p>
-Gram, tur, moong and urad have different
-nutrient requirements. Avoid unnecessary
-excess nitrogen and follow soil-test
-recommendations.
-</p>
-
-</div>
-
-
-<div class="info-card">
-
-<h3>🍇 Fruit Crops</h3>
-
-<p>
-Fruit crops require balanced and stage-wise
-nutrition. Nutrient needs vary with crop,
-variety, plant age and production stage.
-</p>
-
-</div>
-
-
-<div class="info-card">
-
-<h3>🌿 Oilseeds</h3>
-
-<p>
-Soybean and groundnut require balanced
-nutrition along with appropriate secondary
-and micronutrients when soil tests indicate
-a deficiency.
-</p>
-
-</div>
-
-
-<div class="info-card">
-
-<h3>🌱 Cotton</h3>
-
-<p>
-Cotton requires balanced nutrition throughout
-its growth. Fertilizer application should
-follow soil-test and local recommendations.
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-
-<!-- SOIL TEST -->
-
-<div class="soil">
-
-<h2>🔬 Soil Testing</h2>
-
-<p>
-Soil testing helps identify nutrient levels
-and soil properties. It can help farmers
-choose appropriate fertilizers instead of
-applying fertilizer unnecessarily.
-</p>
-
-<a
-href="https://soilhealth.dac.gov.in/"
-target="_blank"
-class="soil-btn">
-
-🔬 Soil Health Card / Soil Testing
-
-</a>
-
-</div>
-
-
-<!-- ORGANIC -->
-
-<div class="fertilizer-info">
-
-<h2>🌿 Organic Fertilizers</h2>
-
-<div class="info-grid">
-
-
-<div class="info-card">
-
-<h3>🌱 Farmyard Manure (FYM)</h3>
-
-<p>
-Well-decomposed farmyard manure can improve
-soil organic matter and soil structure.
-</p>
-
-</div>
-
-
-<div class="info-card">
-
-<h3>🪱 Vermicompost</h3>
-
-<p>
-Vermicompost is prepared using earthworms
-and decomposed organic material. It can
-improve soil organic matter.
-</p>
-
-</div>
-
-
-<div class="info-card">
-
-<h3>🍂 Compost</h3>
-
-<p>
-Compost is decomposed organic material that
-can be used as a source of organic matter
-and nutrients.
-</p>
-
-</div>
-
-
-<div class="info-card">
-
-<h3>🌿 Green Manure</h3>
-
-<p>
-Green manure crops can be incorporated into
-soil to add organic matter and improve
-soil health.
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-
-<!-- WARNING -->
-
-<div class="warning">
-
-<b>⚠️ Important Safety Information</b>
-
-<br><br>
-
-Do not decide fertilizer quantity only from
-general information on this page.
-
-The correct dose depends on the crop, variety,
-soil condition, previous crop, irrigation,
-growth stage and soil-test results.
-
-For exact fertilizer recommendations,
-consult the Agriculture Department,
-Krishi Vigyan Kendra or a qualified
-agriculture expert.
-
-</div>
-
-
-<!-- OFFICIAL -->
-
-<div class="official">
-
-<h2>🏛️ Official Agriculture Information</h2>
-
-<p>
-For reliable agricultural information,
-farmers can refer to official Government
-agriculture resources.
-</p>
-
-<a
-href="https://agriwelfare.gov.in/"
-target="_blank"
-class="official-btn">
-
-🌐 Agriculture Department
-
-</a>
-
-</div>
-
-
-</div>
-
-
-<!-- FOOTER -->
-
-<footer>
-
-© 2026 GramSakhi | Farmer Corner
-
-</footer>
-
-
+<a href="Government.html" class="back">← Back</a>
+<main class="container">
+  <div class="card">
+    <h2>🧪 Fertilizer Information</h2>
+    <p>Choose a fertilizer below to learn about its common use. Fertilizer needs vary with crop, soil, season and local conditions. Always follow a soil-test recommendation or advice from an agriculture expert.</p>
+    <label for="fertilizerSelect"><b>Select Fertilizer:</b></label>
+    <select id="fertilizerSelect" onchange="showFertilizer()">
+      <option value="">-- Select a fertilizer --</option>
+      <option value="urea">Urea</option>
+      <option value="dap">DAP (Diammonium Phosphate)</option>
+      <option value="npk">NPK Complex Fertilizer</option>
+      <option value="mop">MOP (Muriate of Potash)</option>
+      <option value="ssp">SSP (Single Super Phosphate)</option>
+      <option value="compost">Compost</option>
+      <option value="vermicompost">Vermicompost</option>
+      <option value="neemcake">Neem Cake</option>
+    </select>
+    <div id="fertilizerInfo" class="card" style="margin:16px 0 0;box-shadow:none;border:1px solid #e0e0e0">
+      <h2>🌿 Fertilizer Details</h2>
+      <p>Please select a fertilizer to see its information.</p>
+    </div>
+  </div>
+  <div class="card">
+    <h2>🌾 Understanding NPK</h2>
+    <div class="info-grid">
+      <div class="info-card"><h3>N — Nitrogen</h3><p>Supports leafy growth and the formation of chlorophyll.</p></div>
+      <div class="info-card"><h3>P — Phosphorus</h3><p>Supports root development, energy transfer and early plant growth.</p></div>
+      <div class="info-card"><h3>K — Potassium</h3><p>Supports water regulation, plant strength and overall crop quality.</p></div>
+    </div>
+    <p style="margin-top:12px">NPK labels show the percentage of nitrogen, phosphate and potash in a fertilizer. Select a grade and application rate only according to crop requirements and soil-test advice.</p>
+  </div>
+  <div class="card">
+    <h2>🪴 How to Apply Fertilizer Responsibly</h2>
+    <ol>
+      <li>Test your soil and use the recommended nutrient plan.</li>
+      <li>Read the product label and follow the recommended dose.</li>
+      <li>Apply fertilizer at the correct crop growth stage.</li>
+      <li>Avoid placing concentrated fertilizer directly against seeds or plant stems.</li>
+      <li>Keep fertilizer away from wells, ponds, drains and waterways.</li>
+      <li>Store fertilizer in its original labelled package, away from children, animals and food.</li>
+      <li>Do not mix products unless the label or a qualified expert confirms compatibility.</li>
+    </ol>
+  </div>
+  <div class="card">
+    <h2>🌱 Crop-wise Guidance</h2>
+    <p>Different crops need different amounts and combinations of nutrients. There is no single fertilizer dose that is correct for every farm.</p>
+    <div class="info-grid">
+      <div class="info-card"><h3>Cereals</h3><p>Wheat, rice, maize and other cereals require balanced nutrient management based on soil testing and the crop stage.</p></div>
+      <div class="info-card"><h3>Pulses</h3><p>Gram, tur, moong and other pulses have specific nutrient needs. Follow local recommendations and use suitable inoculants where advised.</p></div>
+      <div class="info-card"><h3>Vegetables</h3><p>Vegetable nutrient needs vary by species and harvest stage. Avoid excessive nitrogen, which can affect growth and quality.</p></div>
+      <div class="info-card"><h3>Fruits</h3><p>Fruit trees may need nutrients at particular growth stages. Base fertilizer type and amount on soil, plant age and expert advice.</p></div>
+    </div>
+  </div>
+  <div class="card">
+    <h2>🍃 Organic Fertilizers</h2>
+    <div class="info-grid">
+      <div class="info-card"><h3>Compost</h3><p>Made from decomposed organic materials; it can improve soil structure and add organic matter.</p></div>
+      <div class="info-card"><h3>Vermicompost</h3><p>Organic material processed by earthworms. Quality and nutrient content depend on the source and preparation.</p></div>
+      <div class="info-card"><h3>Farmyard Manure</h3><p>Well-decomposed manure can add organic matter and nutrients. Use safe, mature material.</p></div>
+      <div class="info-card"><h3>Neem Cake</h3><p>A neem-seed by-product sometimes used as an organic soil amendment. It is not a replacement for every crop nutrient requirement.</p></div>
+    </div>
+  </div>
+  <div class="card">
+    <h2>🧫 Soil Testing</h2>
+    <p>Soil testing helps identify nutrient status and supports more appropriate fertilizer decisions. Contact your local agriculture office, soil-testing laboratory or Krishi Vigyan Kendra for guidance on collecting a representative soil sample.</p>
+    <a class="btn" href="https://soilhealth.dac.gov.in/" target="_blank" rel="noopener">Soil Health Card Portal</a>
+  </div>
+  <div class="warning"><b>⚠️ Important:</b> This guide provides general information, not a farm-specific fertilizer prescription. Use the dose recommended by a soil test, the product label and your local Agriculture Department or qualified agriculture expert.</div>
+</main>
+<footer>© 2026 GramSakhi | Farmer Corner</footer>
 <script>
-
-/* =========================================
-   FERTILIZER DATA
-========================================= */
-
-const fertilizers = {
-
-urea:{
-name:"🌱 Urea",
-nutrient:"High nitrogen fertilizer",
-purpose:"Mainly supplies nitrogen to support vegetative growth.",
-use:"Use only according to soil-test and crop recommendations.",
-note:"Excess nitrogen can cause excessive vegetative growth and other crop problems."
-},
-
-dap:{
-name:"🌾 DAP",
-nutrient:"Nitrogen + Phosphorus",
-purpose:"Supplies nitrogen and phosphorus.",
-use:"Useful where phosphorus is required according to soil-test recommendations.",
-note:"Avoid unnecessary application when soil already has sufficient phosphorus."
-},
-
-mop:{
-name:"🌱 MOP",
-nutrient:"Potassium",
-purpose:"Supplies potassium to crops.",
-use:"Use where potassium is required according to soil-test recommendations.",
-note:"Crop sensitivity to chloride should be considered."
-},
-
-ssp:{
-name:"🌱 SSP",
-nutrient:"Phosphorus + Sulphur + Calcium",
-purpose:"Provides phosphorus along with sulphur and calcium.",
-use:"Can be useful where these nutrients are required.",
-note:"Use based on soil-test and crop requirements."
-},
-
-npk:{
-name:"🌱 NPK Fertilizer",
-nutrient:"Nitrogen + Phosphorus + Potassium",
-purpose:"Provides a combination of major plant nutrients.",
-use:"Different NPK grades are available for different nutrient requirements.",
-note:"Choose the grade according to crop and soil requirements."
-},
-
-ammonium:{
-name:"🧪 Ammonium Sulphate",
-nutrient:"Nitrogen + Sulphur",
-purpose:"Provides nitrogen and sulphur.",
-use:"May be useful where nitrogen and sulphur are required.",
-note:"Use according to soil-test recommendations."
-},
-
-organic:{
-name:"🌿 Organic Manure",
-nutrient:"Organic matter + plant nutrients",
-purpose:"Improves soil organic matter and contributes nutrients.",
-use:"Use well-decomposed organic material.",
-note:"Nutrient content varies according to source and decomposition."
-},
-
-vermicompost:{
-name:"🪱 Vermicompost",
-nutrient:"Organic matter + plant nutrients",
-purpose:"Improves soil organic matter and soil structure.",
-use:"Use mature, well-prepared vermicompost.",
-note:"Nutrient content varies with the material used to prepare it."
-},
-
-compost:{
-name:"🍂 Compost",
-nutrient:"Organic matter + nutrients",
-purpose:"Improves soil organic matter and soil structure.",
-use:"Apply properly decomposed compost.",
-note:"Do not use incompletely decomposed organic waste."
-},
-
-farmyard:{
-name:"🐄 Farmyard Manure (FYM)",
-nutrient:"Organic matter + plant nutrients",
-purpose:"Improves soil structure and organic matter.",
-use:"Use well-decomposed FYM.",
-note:"Nutrient content varies according to source and storage."
-}
-
+const fertilizerData={
+  urea:{title:'Urea',nutrients:'A concentrated nitrogen fertilizer.',uses:'Used to supply nitrogen for crop growth when nitrogen is required.',care:'Excess use may cause overly leafy growth and nutrient losses. Follow the crop-specific recommendation.'},
+  dap:{title:'DAP (Diammonium Phosphate)',nutrients:'Supplies nitrogen and phosphorus.',uses:'Often used as a source of phosphorus and some nitrogen during crop establishment where recommended.',care:'Avoid direct contact with seeds and follow the recommended placement and dose.'},
+  npk:{title:'NPK Complex Fertilizer',nutrients:'Supplies nitrogen, phosphorus and potassium in a labelled ratio.',uses:'Used when the selected grade matches crop nutrient needs.',care:'Check the N-P-K grade on the bag; different grades are not interchangeable.'},
+  mop:{title:'MOP (Muriate of Potash)',nutrients:'A common source of potassium.',uses:'Used to supply potassium where soil and crop recommendations indicate a need.',care:'Use the recommended dose and check whether the crop is sensitive to chloride.'},
+  ssp:{title:'SSP (Single Super Phosphate)',nutrients:'Supplies phosphorus and also contains calcium and sulphur.',uses:'May be selected when these nutrients are required by the crop and soil.',care:'Use based on soil-test recommendations and the product label.'},
+  compost:{title:'Compost',nutrients:'Adds organic matter and variable amounts of plant nutrients.',uses:'Can improve soil structure, water holding and biological activity.',care:'Use mature, clean compost and do not assume its nutrient content is uniform.'},
+  vermicompost:{title:'Vermicompost',nutrients:'Organic amendment with variable nutrient content.',uses:'Can add organic matter and support soil health as part of a balanced nutrient plan.',care:'Use good-quality material and follow locally recommended quantities.'},
+  neemcake:{title:'Neem Cake',nutrients:'Organic soil amendment with variable nutrient content.',uses:'May be used as part of an integrated soil fertility programme.',care:'Follow product directions; it does not replace all required nutrients.'}
 };
-
-
-/* =========================================
-   SHOW FERTILIZER
-========================================= */
-
 function showFertilizer(){
-
-const selected =
-document.getElementById("fertilizerSelect").value;
-
-const box =
-document.getElementById("fertilizerInfo");
-
-
-if(selected === ""){
-
-box.innerHTML = `
-<h2>🧪 Fertilizer Information</h2>
-
-<p>
-Select a fertilizer above to see its general
-purpose and nutrient information.
-</p>
-`;
-
-return;
-
+  const selected=document.getElementById('fertilizerSelect').value;
+  const box=document.getElementById('fertilizerInfo');
+  if(!selected){box.innerHTML='<h2>🌿 Fertilizer Details</h2><p>Please select a fertilizer to see its information.</p>';return;}
+  const f=fertilizerData[selected];
+  box.innerHTML=`<h2>🌿 ${f.title}</h2><div class="info-grid"><div class="info-card"><h3>🧪 Nutrients</h3><p>${f.nutrients}</p></div><div class="info-card"><h3>🌾 Common Uses</h3><p>${f.uses}</p></div><div class="info-card"><h3>⚠️ Care</h3><p>${f.care}</p></div></div>`;
+  collectOriginalText();
 }
-
-
-const fertilizer =
-fertilizers[selected];
-
-
-box.innerHTML = `
-
-<h2>${fertilizer.name}</h2>
-
-<div class="info-grid">
-
-<div class="info-card">
-
-<h3>🧪 Nutrients</h3>
-
-<p>
-${fertilizer.nutrient}
-</p>
-
-</div>
-
-
-<div class="info-card">
-
-<h3>🌱 Main Purpose</h3>
-
-<p>
-${fertilizer.purpose}
-</p>
-
-</div>
-
-
-<div class="info-card">
-
-<h3>🚜 General Use</h3>
-
-<p>
-${fertilizer.use}
-</p>
-
-</div>
-
-
-<div class="info-card">
-
-<h3>⚠️ Important Note</h3>
-
-<p>
-${fertilizer.note}
-</p>
-
-</div>
-
-</div>
-
-`;
-
+const originalText=new Map();
+const originalPlaceholders=new Map();
+let currentLanguage='en';
+function collectOriginalText(){
+  const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+    acceptNode(node){
+      if(!node.nodeValue.trim())return NodeFilter.FILTER_REJECT;
+      const parent=node.parentElement;
+      if(!parent||parent.closest('script,style,.language-bar'))return NodeFilter.FILTER_REJECT;
+      return NodeFilter.FILTER_ACCEPT;
+    }
+  });
+  let node;
+  while(node=walker.nextNode())if(!originalText.has(node))originalText.set(node,node.nodeValue);
+  document.querySelectorAll('[placeholder]').forEach(el=>{if(!originalPlaceholders.has(el))originalPlaceholders.set(el,el.getAttribute('placeholder'));});
 }
-
+async function translateText(text,target){
+  if(!text.trim())return text;
+  const url='https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl='+target+'&dt=t&q='+encodeURIComponent(text);
+  const response=await fetch(url);
+  if(!response.ok)throw new Error('Translation service unavailable');
+  const data=await response.json();
+  return data[0].map(part=>part[0]).join('');
+}
+async function changeLanguage(language){
+  if(language===currentLanguage)return;
+  collectOriginalText();
+  const buttons=[...document.querySelectorAll('.language-bar button')];
+  buttons.forEach(button=>button.disabled=true);
+  try{
+    if(language==='en'){
+      for(const [node,text] of originalText)if(node.isConnected)node.nodeValue=text;
+      for(const [el,text] of originalPlaceholders)if(el.isConnected)el.setAttribute('placeholder',text);
+      currentLanguage='en';document.documentElement.lang='en';return;
+    }
+    for(const [node,text] of originalText)if(node.isConnected)node.nodeValue=await translateText(text,language);
+    for(const [el,text] of originalPlaceholders)if(el.isConnected)el.setAttribute('placeholder',await translateText(text,language));
+    currentLanguage=language;document.documentElement.lang=language;
+  }catch(error){alert('Translation needs an internet connection. Please try again.');}
+  finally{buttons.forEach(button=>button.disabled=false);}
+}
+collectOriginalText();
 </script>
-
-
 </body>
-
 </html>

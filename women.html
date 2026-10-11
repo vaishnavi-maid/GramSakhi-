@@ -324,6 +324,13 @@ footer{
  .modal h2{font-size:25px}
  .card h2{font-size:25px}
 }
+
+/* GramSakhi language controls */
+.gs-language-bar{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin:14px auto;padding:10px;width:100%;}
+.gs-language-bar button{border:0;border-radius:10px;padding:10px 17px;background:#f0e4eb;color:#5b1237;font-weight:700;cursor:pointer;font-size:15px;}
+.gs-language-bar button.active{background:#d90068;color:#fff;}
+.gs-language-status{font-size:13px;text-align:center;padding:5px 12px;color:#555;}
+
 </style>
 </head>
 
@@ -1226,7 +1233,6 @@ The exact legal remedy depends on the situation.
 <li>Rights concerning employment and workplace safety.</li>
 <li>Rights to access appropriate legal and support services.</li>
 </ul>
-
 <p>
 For a specific legal problem, seek advice from a qualified
 legal professional or authorised legal-aid service.
@@ -1401,7 +1407,6 @@ transport before deciding the selling price.
 
 }
 },
-
 stories:{
 icon:"🌟",
 title:"Success Stories",
@@ -1553,9 +1558,7 @@ function openTopic(sectionName,topicName){
  document.getElementById("detailContent").innerHTML=topic.content;
 
 }
-
-
-/* ================================
+  /* ================================
    BACK TO SUBTOPICS
 ================================ */
 
@@ -1716,9 +1719,7 @@ function searchContent(){
  });
 
 }
-
-
-/* ================================
+  /* ================================
    ENTER KEY SEARCH
 ================================ */
 
@@ -1794,6 +1795,135 @@ document.addEventListener("keydown",function(e){
 
 });
 
+</script>
+
+
+<script>
+/* GramSakhi language switcher: translates the currently displayed content,
+   including topic headings and detailed paragraphs, using Google's public
+   translation endpoint. Internet access is required for first-time translation. */
+(function(){
+  const cache = new Map();
+  let currentLang = 'en';
+  let busy = false;
+  const originals = new WeakMap();
+  const labels = {en:'English', mr:'मराठी', hi:'हिन्दी'};
+
+  function makeBar(id){
+    let bar=document.getElementById(id);
+    if(bar) return bar;
+    bar=document.createElement('div'); bar.id=id; bar.className='gs-language-bar';
+    [['en','English'],['mr','मराठी'],['hi','हिन्दी']].forEach(([lang,label])=>{
+      const b=document.createElement('button'); b.type='button'; b.textContent=label;
+      b.dataset.gsLang=lang; b.addEventListener('click',()=>setLanguage(lang,bar));
+      bar.appendChild(b);
+    });
+    return bar;
+  }
+  function ensureBars(){
+    const intro=document.getElementById('modalIntro');
+    if(intro && !document.getElementById('gs-section-languages')){
+      intro.insertAdjacentElement('afterend',makeBar('gs-section-languages'));
+    }
+    const title=document.getElementById('detailTitle');
+    if(title && !document.getElementById('gs-topic-languages')){
+      title.insertAdjacentElement('afterend',makeBar('gs-topic-languages'));
+    }
+    updateActive();
+  }
+  function updateActive(){
+    document.querySelectorAll('.gs-language-bar button').forEach(b=>{
+      b.classList.toggle('active',b.dataset.gsLang===currentLang);
+    });
+  }
+  async function translateText(text,lang){
+    const trimmed=text.trim();
+    if(!trimmed || lang==='en') return text;
+    const key=lang+'|'+trimmed;
+    if(cache.has(key)) return text.replace(trimmed,cache.get(key));
+    try{
+      const url='https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl='+encodeURIComponent(lang)+'&dt=t&q='+encodeURIComponent(trimmed);
+      const response=await fetch(url);
+      if(!response.ok) throw new Error('Translation service returned '+response.status);
+      const data=await response.json();
+      const translated=(data[0]||[]).map(part=>part[0]||'').join('');
+      if(!translated) throw new Error('No translated text returned');
+      cache.set(key,translated);
+      return text.replace(trimmed,translated);
+    }catch(e){ throw e; }
+  }
+  function eligibleTextNodes(root){
+    const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{
+      acceptNode(node){
+        if(!node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+        const p=node.parentElement;
+        if(!p || p.closest('script,style,textarea,input,button,.gs-language-bar,.gs-language-status')) return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    const nodes=[]; let n; while((n=walker.nextNode())) nodes.push(n); return nodes;
+  }
+  async function applyLanguage(lang){
+    if(busy) return;
+    currentLang=lang; updateActive();
+    let status=document.getElementById('gs-language-status');
+    if(!status){ status=document.createElement('div'); status.id='gs-language-status'; status.className='gs-language-status';
+      const bar=document.getElementById('gs-topic-languages') || document.getElementById('gs-section-languages');
+      if(bar) bar.insertAdjacentElement('afterend',status);
+    }
+    if(lang==='en'){
+      document.querySelectorAll('body *').forEach(el=>{
+        if(el.childNodes.length===1 && el.firstChild.nodeType===Node.TEXT_NODE && originals.has(el.firstChild)) el.firstChild.nodeValue=originals.get(el.firstChild);
+      });
+      status.textContent=''; return;
+    }
+    busy=true; status.textContent='Translating content… please wait.';
+    try{
+      // Translate all currently rendered text in the page, including the open subsection.
+      const roots=[document.querySelector('.header'),document.getElementById('overlay')].filter(Boolean);
+      const all=[]; roots.forEach(root=>eligibleTextNodes(root).forEach(n=>{if(!all.includes(n)) all.push(n);}));
+      let index=0;
+      async function worker(){ while(index<all.length){
+        const node=all[index++];
+        if(!originals.has(node)) originals.set(node,node.nodeValue);
+        const original=originals.get(node);
+        try{ node.nodeValue=await translateText(original,lang); }
+        catch(e){ /* keep this sentence in English if the service rejects it */ }
+      }}
+      await Promise.all([worker(),worker(),worker(),worker()]);
+      status.textContent='Language: '+labels[lang]+(all.length?'':' — no text found');
+    }catch(err){
+      status.textContent='Translation could not load. Check your internet connection and try again.';
+    }finally{busy=false;updateActive();}
+  }
+  async function setLanguage(lang){ await applyLanguage(lang); }
+  const oldOpenSection=window.openSection;
+  if(typeof oldOpenSection==='function') window.openSection=function(name){
+    // Always return to English before rebuilding from the original source data.
+    currentLang='en';
+    oldOpenSection(name);
+    ensureBars();
+    if(langWanted!=='en') applyLanguage(langWanted);
+  };
+  const oldOpenTopic=window.openTopic;
+  if(typeof oldOpenTopic==='function') window.openTopic=function(section,topic){
+    currentLang='en';
+    oldOpenTopic(section,topic);
+    ensureBars();
+    if(langWanted!=='en') applyLanguage(langWanted);
+  };
+  let langWanted='en';
+  const originalApply=applyLanguage;
+  applyLanguage=async function(lang){langWanted=lang;return originalApply(lang);};
+  // Replace the original header-only switcher so all language controls share the same behavior.
+  window.changeLanguage=function(lang,button){
+    document.querySelectorAll('.lang').forEach(b=>b.classList.remove('active'));
+    if(button) button.classList.add('active');
+    applyLanguage(lang);
+  };
+  document.addEventListener('DOMContentLoaded',ensureBars);
+  ensureBars();
+})();
 </script>
 
 </body>

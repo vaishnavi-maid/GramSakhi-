@@ -1,238 +1,116 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Farmer Government Schemes</title>
-
 <style>
-.search-box{
-text-align:center;
-margin:20px;
-}
-
-.search-box input{
-width:90%;
-padding:12px;
-font-size:16px;
-border:2px solid #2E7D32;
-border-radius:10px;
-outline:none;
-}
-body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#f4f4f4;
-}
-
-header{
-background:#2E7D32;
-color:white;
-padding:18px;
-text-align:center;
-font-size:28px;
-font-weight:bold;
-}
-
-.back{
-display:inline-block;
-margin:15px;
-padding:10px 18px;
-background:#2E7D32;
-color:white;
-text-decoration:none;
-border-radius:8px;
-}
-
-.card{
-background:white;
-margin:15px;
-padding:20px;
-border-radius:15px;
-box-shadow:0 4px 10px rgba(0,0,0,.2);
-}
-
-.card h2{
-color:#2E7D32;
-}
-
-.btn{
-display:inline-block;
-margin-top:10px;
-padding:10px 18px;
-background:#2E7D32;
-color:white;
-text-decoration:none;
-border-radius:8px;
-}
-
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f4f4}
+.search-box{text-align:center;margin:20px}
+.search-box input{width:90%;padding:12px;font-size:16px;border:2px solid #2E7D32;border-radius:10px;outline:none}
+header{background:#2E7D32;color:white;padding:18px;text-align:center;font-size:28px;font-weight:bold;padding-top:74px}
+.back{display:inline-block;margin:15px;padding:10px 18px;background:#2E7D32;color:white;text-decoration:none;border-radius:8px}
+.card{background:white;margin:15px;padding:20px;border-radius:15px;box-shadow:0 4px 10px rgba(0,0,0,.2)}
+.card h2{color:#2E7D32}
+.btn{display:inline-block;margin-top:10px;padding:10px 18px;background:#2E7D32;color:white;text-decoration:none;border-radius:8px}
+.language-bar{position:fixed;top:8px;right:8px;z-index:9999;display:flex;gap:6px;flex-wrap:wrap;justify-content:center;background:#fff;padding:7px;border-radius:12px;box-shadow:0 2px 8px #0003}
+.language-bar button{border:0;border-radius:7px;padding:8px 11px;background:#2E7D32;color:white;font-size:14px;cursor:pointer}
+.language-bar button:hover{background:#1b5e20}
+.language-bar button:disabled{opacity:.65;cursor:wait}
+@media(max-width:520px){.language-bar{left:6px;right:6px}.language-bar button{padding:7px 9px;font-size:13px}header{font-size:23px}}
 </style>
-
 </head>
-
 <body>
-
+<div class="language-bar" aria-label="Choose language">
+  <button type="button" onclick="changeLanguage('en')">English</button>
+  <button type="button" onclick="changeLanguage('mr')">मराठी</button>
+  <button type="button" onclick="changeLanguage('hi')">हिन्दी</button>
+</div>
 <header>
   <div class="search-box">
-<input
-type="text"
-id="searchInput"
-placeholder="🔍 Search Farmer Scheme..."
-onkeyup="searchScheme()">
+    <input type="text" id="searchInput" placeholder="🔍 Search Farmer Scheme..." onkeyup="searchScheme()">
   </div>
-🌾 Farmer Government Schemes
+  🌾 Farmer Government Schemes
 </header>
-
 <a href="Government.html" class="back">← Back</a>
-
-<div class="card">
-<h2>PM-KISAN</h2>
-<p>Income support scheme for farmers.</p>
-<a href="pmkisan.html" class="btn">View Details</a>
-</div>
-<div class="card">
-<h2>🌾 PM Fasal Bima Yojana</h2>
-
-<p>Crop insurance scheme for farmers.</p>
-
-<a href="fasalbima.html" class="btn">
-View Details
-</a>
-
-</div>
-  <div class="card">
-
-<h2>💳 Kisan Credit Card</h2>
-
-<p>Low-interest loans for farmers.</p>
-
-<a href="kcc.html" class="btn">
-View Details
-</a>
-
-  </div>
-  <div class="card">
-
-<h2>🌱 Soil Health Card Scheme</h2>
-
-<p>Free soil testing and fertilizer recommendations.</p>
-
-<a href="soilhealth.html" class="btn">
-View Details
-</a>
-
-  </div>
-  <div class="card">
-
-<h2>💧 PM Krishi Sinchai Yojana</h2>
-
-<p>Water conservation and irrigation support for farmers.</p>
-
-<a href="pmksy.html" class="btn">
-View Details
-</a>
-
-  </div>
-  <div class="card">
-
-<h2>🛒 e-NAM</h2>
-
-<p>Online National Agriculture Market for Farmers.</p>
-
-<a href="enam.html" class="btn">
-View Details
-</a>
-
-  </div>
-  <div class="card">
-
-<h2>🌿 Paramparagat Krishi Vikas Yojana</h2>
-
-<p>Organic farming support for farmers.</p>
-
-<a href="pkvy.html" class="btn">
-View Details
-</a>
-
-  </div>
-  <div class="card">
-
-<h2>🚜 Agriculture Infrastructure Fund</h2>
-
-<p>Financial support for agricultural infrastructure.</p>
-
-<a href="aif.html" class="btn">
-View Details
-</a>
-
-  </div>
-  <div class="card">
-
-<h2>🍎 MIDH Scheme</h2>
-
-<p>Support for fruits, vegetables, flowers and horticulture crops.</p>
-
-<a href="midh.html" class="btn">
-View Details
-</a>
-
-  </div>
-  <div class="card">
-
-<h2>🐄 Rashtriya Gokul Mission</h2>
-
-<p>Support for dairy farmers and indigenous cattle development.</p>
-
-<a href="gokulmission.html" class="btn">
-View Details
-</a>
-
-  </div>
-  <div class="card">
-
-<h2>🐟 PM Matsya Sampada Yojana</h2>
-
-<p>Support for fisheries and aquaculture development.</p>
-
-<a href="pmmsy.html" class="btn">
-View Details
-</a>
-</div>
-  </ poultry and fodder development.</p>
-
-<div class="card">
-
-<h2>🥛 National Livestock Mission</h2>
-
-<p>Support for livestock, poultry and fodder development.</p>
-
-<a href="nlm.html" class="btn">
-View Details
-</a>
-
-</div>
-  <script>
-function searchScheme() {
-
-let input = document.getElementById("searchInput").value.toLowerCase();
-
-let cards = document.getElementsByClassName("card");
-
-for(let i=0;i<cards.length;i++){
-
-let title = cards[i].getElementsByTagName("h2")[0].innerText.toLowerCase();
-
-if(title.indexOf(input)>-1){
-cards[i].style.display="block";
-}
-else{
-cards[i].style.display="none";
+<div class="card"><h2>PM-KISAN</h2><p>Income support scheme for farmers.</p><a href="pmkisan.html" class="btn">View Details</a></div>
+<div class="card"><h2>🌾 PM Fasal Bima Yojana</h2><p>Crop insurance scheme for farmers.</p><a href="fasalbima.html" class="btn">View Details</a></div>
+<div class="card"><h2>💳 Kisan Credit Card</h2><p>Low-interest loans for farmers.</p><a href="kcc.html" class="btn">View Details</a></div>
+<div class="card"><h2>🌱 Soil Health Card Scheme</h2><p>Free soil testing and fertilizer recommendations.</p><a href="soilhealth.html" class="btn">View Details</a></div>
+<div class="card"><h2>💧 PM Krishi Sinchai Yojana</h2><p>Water conservation and irrigation support for farmers.</p><a href="pmksy.html" class="btn">View Details</a></div>
+<div class="card"><h2>🛒 e-NAM</h2><p>Online National Agriculture Market for Farmers.</p><a href="enam.html" class="btn">View Details</a></div>
+<div class="card"><h2>🌿 Paramparagat Krishi Vikas Yojana</h2><p>Organic farming support for farmers.</p><a href="pkvy.html" class="btn">View Details</a></div>
+<div class="card"><h2>🚜 Agriculture Infrastructure Fund</h2><p>Financial support for agricultural infrastructure.</p><a href="aif.html" class="btn">View Details</a></div>
+<div class="card"><h2>🍎 MIDH Scheme</h2><p>Support for fruits, vegetables, flowers and horticulture crops.</p><a href="midh.html" class="btn">View Details</a></div>
+<div class="card"><h2>🐄 Rashtriya Gokul Mission</h2><p>Support for dairy farmers and indigenous cattle development.</p><a href="gokulmission.html" class="btn">View Details</a></div>
+<div class="card"><h2>🐟 PM Matsya Sampada Yojana</h2><p>Support for fisheries and aquaculture development.</p><a href="pmmsy.html" class="btn">View Details</a></div>
+<div class="card"><h2>🥛 National Livestock Mission</h2><p>Support for livestock, poultry and fodder development.</p><a href="nlm.html" class="btn">View Details</a></div>
+<script>
+function searchScheme(){
+  const input=document.getElementById('searchInput').value.toLowerCase().trim();
+  document.querySelectorAll('.card').forEach(card=>{
+    const title=card.querySelector('h2')?.innerText.toLowerCase()||'';
+    card.style.display=title.includes(input)?'block':'none';
+  });
 }
 
+// Language buttons translate visible page text using Google's public translation endpoint.
+// Internet access is required. Original text is kept so switching languages works reliably.
+const originalText=new Map();
+const originalPlaceholders=new Map();
+let currentLanguage='en';
+function collectOriginalText(){
+  const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+    acceptNode(node){
+      if(!node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+      const parent=node.parentElement;
+      if(!parent || parent.closest('script,style,.language-bar')) return NodeFilter.FILTER_REJECT;
+      return NodeFilter.FILTER_ACCEPT;
+    }
+  });
+  let node;
+  while(node=walker.nextNode()) if(!originalText.has(node)) originalText.set(node,node.nodeValue);
+  document.querySelectorAll('[placeholder]').forEach(el=>{
+    if(!originalPlaceholders.has(el)) originalPlaceholders.set(el,el.getAttribute('placeholder'));
+  });
 }
-
+async function translateText(text,target){
+  if(!text.trim()) return text;
+  const url='https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl='+target+'&dt=t&q='+encodeURIComponent(text);
+  const response=await fetch(url);
+  if(!response.ok) throw new Error('Translation service unavailable');
+  const data=await response.json();
+  return data[0].map(part=>part[0]).join('');
 }
-  </script>
+async function changeLanguage(language){
+  if(language===currentLanguage) return;
+  collectOriginalText();
+  const buttons=[...document.querySelectorAll('.language-bar button')];
+  buttons.forEach(button=>button.disabled=true);
+  try{
+    if(language==='en'){
+      for(const [node,text] of originalText) if(node.isConnected) node.nodeValue=text;
+      for(const [el,text] of originalPlaceholders) if(el.isConnected) el.setAttribute('placeholder',text);
+      currentLanguage='en';
+      document.documentElement.lang='en';
+      return;
+    }
+    for(const [node,text] of originalText){
+      if(node.isConnected) node.nodeValue=await translateText(text,language);
+    }
+    for(const [el,text] of originalPlaceholders){
+      if(el.isConnected) el.setAttribute('placeholder',await translateText(text,language));
+    }
+    currentLanguage=language;
+    document.documentElement.lang=language;
+  }catch(error){
+    alert('Translation needs an internet connection. Please try again.');
+  }finally{
+    buttons.forEach(button=>button.disabled=false);
+  }
+}
+collectOriginalText();
+</script>
 </body>
 </html>

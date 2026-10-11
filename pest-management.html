@@ -293,6 +293,74 @@ Identify Problems Early and Protect Your Crops
 </header>
 
 
+<!-- GramSakhi Offline Language Options: no Google Translate or external translation service -->
+<style>
+#gsOfflineLanguages{width:94%;max-width:1100px;margin:15px auto;padding:16px;background:#fff;border-radius:12px;box-shadow:0 3px 10px rgba(0,0,0,.08);text-align:center}
+#gsOfflineLanguages h3{color:#558b2f;margin-bottom:10px}
+#gsOfflineLanguages button{padding:10px 16px;margin:4px;border:0;border-radius:8px;color:#fff;cursor:pointer;font-weight:bold}
+#gsLangEN{background:#558b2f}#gsLangMR{background:#e67e22}#gsLangHI{background:#1565c0}
+#gsOfflineLanguages button[aria-pressed="true"]{outline:3px solid #263238;outline-offset:2px}
+  </style>
+<div id="gsOfflineLanguages" aria-label="Choose language">
+ <h3>🌐 Choose Your Language / भाषा निवडा / अपनी भाषा चुनें</h3>
+ <button id="gsLangEN" type="button" onclick="gsSetLanguage('en')" aria-pressed="true">English</button>
+ <button id="gsLangMR" type="button" onclick="gsSetLanguage('mr')" aria-pressed="false">मराठी</button>
+ <button id="gsLangHI" type="button" onclick="gsSetLanguage('hi')" aria-pressed="false">हिंदी</button>
+ <p style="font-size:12px;margin-top:8px;color:#555">Offline translations included in this page; no Google Translator used.</p>
+</div>
+<script>
+(function(){
+ const translations={
+ mr:{
+ 'Pest & Disease Management':'कीड व रोग व्यवस्थापन','Identify Problems Early and Protect Your Crops':'समस्या लवकर ओळखा आणि पिकांचे संरक्षण करा','🌱 Protect Your Crop':'🌱 आपल्या पिकाचे संरक्षण करा','Pests and diseases can reduce crop growth and yield. Regular field observation, good farming practices and early identification can help farmers manage crop problems effectively.':'कीड आणि रोगांमुळे पिकांची वाढ व उत्पादन कमी होऊ शकते. शेताची नियमित पाहणी, चांगल्या शेती पद्धती आणि लवकर ओळख यामुळे शेतकऱ्यांना पिकांच्या समस्या प्रभावीपणे हाताळता येतात.','🔎 Select Your Crop':'🔎 आपले पीक निवडा','-- Select Crop --':'-- पीक निवडा --','🐛 Pest & Disease Information':'🐛 कीड व रोगांची माहिती','Select a crop above to see common pests, diseases, symptoms and general management.':'सामान्य कीड, रोग, लक्षणे आणि व्यवस्थापन पाहण्यासाठी वरील पीक निवडा.','🔍 Early Warning Signs':'🔍 सुरुवातीची लक्षणे','🍃 Leaf Damage':'🍃 पानांचे नुकसान','Holes, curling, discoloration, spots or unexpected leaf drop may indicate pest, disease or nutrient problems.':'पानांना छिद्रे पडणे, पाने वाकडी होणे, रंग बदलणे, डाग पडणे किंवा पाने गळणे ही कीड, रोग किंवा अन्नद्रव्यांच्या कमतरतेची लक्षणे असू शकतात.','🌱 Plant Wilting':'🌱 झाड कोमेजणे','Sudden or gradual wilting can have several causes including diseases, root problems, water stress or pests.':'झाड अचानक किंवा हळूहळू कोमेजण्यामागे रोग, मुळांच्या समस्या, पाण्याचा ताण किंवा कीड अशी अनेक कारणे असू शकतात.','🐛 Visible Insects':'🐛 दिसणारे कीटक','Check both sides of leaves, stems, flowers and fruits for insects or eggs.':'पानांच्या दोन्ही बाजू, खोड, फुले आणि फळांवर कीटक किंवा अंडी आहेत का ते तपासा.','🍅 Fruit Damage':'🍅 फळांचे नुकसान','Holes, rotting, discoloration or abnormal fruit development should be investigated.':'फळांना छिद्रे पडणे, कुजणे, रंग बदलणे किंवा असामान्य वाढ दिसल्यास तपासणी करा.','🌿 Integrated Pest Management (IPM)':'🌿 एकात्मिक कीड व्यवस्थापन (IPM)','Integrated Pest Management combines different safe and practical approaches instead of depending only on pesticides.':'एकात्मिक कीड व्यवस्थापनात केवळ कीटकनाशकांवर अवलंबून न राहता विविध सुरक्षित व व्यावहारिक उपाय वापरले जातात.','👀 Monitor':'👀 नियमित पाहणी','Regularly inspect plants, leaves, stems, flowers and fruits.':'झाडे, पाने, खोड, फुले आणि फळांची नियमित तपासणी करा.','🌱 Prevent':'🌱 प्रतिबंध करा','Use healthy planting material, suitable crop rotation and good field sanitation.':'निरोगी लागवड साहित्य वापरा, योग्य पीक फेरपालट करा आणि शेत स्वच्छ ठेवा.','🧹 Remove':'🧹 काढून टाका','Remove heavily infected plant parts or affected plants when appropriate.':'योग्य असल्यास जास्त बाधित झाडांचे भाग किंवा झाडे काढून टाका.','🐞 Biological Control':'🐞 जैविक नियंत्रण','Encourage beneficial insects and use approved biological control methods where suitable.':'उपयुक्त कीटकांचे संरक्षण करा आणि योग्य ठिकाणी मान्यताप्राप्त जैविक नियंत्रण पद्धती वापरा.','🪤 Mechanical Control':'🪤 यांत्रिक नियंत्रण','Use traps, barriers or physical removal of pests where practical.':'शक्य असल्यास सापळे, अडथळे किंवा कीटक हाताने काढण्याच्या पद्धती वापरा.','🧪 Chemical Control':'🧪 रासायनिक नियंत्रण','Use registered pesticides only when necessary and according to the product label and expert recommendations.':'गरज असेल तेव्हाच नोंदणीकृत कीटकनाशके वापरा आणि लेबल व तज्ज्ञांच्या सूचनांचे पालन करा.','🛡️ Prevention Tips':'🛡️ प्रतिबंधक उपाय','🌱 Healthy Seeds':'🌱 निरोगी बियाणे','Use quality and certified seeds or healthy planting material from reliable sources.':'विश्वसनीय स्रोतांकडून दर्जेदार, प्रमाणित बियाणे किंवा निरोगी लागवड साहित्य वापरा.','🌾 Crop Rotation':'🌾 पीक फेरपालट','Where suitable, rotate crops to reduce the buildup of certain pests and diseases.':'योग्य ठिकाणी पीक फेरपालट केल्याने काही कीड व रोगांचा प्रादुर्भाव कमी होऊ शकतो.','🧹 Field Hygiene':'🧹 शेताची स्वच्छता','Remove crop residues and weeds that may harbour pests or diseases.':'कीड किंवा रोग टिकून राहू शकतील असे पीक अवशेष आणि तण काढून टाका.','💧 Proper Irrigation':'💧 योग्य सिंचन','Avoid unnecessary irrigation and prolonged waterlogging.':'अनावश्यक सिंचन आणि दीर्घकाळ पाणी साचणे टाळा.','🌬️ Proper Spacing':'🌬️ योग्य अंतर','Appropriate plant spacing can improve air circulation and reduce some disease risks.':'झाडांमध्ये योग्य अंतर ठेवल्याने हवा खेळती राहते आणि काही रोगांचा धोका कमी होतो.','🔬 Soil Testing':'🔬 माती परीक्षण','Use soil-test information to support balanced nutrient management and healthy crop growth.':'संतुलित अन्नद्रव्य व्यवस्थापन आणि पिकांच्या निरोगी वाढीसाठी माती परीक्षणाचा आधार घ्या.','🧪 Safe Pesticide Use':'🧪 कीटकनाशकांचा सुरक्षित वापर','Identify the pest or disease before choosing a pesticide.':'कीटकनाशक निवडण्यापूर्वी कीड किंवा रोग ओळखा.','Use only products registered for the intended crop and pest.':'संबंधित पीक आणि किडीसाठी नोंदणीकृत उत्पादनेच वापरा.','Read and follow the product label carefully.':'उत्पादनावरील लेबल काळजीपूर्वक वाचा आणि त्याचे पालन करा.','Use the recommended dose and application method on the label.':'लेबलवर दिलेला डोस आणि वापरण्याची पद्धत पाळा.','Wear appropriate protective equipment.':'योग्य संरक्षक साधने वापरा.','Keep children and animals away during application.':'फवारणीच्या वेळी मुले आणि जनावरांना दूर ठेवा.','Observe the required waiting period before harvesting.':'काढणीपूर्वी आवश्यक प्रतीक्षा कालावधी पाळा.','Do not mix pesticides unless the combination is specifically recommended by an authorised expert or product label.':'अधिकृत तज्ज्ञ किंवा लेबलवर स्पष्ट शिफारस नसल्यास कीटकनाशके एकत्र मिसळू नका.','Store pesticides safely in their original, labelled containers.':'कीटकनाशके मूळ लेबल असलेल्या डब्यात सुरक्षित ठेवा.','🌿 Non-Chemical Management':'🌿 रसायनविरहित व्यवस्थापन','🪤 Traps':'🪤 सापळे','Suitable traps can help monitor or reduce certain insect populations.':'योग्य सापळ्यांमुळे काही कीटकांचे निरीक्षण किंवा संख्या कमी करण्यास मदत होते.','🐞 Beneficial Insects':'🐞 उपयुक्त कीटक','Protect natural enemies such as ladybird beetles and other beneficial organisms.':'लेडीबर्ड बीटलसारखे नैसर्गिक शत्रू आणि इतर उपयुक्त जीवांचे संरक्षण करा.','🌱 Resistant Varieties':'🌱 प्रतिकारक्षम वाण','Where available, choose varieties with appropriate resistance or tolerance.':'उपलब्ध असल्यास योग्य प्रतिकारशक्ती किंवा सहनशीलता असलेले वाण निवडा.','🧹 Sanitation':'🧹 स्वच्छता','Remove and safely manage severely diseased plant material where appropriate.':'योग्य असल्यास गंभीर रोगग्रस्त वनस्पतींचे भाग काढून सुरक्षितरीत्या नष्ट करा.','⚠️ Important:':'⚠️ महत्त्वाचे:','Not every leaf spot, insect or yellow leaf requires pesticide treatment.':'प्रत्येक पानावरील डाग, कीटक किंवा पिवळे पान यासाठी कीटकनाशक वापरणे आवश्यक नसते.','Some symptoms can look similar but have different causes, including nutrient deficiency, water stress, weather damage or disease.':'काही लक्षणे सारखी दिसू शकतात; परंतु त्यामागे अन्नद्रव्यांची कमतरता, पाण्याचा ताण, हवामानामुळे झालेले नुकसान किंवा रोग अशी वेगवेगळी कारणे असू शकतात.','Correct identification should be done before treatment.':'उपचार करण्यापूर्वी योग्य ओळख करणे आवश्यक आहे.','🚫 Never use an unlabelled or banned pesticide.':'🚫 लेबल नसलेले किंवा बंदी घातलेले कीटकनाशक कधीही वापरू नका.','Do not increase the pesticide dose on your own. Always follow the current product label and local agricultural recommendations.':'स्वतःहून कीटकनाशकाचा डोस वाढवू नका. सध्याच्या उत्पादन लेबलाचे आणि स्थानिक कृषी शिफारशींचे पालन करा.','For serious or uncertain crop problems, contact the Agriculture Department, Krishi Vigyan Kendra or a qualified agricultural expert.':'गंभीर किंवा न समजणाऱ्या पीक समस्यांसाठी कृषी विभाग, कृषी विज्ञान केंद्र किंवा पात्र कृषी तज्ज्ञांशी संपर्क साधा.','🏛️ Official Agriculture Resources':'🏛️ अधिकृत कृषी संसाधने','For crop protection advice, farmers should use reliable government agricultural resources and seek local expert guidance when necessary.':'पीक संरक्षणाच्या सल्ल्यासाठी शेतकऱ्यांनी विश्वासार्ह सरकारी कृषी संसाधने वापरावीत आणि गरजेनुसार स्थानिक तज्ज्ञांचे मार्गदर्शन घ्यावे.','🌐 Agriculture Department':'🌐 कृषी विभाग','© 2026 GramSakhi | Farmer Corner':'© 2026 GramSakhi | शेतकरी विभाग','Common Pests':'सामान्य कीड','Common Diseases':'सामान्य रोग','Common Symptoms':'सामान्य लक्षणे','Prevention':'प्रतिबंध','General Management':'सर्वसाधारण व्यवस्थापन','🥬 Cabbage':'🥬 कोबी','🥦 Cauliflower':'🥦 फुलकोबी','🫛 Green Peas':'🫛 हिरवे वाटाणे','🌿 Fenugreek':'🌿 मेथी','🥬 Spinach':'🥬 पालक','🌶️ Chilli':'🌶️ मिरची','🍅 Tomato':'🍅 टोमॅटो','🧅 Onion':'🧅 कांदा','🥔 Potato':'🥔 बटाटा','🍆 Brinjal':'🍆 वांगी','🌱 Okra':'🌱 भेंडी','🍈 Guava':'🍈 पेरू','🥭 Mango':'🥭 आंबा','🍇 Grapes':'🍇 द्राक्षे','🍎 Pomegranate':'🍎 डाळिंब','🍌 Banana':'🍌 केळी','🌾 Wheat':'🌾 गहू','🌽 Maize':'🌽 मका','🌾 Jowar':'🌾 ज्वारी','🌾 Bajra':'🌾 बाजरी','🌱 Gram':'🌱 हरभरा','🌱 Tur / Pigeon Pea':'🌱 तूर','🌱 Moong':'🌱 मूग','🌱 Soybean':'🌱 सोयाबीन','🥜 Groundnut':'🥜 भुईमूग','🌿 Cotton':'🌿 कापूस'
+ },
+ hi:{
+ 'Pest & Disease Management':'कीट एवं रोग प्रबंधन','Identify Problems Early and Protect Your Crops':'समस्याओं की जल्दी पहचान करें और फसलों की रक्षा करें','🌱 Protect Your Crop':'🌱 अपनी फसल की रक्षा करें','Pests and diseases can reduce crop growth and yield. Regular field observation, good farming practices and early identification can help farmers manage crop problems effectively.':'कीट और रोग फसल की वृद्धि और उत्पादन घटा सकते हैं। खेत की नियमित निगरानी, अच्छी कृषि पद्धतियाँ और समय पर पहचान से किसानों को फसल की समस्याएँ संभालने में मदद मिलती है।','🔎 Select Your Crop':'🔎 अपनी फसल चुनें','-- Select Crop --':'-- फसल चुनें --','🐛 Pest & Disease Information':'🐛 कीट और रोग की जानकारी','Select a crop above to see common pests, diseases, symptoms and general management.':'आम कीट, रोग, लक्षण और सामान्य प्रबंधन देखने के लिए ऊपर फसल चुनें।','🔍 Early Warning Signs':'🔍 शुरुआती चेतावनी के संकेत','🍃 Leaf Damage':'🍃 पत्तियों को नुकसान','Holes, curling, discoloration, spots or unexpected leaf drop may indicate pest, disease or nutrient problems.':'छेद, पत्तियों का मुड़ना, रंग बदलना, धब्बे या पत्तियों का गिरना कीट, रोग या पोषक तत्वों की समस्या का संकेत हो सकता है।','🌱 Plant Wilting':'🌱 पौधे का मुरझाना','Sudden or gradual wilting can have several causes including diseases, root problems, water stress or pests.':'अचानक या धीरे-धीरे मुरझाने के कई कारण हो सकते हैं, जैसे रोग, जड़ों की समस्या, पानी की कमी या कीट।','🐛 Visible Insects':'🐛 दिखाई देने वाले कीट','Check both sides of leaves, stems, flowers and fruits for insects or eggs.':'पत्तियों के दोनों तरफ, तनों, फूलों और फलों पर कीट या अंडे जाँचें।','🍅 Fruit Damage':'🍅 फलों को नुकसान','Holes, rotting, discoloration or abnormal fruit development should be investigated.':'फलों में छेद, सड़न, रंग बदलना या असामान्य विकास दिखाई दे तो जाँच करें।','🌿 Integrated Pest Management (IPM)':'🌿 एकीकृत कीट प्रबंधन (IPM)','Integrated Pest Management combines different safe and practical approaches instead of depending only on pesticides.':'एकीकृत कीट प्रबंधन में केवल कीटनाशकों पर निर्भर रहने के बजाय कई सुरक्षित और व्यावहारिक उपाय अपनाए जाते हैं।','👀 Monitor':'👀 निगरानी करें','Regularly inspect plants, leaves, stems, flowers and fruits.':'पौधों, पत्तियों, तनों, फूलों और फलों की नियमित जाँच करें।','🌱 Prevent':'🌱 रोकथाम करें','Use healthy planting material, suitable crop rotation and good field sanitation.':'स्वस्थ रोपण सामग्री का उपयोग करें, उचित फसल चक्र अपनाएँ और खेत साफ रखें।','🧹 Remove':'🧹 हटाएँ','Remove heavily infected plant parts or affected plants when appropriate.':'उचित होने पर अधिक प्रभावित पौधों के हिस्सों या पौधों को हटा दें।','🐞 Biological Control':'🐞 जैविक नियंत्रण','Encourage beneficial insects and use approved biological control methods where suitable.':'लाभकारी कीटों को बढ़ावा दें और जहाँ उचित हो, स्वीकृत जैविक नियंत्रण विधियाँ अपनाएँ।','🪤 Mechanical Control':'🪤 यांत्रिक नियंत्रण','Use traps, barriers or physical removal of pests where practical.':'जहाँ संभव हो, जाल, अवरोध या कीटों को हाथ से हटाने के उपाय अपनाएँ।','🧪 Chemical Control':'🧪 रासायनिक नियंत्रण','Use registered pesticides only when necessary and according to the product label and expert recommendations.':'केवल आवश्यकता होने पर पंजीकृत कीटनाशक का उपयोग करें और लेबल तथा विशेषज्ञों की सलाह मानें।','🛡️ Prevention Tips':'🛡️ रोकथाम के सुझाव','🌱 Healthy Seeds':'🌱 स्वस्थ बीज','Use quality and certified seeds or healthy planting material from reliable sources.':'विश्वसनीय स्रोतों से अच्छी गुणवत्ता वाले प्रमाणित बीज या स्वस्थ रोपण सामग्री लें।','🌾 Crop Rotation':'🌾 फसल चक्र','Where suitable, rotate crops to reduce the buildup of certain pests and diseases.':'जहाँ उचित हो, कुछ कीटों और रोगों को कम करने के लिए फसल चक्र अपनाएँ।','🧹 Field Hygiene':'🧹 खेत की सफाई','Remove crop residues and weeds that may harbour pests or diseases.':'ऐसे फसल अवशेष और खरपतवार हटाएँ जिनमें कीट या रोग पनप सकते हैं।','💧 Proper Irrigation':'💧 उचित सिंचाई','Avoid unnecessary irrigation and prolonged waterlogging.':'अनावश्यक सिंचाई और लंबे समय तक जलभराव से बचें।','🌬️ Proper Spacing':'🌬️ उचित दूरी','Appropriate plant spacing can improve air circulation and reduce some disease risks.':'पौधों के बीच उचित दूरी से हवा का संचार बेहतर होता है और कुछ रोगों का खतरा घटता है।','🔬 Soil Testing':'🔬 मिट्टी की जाँच','Use soil-test information to support balanced nutrient management and healthy crop growth.':'संतुलित पोषक तत्व प्रबंधन और स्वस्थ फसल वृद्धि के लिए मिट्टी की जाँच की जानकारी का उपयोग करें।','🧪 Safe Pesticide Use':'🧪 कीटनाशकों का सुरक्षित उपयोग','Identify the pest or disease before choosing a pesticide.':'कीटनाशक चुनने से पहले कीट या रोग की पहचान करें।','Use only products registered for the intended crop and pest.':'संबंधित फसल और कीट के लिए पंजीकृत उत्पाद ही उपयोग करें।','Read and follow the product label carefully.':'उत्पाद का लेबल ध्यान से पढ़ें और उसका पालन करें।','Use the recommended dose and application method on the label.':'लेबल पर दी गई मात्रा और उपयोग विधि अपनाएँ।','Wear appropriate protective equipment.':'उचित सुरक्षा उपकरण पहनें।','Keep children and animals away during application.':'छिड़काव के दौरान बच्चों और पशुओं को दूर रखें।','Observe the required waiting period before harvesting.':'कटाई से पहले आवश्यक प्रतीक्षा अवधि का पालन करें।','Do not mix pesticides unless the combination is specifically recommended by an authorised expert or product label.':'जब तक अधिकृत विशेषज्ञ या उत्पाद का लेबल स्पष्ट रूप से न बताए, कीटनाशकों को न मिलाएँ।','Store pesticides safely in their original, labelled containers.':'कीटनाशकों को उनके मूल लेबल वाले डिब्बों में सुरक्षित रखें।','🌿 Non-Chemical Management':'🌿 गैर-रासायनिक प्रबंधन','🪤 Traps':'🪤 जाल','Suitable traps can help monitor or reduce certain insect populations.':'उपयुक्त जाल कुछ कीटों की निगरानी या उनकी संख्या कम करने में मदद कर सकते हैं।','🐞 Beneficial Insects':'🐞 लाभकारी कीट','Protect natural enemies such as ladybird beetles and other beneficial organisms.':'लेडीबर्ड बीटल जैसे प्राकृतिक शत्रुओं और अन्य लाभकारी जीवों की रक्षा करें।','🌱 Resistant Varieties':'🌱 प्रतिरोधी किस्में','Where available, choose varieties with appropriate resistance or tolerance.':'उपलब्ध होने पर उचित प्रतिरोध या सहनशीलता वाली किस्में चुनें।','🧹 Sanitation':'🧹 सफाई','Remove and safely manage severely diseased plant material where appropriate.':'उचित होने पर गंभीर रूप से रोगग्रस्त पौधों के हिस्सों को हटाकर सुरक्षित तरीके से नष्ट करें।','⚠️ Important:':'⚠️ महत्वपूर्ण:','Not every leaf spot, insect or yellow leaf requires pesticide treatment.':'हर पत्ती के धब्बे, कीट या पीली पत्ती के लिए कीटनाशक जरूरी नहीं है।','Some symptoms can look similar but have different causes, including nutrient deficiency, water stress, weather damage or disease.':'कुछ लक्षण समान दिख सकते हैं, लेकिन उनके कारण अलग हो सकते हैं, जैसे पोषक तत्वों की कमी, पानी का तनाव, मौसम से नुकसान या रोग।','Correct identification should be done before treatment.':'उपचार से पहले सही पहचान करें।','🚫 Never use an unlabelled or banned pesticide.':'🚫 बिना लेबल वाला या प्रतिबंधित कीटनाशक कभी उपयोग न करें।','Do not increase the pesticide dose on your own. Always follow the current product label and local agricultural recommendations.':'अपनी ओर से कीटनाशक की मात्रा न बढ़ाएँ। हमेशा मौजूदा उत्पाद लेबल और स्थानीय कृषि सलाह का पालन करें।','For serious or uncertain crop problems, contact the Agriculture Department, Krishi Vigyan Kendra or a qualified agricultural expert.':'फसल की गंभीर या अस्पष्ट समस्या के लिए कृषि विभाग, कृषि विज्ञान केंद्र या योग्य कृषि विशेषज्ञ से संपर्क करें।','🏛️ Official Agriculture Resources':'🏛️ आधिकारिक कृषि संसाधन','For crop protection advice, farmers should use reliable government agricultural resources and seek local expert guidance when necessary.':'फसल सुरक्षा की सलाह के लिए किसान विश्वसनीय सरकारी कृषि संसाधनों का उपयोग करें और आवश्यकता होने पर स्थानीय विशेषज्ञ से मार्गदर्शन लें।','🌐 Agriculture Department':'🌐 कृषि विभाग','© 2026 GramSakhi | Farmer Corner':'© 2026 GramSakhi | किसान अनुभाग','Common Pests':'आम कीट','Common Diseases':'आम रोग','Common Symptoms':'आम लक्षण','Prevention':'रोकथाम','General Management':'सामान्य प्रबंधन','🥬 Cabbage':'🥬 पत्तागोभी','🥦 Cauliflower':'🥦 फूलगोभी','🫛 Green Peas':'🫛 हरे मटर','🌿 Fenugreek':'🌿 मेथी','🥬 Spinach':'🥬 पालक','🌶️ Chilli':'🌶️ मिर्च','🍅 Tomato':'🍅 टमाटर','🧅 Onion':'🧅 प्याज','🥔 Potato':'🥔 आलू','🍆 Brinjal':'🍆 बैंगन','🌱 Okra':'🌱 भिंडी','🍈 Guava':'🍈 अमरूद','🥭 Mango':'🥭 आम','🍇 Grapes':'🍇 अंगूर','🍎 Pomegranate':'🍎 अनार','🍌 Banana':'🍌 केला','🌾 Wheat':'🌾 गेहूँ','🌽 Maize':'🌽 मक्का','🌾 Jowar':'🌾 ज्वार','🌾 Bajra':'🌾 बाजरा','🌱 Gram':'🌱 चना','🌱 Tur / Pigeon Pea':'🌱 अरहर','🌱 Moong':'🌱 मूँग','🌱 Soybean':'🌱 सोयाबीन','🥜 Groundnut':'🥜 मूँगफली','🌿 Cotton':'🌿 कपास'
+ }
+ };
+ const originals=new WeakMap();
+ const keys={en:'gsLangEN',mr:'gsLangMR',hi:'gsLangHI'};
+ function translateTextNode(node,lang){
+   if(!originals.has(node)) originals.set(node,node.nodeValue);
+   const original=originals.get(node);
+   if(lang==='en'){node.nodeValue=original;return;}
+   let value=original;
+   const dict=translations[lang]||{};
+   Object.keys(dict).sort((a,b)=>b.length-a.length).forEach(k=>{
+      if(value.includes(k)) value=value.split(k).join(dict[k]);
+   });
+   // Avoid repeatedly triggering MutationObserver when the text is already translated.
+   if(node.nodeValue !== value) node.nodeValue=value;
+ }
+ let current='en';
+ window.gsSetLanguage=function(lang){
+   if(!['en','mr','hi'].includes(lang)) return;
+   current=lang;
+   document.documentElement.lang=lang==='mr'?'mr':lang;
+   document.querySelectorAll('#gsOfflineLanguages button').forEach(b=>b.setAttribute('aria-pressed','false'));
+   document.getElementById(keys[lang]).setAttribute('aria-pressed','true');
+   const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
+   let node; while(node=walker.nextNode()){
+      if(node.parentElement && (node.parentElement.closest('#gsOfflineLanguages,script,style'))) continue;
+      translateTextNode(node,lang);
+   }
+ };
+ // Translate newly generated crop details after the existing showCrop() function updates the result.
+ const observer=new MutationObserver(()=>{
+   if(current==='en') return;
+   const root=document.getElementById('cropResult'); if(!root) return;
+   const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT); let node;
+   while(node=walker.nextNode()) translateTextNode(node,current);
+ });
+ window.addEventListener('DOMContentLoaded',()=>{
+   const root=document.getElementById('cropResult'); if(root) observer.observe(root,{childList:true,subtree:true,characterData:true});
+ });
+})</script>
+<!-- End GramSakhi Offline Language Options -->
+
+
+
+
 
 <!-- INTRO -->
 
@@ -375,7 +443,6 @@ farmers manage crop problems effectively.
 <option value="cotton">🌿 Cotton</option>
 
 </select>
-
 </div>
 
 
@@ -528,8 +595,6 @@ biological control methods where suitable.
 </p>
 
 </div>
-
-
 <div class="step">
 
 <span class="step-number">5</span>
@@ -705,8 +770,6 @@ labelled containers.
 </ul>
 
 </div>
-
-
 <!-- NATURAL METHODS -->
 
 <div class="section">
@@ -1196,5 +1259,3 @@ function showCrop(){
 </body>
 
 </html>
-  
-  
